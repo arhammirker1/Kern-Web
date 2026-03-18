@@ -108,7 +108,7 @@ export default function BlogPage() {
       {/* FEATURED */}
       <div className="blog-featured reveal">
         <div className="blog-featured-inner">
-          <a href="#" className="featured-card">
+          <Link href="/blog/the-283-problem" className="featured-card">
             <div className="featured-img-wrap">
               <div className="featured-img">
                 <div className="feat-visual">
@@ -168,7 +168,7 @@ export default function BlogPage() {
               </div>
               <span className="post-read-btn">Read article →</span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
