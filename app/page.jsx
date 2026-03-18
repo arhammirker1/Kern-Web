@@ -176,9 +176,7 @@ export default function Home() {
           {/* Replace MASCOT_SRC with a real /public path once you have the image file,
               e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
           <img
-            src="/mascot.png"
-            alt="Kern mascot"
-            onError={(e) => { e.currentTarget.style.display = 'none' }}
+            src={MASCOT_SRC}
           />
         </div>
       </section>
