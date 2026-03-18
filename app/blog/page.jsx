@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Nav from '../../components/Nav'
-
+import { supabase } from '../../lib/supabase'
 const KernMark = () => (
   <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
     <rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" />
@@ -26,15 +26,26 @@ export default function BlogPage() {
     return () => obs.disconnect()
   }, [])
 
-  function newsletterSignup() {
-    if (!newsletterEmail || !newsletterEmail.includes('@')) {
-      setEmailError(true)
-      setTimeout(() => setEmailError(false), 1500)
-      return
-    }
-    setNewsletterSuccess(true)
-    setNewsletterEmail('')
+  async function newsletterSignup() {
+  if (!newsletterEmail || !newsletterEmail.includes('@')) {
+    setEmailError(true)
+    setTimeout(() => setEmailError(false), 1500)
+    return
   }
+
+  const { error } = await supabase
+    .from('newsletter_subscribers')
+    .insert({ email: newsletterEmail, source: 'blog' })
+
+  if (error && error.code !== '23505') {
+    setEmailError(true)
+    setTimeout(() => setEmailError(false), 1500)
+    return
+  }
+
+  setNewsletterSuccess(true)
+  setNewsletterEmail('')
+}
 
   const posts = [
     {

@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import Nav from '../components/Nav'
+import { supabase } from '../lib/supabase'
 
 // ─── Base64 mascot image (stored outside component to avoid re-creation) ───
 const MASCOT_SRC =
@@ -32,6 +33,7 @@ export default function Home() {
   const [email1Err,   setEmail1Err]   = useState(false)
   const [emailFinalErr, setEmailFinalErr] = useState(false)
   const [copiedHero,  setCopiedHero]  = useState(false)
+  const [waitlistCount, setWaitlistCount] = useState(247)
 
   // Scroll-reveal
   useEffect(() => {
@@ -43,33 +45,59 @@ export default function Home() {
     return () => obs.disconnect()
   }, [])
 
+  // Live waitlist counter
+  useEffect(() => {
+    supabase
+      .from('waitlist')
+      .select('*', { count: 'exact', head: true })
+      .then(({ count }) => {
+        if (count) setWaitlistCount(count)
+      })
+  }, [])
+
   // Read ?ref= from URL once on mount
   const urlRef = typeof window !== 'undefined'
     ? new URLSearchParams(window.location.search).get('ref')
     : null
 
-  function signup(email, setResult, setErr, clearEmail, source = 'hero') {
-    if (!email || !email.includes('@')) {
-      setErr(true)
-      setTimeout(() => setErr(false), 1500)
+  async function signup(email, setResult, setErr, clearEmail, source = 'hero') {
+  if (!email || !email.includes('@')) {
+    setErr(true)
+    setTimeout(() => setErr(false), 1500)
+    return
+  }
+
+  const { data, error } = await supabase
+    .from('waitlist')
+    .insert({
+      email,
+      source,
+      referred_by: urlRef,
+      metadata: {
+        user_agent: navigator.userAgent,
+        referrer: document.referrer || null,
+        url: window.location.href,
+        timestamp: new Date().toISOString()
+      }
+    })
+    .select('position, referral_code')
+    .single()
+
+  if (error) {
+    // Already on the list
+    if (error.code === '23505') {
+      setResult({ message: "You're already on the list! Check your inbox.", refLink: null })
       return
     }
-
-    const refCode = makeRefCode(email)
-    const refLink = typeof window !== 'undefined'
-      ? `${window.location.origin}${window.location.pathname}?ref=${refCode}`
-      : `https://kern.app?ref=${refCode}`
-
-    // Wire up your real API here:
-    // fetch('/api/waitlist', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email, source, referredBy: urlRef })
-    // })
-
-    setResult({ message: "You're on the list!", refLink })
-    clearEmail('')
+    setErr(true)
+    setTimeout(() => setErr(false), 1500)
+    return
   }
+
+  const refLink = `${window.location.origin}${window.location.pathname}?ref=${data.referral_code}`
+  setResult({ message: `You're #${data.position} on the waitlist!`, refLink })
+  clearEmail('')
+}
 
   const copyRef = useCallback((link, setCopied) => {
     navigator.clipboard.writeText(link).then(() => {
@@ -167,7 +195,7 @@ export default function Home() {
               <div className="av" style={{ background: '#C03B30' }}>S</div>
               <div className="av" style={{ background: '#7C3AED' }}>T</div>
             </div>
-            <span>Join <strong>247 founders</strong> already on the waitlist</span>
+            <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
           </div>
         </div>
 
@@ -707,7 +735,7 @@ export default function Home() {
         )}
 
         <div className="final-counter reveal">
-          <strong>247 founders</strong> waiting · Wave 1 beta spots are limited
+          <strong>{waitlistCount} founders</strong> waiting · Wave 1 beta spots are limited
         </div>
       </section>
 
