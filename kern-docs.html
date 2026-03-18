@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kern Docs — Documentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0E0E0D;--ink2:#1A1A18;--cream:#F6F4EF;--parch:#EDE9E1;--wire:#E0DDD6;--ghost:#7A776F;--ghost2:#9C9890;--vi:#4C3FD4;--vi2:#6358E8}
+body{background:var(--cream);color:var(--ink);font-family:'Geist',sans-serif;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(246,244,239,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(14,14,13,0.06)}
+.nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.nav-mark{width:28px;height:28px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center}
+.nav-wordmark{font-weight:600;font-size:16px;color:var(--ink);letter-spacing:-0.02em}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{font-size:13px;color:var(--ghost);text-decoration:none;transition:color 0.15s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);font-weight:500}
+.nav-cta{padding:8px 18px;border-radius:8px;background:var(--vi);color:#fff;font-size:13px;font-weight:500;border:none;cursor:pointer;text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--vi2)}
+
+.docs-layout{display:grid;grid-template-columns:260px 1fr;min-height:100vh;padding-top:56px}
+.docs-sidebar{position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;border-right:1px solid var(--wire);padding:32px 0;background:#fff}
+.docs-sidebar::-webkit-scrollbar{width:2px}
+.sidebar-section{margin-bottom:8px}
+.sidebar-section-label{font-family:'Geist Mono',monospace;font-size:10px;font-weight:500;color:var(--ghost2);letter-spacing:0.1em;text-transform:uppercase;padding:8px 24px 4px}
+.sidebar-link{display:block;padding:7px 24px;font-size:14px;color:var(--ghost);text-decoration:none;transition:all 0.15s;border-left:2px solid transparent}
+.sidebar-link:hover{color:var(--ink);background:var(--cream)}
+.sidebar-link.active{color:var(--vi);border-left-color:var(--vi);background:rgba(76,63,212,0.04);font-weight:500}
+
+.docs-content{padding:56px 64px 100px;max-width:760px}
+.docs-breadcrumb{font-size:13px;color:var(--ghost);margin-bottom:32px;display:flex;align-items:center;gap:8px;font-family:'Geist Mono',monospace}
+.docs-breadcrumb a{color:var(--ghost);text-decoration:none}
+.docs-breadcrumb a:hover{color:var(--vi)}
+.docs-breadcrumb span{color:var(--ghost2)}
+
+.doc-hero{border-bottom:1px solid var(--wire);padding-bottom:40px;margin-bottom:40px}
+.doc-eyebrow{font-family:'Geist Mono',monospace;font-size:11px;color:var(--vi);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px}
+.doc-h1{font-family:'Fraunces',serif;font-size:clamp(36px,4vw,52px);font-weight:300;letter-spacing:-0.03em;color:var(--ink);line-height:1.08;margin-bottom:16px}
+.doc-lead{font-size:18px;color:var(--ghost);font-weight:300;line-height:1.7;max-width:580px}
+
+.doc-h2{font-family:'Fraunces',serif;font-size:28px;font-weight:300;letter-spacing:-0.02em;color:var(--ink);margin:48px 0 16px}
+.doc-h3{font-size:18px;font-weight:600;color:var(--ink);margin:32px 0 12px;letter-spacing:-0.01em}
+.doc-p{font-size:15px;color:var(--ghost);line-height:1.75;margin-bottom:16px}
+.doc-p a{color:var(--vi);text-decoration:none}
+.doc-p a:hover{text-decoration:underline}
+
+.doc-callout{background:rgba(76,63,212,0.06);border:1px solid rgba(76,63,212,0.2);border-radius:12px;padding:20px 24px;margin:24px 0;display:flex;gap:14px}
+.doc-callout-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.doc-callout p{font-size:14px;color:var(--ink);line-height:1.6;margin:0}
+.doc-callout strong{color:var(--vi)}
+
+.doc-code{background:var(--ink2);border-radius:10px;padding:20px 24px;margin:20px 0;overflow-x:auto}
+.doc-code code{font-family:'Geist Mono',monospace;font-size:13px;color:#D4D1CA;line-height:1.7;white-space:pre}
+.doc-code-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.06)}
+.doc-code-lang{font-family:'Geist Mono',monospace;font-size:11px;color:#555552;letter-spacing:0.04em}
+
+.feature-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+.feature-card{background:#fff;border:1px solid var(--wire);border-radius:12px;padding:20px;text-decoration:none;transition:all 0.15s;display:block}
+.feature-card:hover{border-color:rgba(76,63,212,0.3);background:rgba(76,63,212,0.02);transform:translateY(-2px)}
+.feature-card h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px;letter-spacing:-0.01em}
+.feature-card p{font-size:13px;color:var(--ghost);line-height:1.5}
+.feature-card-arrow{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.feature-card-arrow span{font-size:12px;color:var(--vi);font-family:'Geist Mono',monospace}
+
+.doc-steps{counter-reset:step;display:flex;flex-direction:column;gap:0;margin:24px 0}
+.doc-step{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--wire);position:relative}
+.doc-step:last-child{border-bottom:none}
+.doc-step-num{width:28px;height:28px;border-radius:50%;background:var(--vi);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0;margin-top:2px}
+.doc-step-body h4{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.doc-step-body p{font-size:14px;color:var(--ghost);line-height:1.6}
+
+.doc-table{width:100%;border-collapse:collapse;margin:24px 0;font-size:14px}
+.doc-table th{text-align:left;padding:10px 16px;background:var(--parch);font-weight:500;color:var(--ink);border:1px solid var(--wire);font-family:'Geist Mono',monospace;font-size:12px;letter-spacing:0.04em}
+.doc-table td{padding:10px 16px;border:1px solid var(--wire);color:var(--ghost);vertical-align:top}
+.doc-table td:first-child{font-weight:500;color:var(--ink);font-family:'Geist Mono',monospace;font-size:13px}
+.badge{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:100px;font-family:'Geist Mono',monospace}
+.badge-vi{background:rgba(76,63,212,0.1);color:var(--vi)}
+.badge-gr{background:rgba(13,107,79,0.1);color:#0D6B4F}
+.badge-am{background:rgba(196,114,10,0.1);color:#C4720A}
+
+.doc-nav{display:flex;justify-content:space-between;padding-top:48px;margin-top:48px;border-top:1px solid var(--wire)}
+.doc-nav-btn{display:flex;flex-direction:column;gap:4px;text-decoration:none;padding:16px 20px;border:1px solid var(--wire);border-radius:10px;transition:all 0.15s;max-width:220px}
+.doc-nav-btn:hover{border-color:rgba(76,63,212,0.3);background:rgba(76,63,212,0.02)}
+.doc-nav-btn span{font-size:11px;color:var(--ghost);font-family:'Geist Mono',monospace;letter-spacing:0.04em}
+.doc-nav-btn strong{font-size:14px;color:var(--ink);font-weight:500}
+
+@media(max-width:900px){
+  nav{padding:0 20px}.nav-links{display:none}
+  .docs-layout{grid-template-columns:1fr}
+  .docs-sidebar{display:none}
+  .docs-content{padding:32px 20px 80px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-mark"><svg viewBox="0 0 16 16" fill="none" width="16" height="16"><rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF"/><rect x="9.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5"/><rect x="1.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5"/><rect x="9.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.3"/></svg></div>
+    <span class="nav-wordmark">kern</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="docs.html" class="active">Docs</a>
+    <a href="blog.html">Blog</a>
+  </div>
+  <a href="index.html#waitlist" class="nav-cta">Join Waitlist</a>
+</nav>
+
+<div class="docs-layout">
+  <aside class="docs-sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Getting started</div>
+      <a href="#overview" class="sidebar-link active">Overview</a>
+      <a href="#quickstart" class="sidebar-link">Quick start</a>
+      <a href="#workspace" class="sidebar-link">Your workspace</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Core modules</div>
+      <a href="#inbox" class="sidebar-link">Inbox</a>
+      <a href="#tasks" class="sidebar-link">Tasks & Projects</a>
+      <a href="#calendar" class="sidebar-link">Calendar</a>
+      <a href="#vault" class="sidebar-link">Vault</a>
+      <a href="#crm" class="sidebar-link">CRM</a>
+      <a href="#linkedin" class="sidebar-link">LinkedIn Studio</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Team & clients</div>
+      <a href="#team" class="sidebar-link">Team management</a>
+      <a href="#permissions" class="sidebar-link">Permissions</a>
+      <a href="#client-portal" class="sidebar-link">Client portal</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">Integrations</div>
+      <a href="#google" class="sidebar-link">Google Drive</a>
+      <a href="#google-calendar" class="sidebar-link">Google Calendar</a>
+      <a href="#push" class="sidebar-link">Push notifications</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-section-label">AI Layer</div>
+      <a href="#ai" class="sidebar-link">AI overview <span class="badge badge-am" style="margin-left:6px">Soon</span></a>
+    </div>
+  </aside>
+
+  <main class="docs-content" id="overview">
+    <div class="docs-breadcrumb">
+      <a href="index.html">kern</a>
+      <span>›</span>
+      <span>docs</span>
+      <span>›</span>
+      <span>overview</span>
+    </div>
+
+    <div class="doc-hero">
+      <div class="doc-eyebrow">Documentation</div>
+      <h1 class="doc-h1">Welcome to<br>Kern.</h1>
+      <p class="doc-lead">Kern is your agency operating system — a single workspace that replaces Slack, Notion, HubSpot, Linear, and Buffer. This guide gets you from zero to fully set up.</p>
+    </div>
+
+    <div class="doc-callout">
+      <div class="doc-callout-icon">⚡</div>
+      <p><strong>Early access:</strong> Kern is currently in closed beta. Join the waitlist at <a href="index.html#waitlist" style="color:var(--vi)">kern.app</a> to get access when your spot opens up.</p>
+    </div>
+
+    <h2 class="doc-h2" id="quickstart">Quick start</h2>
+    <p class="doc-p">From signup to your first message in under 5 minutes.</p>
+
+    <div class="doc-steps">
+      <div class="doc-step">
+        <div class="doc-step-num">1</div>
+        <div class="doc-step-body">
+          <h4>Create your workspace</h4>
+          <p>Sign up with your email. Your workspace is created instantly — no credit card needed for the trial.</p>
+        </div>
+      </div>
+      <div class="doc-step">
+        <div class="doc-step-num">2</div>
+        <div class="doc-step-body">
+          <h4>Connect Google Drive</h4>
+          <p>Go to Settings → Integrations → Connect Google. A "Vault" folder is auto-created in your Drive. All files stay in your account.</p>
+        </div>
+      </div>
+      <div class="doc-step">
+        <div class="doc-step-num">3</div>
+        <div class="doc-step-body">
+          <h4>Invite your team</h4>
+          <p>Go to Team → Add Member. Set their role, permissions, and credentials. They're ready to log in immediately — no invite email flow needed.</p>
+        </div>
+      </div>
+      <div class="doc-step">
+        <div class="doc-step-num">4</div>
+        <div class="doc-step-body">
+          <h4>Create your first project</h4>
+          <p>Projects automatically get a dedicated chat room, a Vault folder structure, and can be linked to a client portal.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="doc-h2">Explore the modules</h2>
+    <p class="doc-p">Kern has 8 core modules. Click any to jump to its documentation.</p>
+
+    <div class="feature-cards">
+      <a class="feature-card" href="#inbox">
+        <h4>💬 Real-Time Inbox</h4>
+        <p>Project channels, group chats, DMs. Reactions, file attachments, task references.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+      <a class="feature-card" href="#tasks">
+        <h4>✅ Tasks & Projects</h4>
+        <p>4 time-horizon buckets. Priority sorting, team assignment, client visibility.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+      <a class="feature-card" href="#vault">
+        <h4>🗄️ Vault</h4>
+        <p>Google Drive-backed. Internal docs, client uploads, deliverables — role-scoped.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+      <a class="feature-card" href="#client-portal">
+        <h4>🏢 Client Portal</h4>
+        <p>White-label scoped workspace per client. Tasks, files, inbox, calendar.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+      <a class="feature-card" href="#crm">
+        <h4>🤝 CRM</h4>
+        <p>Track leads, investors, partners. Log outcomes, set reminders, link to events.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+      <a class="feature-card" href="#calendar">
+        <h4>📅 Calendar</h4>
+        <p>Day / Week / Month. Google Meet auto-creation. 5-min meeting reminders.</p>
+        <div class="feature-card-arrow"><span>Read docs →</span></div>
+      </a>
+    </div>
+
+    <h2 class="doc-h2" id="permissions">Permission system</h2>
+    <p class="doc-p">Kern uses a 3-tier user model with 12 granular permission toggles per team member.</p>
+
+    <table class="doc-table">
+      <thead>
+        <tr>
+          <th>User type</th>
+          <th>Access level</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Founder</td>
+          <td><span class="badge badge-vi">Full access</span></td>
+          <td>Owns the workspace. Can create teams, clients, projects.</td>
+        </tr>
+        <tr>
+          <td>Team member</td>
+          <td><span class="badge badge-am">Configurable</span></td>
+          <td>12 permission toggles. 5 preset roles available.</td>
+        </tr>
+        <tr>
+          <td>Client</td>
+          <td><span class="badge badge-gr">Portal-scoped</span></td>
+          <td>Sees only their project data. Optionally can create tasks.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="doc-callout" style="background:rgba(13,107,79,0.05);border-color:rgba(13,107,79,0.2)">
+      <div class="doc-callout-icon">💡</div>
+      <p><strong>Role presets:</strong> Admin · Project Manager · Executor · Sales / Outreach · Analyst. Each preset configures all 12 toggles automatically. You can override any toggle after applying a preset.</p>
+    </div>
+
+    <h2 class="doc-h2" id="inbox">Inbox — real-time messaging</h2>
+    <p class="doc-p">The inbox uses Supabase Realtime WebSocket channels. Each room maintains its own subscription — switching rooms tears down the old channel and creates a new one.</p>
+
+    <h3 class="doc-h3">Room types</h3>
+    <p class="doc-p">There are three room types: <strong>Project</strong> (auto-created when you create a project), <strong>Group</strong> (custom channels you create), and <strong>Direct</strong> (1-on-1 DMs).</p>
+
+    <h3 class="doc-h3">Sending a task reference</h3>
+    <p class="doc-p">Type <code style="background:var(--parch);padding:2px 6px;border-radius:4px;font-family:'Geist Mono',monospace;font-size:13px">/task</code> in any message input to open the task picker. Select a task to send it as a rich card in the chat room. Task cards show the title, status, and priority.</p>
+
+    <div class="doc-code">
+      <div class="doc-code-header">
+        <span class="doc-code-lang">Message input</span>
+      </div>
+      <code>/task [search query]     → opens task picker
+@name                  → opens mention picker
+Shift+Enter            → new line
+Enter                  → send message</code>
+    </div>
+
+    <h2 class="doc-h2" id="google">Google Drive integration</h2>
+    <p class="doc-p">Kern stores all Vault files directly in your Google Drive account. We never hold your files — they live in your Drive and you retain full ownership.</p>
+
+    <div class="doc-steps">
+      <div class="doc-step">
+        <div class="doc-step-num">1</div>
+        <div class="doc-step-body"><h4>Connect your Google account</h4><p>Settings → Integrations → Connect Google. Kern requests Drive and Calendar permissions.</p></div>
+      </div>
+      <div class="doc-step">
+        <div class="doc-step-num">2</div>
+        <div class="doc-step-body"><h4>Vault folder auto-created</h4><p>A root "Vault" folder is created in your Drive. All project subfolders live inside it.</p></div>
+      </div>
+      <div class="doc-step">
+        <div class="doc-step-num">3</div>
+        <div class="doc-step-body"><h4>Project folders created automatically</h4><p>Creating a project auto-creates 3 subfolders: Internal Documents (team only), Client Uploads, and Deliverables (client-visible).</p></div>
+      </div>
+    </div>
+
+    <h2 class="doc-h2" id="ai">AI Layer — coming soon</h2>
+    <div class="doc-callout" style="background:rgba(196,114,10,0.06);border-color:rgba(196,114,10,0.2)">
+      <div class="doc-callout-icon">🚧</div>
+      <p><strong>In development.</strong> The AI layer is actively being built. Early access members will be the first to try it. <a href="index.html#waitlist">Join the waitlist</a> to get early access.</p>
+    </div>
+    <p class="doc-p">The AI layer will sit on top of all Kern modules and add natural language intelligence. Planned features include:</p>
+    <p class="doc-p">· Task creation from chat messages ("can you finish the landing page by Friday" → task created, assigned, due date set)<br>
+    · Thread summaries ("what happened in the last 3 hours?")<br>
+    · Client brief → project structure generation<br>
+    · Smart follow-up reminders from CRM context<br>
+    · Auto-scheduling from calendar patterns</p>
+
+    <div class="doc-nav">
+      <a href="index.html" class="doc-nav-btn" style="justify-self:flex-start">
+        <span>← Back to</span>
+        <strong>kern.app</strong>
+      </a>
+      <a href="blog.html" class="doc-nav-btn" style="text-align:right">
+        <span>Read our →</span>
+        <strong>Blog</strong>
+      </a>
+    </div>
+  </main>
+</div>
+
+<script>
+// Active sidebar link on scroll
+const links = document.querySelectorAll('.sidebar-link[href^="#"]');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const link = document.querySelector(`.sidebar-link[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, {threshold: 0.3, rootMargin: '-56px 0px -70% 0px'});
+document.querySelectorAll('[id]').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
