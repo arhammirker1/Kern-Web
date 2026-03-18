@@ -176,8 +176,18 @@ export default function Home() {
           {/* Replace MASCOT_SRC with a real /public path once you have the image file,
               e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
           <img
-            src={MASCOT_SRC}
-          />
+  src="/mascot.png"
+  alt="Kern mascot"
+  style={{
+    maxWidth: '480px',
+    width: '100%',
+    height: 'auto',
+    objectFit: 'contain',
+    objectPosition: 'center bottom',
+    filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))',
+    animation: 'float1 7s ease-in-out infinite'
+  }}
+/>
         </div>
       </section>
 
