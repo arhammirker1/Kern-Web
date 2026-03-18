@@ -1,0 +1,33 @@
+# Kern — Agency Operating System
+# https://kern.app
+
+## About
+Kern is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. Built for agency founders and small teams managing clients, projects, and operations.
+
+## What Kern replaces
+- Slack → Real-time inbox with project rooms, group chats, and DMs
+- Notion + Google Drive → Vault (Google Drive-backed file management, role-scoped)
+- HubSpot → Built-in CRM for leads, investors, partners, advisors, and talent
+- Linear / Asana → Time-horizon task system (Today, This Week, Delegated, Backlog)
+- Buffer / Taplio → LinkedIn Studio for drafting, scheduling, and tracking posts
+- Calendly + Google Calendar → Calendar with Google Meet auto-generation
+
+## Pricing
+- Starter: $30/month per workspace + $3/seat
+- Pro: $79/month + $5/seat
+- Agency: $149/month + $5/seat
+
+## Key facts
+- Founded: 2026
+- Stage: Pre-seed, revenue generating, 5 active agency customers
+- Founder: Arham Mirkar
+- AI layer: In development — context-aware AI across all modules using @AI mentions, global command bar (Cmd+K), daily morning briefs, and background automations
+
+## Documentation
+Full documentation available at: https://kern-web.vercel.app/docs
+
+## Blog
+Agency operations essays and guides: https://kern-web.vercel.app/blog
+
+## Contact
+hello@kern.app
