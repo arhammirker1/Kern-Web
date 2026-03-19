@@ -205,7 +205,7 @@ export default function Home() {
               e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
           <img
   src="/mascot.png"
-  alt="Kern mascot"
+  alt="Kobin mascot"
   style={{
     maxWidth: '480px',
     width: '100%',
@@ -394,7 +394,7 @@ export default function Home() {
               <div className="nav-mark" style={{ width: '32px', height: '32px', borderRadius: '9px' }}>
                 <KernMark size={18} />
               </div>
-              <h3>Kern</h3>
+              <h3>Kobin</h3>
             </div>
             <div className="from">From $49 per month</div>
             <div className="save-box">
@@ -505,7 +505,7 @@ export default function Home() {
             <div className="ai-features">
               {[
                 { title: 'Task from chat', desc: '"Ahmed can you finish the landing page by Friday" → task created, assigned, due date set.' },
-                { title: 'Smart summaries', desc: 'Missed a thread? Kern summarises what happened and what needs your attention.' },
+                { title: 'Smart summaries', desc: 'Missed a thread? Ko summarises what happened and what needs your attention.' },
                 { title: 'Client brief → project', desc: 'Paste a brief, get a full project structure with tasks, timeline, and team assignments.' },
               ].map(({ title, desc }) => (
                 <div className="ai-feat" key={title}>
@@ -525,7 +525,7 @@ export default function Home() {
             <div className="ai-card">
               <div className="ai-card-header">
                 <div className="ai-card-dot" />
-                kern ai · parsing message
+                kobin ai · parsing message
               </div>
               <div className="ai-prompt">
                 &quot;can you please draft this task for the landing page redesign? need it done by friday&quot;
@@ -539,7 +539,7 @@ export default function Home() {
             <div className="ai-card">
               <div className="ai-card-header">
                 <div className="ai-card-dot" />
-                kern ai · thread summary
+                kobin ai · thread summary
               </div>
               <div className="ai-prompt">Last 3 hours of #reelix channel</div>
               <div className="ai-response">
@@ -743,17 +743,17 @@ export default function Home() {
       <footer>
         <div className="foot-brand">
           <div className="nav-mark"><KernMark /></div>
-          kern
+          Kobin
         </div>
         <div className="foot-links">
           <Link href="/#features">Features</Link>
           <Link href="/#pricing">Pricing</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/blog">Blog</Link>
-          <a href="mailto:hello@kern.app">Contact</a>
+          <a href="mailto:hello@Kobin.app">Contact</a>
           <Link href="#">Privacy</Link>
         </div>
-        <div className="foot-copy">© 2026 Kern. All rights reserved.</div>
+        <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
       </footer>
     </>
   )

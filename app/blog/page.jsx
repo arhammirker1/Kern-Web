@@ -59,7 +59,7 @@ export default function BlogPage() {
       thumbClass: 'thumb-vi', thumbText: 'build in\npublic', thumbLabel: 'BUILD LOG',
       category: 'cat-build', catLabel: 'Build in public',
       title: 'How we built a real-time inbox that replaces Slack in 3 weeks',
-      excerpt: 'The technical decisions, UX mistakes, and hard lessons from building Kern\'s inbox from scratch. Supabase Realtime, optimistic updates, and why reactions are harder than you think.',
+      excerpt: 'The technical decisions, UX mistakes, and hard lessons from building Kobin\'s inbox from scratch. Supabase Realtime, optimistic updates, and why reactions are harder than you think.',
       meta: 'Mar 12 · 11 min',
     },
     {
@@ -70,10 +70,10 @@ export default function BlogPage() {
       meta: 'Mar 10 · 9 min',
     },
     {
-      thumbClass: 'thumb-dark', thumbText: 'kern\nv1', thumbLabel: 'LAUNCH STORY',
+      thumbClass: 'thumb-dark', thumbText: 'kobin\nv1', thumbLabel: 'LAUNCH STORY',
       category: 'cat-story', catLabel: 'Story',
-      title: 'I built Kern to replace my own agency tool stack. Here\'s what happened.',
-      excerpt: '12 months. 5 failed prototypes. 1 name change. And a product that finally feels like what I always wanted to use. The honest story behind building Kern.',
+      title: 'I built Kobin to replace my own agency tool stack. Here\'s what happened.',
+      excerpt: '12 months. 5 failed prototypes. 1 name change. And a product that finally feels like what I always wanted to use. The honest story behind building Kobin.',
       meta: 'Mar 6 · 14 min',
     },
     {
@@ -84,10 +84,10 @@ export default function BlogPage() {
       meta: 'Mar 3 · 7 min',
     },
     {
-      thumbClass: 'thumb-parch', thumbText: 'Slack vs\nKern', thumbLabel: 'COMPARISON',
+      thumbClass: 'thumb-parch', thumbText: 'Slack vs\nKobin', thumbLabel: 'COMPARISON',
       category: 'cat-guide', catLabel: 'Guide',
-      title: 'Slack vs Kern: what a 5-person agency actually needs in 2026',
-      excerpt: 'A direct, honest comparison. Where Slack wins, where Kern wins, and why we built what we did. No sales pitch — just the reality of both tools.',
+      title: 'Slack vs Kobin: what a 5-person agency actually needs in 2026',
+      excerpt: 'A direct, honest comparison. Where Slack wins, where Kobin wins, and why we built what we did. No sales pitch — just the reality of both tools.',
       meta: 'Feb 28 · 8 min',
     },
   ]
@@ -99,7 +99,7 @@ export default function BlogPage() {
       {/* HERO */}
       <div className="blog-hero reveal">
         <div className="blog-hero-inner">
-          <div className="blog-eyebrow">The Kern Blog</div>
+          <div className="blog-eyebrow">The Kobin Blog</div>
           <h1>For founders<br />who <em>build.</em></h1>
           <p className="blog-hero-sub">Essays, guides, and honest writing about running an agency without losing your mind. No fluff.</p>
         </div>
@@ -205,9 +205,9 @@ export default function BlogPage() {
         <div className="blog-cats-inner">
           {[
             { num: 6, name: 'The problem', desc: 'Essays on tool overload, context switching, and agency inefficiency' },
-            { num: 4, name: 'Build in public', desc: 'Technical decisions, product mistakes, and honest build logs from Kern HQ' },
+            { num: 4, name: 'Build in public', desc: 'Technical decisions, product mistakes, and honest build logs from Kobin HQ' },
             { num: 5, name: 'Guides', desc: 'Practical walkthroughs for running a leaner, more focused agency' },
-            { num: 3, name: 'Stories', desc: 'Founder journeys and real stories from agencies using Kern' },
+            { num: 3, name: 'Stories', desc: 'Founder journeys and real stories from agencies using Kobin' },
           ].map(({ num, name, desc }) => (
             <a href="#" className="cat-card" key={name}>
               <div className="cat-num">{num}</div>
@@ -245,7 +245,7 @@ export default function BlogPage() {
       <footer>
         <div className="foot-brand">
           <div className="nav-mark"><KernMark /></div>
-          kern
+          kobin
         </div>
         <div className="foot-links">
           <Link href="/#features">Features</Link>
@@ -254,7 +254,7 @@ export default function BlogPage() {
           <Link href="/blog">Blog</Link>
           <a href="#">Privacy</a>
         </div>
-        <div className="foot-copy">© 2026 Kern. All rights reserved.</div>
+        <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
       </footer>
     </>
   )

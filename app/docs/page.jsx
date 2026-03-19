@@ -70,7 +70,7 @@ export default function DocsPage() {
 
         <main className="docs-content" id="overview">
           <div className="docs-breadcrumb">
-            <Link href="/">kern</Link>
+            <Link href="/">kobin</Link>
             <span>›</span>
             <span>docs</span>
             <span>›</span>
@@ -79,13 +79,13 @@ export default function DocsPage() {
 
           <div className="doc-hero">
             <div className="doc-eyebrow">Documentation</div>
-            <h1 className="doc-h1">Welcome to<br />Kern.</h1>
-            <p className="doc-lead">Kern is your agency operating system — a single workspace that replaces Slack, Notion, HubSpot, Linear, and Buffer. This guide gets you from zero to fully set up.</p>
+            <h1 className="doc-h1">Welcome to<br />Kobin.</h1>
+            <p className="doc-lead">Kobin is your agency operating system — a single workspace that replaces Slack, Notion, HubSpot, Linear, and Buffer. This guide gets you from zero to fully set up.</p>
           </div>
 
           <div className="doc-callout">
             <div className="doc-callout-icon">⚡</div>
-            <p><strong>Early access:</strong> Kern is currently in closed beta. Join the waitlist at <Link href="/#waitlist" style={{ color: 'var(--vi)' }}>kern.app</Link> to get access when your spot opens up.</p>
+            <p><strong>Early access:</strong> Kobin is currently in closed beta. Join the waitlist at <Link href="/#waitlist" style={{ color: 'var(--vi)' }}>kobin.app</Link> to get access when your spot opens up.</p>
           </div>
 
           {/* ── QUICK START ── */}
@@ -131,7 +131,7 @@ export default function DocsPage() {
 
           {/* ── PERMISSION SYSTEM ── */}
           <h2 className="doc-h2" id="permissions">Permission system</h2>
-          <p className="doc-p">Kern uses a 3-tier user model with 12 granular permission toggles per team member.</p>
+          <p className="doc-p">Kobin uses a 3-tier user model with 12 granular permission toggles per team member.</p>
 
           <table className="doc-table">
             <thead>
@@ -428,11 +428,11 @@ Enter                  → send message`}</code>
 
           {/* ── GOOGLE DRIVE ── */}
           <h2 className="doc-h2" id="google">Google Drive integration</h2>
-          <p className="doc-p">Kern stores all Vault files directly in your Google Drive account using the <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>drive.file</code> scope — only files the app creates, never your existing Drive content. We never hold your files.</p>
+          <p className="doc-p">Kobin stores all Vault files directly in your Google Drive account using the <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>drive.file</code> scope — only files the app creates, never your existing Drive content. We never hold your files.</p>
 
           <div className="doc-steps">
             {[
-              { title: 'Connect your Google account', desc: 'Settings → Integrations → Connect Google. Kern requests Drive and Calendar permissions.' },
+              { title: 'Connect your Google account', desc: 'Settings → Integrations → Connect Google. Kobin requests Drive and Calendar permissions.' },
               { title: 'Vault folder auto-created', desc: 'A root "Vault" folder is created in your Drive. All project subfolders live inside it.' },
               { title: 'Project folders created automatically', desc: 'Creating a project auto-creates 3 subfolders: Internal Documents (team only), Client Uploads, and Deliverables (client-visible).' },
             ].map(({ title, desc }, i) => (
@@ -461,7 +461,7 @@ Enter                  → send message`}</code>
 
           {/* ── GOOGLE CALENDAR ── */}
           <h2 className="doc-h2" id="google-calendar">Google Calendar integration</h2>
-          <p className="doc-p">When Google is connected, every event created in Kern with the Meet toggle enabled automatically creates a real Google Calendar event, generates a unique Meet link, and sends calendar invites to all listed attendee emails. Access tokens refresh automatically using the stored refresh token — no re-auth needed.</p>
+          <p className="doc-p">When Google is connected, every event created in Kobin with the Meet toggle enabled automatically creates a real Google Calendar event, generates a unique Meet link, and sends calendar invites to all listed attendee emails. Access tokens refresh automatically using the stored refresh token — no re-auth needed.</p>
 
           {/* ── PUSH NOTIFICATIONS ── */}
           <h2 className="doc-h2" id="push">Push notifications</h2>
@@ -688,7 +688,7 @@ Enter                  → send message`}</code>
           <div className="doc-nav">
             <Link href="/" className="doc-nav-btn">
               <span>← Back to</span>
-              <strong>kern.app</strong>
+              <strong>kobin.app</strong>
             </Link>
             <Link href="/blog" className="doc-nav-btn" style={{ textAlign: 'right' }}>
               <span>Read our →</span>

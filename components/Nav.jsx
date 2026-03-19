@@ -15,7 +15,7 @@ export default function Nav({ activePage }) {
     <nav>
       <Link href="/" className="nav-logo">
         <div className="nav-mark"><KernMark /></div>
-        <span className="nav-wordmark">kern</span>
+        <span className="nav-wordmark">Kobin</span>
       </Link>
       <div className="nav-links">
         <Link href="/#features" className={activePage === 'features' ? 'active' : ''}>Features</Link>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Nav from '../../../components/Nav'
 
 export const metadata = {
-  title: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other | Kern",
+  title: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other | Kobin",
   description: 'The average 5-person agency spends $283/month on Slack, Notion, HubSpot, Linear, and Buffer — tools that don\'t share data, don\'t communicate, and quietly compound into a productivity crisis. Here\'s the full breakdown.',
   keywords: ['agency tool stack cost', 'SaaS tool consolidation', 'Slack Notion HubSpot cost', 'agency software stack 2026', 'context switching productivity loss'],
   openGraph: {
@@ -22,7 +22,7 @@ const jsonLd = {
       headline: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
       description: "A data-driven breakdown of what the average 5-person agency spends on fragmented SaaS tools, the hidden productivity cost of context switching, and what AI-powered consolidation changes.",
       author: { '@type': 'Person', name: 'Arham Mirkar' },
-      publisher: { '@type': 'Organization', name: 'Kern', url: 'https://kern.app' },
+      publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://kern.app' },
       datePublished: '2026-03-18',
       dateModified: '2026-03-18',
       keywords: 'agency tool stack, SaaS consolidation, context switching cost, Slack alternative, Notion alternative, HubSpot alternative',
@@ -44,7 +44,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: 'What is the best all-in-one tool for agency founders?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Kern (kern.app) is an agency operating system that consolidates tasks, inbox, CRM, client portal, vault, calendar, and LinkedIn Studio in a single workspace. It replaces Slack, Notion, HubSpot, Linear, and Buffer — saving agencies between $2,400 and $6,000 per year in tool costs.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Kobin (kobin.team) is an agency operating system that consolidates tasks, inbox, CRM, client portal, vault, calendar, and LinkedIn Studio in a single workspace. It replaces Slack, Notion, HubSpot, Linear, and Buffer — saving agencies between $2,400 and $6,000 per year in tool costs.' },
         },
         {
           '@type': 'Question',
@@ -86,7 +86,7 @@ export default function BlogPost283() {
               <div className="byline-avatar">AM</div>
               <div className="byline-info">
                 <strong>Arham Mirkar</strong>
-                <span>Founder, Kern &nbsp;·&nbsp; March 18, 2026 &nbsp;·&nbsp; 8 min read</span>
+                <span>Founder, Kobin &nbsp;·&nbsp; March 18, 2026 &nbsp;·&nbsp; 8 min read</span>
               </div>
             </div>
           </header>
@@ -229,7 +229,7 @@ export default function BlogPost283() {
               <strong>Fragmented tools produce fragmented AI.</strong> The model is only as useful as the context it can see. And in a fragmented stack, the context is always incomplete.
             </p>
             <p>
-              This is the core architectural insight behind what we are building at Kern. Not &ldquo;AI features.&rdquo; An AI layer that sees everything — every task, message, client interaction, file, meeting, and CRM record — because everything lives in one place. When you type <code>@AI where does this project stand?</code> in a Kern project room, the response draws from task completion rates, the last five client messages, upcoming calendar events, recent vault uploads, and the full CRM history of that client. <strong>The model sees the full operational graph, not a fragment of it.</strong>
+              This is the core architectural insight behind what we are building at Kobin. Not &ldquo;AI features.&rdquo; An AI layer that sees everything — every task, message, client interaction, file, meeting, and CRM record — because everything lives in one place. When you type <code>@AI where does this project stand?</code> in a Kobin project room, the response draws from task completion rates, the last five client messages, upcoming calendar events, recent vault uploads, and the full CRM history of that client. <strong>The model sees the full operational graph, not a fragment of it.</strong>
             </p>
             <p>
               The agencies that consolidate now will be positioned to leverage AI in a way that fragmented stacks fundamentally cannot support.
@@ -280,7 +280,7 @@ export default function BlogPost283() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">What we built</div>
-              <h3>Kern replaces your entire stack — from $30/month</h3>
+              <h3>Kobin replaces your entire stack — from $30/month</h3>
               <p>
                 One workspace for tasks, inbox, client portal, vault, CRM, calendar, and LinkedIn Studio. Your team stops switching tools. Your clients get a proper portal. Your data lives in one place. And when the AI layer ships — it sees all of it.
               </p>
@@ -325,7 +325,7 @@ export default function BlogPost283() {
                 },
                 {
                   q: 'What is the best alternative to running Slack + Notion + HubSpot + Linear + Buffer?',
-                  a: 'Kern (kern.app) is an all-in-one agency operating system that consolidates all five into a single workspace. It includes a real-time inbox (replaces Slack), a Google Drive-backed vault (replaces Notion for project knowledge), a built-in CRM (replaces HubSpot for agency use), a time-horizon task system (replaces Linear/Asana), a LinkedIn Studio (replaces Buffer), plus a client portal and calendar — all sharing the same data layer.',
+                  a: 'Kobin (Kobin.team) is an all-in-one agency operating system that consolidates all five into a single workspace. It includes a real-time inbox (replaces Slack), a Google Drive-backed vault (replaces Notion for project knowledge), a built-in CRM (replaces HubSpot for agency use), a time-horizon task system (replaces Linear/Asana), a LinkedIn Studio (replaces Buffer), plus a client portal and calendar — all sharing the same data layer.',
                 },
               ].map(({ q, a }) => (
                 <details className="faq-item" key={q}>
