@@ -1,21 +1,13 @@
 'use client'
 import Link from 'next/link'
 
-const KernMark = ({ size = 16 }) => (
-  <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
-    <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
-    <rect x="148" y="128" width="52" height="256" rx="26" fill="#F0EDE6"/>
-    <line x1="196" y1="238" x2="352" y2="108" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
-    <line x1="196" y1="272" x2="352" y2="402" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
-    <circle cx="196" cy="256" r="34" fill="#5B4FE8"/>
-  </svg>
-)
+
 
 export default function Nav({ activePage }) {
   return (
     <nav>
       <Link href="/" className="nav-logo">
-        <div className="nav-mark"><KernMark /></div>
+        <img src="/kobin_icon_32.png" width="28" height="28" alt="Kobin" style={{ borderRadius: '7px' }} />
         <span className="nav-wordmark">Kobin</span>
       </Link>
       <div className="nav-links">
