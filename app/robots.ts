@@ -17,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Applebot',      allow: '/' },   // Apple Intelligence
       { userAgent: 'anthropic-ai',  allow: '/' },
     ],
-    sitemap: 'https://kern-web.vercel.app/sitemap.xml',
+    sitemap: 'https://kobin.team/sitemap.xml',
   }
 }

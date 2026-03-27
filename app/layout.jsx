@@ -5,7 +5,7 @@ import './globals.css'
 // Replace 'https://kern.app' with your real domain the day you get it.
 // This one line fixes: OG images, canonical URLs, sitemap, and AI citations.
 
-const SITE_URL = 'https://kern-web.vercel.app'
+const SITE_URL = 'https://kobin.team'
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -18,12 +18,12 @@ const orgSchema = {
       description: 'Agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace.',
       foundingDate: '2026',
       sameAs: [
-        'https://twitter.com/kern_app',
-        'https://linkedin.com/company/kern-app',
+        'https://twitter.com/kobin_app',
+        'https://www.linkedin.com/in/arham-mirkar/',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
-        email: 'hello@kobin.app',
+        email: 'support@kobin.team',
         contactType: 'customer support',
       },
     },
