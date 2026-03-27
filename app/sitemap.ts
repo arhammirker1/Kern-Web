@@ -4,7 +4,7 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://kobin.team',
+      url: 'https://www.kobin.team/',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
