@@ -1,7 +1,6 @@
 # Kern Marketing Site
 
-Next.js 15 · TypeScript · Supabase · Vercel
-
+Arham Mirkar
 ---
 
 ## File Structure
