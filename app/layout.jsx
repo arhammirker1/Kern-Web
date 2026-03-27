@@ -102,6 +102,9 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/kobin_icon_32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/kobin_icon_180.png" />
       </head>
       <body>{children}</body>
     </html>

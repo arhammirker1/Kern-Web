@@ -9,11 +9,12 @@ const MASCOT_SRC =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAGvCAYAAABy0V2hAAEAAElEQVR4nOxdd5gV1fl+z9Q7t28BFlilKgIWQEUpdsC6doMtxlhiTTEm9miiv5ii0cSYaGxYo9hl7QWMwooiUkUUkA7L1ttm5k49vz/OPbN3l6UYscV5n2efhd27994ZO3O+uznnnN87AIQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIEeL/FrKjnzJEiBAhvvMgRNzq773fByEEhHReliml9NHnsm0bsixDEATYtg1FUSCKIorFImRZhu/7cBwH8XgcxWIRkiTB8zyoqgrHcYK/kSQJtm0DADyPQpZlOI4DTdOg6zqi0SgIREiyAEkSY4cxX099Ap+6IBBB4UEgEnzqwrZtRKNROI4D27bR3d2NWCyGWCyGWCyGWCyGWCwGAMhms8hms8hkMujo6MDOnTsRj8cRCoXQ1NSEeDyOWCyGWCyGXC6HQqGAYrGIdDqNRCIBAKiurkYsFgMA5PN5FItF5PN5ZLNZFItF5HI5lEolFAoFFAoFVFRUIJfLQZIkuK4LVVXhuq7380VRgG3bcBwHtm0jGo0im80in8+jWCzCcRwUCgUUi0UAQCaTge/7yGazKJVKqKyshG3byGazKBaLKBQKKJVKqKqoQKFQQKFQgG3byGazKBQKKJVKKJVKKJfLKJVKcF0XxWIRxWIRhUIBxWIRhUIBxWIR5XIZpVIJxWIR5XIZxWIRhUIBxWIRpVIJpVIJlUoFpWIRpWIR5XIZpVIJpVIJpVIJpVIJpVIJpVIJpVIJpVIJuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwO+X9wTiNSKkMWGQAAAABJRU5ErkJggg=='
 
 const KernMark = ({ size = 16 }) => (
-  <svg viewBox="0 0 16 16" fill="none" width={size} height={size}>
-    <rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" />
-    <rect x="9.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5" />
-    <rect x="1.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5" />
-    <rect x="9.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.3" />
+  <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
+    <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
+    <rect x="148" y="128" width="52" height="256" rx="26" fill="#F0EDE6"/>
+    <line x1="196" y1="238" x2="352" y2="108" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
+    <line x1="196" y1="272" x2="352" y2="402" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
+    <circle cx="196" cy="256" r="34" fill="#5B4FE8"/>
   </svg>
 )
 

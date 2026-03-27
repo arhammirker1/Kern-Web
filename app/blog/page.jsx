@@ -3,12 +3,13 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Nav from '../../components/Nav'
 import { supabase } from '../../lib/supabase'
-const KernMark = () => (
-  <svg viewBox="0 0 16 16" fill="none" width="16" height="16">
-    <rect x="1.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" />
-    <rect x="9.5" y="1.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5" />
-    <rect x="1.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.5" />
-    <rect x="9.5" y="9.5" width="5" height="5" rx="1.2" fill="#F6F4EF" opacity="0.3" />
+const KernMark = ({ size = 16 }) => (
+  <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
+    <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
+    <rect x="148" y="128" width="52" height="256" rx="26" fill="#F0EDE6"/>
+    <line x1="196" y1="238" x2="352" y2="108" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
+    <line x1="196" y1="272" x2="352" y2="402" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
+    <circle cx="196" cy="256" r="34" fill="#5B4FE8"/>
   </svg>
 )
 
