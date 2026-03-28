@@ -119,7 +119,7 @@ export default function DocsPage() {
               { href: '#crm', title: '🤝 CRM', desc: 'Track leads, investors, partners. Log outcomes, set follow-up reminders, tag and filter.' },
               { href: '#calendar', title: '📅 Calendar', desc: 'Day / Week / Month. Google Meet auto-creation. Two-stage meeting reminders.' },
               { href: '#linkedin', title: '✍️ LinkedIn Studio', desc: 'Draft, schedule, and track LinkedIn posts. Impressions and engagement per post.' },
-              { href: '#ai', title: '🤖 AI Layer', desc: 'Context-aware intelligence across every module. @AI in inbox, command bar, daily briefs, and task intelligence.' },
+              { href: '#ai', title: '🤖 AI Layer', desc: 'Groq-powered (Llama 3.3 70B) intelligence built into the inbox. @AI mentions with real-time streaming, full workspace context injection, and a roadmap through command bar, briefs, and automations.' },
             ].map(({ href, title, desc }) => (
               <a className="feature-card" href={href} key={href}>
                 <h4>{title}</h4>
@@ -476,8 +476,8 @@ Enter                  → send message`}</code>
                 ['5-min meeting reminder', '5 minutes before any calendar event', 'Slide-in toast in top-right corner with join button'],
                 ['1-min meeting interrupt', '1 minute before any calendar event', 'Full-screen modal + Browser Notification API push (visible when tab is unfocused)'],
                 ['Task assignment', 'Task assigned to a team member', 'Slide-in toast with task title and priority badge + Browser Notification API push'],
-                ['Daily brief', 'Every morning at 8am', 'Push notification with 6-section workspace briefing — each section tappable to the relevant area'],
-                ['Client silence nudge', 'Client has not replied in 4+ days with tasks awaiting input', 'Notification with AI-drafted follow-up message preview and one-tap send flow'],
+                ['Daily brief', 'Every morning at 8am — Phase 2', 'Push notification with 6-section workspace briefing — each section tappable to the relevant area'],
+                ['Client silence nudge', 'Client has not replied in 4+ days with tasks awaiting input — Phase 2', 'Notification with AI-drafted follow-up message preview and one-tap send flow'],
               ].map(([t, tr, d]) => (
                 <tr key={t}><td>{t}</td><td>{tr}</td><td>{d}</td></tr>
               ))}
@@ -498,28 +498,33 @@ Enter                  → send message`}</code>
             <p><strong>The core difference:</strong> Command Center AI sees everything — because everything lives in one place. Slack&apos;s AI sees messages. Asana&apos;s AI sees tasks. Notion&apos;s AI sees documents. None of them see the full picture. This is the moat.</p>
           </div>
 
-          <h3 className="doc-h3">Model options</h3>
-          <table className="doc-table">
-            <thead>
-              <tr><th>Provider</th><th>Model</th><th>Best for</th></tr>
-            </thead>
-            <tbody>
-              {[
-                ['Groq (free)', 'Llama 3.3 70B', 'Default — all operational tasks, summaries, drafts, briefs. No API key required.'],
-                ['Anthropic', 'Claude Sonnet 4.6', 'Nuanced client communication, proposals, complex reasoning.'],
-                ['OpenAI', 'GPT-4o', 'Fast responses, users already in the OpenAI ecosystem.'],
-                ['Google', 'Gemini 1.5 Pro', 'Users in Google Workspace, tight Calendar and Drive context.'],
-              ].map(([p, m, b]) => (
-                <tr key={p}><td>{p}</td><td><code style={{ fontFamily: "'Geist Mono',monospace", fontSize: '12px' }}>{m}</code></td><td>{b}</td></tr>
-              ))}
-            </tbody>
-          </table>
+          <h3 className="doc-h3">Model (Phase 1)</h3>
+<p className="doc-p">All users get AI on day one with no setup required. Command Center connects to Groq's free inference tier running Llama 3.3 70B — up to 14,400 requests per day, sufficient for any agency founder's daily usage. Bring-your-own-model support (Anthropic, OpenAI, Google) is planned for Phase 2.</p>
 
-          <p className="doc-p">To connect your own model: Settings → AI Integrations → select provider → enter API key. Keys are stored server-side, encrypted at rest, and never exposed to the browser. You can toggle between providers at any time.</p>
+<table className="doc-table">
+  <thead>
+    <tr><th>Provider</th><th>Model</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    {[
+      ['Groq', 'Llama 3.3 70B', 'Live — free, no API key required'],
+      ['Anthropic', 'Claude Sonnet 4.6', 'Phase 2 — bring your own key'],
+      ['OpenAI', 'GPT-4o', 'Phase 2 — bring your own key'],
+      ['Google', 'Gemini 1.5 Pro', 'Phase 2 — bring your own key'],
+    ].map(([p, m, b]) => (
+      <tr key={p}><td>{p}</td><td><code style={{ fontFamily: "'Geist Mono',monospace", fontSize: '12px' }}>{m}</code></td><td>{b}</td></tr>
+    ))}
+  </tbody>
+</table>
 
           {/* ── AI INBOX ── */}
-          <h2 className="doc-h2" id="ai-inbox">@AI in the Inbox</h2>
-          <p className="doc-p">In any project room, group room, or direct message, typing <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>@AI</code> triggers an AI response inline as a message in the thread — purple avatar, AI label, subtle background, streamed text. Full project and conversation context is injected automatically.</p>
+          <h2 className="doc-h2" id="ai-inbox">@AI in the Inbox <span className="badge badge-vi" style={{ marginLeft: '8px', fontSize: '11px' }}>Live</span></h2>
+          <p className="doc-p">In any project room, group room, or direct message, typing <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>@AI</code> triggers a streamed AI response inline as a message in the thread. The response renders token by token with a purple avatar, AI label, and subtle background. A copy button appears on hover. Full workspace context is silently injected before every request — the model never receives a bare prompt.</p>
+
+          <div className="doc-callout" style={{ background: 'rgba(91,91,214,0.06)', borderColor: 'rgba(124,58,237,0.3)' }}>
+            <div className="doc-callout-icon">⚡</div>
+            <p><strong>Context injected per request:</strong> Workspace identity · Active project (name, status, dates) · All active tasks (priority, status, due dates, overdue flags) · Upcoming calendar events (next 7 days) · Vault files (titles, descriptions, types) · CRM contacts (pipeline stage, deal value) · Last 20 messages in the current room. Context is automatically scoped to the active project when in a project room.</p>
+          </div>
 
           <table className="doc-table">
             <thead>
@@ -533,7 +538,9 @@ Enter                  → send message`}</code>
                 ['@AI prepare me for tomorrow\'s call', 'Call prep: client profile, open issues, last conversation summary, pending deliverables, suggested talking points.'],
                 ['@AI turn this message into a task', 'Forwards client message — AI pre-fills the entire task form: title, priority, suggested assignee, suggested due date.'],
                 ['@AI is this project on track?', 'Compares task completion rate against project timeline — flags if current pace will miss the deadline.'],
+                ['@AI what did we agree last time?', 'Scans previous messages for decisions, commitments, and agreed next steps.'],
                 ['@AI summarise this week\'s activity', 'Tasks completed, messages exchanged, files uploaded, meetings held — weekly digest in plain language.'],
+                ['@AI write a proposal intro for this client', 'Uses client record, project brief from vault, and CRM notes to draft a personalised proposal opening.'],
               ].map(([q, a]) => (
                 <tr key={q}><td style={{ fontFamily: "'Geist Mono',monospace", fontSize: '12px' }}>{q}</td><td>{a}</td></tr>
               ))}
@@ -541,8 +548,8 @@ Enter                  → send message`}</code>
           </table>
 
           {/* ── AI COMMAND BAR ── */}
-          <h2 className="doc-h2" id="ai-command">Global AI Command Bar</h2>
-          <p className="doc-p">Press <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>Cmd/Ctrl + K</code> from anywhere to open the floating command bar. Unlike inbox @AI which is scoped to one room, the command bar has full workspace access — all projects, all clients, all tasks, complete calendar, entire CRM.</p>
+          <h2 className="doc-h2" id="ai-command">Global AI Command Bar <span className="badge badge-am" style={{ marginLeft: '8px', fontSize: '11px' }}>Phase 2</span></h2>
+          <p className="doc-p">A floating command bar accessible from anywhere via <code style={{ background: 'var(--parch)', padding: '2px 6px', borderRadius: '4px', fontFamily: "'Geist Mono',monospace", fontSize: '13px' }}>Cmd/Ctrl + K</code>. Unlike inbox @AI which is scoped to one room, the command bar will have full workspace access — all projects, all clients, all tasks, complete calendar, entire CRM. Shipping in Phase 2.</p>
 
           <table className="doc-table">
             <thead>
@@ -563,7 +570,7 @@ Enter                  → send message`}</code>
           </table>
 
           {/* ── AI BRIEFS ── */}
-          <h2 className="doc-h2" id="ai-briefs">Daily &amp; pre-meeting briefs</h2>
+          <h2 className="doc-h2" id="ai-briefs">Daily &amp; Pre-Meeting Briefs <span className="badge badge-am" style={{ marginLeft: '8px', fontSize: '11px' }}>Phase 2</span></h2>
 
           <h3 className="doc-h3">Daily morning brief — 8am</h3>
           <p className="doc-p">Every morning at 8am, Command Center auto-generates a personalised workspace briefing delivered as a notification. Six sections, each tappable to navigate directly to the relevant area.</p>
@@ -608,8 +615,8 @@ Enter                  → send message`}</code>
           </table>
 
           {/* ── AI TASKS ── */}
-          <h2 className="doc-h2" id="ai-tasks">Task intelligence</h2>
-          <p className="doc-p">AI assists at every stage of task creation and management. All suggestions are editable before saving — AI suggests, founder confirms.</p>
+          <h2 className="doc-h2" id="ai-tasks">Task Intelligence <span className="badge badge-am" style={{ marginLeft: '8px', fontSize: '11px' }}>Phase 3</span></h2>
+          <p className="doc-p">AI will assist at every stage of task creation and management — suggesting priority, generating descriptions, breaking tasks into subtasks, suggesting assignees, and drafting client messages. All suggestions editable before saving. Shipping in Phase 3.</p>
 
           <table className="doc-table">
             <thead>
@@ -630,8 +637,8 @@ Enter                  → send message`}</code>
           </table>
 
           {/* ── AI AUTOMATIONS ── */}
-          <h2 className="doc-h2" id="ai-automations">Background automations</h2>
-          <p className="doc-p">In addition to on-demand AI, Command Center runs background monitoring processes that proactively surface insights without you asking.</p>
+          <h2 className="doc-h2" id="ai-automations">Background Automations <span className="badge badge-am" style={{ marginLeft: '8px', fontSize: '11px' }}>Phases 2 & 3</span></h2>
+          <p className="doc-p">Command Center will run background monitoring processes that proactively surface insights without the founder asking. Client silence detection and project risk monitoring ship in Phase 2. Weekly client reports and conversation-to-task detection ship in Phase 3.</p>
 
           <h3 className="doc-h3">Client silence detection — every 6 hours</h3>
           <p className="doc-p">Scans all active client projects for clients who have not replied in 4+ days while tasks are waiting on their input or approval. AI generates a draft follow-up message in your voice and surfaces it as a notification with a one-tap review and send flow.</p>
