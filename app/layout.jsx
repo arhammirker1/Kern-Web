@@ -19,9 +19,22 @@ const orgSchema = {
       description: 'Agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace.',
       foundingDate: '2026',
       sameAs: [
-        'https://twitter.com/kobin_app',
-        'https://www.linkedin.com/company/kobin-app',
+        'https://www.instagram.com/kobin.ai/',
+        'https://www.linkedin.com/company/kobin-app/',
       ],
+```
+
+**In `public/llms.txt` find:**
+```
+- Domain: kobin.team
+```
+
+**Replace with:**
+```
+- Domain: kobin.team
+- Instagram: https://www.instagram.com/kobin.ai/
+- LinkedIn: https://www.linkedin.com/company/kobin-app/
+- Product Hunt: https://www.producthunt.com/products/kobin
       contactPoint: {
         '@type': 'ContactPoint',
         email: 'support@kobin.team',

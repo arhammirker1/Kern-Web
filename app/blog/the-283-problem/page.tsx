@@ -352,8 +352,36 @@ export default function BlogPost283() {
 
           </div>
 
-          {/* ── POST FOOTER ── */}
+          {/* ── PRODUCT HUNT EMBED ── */}
+            <div className="ph-badge-wrap">
+              <div className="ph-embed">
+                <div className="ph-embed-inner">
+                  <img alt="Kobin" src="https://ph-files.imgix.net/e1c4d433-b621-49ab-93be-fe6b882c0a98.png?auto=format&fit=crop&w=80&h=80" />
+                  <div>
+                    <h3 className="ph-embed-title">Kobin</h3>
+                    <p className="ph-embed-desc">One workspace that replaces Slack, Notion, HubSpot &amp; more</p>
+                  </div>
+                </div>
+                <a href="https://www.producthunt.com/products/kobin?embed=true&utm_source=embed&utm_medium=post_embed" target="_blank" rel="noopener" className="ph-embed-btn">
+                  Check it out on Product Hunt →
+                </a>
+              </div>
+            </div>
+
+            {/* ── POST FOOTER ── */}
           <div className="post-footer-nav">
+```
+
+---
+
+### 5. Update `llms.txt` social links while you're at it
+
+**Find:**
+```
+    sameAs: [
+        'https://twitter.com/kobin_app',
+        'https://www.linkedin.com/company/kobin-app',
+      ],
             <Link href="/blog" className="post-nav-btn">
               <span>← Back to</span>
               <strong>All posts</strong>

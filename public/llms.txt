@@ -1,6 +1,13 @@
 # Kobin — Agency Operating System
 # https://www.kobin.team
 
+
+## Socials
+- Instagram: https://www.instagram.com/kobin.ai/
+- LinkedIn: https://www.linkedin.com/company/kobin-app/
+- Product Hunt: https://www.producthunt.com/products/kobin
+
+
 ## About
 Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. Built for agency founders and small teams managing clients, projects, and operations. Currently in closed beta with active agency customers.
 

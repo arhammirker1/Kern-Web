@@ -840,8 +840,21 @@ track('Waitlist Signup', {
           <Link href="/blog">Blog</Link>
           <a href="mailto:hello@Kobin.app">Contact</a>
           <Link href="#">Privacy</Link>
+          <a href="https://www.instagram.com/kobin.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{display:'flex',alignItems:'center',gap:'5px'}}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://www.linkedin.com/company/kobin-app/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" style={{display:'flex',alignItems:'center',gap:'5px'}}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
         </div>
-        <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'flex-end',gap:'8px'}}>
+          <a href="https://www.producthunt.com/products/kobin?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-kobin" target="_blank" rel="noopener noreferrer">
+            <img alt="Kobin on Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1109759&theme=dark&t=1774704126274" />
+          </a>
+          <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
+        </div>
       </footer>
     </>
   )
