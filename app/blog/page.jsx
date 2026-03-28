@@ -97,6 +97,49 @@ export default function BlogPage() {
     <>
       <Nav activePage="blog" />
 
+      {/* Blog page schema for AI crawlers */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'The Kobin Blog',
+            description: 'Essays, guides, and honest writing about running an agency without losing your mind.',
+            url: 'https://www.kobin.team/blog',
+            publisher: {
+              '@type': 'Organization',
+              name: 'Kobin',
+              url: 'https://www.kobin.team',
+            },
+            blogPost: [
+              {
+                '@type': 'BlogPosting',
+                headline: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
+                url: 'https://www.kobin.team/blog/the-283-problem',
+                datePublished: '2026-03-18',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                description: 'The average 5-person agency spends $283/month on Slack, Notion, HubSpot, Linear, and Buffer. Here is the full cost breakdown.',
+              },
+              {
+                '@type': 'BlogPosting',
+                headline: 'The real cost of switching between Slack, Notion and Linear',
+                datePublished: '2026-03-15',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                description: 'Research shows 1.2 months of productivity lost per year to tool switching.',
+              },
+              {
+                '@type': 'BlogPosting',
+                headline: 'How we built a real-time inbox that replaces Slack in 3 weeks',
+                datePublished: '2026-03-12',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                description: 'Technical decisions and lessons from building Kobin\'s inbox with Supabase Realtime.',
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* HERO */}
       <div className="blog-hero reveal">
         <div className="blog-hero-inner">

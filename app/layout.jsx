@@ -5,7 +5,7 @@ import './globals.css'
 // Replace 'https://kern.app' with your real domain the day you get it.
 // This one line fixes: OG images, canonical URLs, sitemap, and AI citations.
 
-const SITE_URL = 'https://kobin.team'
+const SITE_URL = 'https://www.kobin.team'
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -19,7 +19,7 @@ const orgSchema = {
       foundingDate: '2026',
       sameAs: [
         'https://twitter.com/kobin_app',
-        'https://www.linkedin.com/in/arham-mirkar/',
+        'https://www.linkedin.com/company/kobin-app',
       ],
       contactPoint: {
         '@type': 'ContactPoint',
@@ -33,6 +33,11 @@ const orgSchema = {
       url: SITE_URL,
       name: 'Kobin',
       publisher: { '@id': `${SITE_URL}/#organization` },
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${SITE_URL}/blog?q={search_term_string}`,
+        'query-input': 'required name=search_term_string',
+      },
     },
     {
       '@type': 'SoftwareApplication',
@@ -40,13 +45,43 @@ const orgSchema = {
       name: 'Kobin',
       applicationCategory: 'BusinessApplication',
       operatingSystem: 'Web, iOS, Android',
-      offers: {
-        '@type': 'Offer',
-        price: '30',
-        priceCurrency: 'USD',
-        priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
-      },
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'Solo',
+          price: '19',
+          priceCurrency: 'USD',
+          description: 'All 8 modules, up to 3 active projects',
+          priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
+        },
+        {
+          '@type': 'Offer',
+          name: 'Founder',
+          price: '49',
+          priceCurrency: 'USD',
+          description: 'Up to 5 team members, 3 client portals, LinkedIn Studio',
+          priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
+        },
+        {
+          '@type': 'Offer',
+          name: 'Agency',
+          price: '99',
+          priceCurrency: 'USD',
+          description: 'Unlimited team members and client portals, white-label option',
+          priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
+        },
+      ],
       description: 'All-in-one agency workspace: tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer.',
+      featureList: [
+        'Real-time inbox replacing Slack',
+        'Google Drive-backed Vault replacing Notion',
+        'Built-in CRM replacing HubSpot',
+        'Time-horizon task system replacing Linear',
+        'LinkedIn Studio replacing Buffer',
+        'Client portal included in all plans',
+        'Google Calendar and Meet integration',
+        'AI layer with @AI mentions and command bar',
+      ],
     },
   ],
 }

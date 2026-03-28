@@ -1,31 +1,32 @@
-// NEW FILE: app/sitemap.ts
 import { MetadataRoute } from 'next'
+
+const SITE = 'https://www.kobin.team'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://www.kobin.team/',
+      url: `${SITE}/`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 1,
+      priority: 1.0,
     },
     {
-      url: 'https://www.kobin.team/blog',
+      url: `${SITE}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://www.kobin.team/blog/the-283-problem',
-      lastModified: new Date('2026-03-18'),
-      changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: 'https://www.kobin.team/docs',
+      url: `${SITE}/blog/the-283-problem`,
+      lastModified: new Date('2026-03-18'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/docs`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
   ]
 }

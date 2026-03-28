@@ -1,4 +1,6 @@
 'use client'
+
+
 import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import Nav from '../components/Nav'
@@ -116,6 +118,71 @@ export default function Home() {
   return (
     <>
       <Nav />
+
+      {/* ── FAQ + PRODUCT SCHEMA for AI/SGE ── */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'FAQPage',
+                mainEntity: [
+                  {
+                    '@type': 'Question',
+                    name: 'What is Kobin?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, and LinkedIn Studio — all sharing one data layer.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'What tools does Kobin replace?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Kobin replaces Slack (real-time inbox), Notion (vault and docs), HubSpot (CRM), Linear or Asana (task management), and Buffer or Taplio (LinkedIn scheduling). It also includes a built-in client portal that replaces tools like Basecamp or custom portal setups.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'How much does Kobin cost?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Kobin has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals), and Agency at $99/month (unlimited team members and client portals). All plans include a 14-day free trial with no credit card required.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Does Kobin have a client portal?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click and require no separate tool or subscription.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Is Kobin a Slack alternative for agencies?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a direct Slack alternative. It adds file attachments, message replies, forwards, unread badges, and @AI mentions that trigger inline AI responses with full project context.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Does Kobin integrate with Google Drive?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Kobin\'s Vault feature is backed by Google Drive using the drive.file scope — meaning it only accesses files it creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.',
+                    },
+                  },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* ── HERO ── */}
       <section className="hero" id="waitlist">

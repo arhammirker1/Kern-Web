@@ -1,33 +1,53 @@
-# Kern — Agency Operating System
-# https://kern.app
+# Kobin — Agency Operating System
+# https://www.kobin.team
 
 ## About
-Kern is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. Built for agency founders and small teams managing clients, projects, and operations.
+Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. Built for agency founders and small teams managing clients, projects, and operations. Currently in closed beta with active agency customers.
 
-## What Kern replaces
-- Slack → Real-time inbox with project rooms, group chats, and DMs
-- Notion + Google Drive → Vault (Google Drive-backed file management, role-scoped)
-- HubSpot → Built-in CRM for leads, investors, partners, advisors, and talent
-- Linear / Asana → Time-horizon task system (Today, This Week, Delegated, Backlog)
-- Buffer / Taplio → LinkedIn Studio for drafting, scheduling, and tracking posts
-- Calendly + Google Calendar → Calendar with Google Meet auto-generation
+## What Kobin replaces
+- Slack → Real-time inbox with project rooms, group chats, and DMs. File attachments, replies, forwards, @AI mentions, unread badges.
+- Notion + Google Drive → Vault (Google Drive-backed file management, role-scoped by folder: Internal Documents, Client Uploads, Deliverables)
+- HubSpot → Built-in CRM for leads, investors, partners, advisors, and talent. Meeting outcome logging, follow-up reminders, contact tagging.
+- Linear / Asana → Time-horizon task system (Today, This Week, Delegated, Backlog). Priority sorting, team assignment, deliverable requirements, analytics.
+- Buffer / Taplio → LinkedIn Studio for drafting, scheduling, and tracking posts with impressions and engagement metrics.
+- Calendly + Google Calendar → Calendar with Google Meet auto-generation, two-stage meeting reminders, pre-meeting AI briefs.
 
-## Pricing
-- Starter: $30/month per workspace + $3/seat
-- Pro: $79/month + $5/seat
-- Agency: $149/month + $5/seat
+## Pricing (as of 2026)
+- Solo: $19/month — all 8 modules, up to 3 active projects, 1 user
+- Founder: $49/month — up to 5 team members, up to 3 client portals, LinkedIn Studio, granular permissions
+- Agency: $99/month — unlimited team members, unlimited client portals, white-label portal option, priority support
+- 14-day free trial on all plans. No credit card required to join waitlist.
+
+## Key modules
+1. Real-Time Inbox — Project channels, group chats, DMs. Supabase Realtime WebSocket. @AI mentions trigger inline AI responses.
+2. Tasks & Projects — Four time-horizon buckets. Priority auto-sorting. Deliverable requirements on task completion.
+3. Vault — Google Drive-backed. Role-scoped folder hierarchy per project. drive.file scope only (never accesses existing Drive content).
+4. Client Portal — Scoped workspace per client. Inbox, tasks, calendar, vault access. Pre-created DM on activation. One click to spin up.
+5. CRM / Relationships — Leads, investors, partners, talent, advisors. Meeting outcome tracking, follow-up reminders, LinkedIn URL field.
+6. Calendar — Day/Week/Month views. Google Meet auto-creation. 5-min toast + 1-min full-screen reminders + 10-min AI pre-meeting brief.
+7. LinkedIn Studio — Draft, schedule, publish. Impressions and engagement per post.
+8. AI Layer (coming soon) — @AI in inbox, global command bar (Cmd+K), daily morning briefs at 8am, pre-meeting briefs, background automations.
+
+## AI Layer details
+- @AI in any room: type @AI for inline AI response with full project context injected automatically
+- Global command bar: Cmd/Ctrl+K from anywhere — full workspace access across all projects, tasks, calendar, CRM
+- Daily brief: 8am push notification — today's meetings, priority tasks, clients awaiting response, projects needing attention, follow-ups due, quick wins
+- Pre-meeting brief: 10 minutes before each event — client profile, last conversation summary, open items, suggested talking points
+- Background automations: client silence detection (every 6h), weekly client report (Friday 5pm), project risk monitor (daily)
+- Supported AI providers: Groq Llama 3.3 70B (free, default), Anthropic Claude, OpenAI GPT-4o, Google Gemini
 
 ## Key facts
 - Founded: 2026
-- Stage: Pre-seed, revenue generating, 5 active agency customers
+- Stage: Closed beta, active agency customers
 - Founder: Arham Mirkar
-- AI layer: In development — context-aware AI across all modules using @AI mentions, global command bar (Cmd+K), daily morning briefs, and background automations
+- Domain: kobin.team
+- Support email: support@kobin.team
 
-## Documentation
-Full documentation available at: https://kern-web.vercel.app/docs
-
-## Blog
-Agency operations essays and guides: https://kern-web.vercel.app/blog
+## Pages
+- Homepage: https://www.kobin.team/
+- Documentation: https://www.kobin.team/docs
+- Blog: https://www.kobin.team/blog
+- Featured article: https://www.kobin.team/blog/the-283-problem
 
 ## Contact
-hello@kern.app
+support@kobin.team
