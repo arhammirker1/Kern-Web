@@ -1,5 +1,6 @@
 // NEW
 import './globals.css'
+import MixpanelInit from '../components/MixpanelInit'
 
 // ── Placeholder until you get your domain ──
 // Replace 'https://kern.app' with your real domain the day you get it.
@@ -141,7 +142,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/kobin_icon_32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/kobin_icon_180.png" />
       </head>
-      <body>{children}</body>
+      <body>
+  <MixpanelInit />
+  {children}
+</body>
     </html>
   )
 }

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Nav from '../../components/Nav'
 import { supabase } from '../../lib/supabase'
+import { track } from '../../lib/mixpanel'
 const KernMark = ({ size = 16 }) => (
   <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
     <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
@@ -45,7 +46,8 @@ export default function BlogPage() {
   }
 
   setNewsletterSuccess(true)
-  setNewsletterEmail('')
+setNewsletterEmail('')
+track('Newsletter Signup', { source: 'blog' })
 }
 
   const posts = [
