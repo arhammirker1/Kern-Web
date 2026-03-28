@@ -7,7 +7,7 @@ export default function Nav({ activePage }) {
   return (
     <nav>
       <Link href="/" className="nav-logo">
-        <img src="/dark_cream.svg" width="28" height="28" alt="Kobin" />
+        <img src="/logo_1.png" width="28" height="28" alt="Kobin" />
         <span className="nav-wordmark">Kobin</span>
       </Link>
       <div className="nav-links">
