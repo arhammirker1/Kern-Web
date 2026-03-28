@@ -5,7 +5,7 @@ import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import Nav from '../components/Nav'
 import { supabase } from '../lib/supabase'
-import { track } from '../lib/mixpanel'
+import { track, identifyUser } from '../lib/mixpanel'
 
 // ─── Base64 mascot image (stored outside component to avoid re-creation) ───
 const MASCOT_SRC =
@@ -91,6 +91,7 @@ export default function Home() {
     // Already on the list
     if (error.code === '23505') {
   setResult({ message: "You're already on the list! Check your inbox.", refLink: null })
+  identifyUser(email)
   track('Waitlist Signup Duplicate', { source })
   return
 }
@@ -101,10 +102,20 @@ export default function Home() {
 
   const refLink = `${window.location.origin}${window.location.pathname}?ref=${data.referral_code}`
 setResult({ message: `You're #${data.position} on the waitlist!`, refLink })
+
+// Identify the user now that we have their email
+identifyUser(email, {
+  'Waitlist Position': data.position,
+  'Signup Source': source,
+  'Referred By': urlRef || null,
+  'Referral Code': data.referral_code,
+})
+
 track('Waitlist Signup', {
   source,
   position: data.position,
   referred_by: urlRef || null,
+  referral_code: data.referral_code,
 })
   clearEmail('')
 }
@@ -113,13 +124,13 @@ track('Waitlist Signup', {
   navigator.clipboard.writeText(link).then(() => {
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
-    track('Referral Link Copied', { link })
+    track('Referral Link Copied', { link, source: 'hero' })
   })
 }, [])
 
   function scrollToWaitlist(e) {
   e?.preventDefault()
-  track('CTA Button Clicked', { button: 'pricing_join_waitlist' })
+  track('CTA Clicked', { button: 'pricing_join_waitlist', section: 'pricing' })
   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
   setTimeout(() => document.getElementById('email1')?.focus(), 600)
 }
