@@ -10,12 +10,14 @@
     "link": "next link"
   },
   "dependencies": {
+    "@react-email/components": "^1.0.10",
     "@supabase/supabase-js": "^2.49.0",
     "@vercel/analytics": "^2.0.1",
     "mixpanel-browser": "^2.77.0",
     "next": "^15.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "resend": "^6.9.4"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
