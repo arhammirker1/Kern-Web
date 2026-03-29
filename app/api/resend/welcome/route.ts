@@ -7,19 +7,18 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 // Supabase signs webhooks with a shared secret
 function verifySupabaseSignature(req: NextRequest, body: string): boolean {
   const secret = process.env.SUPABASE_WEBHOOK_SECRET
-  if (!secret) return true // skip verification in dev if not set
+  if (!secret) return true
   const signature = req.headers.get('x-supabase-signature')
-  if (!signature) return false
-  const crypto = require('crypto')
-  const expected = crypto
-    .createHmac('sha256', secret)
-    .update(body)
-    .digest('hex')
-  return signature === expected
+  return signature === secret  // ← plain comparison, not HMAC
 }
 
 export async function POST(req: NextRequest) {
   const rawBody = await req.text()
+
+    // DEBUG - remove after fixing
+  console.log('SECRET:', process.env.SUPABASE_WEBHOOK_SECRET)
+  console.log('HEADER:', req.headers.get('x-supabase-signature'))
+  console.log('MATCH:', req.headers.get('x-supabase-signature') === process.env.SUPABASE_WEBHOOK_SECRET)
 
   if (!verifySupabaseSignature(req, rawBody)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -66,3 +65,4 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: err.message }, { status: 500 })
   }
 }
+
