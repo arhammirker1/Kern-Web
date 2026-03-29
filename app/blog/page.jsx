@@ -53,6 +53,14 @@ setNewsletterEmail('')
 
   const posts = [
     {
+      thumbClass: 'thumb-vi', thumbText: 'Slack\nNotion\nAsana', thumbLabel: 'COMPARISON GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'Slack, Notion, Asana, HubSpot: Why Agencies Are Replacing Them All With One Tool',
+      excerpt: 'Four tools, four invoices, four places to check for a single client project. Here is a direct comparison — and what switching to one workspace actually saves you.',
+      meta: 'Mar 25 · 10 min',
+      href: '/blog/slack-notion-asana-hubspot-alternatives',
+    },
+    {
       thumbClass: 'thumb-dark', thumbText: 'context\nswitching', thumbLabel: 'DATA ESSAY',
       category: 'cat-problem', catLabel: 'The problem',
       title: 'The real cost of switching between Slack, Notion and Linear',
@@ -224,8 +232,8 @@ setNewsletterEmail('')
         <div className="blog-grid-inner reveal">
           <div className="grid-header"><h2>All posts</h2></div>
           <div className="posts-grid">
-            {posts.map(({ thumbClass, thumbText, thumbLabel, category, catLabel, title, excerpt, meta }) => (
-              <a href="#" className="post-card" key={title}>
+            {posts.map(({ thumbClass, thumbText, thumbLabel, category, catLabel, title, excerpt, meta, href }) => (
+              <a href={href || '#'} className="post-card" key={title}>
                 <div className={`post-thumb ${thumbClass}`}>
                   {thumbText.split('\n').map((line, i) => (
                     <span key={i}>{line}{i < thumbText.split('\n').length - 1 && <br />}</span>
