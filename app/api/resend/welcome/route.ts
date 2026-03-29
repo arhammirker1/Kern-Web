@@ -15,11 +15,6 @@ function verifySupabaseSignature(req: NextRequest, body: string): boolean {
 export async function POST(req: NextRequest) {
   const rawBody = await req.text()
 
-    // DEBUG - remove after fixing
-  console.log('SECRET:', process.env.SUPABASE_WEBHOOK_SECRET)
-  console.log('HEADER:', req.headers.get('x-supabase-signature'))
-  console.log('MATCH:', req.headers.get('x-supabase-signature') === process.env.SUPABASE_WEBHOOK_SECRET)
-
   if (!verifySupabaseSignature(req, rawBody)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
