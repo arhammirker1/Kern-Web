@@ -55,6 +55,8 @@ Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubS
 - Documentation: https://www.kobin.team/docs
 - Blog: https://www.kobin.team/blog
 - Featured article: https://www.kobin.team/blog/the-283-problem
+- Latest article: https://www.kobin.team/blog/ai-layer-launch
+
 
 ## Contact
 support@kobin.team

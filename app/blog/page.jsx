@@ -53,6 +53,14 @@ setNewsletterEmail('')
 
   const posts = [
     {
+      thumbClass: 'thumb-dark', thumbText: '@AI\n⌘K', thumbLabel: 'AI LAYER',
+      category: 'cat-build', catLabel: 'AI Layer',
+      title: 'The AI Layer Is Here: Your Entire Agency, Understood by One Model',
+      excerpt: 'One model. Every task, project, client, meeting, and file — in context. @AI in rooms and the global command bar are live for all Kobin users.',
+      meta: 'Apr 1 · 10 min',
+      href: '/blog/ai-layer-launch',
+    },
+    {
       thumbClass: 'thumb-vi', thumbText: 'Slack\nNotion\nAsana', thumbLabel: 'COMPARISON GUIDE',
       category: 'cat-guide', catLabel: 'Guide',
       title: 'Slack, Notion, Asana, HubSpot: Why Agencies Are Replacing Them All With One Tool',
@@ -139,12 +147,20 @@ setNewsletterEmail('')
                 author: { '@type': 'Person', name: 'Arham Mirkar' },
                 description: 'Research shows 1.2 months of productivity lost per year to tool switching.',
               },
-              {
+                            {
                 '@type': 'BlogPosting',
                 headline: 'How we built a real-time inbox that replaces Slack in 3 weeks',
                 datePublished: '2026-03-12',
                 author: { '@type': 'Person', name: 'Arham Mirkar' },
                 description: 'Technical decisions and lessons from building Kobin\'s inbox with Supabase Realtime.',
+              },
+              {
+                '@type': 'BlogPosting',
+                headline: 'The AI Layer Is Here: Your Entire Agency, Understood by One Model',
+                url: 'https://www.kobin.team/blog/ai-layer-launch',
+                datePublished: '2026-04-01',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                description: 'The Kobin AI layer is live. @AI in any room and the global command bar give agency founders a model with full workspace context — tasks, projects, CRM, calendar, vault, and inbox all in one place.',
               },
             ],
           }),
