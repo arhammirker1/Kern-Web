@@ -128,9 +128,15 @@ track('Waitlist Signup', {
   })
 }, [])
 
-  function scrollToWaitlist(e) {
+  function scrollToWaitlist(e, section = 'unknown') {
   e?.preventDefault()
-  track('CTA Clicked', { button: 'pricing_join_waitlist', section: 'pricing' })
+  track('CTA Clicked', {
+    button: 'join_waitlist',
+    section,
+    scroll_pct_at_click: Math.round(
+      ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
+    ),
+  })
   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
   setTimeout(() => document.getElementById('email1')?.focus(), 600)
 }
@@ -703,7 +709,7 @@ track('Waitlist Signup', {
                 <li>Google Drive connected</li>
                 <li>Web push notifications</li>
               </ul>
-              <button className="plan-btn" onClick={scrollToWaitlist}>Join Waitlist</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_solo')}>Join Waitlist</button>
             </div>
 
             {/* Founder (best) */}
@@ -721,7 +727,7 @@ track('Waitlist Signup', {
                 <li>Granular permissions (12 toggles)</li>
                 <li>Unlimited projects</li>
               </ul>
-              <button className="plan-btn" onClick={scrollToWaitlist}>Get Founding Price</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_founder')}>Get Founding Price</button>
             </div>
 
             {/* Agency */}
@@ -737,7 +743,7 @@ track('Waitlist Signup', {
                 <li>White-label portal option</li>
                 <li>Priority support</li>
               </ul>
-              <button className="plan-btn" onClick={scrollToWaitlist}>Join Waitlist</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_agency')}>Join Waitlist</button>
             </div>
           </div>
           <p className="pricing-note">14-day free trial on all plans · No credit card to join waitlist</p>
