@@ -123,7 +123,7 @@ export default function BlogPost283() {
               This is the $283 problem. And it&apos;s costing you a lot more than the monthly invoice.
             </p>
 
-            <h2 id="the-stack">The stack audit every founder avoids</h2>
+            <h2 id="the-stack">How much does a 5-person agency spend on SaaS tools?</h2>
             <p>
               Let&apos;s do the math that nobody does. Here is the tool stack of a typical 5-person digital or creative agency in 2026, pulled from published pricing pages:
             </p>
@@ -312,7 +312,7 @@ export default function BlogPost283() {
               {[
                 {
                   q: 'How much does the average 5-person agency spend on SaaS tools per month?',
-                  a: 'Based on published pricing pages as of March 2026, a typical 5-person agency running Slack, Notion, HubSpot Starter, Linear, and Buffer spends between $203 and $504 per month — a median of approximately $283/month, or $3,396 per year. This excludes Google Workspace, Calendly, Zapier, and other common additions to the stack.',
+                  a: 'The median is approximately $283/month ($3,396/year) for Slack, Notion, HubSpot Starter, Linear, and Buffer. Based on published pricing pages as of March 2026, this ranges from $203 to $504 depending on plan tier, excluding Google Workspace, Calendly, and Zapier.',
                 },
                 {
                   q: 'How much productivity does context switching actually cost?',

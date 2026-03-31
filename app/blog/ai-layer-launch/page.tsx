@@ -5,7 +5,7 @@ export const metadata = {
   title: "The AI Layer Is Here: Your Entire Agency, Understood by One Model | Kobin",
   description: 'Kobin\'s AI layer is now live. Ask @AI anything inside any room, or open the global command bar from anywhere. Create tasks, query your pipeline, get meeting briefs — all from one model that sees your full workspace.',
   keywords: ['agency AI assistant', 'AI task management', 'AI command bar', 'agency operating system AI', 'kobin AI layer', '@AI inbox'],
-  alternates: { canonical: 'https://kobin.team/blog/ai-layer-launch' },
+  alternates: { canonical: 'https://www.kobin.team/blog/ai-layer-launch' },
   openGraph: {
     title: "The AI Layer Is Here: Your Entire Agency, Understood by One Model",
     description: 'One model. Every task, project, client, meeting, and file — in context. The Kobin AI layer is live.',

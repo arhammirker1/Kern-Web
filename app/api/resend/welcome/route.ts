@@ -5,11 +5,18 @@ import { WelcomeEmail } from '../../../../emails/WelcomeEmail'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Supabase signs webhooks with a shared secret
+import crypto from 'crypto'
+
 function verifySupabaseSignature(req: NextRequest, body: string): boolean {
   const secret = process.env.SUPABASE_WEBHOOK_SECRET
   if (!secret) return true
   const signature = req.headers.get('x-supabase-signature')
-  return signature === secret  // ← plain comparison, not HMAC
+  if (!signature) return false
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(body)
+    .digest('hex')
+  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))
 }
 
 export async function POST(req: NextRequest) {

@@ -10,6 +10,22 @@
       ],
       "destination": "https://www.kobin.team/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-forwarded-proto",
+          "value": "http"
+        },
+        {
+          "type": "host",
+          "value": "kobin.team"
+        }
+      ],
+      "destination": "https://www.kobin.team/$1",
+      "permanent": true
     }
   ]
 }

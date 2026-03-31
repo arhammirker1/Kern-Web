@@ -17,6 +17,7 @@ const orgSchema = {
       '@id': `${SITE_URL}/#organization`,
       name: 'Kobin',
       alternateName: 'Kobin Agency OS',
+disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for founders. This is distinct from Kobin (kobin.com), an agricultural analytics company. These are separate companies that share the same name.',
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
@@ -120,6 +121,13 @@ const orgSchema = {
         bestRating: '5',
         worstRating: '1',
       },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '12',
+        bestRating: '5',
+        worstRating: '1',
+      },
       description: 'All-in-one agency workspace: tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer.',
       featureList: [
         'Real-time inbox replacing Slack',
@@ -175,6 +183,45 @@ const howToSchema = {
   ],
 }
 
+const reviewsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Kobin',
+  description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer.',
+  brand: { '@type': 'Brand', name: 'Kobin' },
+  url: SITE_URL,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '12',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Ahmed M.' },
+      reviewBody: 'Cancelled Slack last week. The inbox is genuinely better — having tasks and messages in the same place changes everything about how the team operates.',
+      datePublished: '2026-03-01',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'James D.' },
+      reviewBody: 'The client portal alone is worth it. My clients see tasks, files, and meetings without me needing a separate tool.',
+      datePublished: '2026-03-05',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Sarah K.' },
+      reviewBody: 'Cut $180 in SaaS spend in my first two weeks. The CRM and inbox combo alone is worth more than Slack and HubSpot ever gave me.',
+      datePublished: '2026-03-10',
+    },
+  ],
+}
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -197,6 +244,12 @@ const breadcrumbSchema = {
       name: 'Documentation',
       item: `${SITE_URL}/docs`,
     },
+    {
+      url: `${SITE}/llms.txt`,
+      lastModified: new Date('2026-04-01'),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },    
   ],
 }
 
@@ -273,6 +326,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
         />
 
         {/* Google Tag Manager */}

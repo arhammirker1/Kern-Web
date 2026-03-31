@@ -130,7 +130,7 @@ export function WelcomeEmail({ email, position, refLink, source }: WelcomeEmailP
                     <tr><td style={featureRow}><Text style={featureName}>🏢 Client Portal</Text><Text style={featureSub}>Built-in, no extra cost</Text></td></tr>
                     <tr><td style={featureRow}><Text style={featureName}>📅 Calendar</Text><Text style={featureSub}>Google Meet included</Text></td></tr>
                     <tr><td style={featureRow}><Text style={featureName}>✍️ LinkedIn Studio</Text><Text style={featureSub}>Replaces Buffer</Text></td></tr>
-                    <tr><td style={featureRow}><Text style={featureName}>🤖 AI Layer</Text><Text style={featureSub}>Coming soon</Text></td></tr>
+                    <tr><td style={featureRow}><Text style={featureName}>🤖 AI Layer</Text><Text style={featureSub}>Live — @AI + ⌘K</Text></td></tr>
                   </table>
                 </td>
               </tr>
