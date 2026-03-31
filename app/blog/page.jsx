@@ -309,7 +309,7 @@ setNewsletterEmail('')
           <div className={`newsletter-success${newsletterSuccess ? ' show' : ''}`}>
             ✓ You&apos;re subscribed. First issue lands Friday.
           </div>
-          <div className="newsletter-note">1,200+ founders subscribed · Unsubscribe anytime</div>
+          <div className="newsletter-note">Join the waitlist · Unsubscribe anytime</div>
         </div>
       </div>
 

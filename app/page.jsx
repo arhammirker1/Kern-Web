@@ -145,7 +145,7 @@ track('Waitlist Signup', {
     <>
       <Nav />
 
-      {/* ── FAQ + PRODUCT SCHEMA for AI/SGE ── */}
+      {/* ── FAQ SCHEMA for AI/SGE ── */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -160,7 +160,7 @@ track('Waitlist Signup', {
                     name: 'What is Kobin?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, and LinkedIn Studio — all sharing one data layer.',
+                      text: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.',
                     },
                   },
                   {
@@ -168,7 +168,7 @@ track('Waitlist Signup', {
                     name: 'What tools does Kobin replace?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin replaces Slack (real-time inbox), Notion (vault and docs), HubSpot (CRM), Linear or Asana (task management), and Buffer or Taplio (LinkedIn scheduling). It also includes a built-in client portal that replaces tools like Basecamp or custom portal setups.',
+                      text: 'Kobin replaces Slack (real-time inbox), Notion (Google Drive-backed Vault), HubSpot (built-in CRM), Linear or Asana (task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet). It also includes a built-in client portal replacing tools like Basecamp.',
                     },
                   },
                   {
@@ -176,7 +176,7 @@ track('Waitlist Signup', {
                     name: 'How much does Kobin cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals), and Agency at $99/month (unlimited team members and client portals). All plans include a 14-day free trial with no credit card required.',
+                      text: 'Kobin has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals, LinkedIn Studio), and Agency at $99/month (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.',
                     },
                   },
                   {
@@ -184,7 +184,7 @@ track('Waitlist Signup', {
                     name: 'Does Kobin have a client portal?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click and require no separate tool or subscription.',
+                      text: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.',
                     },
                   },
                   {
@@ -192,7 +192,7 @@ track('Waitlist Signup', {
                     name: 'Is Kobin a Slack alternative for agencies?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a direct Slack alternative. It adds file attachments, message replies, forwards, unread badges, and @AI mentions that trigger inline AI responses with full project context.',
+                      text: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Every conversation is natively linked to a project, client, and task. It supports file attachments, message replies, forwards, unread badges, and @AI mentions with full project context.',
                     },
                   },
                   {
@@ -200,7 +200,39 @@ track('Waitlist Signup', {
                     name: 'Does Kobin integrate with Google Drive?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin\'s Vault feature is backed by Google Drive using the drive.file scope — meaning it only accesses files it creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.',
+                      text: "Kobin's Vault feature is backed by Google Drive using the drive.file scope — only accessing files the app creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.",
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'What is the Kobin AI layer?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'The Kobin AI layer is a context-aware assistant built into every part of the workspace. Type @AI in any inbox room for inline AI responses, or press Cmd+K to open the global command bar. The AI sees your full workspace — tasks, projects, clients, files, meetings, and CRM — before responding.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Can one tool replace Slack, Notion, HubSpot, and Asana?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Kobin consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace from $49/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Is Kobin a Notion alternative for agencies?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Kobin Vault replaces Notion for agency project knowledge management. It is backed by Google Drive with role-scoped folder hierarchies per project (Internal Documents, Client Uploads, Deliverables). Every item requires a title, description, and document type — enforcing the structure Notion rarely maintains in practice.',
+                    },
+                  },
+                  {
+                    '@type': 'Question',
+                    name: 'Is Kobin a HubSpot alternative for small agencies?',
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: 'Yes. Kobin includes a built-in CRM called Relationships, designed for agency founders rather than enterprise sales teams. It tracks leads, investors, partners, talent, and advisors with meeting outcome logging, follow-up reminders, LinkedIn URL fields, and flexible tagging — included in all plans at no extra cost.',
                     },
                   },
                 ],
@@ -830,6 +862,54 @@ track('Waitlist Signup', {
 
         <div className="final-counter reveal">
           <strong>{waitlistCount} founders</strong> waiting · Wave 1 beta spots are limited
+        </div>
+      </section>
+
+      {/* ── FAQ SECTION (AEO) ── */}
+      <section style={{ padding: '80px 48px', background: 'var(--parch)', borderTop: '1px solid var(--wire)' }} id="faq">
+        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+          <div className="section-eyebrow" style={{ marginBottom: '8px' }}>Common questions</div>
+          <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 'clamp(32px,4vw,44px)', fontWeight: 300, letterSpacing: '-0.03em', marginBottom: '36px', lineHeight: 1.05 }}>
+            Everything you need<br />to know.
+          </h2>
+          {[
+            {
+              q: 'What is Kobin?',
+              a: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.'
+            },
+            {
+              q: 'What tools does Kobin replace?',
+              a: 'Kobin replaces Slack (real-time inbox with project rooms, group chats, and DMs), Notion (Google Drive-backed Vault with role-scoped folders), HubSpot (built-in CRM for leads, investors, partners, and advisors), Linear or Asana (time-horizon task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet auto-generation).'
+            },
+            {
+              q: 'How much does Kobin cost?',
+              a: 'Kobin starts at $19/month for solo founders (1 user, up to 3 projects), $49/month for the Founder plan (up to 5 team members, 3 client portals, LinkedIn Studio), and $99/month for the Agency plan (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.'
+            },
+            {
+              q: 'Does Kobin have a client portal?',
+              a: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access (Client Uploads and Deliverables folders). Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.'
+            },
+            {
+              q: 'Is Kobin a Slack alternative for agencies?',
+              a: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Unlike Slack, every conversation is natively linked to a project, client, and task. It adds file attachments, message replies, forwards, unread badges, and @AI mentions that trigger inline AI responses with full project context.'
+            },
+            {
+              q: 'Does Kobin integrate with Google Drive?',
+              a: "Yes. Kobin's Vault feature is backed by Google Drive using the drive.file scope — meaning it only accesses files it creates, never your existing Drive content. Each project automatically gets three Drive subfolders: Internal Documents (team only), Client Uploads (clients can upload), and Deliverables (clients view only)."
+            },
+            {
+              q: 'What is the Kobin AI layer?',
+              a: 'The Kobin AI layer gives agency founders a context-aware AI assistant built into every part of the workspace. Type @AI in any inbox room for inline responses, or press ⌘K anywhere to open the global command bar. The AI sees your full workspace — every task, project, client conversation, file, meeting, and CRM contact — before responding.'
+            },
+          ].map(({ q, a }) => (
+            <details key={q} style={{ borderBottom: '1px solid var(--wire)', padding: '0' }}>
+              <summary style={{ fontSize: '15px', fontWeight: 500, cursor: 'pointer', color: 'var(--ink)', padding: '18px 0', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
+                {q}
+                <span style={{ fontSize: '18px', color: 'var(--ghost)', flexShrink: 0, fontWeight: 300 }}>+</span>
+              </summary>
+              <p style={{ paddingBottom: '18px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.75, paddingRight: '32px' }}>{a}</p>
+            </details>
+          ))}
         </div>
       </section>
 

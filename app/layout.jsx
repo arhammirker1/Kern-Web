@@ -30,6 +30,25 @@ const orgSchema = {
         contactType: 'customer support',
       },
     },
+        {
+      '@type': 'Person',
+      '@id': `${SITE_URL}/#founder`,
+      name: 'Arham Mirkar',
+      jobTitle: 'Founder & CEO',
+      worksFor: { '@id': `${SITE_URL}/#organization` },
+      url: SITE_URL,
+      sameAs: [
+        'https://www.linkedin.com/company/kobin-app/',
+        'https://www.instagram.com/kobin.ai/',
+      ],
+      knowsAbout: [
+        'Agency Management Software',
+        'SaaS Tool Consolidation',
+        'Agency Operating System',
+        'Client Portal Software',
+        'Project Management for Agencies',
+      ],
+    },
     {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
@@ -89,6 +108,46 @@ const orgSchema = {
   ],
 }
 
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to set up Kobin as your agency operating system',
+  description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer with one workspace for your agency in under 30 minutes.',
+  totalTime: 'PT30M',
+  step: [
+    {
+      '@type': 'HowToStep',
+      name: 'Create your workspace',
+      text: 'Sign up with your email at kobin.team. Your workspace is created instantly — no credit card needed for the 14-day trial.',
+      position: 1,
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Connect Google Drive',
+      text: 'Go to Settings → Integrations → Connect Google. A Vault root folder is auto-created in your Drive. All existing files stay where they are.',
+      position: 2,
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Invite your team',
+      text: 'Go to Team → Add Member. Set their role and 12 permission toggles. They can log in immediately — no invite email flow.',
+      position: 3,
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Create your first project',
+      text: 'Projects auto-create a dedicated inbox room, a 3-folder Vault structure in Drive, and can be linked to a client portal in one click.',
+      position: 4,
+    },
+    {
+      '@type': 'HowToStep',
+      name: 'Activate a client portal',
+      text: 'Go to Clients → Add Client. A scoped portal is created instantly. A pre-built DM between you and the client is ready before they log in.',
+      position: 5,
+    },
+  ],
+}
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -139,6 +198,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/kobin_icon_32.png" />
