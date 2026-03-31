@@ -1,6 +1,7 @@
 // NEW
 import './globals.css'
 import MixpanelInit from '../components/MixpanelInit'
+import SmartPopup from '../components/SmartPopup'
 
 // ── Placeholder until you get your domain ──
 // Replace 'https://kern.app' with your real domain the day you get it.
@@ -145,6 +146,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
   <MixpanelInit />
+  <SmartPopup />
   {children}
 </body>
     </html>
