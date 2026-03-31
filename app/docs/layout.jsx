@@ -1,6 +1,7 @@
 // NEW FILE: app/docs/layout.jsx
 export const metadata = {
   title: 'Documentation — Kobin Agency Operating System',
+  robots: { index: true, follow: true },
   description: 'Complete documentation for Kobin — the agency operating system. Setup guides, inbox, task management, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer docs.',
   keywords: ['kobin documentation', 'agency operating system docs', 'kobin setup guide', 'kobin AI layer docs', 'agency software documentation'],
   alternates: { canonical: 'https://www.kobin.team/docs' },

@@ -6,6 +6,7 @@ export const metadata = {
   description: 'The average 5-person agency spends $283/month on Slack, Notion, HubSpot, Linear, and Buffer — tools that don\'t share data, don\'t communicate, and quietly compound into a productivity crisis. Here\'s the full breakdown.',
   keywords: ['agency tool stack cost', 'SaaS tool consolidation', 'Slack Notion HubSpot cost', 'agency software stack 2026', 'context switching productivity loss'],
   alternates: { canonical: 'https://www.kobin.team/blog/the-283-problem' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
     description: 'A data-driven breakdown of what tool fragmentation really costs a 5-person agency — and what the AI era changes about it.',
@@ -14,17 +15,27 @@ export const metadata = {
     modifiedTime: '2026-03-18T00:00:00Z',
     authors: ['Arham Mirkar'],
     tags: ['agency tools', 'SaaS costs', 'context switching', 'tool consolidation'],
+    images: [{ url: '/og-the-283-problem.png', width: 1200, height: 630, alt: 'The $283 Problem — Agency Tool Stack Cost Breakdown' }],
   },
+  twitter: { card: 'summary_large_image', creator: '@arham_mirkar' },
 }
 // ─── Article + FAQPage JSON-LD schema ─────────────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kobin.team' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kobin.team/blog' },
+        { '@type': 'ListItem', position: 3, name: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other" },
+      ],
+    },
+    {
       '@type': 'Article',
       headline: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
       description: "A data-driven breakdown of what the average 5-person agency spends on fragmented SaaS tools, the hidden productivity cost of context switching, and what AI-powered consolidation changes.",
-      author: { '@type': 'Person', name: 'Arham Mirkar' },
+      author: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team', sameAs: ['https://www.linkedin.com/company/kobin-app/'] },
       publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://www.kobin.team' },
       datePublished: '2026-03-18',
       dateModified: '2026-03-18',
@@ -93,6 +104,12 @@ export default function BlogPost283() {
               </div>
             </div>
           </header>
+
+          {/* ── TL;DR ── */}
+          <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
+            <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Key takeaway</strong>
+            The average 5-person agency spends $283/month on Slack, Notion, HubSpot, Linear, and Buffer — tools that don't share data and cost 51 minutes of productivity per person per week (Lokalise, 2026). Consolidating onto one workspace saves $150–$230/month in subscriptions alone, before accounting for focus recovery time.
+          </div>
 
           {/* ── HERO STAT BLOCK ── */}
           <div className="post-stat-grid">

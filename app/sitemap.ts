@@ -17,16 +17,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE}/blog/the-283-problem`,
-      lastModified: new Date('2026-03-18'),
-      changeFrequency: 'monthly',
-      priority: 0.95,
-    },
-    {
       url: `${SITE}/docs`,
       lastModified: new Date('2026-04-01'),
       changeFrequency: 'monthly',
       priority: 0.8,
+    },
+    {
+      url: `${SITE}/blog/the-283-problem`,
+      lastModified: new Date('2026-03-18'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
     },
     {
       url: `${SITE}/blog/slack-notion-asana-hubspot-alternatives`,

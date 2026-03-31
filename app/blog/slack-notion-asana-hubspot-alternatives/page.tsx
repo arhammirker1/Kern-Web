@@ -20,6 +20,7 @@ export const metadata = {
     'Kobin vs Notion',
   ],
     alternates: { canonical: 'https://www.kobin.team/blog/slack-notion-asana-hubspot-alternatives' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Slack, Notion, Asana, HubSpot: Why Agencies Are Replacing Them All With One Tool',
     description:
@@ -29,24 +30,30 @@ export const metadata = {
     modifiedTime: '2026-03-25T00:00:00Z',
     authors: ['Arham Mirkar'],
     tags: ['Slack alternative', 'Notion alternative', 'Asana alternative', 'HubSpot alternative', 'agency software'],
+    images: [{ url: '/og-slack-notion-alternatives.png', width: 1200, height: 630, alt: 'Slack, Notion, Asana, HubSpot Alternatives for Agencies — Kobin' }],
   },
+  twitter: { card: 'summary_large_image', creator: '@arham_mirkar' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kobin.team' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kobin.team/blog' },
+        { '@type': 'ListItem', position: 3, name: 'Slack, Notion, Asana, HubSpot Alternatives' },
+      ],
+    },
+    {
       '@type': 'Article',
       headline:
         'Slack, Notion, Asana, HubSpot: Why Agencies Are Replacing Them All With One Tool',
       description:
         'A direct comparison of Slack, Notion, Asana, and HubSpot against an all-in-one agency operating system — and the real reason founders are consolidating in 2026.',
-      author: { '@type': 'Person', name: 'Arham Mirkar' },
-      publisher: {
-        '@type': 'Organization',
-        name: 'Kobin',
-        url: 'https://www.kobin.team',
-      },
+      author: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team', sameAs: ['https://www.linkedin.com/company/kobin-app/'] },
+      publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://www.kobin.team' },
       datePublished: '2026-03-25',
       dateModified: '2026-03-25',
       keywords:
@@ -143,6 +150,12 @@ export default function SlackNotionAsanaHubspotAlternatives() {
               </div>
             </div>
           </header>
+
+          {/* ── TL;DR ── */}
+          <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
+            <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Key takeaway</strong>
+            Running Slack, Notion, Asana, and HubSpot costs a 5-person agency $203–$504/month — tools that were each built in isolation and don't share data. Kobin replaces all four in one workspace from $49/month, with a built-in client portal included at no extra cost.
+          </div>
 
           {/* ── STAT BLOCK ── */}
           <div className="post-stat-grid">

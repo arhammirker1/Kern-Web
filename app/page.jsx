@@ -944,6 +944,7 @@ track('Waitlist Signup', {
             <img alt="Kobin on Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1109759&theme=dark&t=1774704126274" />
           </a>
           <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
+        <div className="foot-copy" style={{ marginTop: '4px' }}>Kobin (kobin.team) is an agency operating system — not affiliated with Kobin (kobin.com), an agricultural analytics company.</div>
         </div>
       </footer>
     </>

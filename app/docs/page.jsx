@@ -3,6 +3,37 @@ import { useEffect } from 'react'
 import Link from 'next/link'
 import Nav from '../../components/Nav'
 
+const docsSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Kobin Documentation — Agency Operating System',
+    description: 'Complete setup guides and module reference for Kobin — the agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer.',
+    author: {
+      '@type': 'Person',
+      name: 'Arham Mirkar',
+      url: 'https://www.kobin.team',
+      sameAs: ['https://www.linkedin.com/company/kobin-app/'],
+    },
+    publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://www.kobin.team' },
+    dateModified: '2026-04-01',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kobin.team/docs' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to set up Kobin as your agency operating system',
+    description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer with one workspace in under 30 minutes.',
+    totalTime: 'PT30M',
+    step: [
+      { '@type': 'HowToStep', position: 1, name: 'Create your workspace', text: 'Sign up with your email at kobin.team. Your workspace is created instantly — no credit card needed for the 14-day trial.' },
+      { '@type': 'HowToStep', position: 2, name: 'Connect Google Drive', text: 'Go to Settings → Integrations → Connect Google. A Vault root folder is auto-created in your Drive. All existing files stay where they are.' },
+      { '@type': 'HowToStep', position: 3, name: 'Invite your team', text: 'Go to Team → Add Member. Set their role and 12 permission toggles. They can log in immediately — no invite email flow.' },
+      { '@type': 'HowToStep', position: 4, name: 'Create your first project', text: 'Projects auto-create a dedicated inbox room, a 3-folder Vault structure in Drive, and can be linked to a client portal in one click.' },
+    ],
+  },
+]
+
 export default function DocsPage() {
   useEffect(() => {
     const links = document.querySelectorAll('.sidebar-link[href^="#"]')
@@ -25,6 +56,9 @@ export default function DocsPage() {
   return (
     <>
       <Nav activePage="docs" />
+      {docsSchemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
 
       <div className="docs-layout">
         <aside className="docs-sidebar">

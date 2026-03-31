@@ -121,13 +121,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
         bestRating: '5',
         worstRating: '1',
       },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '12',
-        bestRating: '5',
-        worstRating: '1',
-      },
+      
       description: 'All-in-one agency workspace: tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer.',
       featureList: [
         'Real-time inbox replacing Slack',
@@ -143,45 +137,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
   ],
 }
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'How to set up Kobin as your agency operating system',
-  description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer with one workspace for your agency in under 30 minutes.',
-  totalTime: 'PT30M',
-  step: [
-    {
-      '@type': 'HowToStep',
-      name: 'Create your workspace',
-      text: 'Sign up with your email at kobin.team. Your workspace is created instantly — no credit card needed for the 14-day trial.',
-      position: 1,
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'Connect Google Drive',
-      text: 'Go to Settings → Integrations → Connect Google. A Vault root folder is auto-created in your Drive. All existing files stay where they are.',
-      position: 2,
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'Invite your team',
-      text: 'Go to Team → Add Member. Set their role and 12 permission toggles. They can log in immediately — no invite email flow.',
-      position: 3,
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'Create your first project',
-      text: 'Projects auto-create a dedicated inbox room, a 3-folder Vault structure in Drive, and can be linked to a client portal in one click.',
-      position: 4,
-    },
-    {
-      '@type': 'HowToStep',
-      name: 'Activate a client portal',
-      text: 'Go to Clients → Add Client. A scoped portal is created instantly. A pre-built DM between you and the client is ready before they log in.',
-      position: 5,
-    },
-  ],
-}
+
 
 const reviewsSchema = {
   '@context': 'https://schema.org',
@@ -317,10 +273,7 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
@@ -350,6 +303,7 @@ export default function RootLayout({ children }) {
         />
 
 
+        <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM context file" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/kobin_icon_32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/kobin_icon_180.png" />

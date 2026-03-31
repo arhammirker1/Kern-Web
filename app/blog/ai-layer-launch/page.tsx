@@ -6,6 +6,7 @@ export const metadata = {
   description: 'Kobin\'s AI layer is now live. Ask @AI anything inside any room, or open the global command bar from anywhere. Create tasks, query your pipeline, get meeting briefs — all from one model that sees your full workspace.',
   keywords: ['agency AI assistant', 'AI task management', 'AI command bar', 'agency operating system AI', 'kobin AI layer', '@AI inbox'],
   alternates: { canonical: 'https://www.kobin.team/blog/ai-layer-launch' },
+  robots: { index: true, follow: true },
   openGraph: {
     title: "The AI Layer Is Here: Your Entire Agency, Understood by One Model",
     description: 'One model. Every task, project, client, meeting, and file — in context. The Kobin AI layer is live.',
@@ -14,18 +15,28 @@ export const metadata = {
     modifiedTime: '2026-04-01T00:00:00Z',
     authors: ['Arham Mirkar'],
     tags: ['AI', 'agency software', 'command bar', 'task management', 'agency operating system'],
+    images: [{ url: '/og-ai-layer-launch.png', width: 1200, height: 630, alt: 'Kobin AI Layer — Your Entire Agency, Understood by One Model' }],
   },
+  twitter: { card: 'summary_large_image', creator: '@arham_mirkar' },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kobin.team' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.kobin.team/blog' },
+        { '@type': 'ListItem', position: 3, name: 'The AI Layer Is Here' },
+      ],
+    },
+    {
       '@type': 'Article',
       headline: "The AI Layer Is Here: Your Entire Agency, Understood by One Model",
       description: "Kobin's AI layer gives agency founders a model that sees every task, project, client conversation, file, meeting, and CRM contact in one place — and can act on all of it.",
-      author: { '@type': 'Person', name: 'Arham Mirkar' },
-      publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://kobin.team' },
+      author: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team', sameAs: ['https://www.linkedin.com/company/kobin-app/'] },
+      publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://www.kobin.team' },
       datePublished: '2026-04-01',
       dateModified: '2026-04-01',
       keywords: 'AI agency assistant, AI command bar, @AI inbox, task creation AI, agency operating system',
@@ -96,6 +107,12 @@ export default function AILayerLaunchPost() {
               </div>
             </div>
           </header>
+
+          {/* ── TL;DR ── */}
+          <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
+            <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Key takeaway</strong>
+            The Kobin AI layer gives every agency founder one model that sees their entire workspace — every task, client message, vault file, calendar event, and CRM contact. Access it via @AI in any inbox room or ⌘K from anywhere. Unlike per-module AI in Slack or Asana, it has full context before it responds.
+          </div>
 
           {/* ── HERO STAT BLOCK ── */}
           <div className="post-stat-grid">
