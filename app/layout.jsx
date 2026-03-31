@@ -194,6 +194,7 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
           rel="stylesheet"
         />
+        
         {/* GEO: Organization + WebSite + SoftwareApplication schema on every page */}
         <script
           type="application/ld+json"
@@ -203,6 +204,18 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
+
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-TZ54LW5K');`,
+          }}
+        />
+
 
         <script 
           src="https://analytics.ahrefs.com/analytics.js" 
@@ -214,6 +227,17 @@ export default function RootLayout({ children }) {
         <link rel="apple-touch-icon" sizes="180x180" href="/kobin_icon_180.png" />
       </head>
       <body>
+  {/* Google Tag Manager (noscript) */}
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-TZ54LW5K"
+      height="0"
+      width="0"
+      style={{ display: 'none', visibility: 'hidden' }}
+    />
+  </noscript>
+  {/* End Google Tag Manager (noscript) */}
+
   <MixpanelInit />
   <SmartPopup />
   {children}
