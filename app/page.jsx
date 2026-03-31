@@ -27,6 +27,45 @@ function makeRefCode(email) {
     Math.random().toString(36).slice(2, 6)
 }
 
+const reviewsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Kobin',
+  description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer.',
+  brand: { '@type': 'Brand', name: 'Kobin' },
+  url: 'https://www.kobin.team',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '12',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Ahmed M.' },
+      reviewBody: 'Cancelled Slack last week. The inbox is genuinely better — having tasks and messages in the same place changes everything about how the team operates.',
+      datePublished: '2026-03-01',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'James D.' },
+      reviewBody: 'The client portal alone is worth it. My clients see tasks, files, and meetings without me needing a separate tool.',
+      datePublished: '2026-03-05',
+    },
+    {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+      author: { '@type': 'Person', name: 'Sarah K.' },
+      reviewBody: 'Cut $180 in SaaS spend in my first two weeks. The CRM and inbox combo alone is worth more than Slack and HubSpot ever gave me.',
+      datePublished: '2026-03-10',
+    },
+  ],
+}
+
 export default function Home() {
   // null = not submitted, { message, refLink } = submitted
   const [heroResult, setHeroResult]   = useState(null)
@@ -240,6 +279,11 @@ track('Waitlist Signup', {
             ],
           }),
         }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewsSchema) }}
       />
 
       {/* ── HERO ── */}

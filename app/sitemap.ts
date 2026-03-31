@@ -36,9 +36,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${SITE}/blog/ai-layer-launch`,
-      lastModified: new Date('2026-03-31'),
+      lastModified: new Date('2026-04-01'),
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.95,
     },
   ]
 }

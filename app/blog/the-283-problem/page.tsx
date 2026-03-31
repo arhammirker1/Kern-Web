@@ -5,12 +5,15 @@ export const metadata = {
   title: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other | Kobin",
   description: 'The average 5-person agency spends $283/month on Slack, Notion, HubSpot, Linear, and Buffer — tools that don\'t share data, don\'t communicate, and quietly compound into a productivity crisis. Here\'s the full breakdown.',
   keywords: ['agency tool stack cost', 'SaaS tool consolidation', 'Slack Notion HubSpot cost', 'agency software stack 2026', 'context switching productivity loss'],
+  alternates: { canonical: 'https://www.kobin.team/blog/the-283-problem' },
   openGraph: {
     title: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
     description: 'A data-driven breakdown of what tool fragmentation really costs a 5-person agency — and what the AI era changes about it.',
     type: 'article',
     publishedTime: '2026-03-18T00:00:00Z',
+    modifiedTime: '2026-03-18T00:00:00Z',
     authors: ['Arham Mirkar'],
+    tags: ['agency tools', 'SaaS costs', 'context switching', 'tool consolidation'],
   },
 }
 // ─── Article + FAQPage JSON-LD schema ─────────────────────────────────────────

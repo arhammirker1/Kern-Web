@@ -16,21 +16,39 @@ const orgSchema = {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
       name: 'Kobin',
+      alternateName: 'Kobin Agency OS',
       url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/kobin_icon_180.png`,
+        width: 180,
+        height: 180,
+      },
       description: 'Agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace.',
       foundingDate: '2026',
       sameAs: [
         'https://www.instagram.com/kobin.ai/',
         'https://www.linkedin.com/company/kobin-app/',
+        'https://www.producthunt.com/products/kobin',
       ],
-
       contactPoint: {
         '@type': 'ContactPoint',
         email: 'support@kobin.team',
         contactType: 'customer support',
       },
+      knowsAbout: [
+        'Agency Management Software',
+        'SaaS Tool Consolidation',
+        'Agency Operating System',
+        'Client Portal Software',
+        'Project Management for Agencies',
+        'AI Workspace Assistant',
+        'Slack Alternative',
+        'Notion Alternative',
+        'HubSpot Alternative for Agencies',
+      ],
     },
-        {
+    {
       '@type': 'Person',
       '@id': `${SITE_URL}/#founder`,
       name: 'Arham Mirkar',
@@ -66,14 +84,16 @@ const orgSchema = {
       '@id': `${SITE_URL}/#app`,
       name: 'Kobin',
       applicationCategory: 'BusinessApplication',
+      applicationSubCategory: 'Agency Management Software',
       operatingSystem: 'Web, iOS, Android',
+      url: SITE_URL,
       offers: [
         {
           '@type': 'Offer',
           name: 'Solo',
           price: '19',
           priceCurrency: 'USD',
-          description: 'All 8 modules, up to 3 active projects',
+          description: 'All 8 modules, up to 3 active projects, 1 user',
           priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
         },
         {
@@ -93,6 +113,13 @@ const orgSchema = {
           priceSpecification: { '@type': 'UnitPriceSpecification', billingIncrement: 1, unitCode: 'MON' },
         },
       ],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '12',
+        bestRating: '5',
+        worstRating: '1',
+      },
       description: 'All-in-one agency workspace: tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer.',
       featureList: [
         'Real-time inbox replacing Slack',
@@ -102,7 +129,7 @@ const orgSchema = {
         'LinkedIn Studio replacing Buffer',
         'Client portal included in all plans',
         'Google Calendar and Meet integration',
-        'AI layer with @AI mentions and command bar',
+        'AI layer with @AI mentions and global command bar',
       ],
     },
   ],
@@ -148,40 +175,83 @@ const howToSchema = {
   ],
 }
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: SITE_URL,
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Blog',
+      item: `${SITE_URL}/blog`,
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Documentation',
+      item: `${SITE_URL}/docs`,
+    },
+  ],
+}
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Kobin — Your Agency Operating System',
+    default: 'Kobin — Agency Operating System | Replace Slack, Notion, HubSpot',
     template: '%s | Kobin',
   },
-  description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer. One workspace for founders running agencies — tasks, inbox, CRM, client portal, vault, calendar, and AI layer.',
-  keywords: ['agency operating system', 'agency management software', 'replace Slack Notion HubSpot', 'client portal for agencies', 'agency tool consolidation', 'kobin app'],
+  description: 'Kobin is the all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer. One workspace for tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer — from $49/month.',
+  keywords: [
+    'agency operating system',
+    'agency management software',
+    'replace Slack Notion HubSpot',
+    'client portal for agencies',
+    'agency tool consolidation',
+    'Slack alternative for agencies',
+    'Notion alternative',
+    'HubSpot alternative small agency',
+    'kobin app',
+    'all-in-one agency tool',
+    'agency AI assistant',
+  ],
   authors: [{ name: 'Arham Mirkar', url: SITE_URL }],
   creator: 'Kobin',
   publisher: 'Kobin',
+  category: 'Business Software',
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large', 'max-video-preview': -1 },
   },
   openGraph: {
     type: 'website',
     siteName: 'Kobin',
     url: SITE_URL,
-    title: 'Kobin — Your Agency Operating System',
-    description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer. One workspace for agency founders.',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kobin — Agency Operating System' }],
+    title: 'Kobin — Agency Operating System | Replace Slack, Notion, HubSpot',
+    description: 'One workspace that replaces Slack, Notion, HubSpot, Linear, and Buffer. Tasks, inbox, CRM, client portal, vault, calendar, and AI layer — from $49/month.',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kobin — Agency Operating System replacing Slack, Notion, HubSpot, Linear, Buffer' }],
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@kobin_app',
     creator: '@arham_mirkar',
-    title: 'Kobin — Your Agency Operating System',
-    description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer.',
+    title: 'Kobin — Agency Operating System',
+    description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer. One workspace from $49/month.',
     images: ['/og-image.png'],
   },
   alternates: {
     canonical: SITE_URL,
+  },
+  verification: {
+    // Add your Google Search Console verification token here when available
+    // google: 'YOUR_VERIFICATION_TOKEN',
   },
 }
 
@@ -222,6 +292,13 @@ export default function RootLayout({ children }) {
           data-key="JBC2tKzAYEWLdvkLcglcwA" 
           async>
         </script>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+
+
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/kobin_icon_32.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/kobin_icon_180.png" />

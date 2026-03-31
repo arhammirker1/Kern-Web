@@ -19,13 +19,16 @@ export const metadata = {
     'Kobin vs Slack',
     'Kobin vs Notion',
   ],
+    alternates: { canonical: 'https://www.kobin.team/blog/slack-notion-asana-hubspot-alternatives' },
   openGraph: {
     title: 'Slack, Notion, Asana, HubSpot: Why Agencies Are Replacing Them All With One Tool',
     description:
       'Four tools, four silos, four invoices. Here is why the fragmented agency stack is losing — and what replacing it actually looks like.',
     type: 'article',
     publishedTime: '2026-03-25T00:00:00Z',
+    modifiedTime: '2026-03-25T00:00:00Z',
     authors: ['Arham Mirkar'],
+    tags: ['Slack alternative', 'Notion alternative', 'Asana alternative', 'HubSpot alternative', 'agency software'],
   },
 }
 
