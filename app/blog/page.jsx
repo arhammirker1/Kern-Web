@@ -53,6 +53,14 @@ setNewsletterEmail('')
 
   const posts = [
     {
+      thumbClass: 'thumb-dark', thumbText: '@AI\nFull\nContext', thumbLabel: 'AI LAYER',
+      category: 'cat-build', catLabel: 'AI Layer',
+      title: 'Your Workspace AI Is Answering in the Dark. Kobin\'s Isn\'t.',
+      excerpt: 'Notion AI sees notes. ClickUp AI sees tasks. Asana Intelligence sees projects. Here is what happens when your AI can see everything — tasks, pipeline, vault, calendar, team workload — at once.',
+      meta: 'Apr 1 · 11 min',
+      href: '/blog/kobin-ai-vs-notion-clickup',
+    },
+    {
       thumbClass: 'thumb-dark', thumbText: '@AI\n⌘K', thumbLabel: 'AI LAYER',
       category: 'cat-build', catLabel: 'AI Layer',
       title: 'The AI Layer Is Here: Your Entire Agency, Understood by One Model',

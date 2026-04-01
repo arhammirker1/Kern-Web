@@ -41,10 +41,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${SITE}/blog/kobin-ai-vs-notion-clickup`,
+      lastModified: new Date('2026-04-01'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },    
+    {
       url: `${SITE}/llms.txt`,
       lastModified: new Date('2026-04-01'),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
+
   ]
 }
