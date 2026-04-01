@@ -26,8 +26,8 @@ export const metadata = {
     description:
       'What happens when an AI can see your tasks, CRM pipeline, vault files, team workload, and calendar all at once? We tested it. Here are the real answers.',
     type: 'article',
-    publishedTime: '2026-04-08T00:00:00Z',
-    modifiedTime: '2026-04-08T00:00:00Z',
+    publishedTime: '2026-04-01T00:00:00Z',
+    modifiedTime: '2026-04-01T00:00:00Z',
     authors: ['Arham Mirkar'],
     tags: ['AI', 'agency tools', 'Notion AI', 'ClickUp AI', 'workspace comparison'],
     images: [
