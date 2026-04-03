@@ -68,6 +68,14 @@ setNewsletterEmail('')
       meta: 'Apr 1 · 10 min',
       href: '/blog/ai-layer-launch',
     },
+        {
+      thumbClass: 'thumb-parch', thumbText: 'Top 10\nTools\n2026', thumbLabel: 'RANKED GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: '10 Best Productivity Tools for Agency Founders in 2026 — Ranked & Compared',
+      excerpt: 'Slack, Notion, Asana, ClickUp, HubSpot, Linear, Monday.com, Basecamp — ranked by real cost and fit for a 5-person agency. Real pricing. Real tradeoffs. One of them replaces all the others.',
+      meta: 'Apr 3 · 14 min',
+      href: '/blog/best-productivity-tools-for-agencies',
+    },    
     {
       thumbClass: 'thumb-vi', thumbText: 'Slack\nNotion\nAsana', thumbLabel: 'COMPARISON GUIDE',
       category: 'cat-guide', catLabel: 'Guide',

@@ -45,7 +45,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-01'),
       changeFrequency: 'monthly',
       priority: 0.9,
-    },    
+    },  
+    {
+      url: `${SITE}/blog/best-productivity-tools-for-agencies`,
+      lastModified: new Date('2026-04-03'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },  
     {
       url: `${SITE}/llms.txt`,
       lastModified: new Date('2026-04-01'),
