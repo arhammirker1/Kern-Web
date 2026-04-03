@@ -200,42 +200,20 @@ setNewsletterEmail('')
               <div className="featured-img">
                 <div className="feat-visual">
                   <div className="feat-visual-icons">
+  <div className="feat-app-icon">
+    <Image src="/slack.jpg" alt="Slack" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+  </div>
+                      <div className="feat-app-icon">
+    <Image src="/notion.png" alt="Notion" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+  </div>
+                      <div className="feat-app-icon">
+    <Image src="/asana.jpg" alt="Asana" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+  </div>
+  <div className="feat-app-icon">
+    <Image src="/hubspot.jpg" alt="HubSpot" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+  </div>
                     <div className="feat-app-icon">
-                      <svg viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="7" fill="#4A154B" />
-                        <circle cx="9" cy="14" r="2" fill="#E01E5A" />
-                        <circle cx="14" cy="9" r="2" fill="#36C5F0" />
-                        <circle cx="19" cy="14" r="2" fill="#2EB67D" />
-                        <circle cx="14" cy="19" r="2" fill="#ECB22E" />
-                      </svg>
-                    </div>
-                    <div className="feat-app-icon">
-                      <svg viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="7" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.1)" />
-                        <rect x="5" y="5" width="18" height="18" rx="2" fill="none" stroke="rgba(255,255,255,0.5)" strokeWidth="1.5" />
-                        <line x1="8" y1="10" x2="20" y2="10" stroke="rgba(255,255,255,0.4)" strokeWidth="1.2" />
-                        <line x1="8" y1="14" x2="18" y2="14" stroke="rgba(255,255,255,0.3)" strokeWidth="1.2" />
-                      </svg>
-                    </div>
-                    <div className="feat-app-icon">
-                      <svg viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="7" fill="#5E6AD2" />
-                        <path d="M6 20L20 6M6 20l5-5M11 22l5-5M16 22L22 16" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-                      </svg>
-                    </div>
-                    <div className="feat-app-icon">
-                      <svg viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="7" fill="#FF7A59" />
-                        <circle cx="14" cy="11" r="3.5" fill="rgba(255,255,255,0.9)" />
-                        <path d="M6 22c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
-                      </svg>
-                    </div>
-                    <div className="feat-app-icon">
-                      <svg viewBox="0 0 28 28" fill="none">
-                        <rect width="28" height="28" rx="7" fill="#2C4BFF" />
-                        <path d="M14 6L18 8.5V13.5L14 16L10 13.5V8.5L14 6Z" fill="rgba(255,255,255,0.3)" />
-                        <path d="M14 9L17 11V14L14 16L11 14V11L14 9Z" fill="white" />
-                      </svg>
+                      <Image src="/google-drive.jpg" alt="Google Drive" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />                   
                     </div>
                   </div>
                   <div className="feat-chaos-text">Too many tools.<br />Not enough focus.</div>

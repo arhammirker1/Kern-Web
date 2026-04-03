@@ -386,78 +386,43 @@ track('Waitlist Signup', {
         <div className="icons-arena">
           {/* Slack */}
           <div className="app-icon" style={{ top: '8%', left: '12%', animation: 'float1 5.2s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="#4A154B" />
-              <circle cx="13" cy="19.5" r="1.5" fill="#E01E5A" />
-              <circle cx="13" cy="13.5" r="1.5" fill="#36C5F0" />
-              <circle cx="23" cy="22.5" r="1.5" fill="#2EB67D" />
-              <circle cx="23" cy="16.5" r="1.5" fill="#ECB22E" />
-            </svg>
-            <div className="app-badge">1M+</div>
-          </div>
+  <Image src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <div className="app-badge">1M+</div>
+</div>
 
           {/* Notion */}
-          <div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="white" stroke="#E0E0E0" />
-              <rect x="8" y="7" width="20" height="22" rx="2" fill="white" stroke="#0E0E0D" strokeWidth="1.5" />
-              <line x1="12" y1="13" x2="24" y2="13" stroke="#0E0E0D" strokeWidth="1.5" strokeLinecap="round" />
-              <line x1="12" y1="17" x2="22" y2="17" stroke="#0E0E0D" strokeWidth="1" strokeLinecap="round" />
-              <line x1="12" y1="21" x2="20" y2="21" stroke="#0E0E0D" strokeWidth="1" strokeLinecap="round" />
-            </svg>
-            <div className="app-badge blue">100</div>
-          </div>
+<div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
+  <Image src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <div className="app-badge blue">100</div>
+</div>
 
           {/* Linear */}
           <div className="app-icon" style={{ top: '60%', left: '6%', animation: 'float3 5.8s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="#5E6AD2" />
-              <path d="M8 24L24 8M8 24l4-4M12 28l4-4M16 28L28 16M24 8l4 4M16 28l4-4" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-            </svg>
-            <div className="app-badge">665</div>
-          </div>
+  <Image src="/asana.jpg" alt="Asana — task management replaced by Kobin tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <div className="app-badge">665</div>
+</div>
 
           {/* Google Drive */}
           <div className="app-icon" style={{ bottom: '12%', left: '20%', animation: 'float4 7.2s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="white" stroke="#E0E0E0" />
-              <path d="M18 8L26 22H10L18 8Z" fill="#4285F4" />
-              <path d="M10 22L6 28H22L26 22H10Z" fill="#34A853" />
-              <path d="M26 22L30 28H22L18 22L26 22Z" fill="#FBBC05" />
-            </svg>
-            <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
-          </div>
+  <Image src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
+</div>
 
           {/* HubSpot */}
           <div className="app-icon" style={{ bottom: '8%', right: '14%', animation: 'float5 5.5s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="#FF7A59" />
-              <circle cx="18" cy="14" r="4" fill="white" />
-              <path d="M12 24c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="white" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-          </div>
+  <Image src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+</div>
 
           {/* Google Calendar */}
           <div className="app-icon" style={{ top: '30%', left: '2%', animation: 'float6 6.8s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="white" stroke="#E0E0E0" />
-              <rect x="6" y="9" width="24" height="20" rx="2" fill="white" stroke="#4285F4" strokeWidth="1.5" />
-              <line x1="6" y1="15" x2="30" y2="15" stroke="#4285F4" strokeWidth="1.5" />
-              <line x1="14" y1="7" x2="14" y2="12" stroke="#EA4335" strokeWidth="2" strokeLinecap="round" />
-              <line x1="22" y1="7" x2="22" y2="12" stroke="#EA4335" strokeWidth="2" strokeLinecap="round" />
-              <text x="18" y="26" textAnchor="middle" fontSize="9" fontWeight="bold" fill="#0E0E0D">31</text>
-            </svg>
-            <div className="app-badge">99+</div>
-          </div>
+  <Image src="/google-meet.jpg" alt="Google Meet — integrated into Kobin calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <div className="app-badge">99+</div>
+</div>
 
           {/* Buffer */}
           <div className="app-icon" style={{ top: '25%', right: '3%', animation: 'float7 7.5s ease-in-out infinite' }}>
-            <svg viewBox="0 0 36 36" fill="none">
-              <rect width="36" height="36" rx="8" fill="#2C4BFF" />
-              <path d="M18 9L26 13.5V22.5L18 27L10 22.5V13.5L18 9Z" fill="rgba(255,255,255,0.3)" />
-              <path d="M18 14L22 16.5V21.5L18 24L14 21.5V16.5L18 14Z" fill="white" />
-            </svg>
-          </div>
+  <Image src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+</div>
 
           <div className="center-text">
             <p>Context switching<br />is killing your focus.</p>
