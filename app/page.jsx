@@ -386,42 +386,42 @@ track('Waitlist Signup', {
         <div className="icons-arena">
           {/* Slack */}
           <div className="app-icon" style={{ top: '8%', left: '12%', animation: 'float1 5.2s ease-in-out infinite' }}>
-  <Image src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">1M+</div>
 </div>
 
           {/* Notion */}
 <div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
-  <Image src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge blue">100</div>
 </div>
 
           {/* Linear */}
           <div className="app-icon" style={{ top: '60%', left: '6%', animation: 'float3 5.8s ease-in-out infinite' }}>
-  <Image src="/asana.jpg" alt="Asana — task management replaced by Kobin tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/asana.jpg" alt="Asana — task management replaced by Kobin tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">665</div>
 </div>
 
           {/* Google Drive */}
           <div className="app-icon" style={{ bottom: '12%', left: '20%', animation: 'float4 7.2s ease-in-out infinite' }}>
-  <Image src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
 </div>
 
           {/* HubSpot */}
           <div className="app-icon" style={{ bottom: '8%', right: '14%', animation: 'float5 5.5s ease-in-out infinite' }}>
-  <Image src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
 </div>
 
           {/* Google Calendar */}
           <div className="app-icon" style={{ top: '30%', left: '2%', animation: 'float6 6.8s ease-in-out infinite' }}>
-  <Image src="/google-meet.jpg" alt="Google Meet — integrated into Kobin calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/google-meet.jpg" alt="Google Meet — integrated into Kobin calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">99+</div>
 </div>
 
           {/* Buffer */}
           <div className="app-icon" style={{ top: '25%', right: '3%', animation: 'float7 7.5s ease-in-out infinite' }}>
-  <Image src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
 </div>
 
           <div className="center-text">

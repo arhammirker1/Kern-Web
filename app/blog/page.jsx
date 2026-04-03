@@ -201,19 +201,19 @@ setNewsletterEmail('')
                 <div className="feat-visual">
                   <div className="feat-visual-icons">
   <div className="feat-app-icon">
-    <Image src="/slack.jpg" alt="Slack" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+    <img src="/slack.jpg" alt="Slack" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
   </div>
                       <div className="feat-app-icon">
-    <Image src="/notion.png" alt="Notion" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+    <img src="/notion.png" alt="Notion" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
   </div>
                       <div className="feat-app-icon">
-    <Image src="/asana.jpg" alt="Asana" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+    <img src="/asana.jpg" alt="Asana" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
   </div>
   <div className="feat-app-icon">
-    <Image src="/hubspot.jpg" alt="HubSpot" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+    <img src="/hubspot.jpg" alt="HubSpot" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
   </div>
                     <div className="feat-app-icon">
-                      <Image src="/google-drive.jpg" alt="Google Drive" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />                   
+                      <img src="/google-drive.jpg" alt="Google Drive" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />                   
                     </div>
                   </div>
                   <div className="feat-chaos-text">Too many tools.<br />Not enough focus.</div>
