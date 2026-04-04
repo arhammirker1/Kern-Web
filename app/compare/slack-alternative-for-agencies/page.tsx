@@ -46,7 +46,7 @@ const jsonLd = {
       brand: { '@type': 'Brand', name: 'Kobin' },
       url: 'https://www.kobin.team',
       offers: [
-        { '@type': 'Offer', name: 'Founder', price: '49', priceCurrency: 'USD' },
+        { '@type': 'Offer', name: 'Founder', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
       ],
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '12', bestRating: '5' },
     },
