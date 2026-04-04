@@ -145,7 +145,16 @@ const reviewsSchema = {
   name: 'Kobin',
   description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer.',
   brand: { '@type': 'Brand', name: 'Kobin' },
-  url: SITE_URL,
+  url: 'https://www.kobin.team',
+  image: 'https://www.kobin.team/og-image.png',
+  offers: {
+    '@type': 'Offer',
+    price: '49',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://www.kobin.team/#waitlist',
+    priceValidUntil: '2027-01-01',
+  },
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: '4.9',
@@ -207,7 +216,7 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: 'Kobin — Agency Operating System | Replace Slack, Notion, HubSpot',
-    template: '%s | Kobin',
+    template: '%s',
   },
   description: 'Kobin is the all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer. One workspace for tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer — from $49/month.',
   keywords: [
