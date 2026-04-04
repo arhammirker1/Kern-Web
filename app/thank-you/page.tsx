@@ -10,7 +10,7 @@ export const metadata = {
 export default function ThankYouPage() {
   return (
     <>
-      <Nav />
+      <Nav activePage="" />
       <div style={{
         minHeight: '100vh',
         display: 'flex',
