@@ -15,6 +15,7 @@ export default function Nav({ activePage }) {
         <Link href="/#pricing" className={activePage === 'pricing' ? 'active' : ''}>Pricing</Link>
         <Link href="/docs" className={activePage === 'docs' ? 'active' : ''}>Docs</Link>
         <Link href="/blog" className={activePage === 'blog' ? 'active' : ''}>Blog</Link>
+<Link href="/compare" className={activePage === 'compare' ? 'active' : ''}>Compare</Link>
       </div>
       <div className="nav-socials">
         <a href="https://www.instagram.com/kobin.ai/" target="_blank" rel="noopener noreferrer" className="nav-social-link" aria-label="Instagram">

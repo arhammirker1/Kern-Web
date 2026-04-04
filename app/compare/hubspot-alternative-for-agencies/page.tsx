@@ -96,7 +96,7 @@ const features = [
 export default function HubSpotAlternativePage() {
   return (
     <>
-      <Nav activePage="blog" />
+      <Nav activePage="compare" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <article className="blog-post-layout">
