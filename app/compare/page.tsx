@@ -85,7 +85,7 @@ export default function ComparePage() {
 
   return (
     <>
-      <Nav activePage="blog" />
+      <Nav activePage="compare" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="blog-post-layout">

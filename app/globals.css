@@ -389,8 +389,8 @@ footer{padding:36px 48px;background:var(--ink2);display:flex;align-items:center;
   nav{padding:0 20px}.nav-links{display:none}
   .hero{grid-template-columns:1fr;padding:100px 20px 60px}
   .hero-left{align-items:flex-start;text-align:left;max-width:100%}
-  .hero-right-img{min-height:280px;margin-top:16px}
-  .hero-right-img img{max-width:280px}
+  .hero-right-img{min-height:220px;margin-top:24px;display:flex!important}
+  .hero-right-img img{max-width:240px}
   .chaos,.features,.ai-section,.testimonials,.pricing,.referral,.final,footer{padding-left:20px;padding-right:20px}
   .replace{padding:0 20px 80px}.replace-inner{grid-template-columns:1fr;padding:36px 24px}
   .replace-arrow{flex-direction:row}
@@ -399,7 +399,7 @@ footer{padding:36px 48px;background:var(--ink2);display:flex;align-items:center;
   .feat-card{border:1px solid var(--wire);border-radius:16px}
   .ref-steps{flex-wrap:wrap;gap:24px}.ref-step::after{display:none}
   .final-form{flex-direction:column}
-  .hero-form{flex-direction:column}
+  .hero-form{flex-direction:column;gap:10px}
   .icons-arena{height:320px}
   .docs-layout{grid-template-columns:1fr}
   .docs-sidebar{display:none}
