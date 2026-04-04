@@ -569,15 +569,15 @@ footer{padding:36px 48px;background:var(--ink2);display:flex;align-items:center;
 .nav-mobile-menu a:last-of-type{border-bottom:none}
 .nav-mobile-menu a:hover{color:var(--vi)}
 
+.nav-right{display:flex;align-items:center;gap:10px}
+.nav-cta-mobile{display:none}
+
 @media(max-width:960px){
-  .nav-hamburger{display:flex;align-items:center;justify-content:center}
+  .nav-hamburger{display:flex!important;align-items:center;justify-content:center}
   .nav-socials{display:none}
-  /* Hide the desktop CTA, show it only inside the hamburger row */
-  nav .nav-cta{display:none}
+  .nav-cta-desktop{display:none!important}
 }
 
 @media(min-width:961px){
-  /* On desktop, hide the hamburger wrapper's CTA since we have it in nav-links area */
-  .nav-hamburger{display:none}
-  /* Make sure the flex wrapper doesn't show on desktop */
+  .nav-hamburger{display:none!important}
 }

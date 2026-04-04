@@ -47,7 +47,6 @@ export default function Nav({ activePage }) {
               </svg>
             )}
           </button>
-          <Link href="/#waitlist" className="nav-cta nav-cta-mobile">Join Waitlist</Link>
         </div>
       </nav>
 
