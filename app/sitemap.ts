@@ -51,7 +51,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-03'),
       changeFrequency: 'monthly',
       priority: 0.95,
-    },  
+    },
+    // ── Compare pages (high commercial intent) ──────────────────────────────
+        {
+      url: `${SITE}/compare`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${SITE}/compare/slack-alternative-for-agencies`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/compare/notion-alternative-for-agencies`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/compare/asana-alternative-for-agencies`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: `${SITE}/compare/hubspot-alternative-for-agencies`,
+      lastModified: new Date('2026-04-04'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+
     {
       url: `${SITE}/llms.txt`,
       lastModified: new Date('2026-04-01'),

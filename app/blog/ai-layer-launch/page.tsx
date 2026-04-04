@@ -40,7 +40,7 @@ const jsonLd = {
       datePublished: '2026-04-01',
       dateModified: '2026-04-01',
       keywords: 'AI agency assistant, AI command bar, @AI inbox, task creation AI, agency operating system',
-      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://kobin.team/blog/ai-layer-launch' },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://www.kobin.team/blog/ai-layer-launch' },
     },
     {
       '@type': 'FAQPage',

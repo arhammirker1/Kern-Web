@@ -6,6 +6,7 @@ import Link from 'next/link'
 import Nav from '../components/Nav'
 import { supabase } from '../lib/supabase'
 import { track, identifyUser } from '../lib/mixpanel'
+import Image from 'next/image'
 
 // ─── Base64 mascot image (stored outside component to avoid re-creation) ───
 const MASCOT_SRC =
@@ -333,19 +334,14 @@ track('Waitlist Signup', {
         <div className="hero-right-img">
           {/* Replace MASCOT_SRC with a real /public path once you have the image file,
               e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
-          <img
-  src="/mascot.png"
-  alt="Kobin mascot"
-  style={{
-    maxWidth: '480px',
-    width: '100%',
-    height: 'auto',
-    objectFit: 'contain',
-    objectPosition: 'center bottom',
-    filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))',
-    animation: 'float1 7s ease-in-out infinite'
-  }}
-/>
+          <Image
+            src="/mascot.png"
+            alt="Kobin mascot"
+            width={480}
+            height={520}
+            priority
+            style={{ objectFit: 'contain', objectPosition: 'center bottom', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))', animation: 'float1 7s ease-in-out infinite' }}
+          />
         </div>
       </section>
 
