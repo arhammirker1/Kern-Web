@@ -105,6 +105,9 @@ export default function Home() {
 
   const refLink = `${window.location.origin}${window.location.pathname}?ref=${data.referral_code}`
 setResult({ message: `You're #${data.position} on the waitlist!`, refLink })
+setTimeout(() => {
+  window.location.href = '/thank-you'
+}, 1500)
 
 // Identify the user now that we have their email
 identifyUser(email, {
