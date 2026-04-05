@@ -47,7 +47,7 @@ const agencyWorkflows = [
 export function AIForAgenciesPage() {
   return (
     <>
-      <Nav />
+      <Nav activePage="" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aiForAgenciesJsonLd) }} />
  
       {/* Hero */}

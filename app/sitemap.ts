@@ -127,12 +127,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-06'),
       changeFrequency: 'monthly',
       priority: 0.95,
-    },
-    {
-      url: `${SITE}/blog/zapier-slack-asana-notion-alternative`,
-      lastModified: new Date('2026-04-05'),
-      changeFrequency: 'monthly',
-      priority: 0.95,
-    },
+    },    
   ]
 }

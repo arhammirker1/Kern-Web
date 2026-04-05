@@ -49,7 +49,7 @@ const comparison = [
 export default function NotionAIAlternativePage() {
   return (
     <>
-      <Nav />
+      <Nav activePage="" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* Hero */}

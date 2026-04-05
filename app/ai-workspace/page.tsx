@@ -219,7 +219,7 @@ const vsComparison = [
 export default function AIWorkspacePage() {
   return (
     <>
-      <Nav />
+      <Nav activePage="" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ── HERO ── */}
