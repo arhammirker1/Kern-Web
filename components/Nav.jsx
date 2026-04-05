@@ -16,6 +16,7 @@ export default function Nav({ activePage }) {
         <div className="nav-links">
           <Link href="/#features" className={activePage === 'features' ? 'active' : ''}>Features</Link>
           <Link href="/#pricing" className={activePage === 'pricing' ? 'active' : ''}>Pricing</Link>
+          <Link href="/ai-workspace" className={activePage === 'ai-workspace' ? 'active' : ''} style={{ color: 'var(--vi)', fontWeight: 500 }}>AI Workspace</Link>
           <Link href="/docs" className={activePage === 'docs' ? 'active' : ''}>Docs</Link>
           <Link href="/blog" className={activePage === 'blog' ? 'active' : ''}>Blog</Link>
           <Link href="/compare" className={activePage === 'compare' ? 'active' : ''}>Compare</Link>
@@ -54,6 +55,7 @@ export default function Nav({ activePage }) {
         <div className="nav-mobile-menu">
           <Link href="/#features" onClick={() => setOpen(false)}>Features</Link>
           <Link href="/#pricing" onClick={() => setOpen(false)}>Pricing</Link>
+          <Link href="/ai-workspace" onClick={() => setOpen(false)} style={{ color: 'var(--vi)', fontWeight: 500 }}>AI Workspace</Link>
           <Link href="/docs" onClick={() => setOpen(false)}>Docs</Link>
           <Link href="/blog" onClick={() => setOpen(false)}>Blog</Link>
           <Link href="/compare" onClick={() => setOpen(false)}>Compare</Link>

@@ -97,5 +97,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
 
+     // ── AI Workspace hub pages (brand + keyword domination) ──────────────────
+    {
+      url: `${SITE}/ai-workspace`,
+      lastModified: new Date('2026-04-06'),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${SITE}/ai-for-agencies`,
+      lastModified: new Date('2026-04-06'),
+      changeFrequency: 'weekly',
+      priority: 0.98,
+    },
+    {
+      url: `${SITE}/ai-productivity-tool`,
+      lastModified: new Date('2026-04-06'),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/notion-ai-alternative`,
+      lastModified: new Date('2026-04-06'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/clickup-ai-alternative`,
+      lastModified: new Date('2026-04-06'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/blog/zapier-slack-asana-notion-alternative`,
+      lastModified: new Date('2026-04-05'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
   ]
 }

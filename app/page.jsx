@@ -262,7 +262,7 @@ track('Waitlist Signup', {
                 <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
               </svg>
             </div>
-            Now accepting early access — limited spots
+            The AI workspace that executes — early access open
           </div>
 
           <h1>
@@ -272,7 +272,7 @@ track('Waitlist Signup', {
           </h1>
 
           <p className="hero-sub">
-            Replace Slack, Notion, HubSpot, Linear, and Buffer. One workspace for founders who refuse to juggle tools.
+            Replace Slack, Notion & ClickUp with one AI that understands everything and takes action.
           </p>
 
           {/* Email form or success state */}
@@ -379,8 +379,8 @@ track('Waitlist Signup', {
       {/* ── CHAOS ── */}
       <section className="chaos reveal">
         <div className="chaos-eyebrow">The problem</div>
-        <h2>The current way<br />you work is <em>chaos.</em></h2>
-        <p className="chaos-sub">6 tools. 6 logins. 6 monthly invoices. Zero connection between any of them.</p>
+        <h2>6 tools. 6 invoices.<br /><em>Zero intelligence.</em></h2>
+        <p className="chaos-sub">Your AI can only see one tool at a time. Kobin AI sees everything — and acts on it.</p>
 
         <div className="icons-arena">
           {/* Slack */}
@@ -504,9 +504,9 @@ track('Waitlist Signup', {
         <div className="features-inner">
           <div className="reveal">
             <div className="section-eyebrow">What&apos;s inside</div>
-            <h2 className="section-h2">Eight modules.<br /><em>One workspace.</em></h2>
+            <h2 className="section-h2">Every feature<br />is a <em>result.</em></h2>
             <p className="section-sub">
-              Everything talks to everything. A task in chat becomes a calendar event. A client meeting invite shows up in their inbox.
+              Save 3 hours/day. Never lose context. AI that executes — creating tasks, assigning team, drafting updates automatically.
             </p>
           </div>
 
@@ -836,6 +836,23 @@ track('Waitlist Signup', {
       {/* ── FAQ SECTION (AEO) ── */}
       <section style={{ padding: '80px 48px', background: 'var(--parch)', borderTop: '1px solid var(--wire)' }} id="faq">
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+
+          {/* AI Workspace cluster links strip */}
+          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center', padding: '0 0 40px', borderTop: '1px solid var(--wire)', paddingTop: '40px', marginTop: '-40px' }}>
+            {[
+              { href: '/ai-workspace', label: 'AI Workspace' },
+              { href: '/ai-for-agencies', label: 'AI for Agencies' },
+              { href: '/notion-ai-alternative', label: 'Notion AI Alternative' },
+              { href: '/clickup-ai-alternative', label: 'ClickUp AI Alternative' },
+              { href: '/ai-productivity-tool', label: 'AI Productivity Tool' },
+            ].map(({ href, label }) => (
+              <a key={href} href={href} style={{ fontSize: '13px', color: 'var(--vi)', textDecoration: 'none', padding: '8px 16px', border: '1px solid rgba(76,63,212,0.2)', borderRadius: '100px', background: 'rgba(76,63,212,0.04)' }}>
+                {label}
+              </a>
+            ))}
+          </div>
+
+          
           <div className="section-eyebrow" style={{ marginBottom: '8px' }}>Common questions</div>
           <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 'clamp(32px,4vw,44px)', fontWeight: 300, letterSpacing: '-0.03em', marginBottom: '36px', lineHeight: 1.05 }}>
             Everything you need<br />to know.
