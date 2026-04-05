@@ -210,30 +210,6 @@ const reviewsSchema = {
   ],
 }
 
-const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
-  itemListElement: [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: SITE_URL,
-    },
-    {
-      '@type': 'ListItem',
-      position: 2,
-      name: 'Blog',
-      item: `${SITE_URL}/blog`,
-    },
-    {
-      '@type': 'ListItem',
-      position: 3,
-      name: 'Documentation',
-      item: `${SITE_URL}/docs`,
-    },      
-  ],
-}
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -324,11 +300,6 @@ export default function RootLayout({ children }) {
           data-key="JBC2tKzAYEWLdvkLcglcwA" 
           async>
         </script>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-        />
 
 
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM context file" />

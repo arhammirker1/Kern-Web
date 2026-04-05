@@ -25,6 +25,14 @@ export default function BlogPage() {
       href: '/blog/kobin-ai-vs-notion-clickup',
     },
     {
+      thumbClass: 'thumb-dark', thumbText: 'Zapier\n+\nStack', thumbLabel: 'THE PROBLEM',
+      category: 'cat-problem', catLabel: 'The Problem',
+      title: 'Zapier + Slack + Asana + Notion Is Not a Workspace. It\'s a $312/Month Maintenance Problem.',
+      excerpt: 'The average agency pays $312/month running Zapier to glue four tools together — tools that still break every time one API updates. Here\'s the real cost, why it fails architecturally, and what a true all-in-one workspace looks like.',
+      meta: 'Apr 5 · 12 min',
+      href: '/blog/zapier-slack-asana-notion-alternative',
+    },    
+    {
       thumbClass: 'thumb-dark', thumbText: '@AI\n⌘K', thumbLabel: 'AI LAYER',
       category: 'cat-build', catLabel: 'AI Layer',
       title: 'The AI Layer Is Here: Your Entire Agency, Understood by One Model',
