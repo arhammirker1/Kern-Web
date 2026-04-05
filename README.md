@@ -1,4 +1,4 @@
-# Kern Marketing Site
+# Kern Landing Page
 
 Arham Mirkar
 ---
