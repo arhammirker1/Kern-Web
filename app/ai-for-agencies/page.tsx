@@ -485,7 +485,7 @@ export default function AIForAgenciesPage() {
                   <div style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)' }}>{module}</div>
                   <div style={{ fontSize: '10px', color: '#0D6B4F', background: 'rgba(13,107,79,0.08)', padding: '2px 8px', borderRadius: '100px', fontFamily: "'Geist Mono', monospace", whiteSpace: 'nowrap' }}>{saves}</div>
                 </div>
-                <div style={{ fontSize: '11px', color: 'var(--ghost2)', fontFamily: "'Geist Mono', monospace', marginBottom: '8px' }}>replaces {replaces}</div>
+                <div style={{ fontSize: '11px', color: 'var(--ghost2)', fontFamily: "'Geist Mono', monospace", marginBottom: '8px' }}>replaces {replaces}</div>
                 <p style={{ fontSize: '12px', color: 'var(--ghost)', lineHeight: 1.6, margin: 0 }}>{desc}</p>
               </div>
             ))}
