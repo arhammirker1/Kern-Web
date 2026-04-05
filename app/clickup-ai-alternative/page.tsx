@@ -158,16 +158,16 @@ const comparison = [
 ]
 
 const featureComparison = [
-  ['Task management', 'Yes - highly configurable (complex)', 'Yes - 4 time-horizon buckets, ready in 30 min'],
-  ['AI layer', 'ClickUp tasks and docs only', 'Full workspace: tasks, CRM, inbox, vault, calendar'],
-  ['Real-time inbox', 'No - requires Slack ($87/mo)', 'Yes - project rooms, group chats, DMs included'],
-  ['Built-in CRM', 'No - requires HubSpot ($50+/mo)', 'Yes - leads, investors, partners, follow-ups included'],
-  ['Client portal', 'Enterprise only (custom pricing)', 'Yes - all plans, one click to activate'],
-  ['Google Drive vault', 'Integration only - via Zapier', 'Yes - native, auto-creates 3 folders per project'],
-  ['LinkedIn Studio', 'No', 'Yes - draft, schedule, and track posts'],
-  ['AI pre-meeting briefs', 'No', 'Yes - auto-generated 10 min before each call'],
-  ['Setup time', 'Weeks of configuration', '30 minutes, no templates required'],
-  ['Price (5 seats)', '$95/mo + $87 Slack + $50+ HubSpot', '$49/mo total - all modules included'],
+  ['Task management', 'Yes - 4 time-horizon buckets, ready in 30 min', 'Yes - highly configurable (complex)'],
+  ['AI layer', 'Full workspace: tasks, CRM, inbox, vault, calendar', 'ClickUp tasks and docs only'],
+  ['Real-time inbox', 'Yes - project rooms, group chats, DMs included', 'No - requires Slack ($87/mo)'],
+  ['Built-in CRM', 'Yes - leads, investors, partners, follow-ups included', 'No - requires HubSpot ($50+/mo)'],
+  ['Client portal', 'Yes - all plans, one click to activate', 'Enterprise only (custom pricing)'],
+  ['Google Drive vault', 'Yes - native, auto-creates 3 folders per project', 'Integration only - via Zapier'],
+  ['LinkedIn Studio', 'Yes - draft, schedule, and track posts', 'No'],
+  ['AI pre-meeting briefs', 'Yes - auto-generated 10 min before each call', 'No'],
+  ['Setup time', '30 minutes, no templates required', 'Weeks of configuration'],
+  ['Price (5 seats)', '$49/mo total - all modules included', '$95/mo + $87 Slack + $50+ HubSpot'],
 ]
 
 export default function ClickUpAIAlternativePage() {
@@ -758,24 +758,24 @@ export default function ClickUpAIAlternativePage() {
                 <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--ink)' }}>
                   {feat}
                 </span>
-                <span style={{ fontSize: '12px', color: '#0D6B4F', lineHeight: 1.5 }}>
-                  {kobin}
-                </span>
-                <span
-                  style={{
-                    fontSize: '12px',
-                    color:
-                      clickup.startsWith('No') || clickup.startsWith('Enterprise') ||
-                      clickup.startsWith('Weeks') || clickup.startsWith('$232')
-                        ? '#C03B30'
-                        : clickup.startsWith('Yes - highly')
-                        ? '#C4720A'
-                        : 'var(--ghost)',
-                    lineHeight: 1.5,
-                  }}
-                >
-                  {clickup}
-                </span>
+<span style={{ fontSize: '12px', color: '#0D6B4F', lineHeight: 1.5 }}>
+  {kobin}
+</span>
+<span
+  style={{
+    fontSize: '12px',
+    color:
+      clickup.startsWith('No') || clickup.startsWith('Enterprise') ||
+      clickup.startsWith('Weeks') || clickup.startsWith('$95')
+        ? '#C03B30'
+        : clickup.startsWith('Yes - highly')
+        ? '#C4720A'
+        : 'var(--ghost)',
+    lineHeight: 1.5,
+  }}
+>
+  {clickup}
+</span>
               </div>
             ))}
           </div>
