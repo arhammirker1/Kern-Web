@@ -44,7 +44,7 @@ const agencyWorkflows = [
   { scenario: 'New team member for a task', without: 'Check Asana for each person, estimate who has capacity (guesswork)', with: 'AI checks live workload, assigns the least busy person automatically' },
 ]
  
-export function AIForAgenciesPage() {
+export default function AIForAgenciesPage() {
   return (
     <>
       <Nav activePage="" />
@@ -140,4 +140,3 @@ export function AIForAgenciesPage() {
   )
 }
  
-export default AIForAgenciesPage
