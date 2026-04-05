@@ -892,8 +892,8 @@ track('Waitlist Signup', {
           <Link href="/#pricing">Pricing</Link>
           <Link href="/docs">Docs</Link>
           <Link href="/blog">Blog</Link>
-          <a href="mailto:hello@Kobin.app">Contact</a>
-          <Link href="#">Privacy</Link>
+          <a href="mailto:support@kobin.team">Contact</a>
+          <Link href="/privacy">Privacy</Link>
           <a href="https://www.instagram.com/kobin.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{display:'flex',alignItems:'center',gap:'5px'}}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             Instagram

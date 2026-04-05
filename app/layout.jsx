@@ -2,6 +2,30 @@
 import './globals.css'
 import MixpanelInit from '../components/MixpanelInit'
 import SmartPopup from '../components/SmartPopup'
+import { Geist, Geist_Mono, Fraunces } from 'next/font/google'
+
+const geistSans = Geist({
+  subsets: ['latin'],
+  variable: '--font-geist',
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-geist-mono',
+  weight: ['400', '500'],
+  display: 'swap',
+})
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  variable: '--font-fraunces',
+  weight: ['300', '400', '600'],
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
+  display: 'swap',
+})
 
 // ── Placeholder until you get your domain ──
 // Replace 'https://kern.app' with your real domain the day you get it.
@@ -57,8 +81,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
       worksFor: { '@id': `${SITE_URL}/#organization` },
       url: SITE_URL,
       sameAs: [
-        'https://www.linkedin.com/company/kobin-app/',
-        'https://www.instagram.com/kobin.ai/',
+        'https://www.linkedin.com/in/arham-mirkar/',
       ],
       knowsAbout: [
         'Agency Management Software',
@@ -269,13 +292,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
+        
         
         {/* GEO: Organization + WebSite + SoftwareApplication schema on every page */}
         <script

@@ -21,6 +21,14 @@ const docsSchemas = [
   },
   {
     '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.kobin.team' },
+      { '@type': 'ListItem', position: 2, name: 'Documentation', item: 'https://www.kobin.team/docs' },
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
     '@type': 'HowTo',
     name: 'How to set up Kobin as your agency operating system',
     description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer with one workspace in under 30 minutes.',
@@ -119,7 +127,7 @@ export default function DocsPage() {
 
           <div className="doc-callout">
             <div className="doc-callout-icon">⚡</div>
-            <p><strong>Early access:</strong> Kobin is currently in closed beta. Join the waitlist at <Link href="/#waitlist" style={{ color: 'var(--vi)' }}>kobin.app</Link> to get access when your spot opens up.</p>
+            <p><strong>Early access:</strong> Kobin is currently in closed beta. Join the waitlist at <Link href="/#waitlist" style={{ color: 'var(--vi)' }}>kobin.team</Link> to get access when your spot opens up.</p>
           </div>
 
           {/* ── QUICK START ── */}

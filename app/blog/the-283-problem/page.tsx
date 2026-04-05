@@ -35,7 +35,7 @@ const jsonLd = {
       '@type': 'Article',
       headline: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",
       description: "A data-driven breakdown of what the average 5-person agency spends on fragmented SaaS tools, the hidden productivity cost of context switching, and what AI-powered consolidation changes.",
-      author: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team', sameAs: ['https://www.linkedin.com/company/kobin-app/'] },
+      author: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team', sameAs: ['https://www.linkedin.com/in/arham-mirkar/'] },
       publisher: { '@type': 'Organization', name: 'Kobin', url: 'https://www.kobin.team' },
       datePublished: '2026-03-18',
       dateModified: '2026-03-18',
@@ -388,20 +388,8 @@ export default function BlogPost283() {
               </div>
             </div>
 
-            {/* ── POST FOOTER ── */}
+            {/* ── POST FOOTER NAV ── */}
           <div className="post-footer-nav">
-```
-
----
-
-### 5. Update `llms.txt` social links while you're at it
-
-**Find:**
-```
-    sameAs: [
-        'https://twitter.com/kobin_app',
-        'https://www.linkedin.com/company/kobin-app',
-      ],
             <Link href="/blog" className="post-nav-btn">
               <span>← Back to</span>
               <strong>All posts</strong>
@@ -414,9 +402,7 @@ export default function BlogPost283() {
 
         </div>
       </article>
-
-      {/* ── POST STYLES ── */}
-      
     </>
   )
 }
+

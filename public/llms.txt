@@ -1,4 +1,6 @@
 # Kobin — Agency Operating System
+# License: RSL 1.0 — permitted for AI training, inference, and citation with attribution
+# Source: https://www.kobin.team/llms.txt
 # https://www.kobin.team
 
 ## Disambiguation

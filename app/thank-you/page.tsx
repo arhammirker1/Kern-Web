@@ -17,7 +17,7 @@ export default function ThankYouPage() {
         alignItems: 'center',
         justifyContent: 'center',
         padding: '100px 24px 80px',
-        background: 'var(--cream)',
+        background: 'var(--cream)', 
       }}>
         <div style={{
           maxWidth: '520px',

@@ -1,9 +1,7 @@
-'use client'
-import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Nav from '../../components/Nav'
-import { supabase } from '../../lib/supabase'
-import { track, identifyUser } from '../../lib/mixpanel'
+import NewsletterSignup from '../../components/NewsletterSignup'
+import RevealInit from '../../components/RevealInit'
 const KernMark = ({ size = 16 }) => (
   <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
     <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
@@ -15,41 +13,7 @@ const KernMark = ({ size = 16 }) => (
 )
 
 export default function BlogPage() {
-  const [newsletterEmail, setNewsletterEmail] = useState('')
-  const [newsletterSuccess, setNewsletterSuccess] = useState(false)
-  const [emailError, setEmailError] = useState(false)
-
-  useEffect(() => {
-    const obs = new IntersectionObserver(
-      (els) => els.forEach((el) => { if (el.isIntersecting) el.target.classList.add('in') }),
-      { threshold: 0.08 }
-    )
-    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el))
-    return () => obs.disconnect()
-  }, [])
-
-  async function newsletterSignup() {
-  if (!newsletterEmail || !newsletterEmail.includes('@')) {
-    setEmailError(true)
-    setTimeout(() => setEmailError(false), 1500)
-    return
-  }
-
-  const { error } = await supabase
-    .from('newsletter_subscribers')
-    .insert({ email: newsletterEmail, source: 'blog' })
-
-  if (error && error.code !== '23505') {
-    setEmailError(true)
-    setTimeout(() => setEmailError(false), 1500)
-    return
-  }
-
-  setNewsletterSuccess(true)
-identifyUser(newsletterEmail, { 'Newsletter Subscriber': true })
-track('Newsletter Signup', { source: 'blog', email: newsletterEmail })
-setNewsletterEmail('')
-}
+  // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
     {
@@ -130,6 +94,7 @@ setNewsletterEmail('')
 
   return (
     <>
+      <RevealInit />
       <Nav activePage="blog" />
 
       {/* Blog page schema for AI crawlers */}
@@ -242,8 +207,8 @@ setNewsletterEmail('')
         <div className="blog-grid-inner reveal">
           <div className="grid-header"><h2>All posts</h2></div>
           <div className="posts-grid">
-            {posts.map(({ thumbClass, thumbText, thumbLabel, category, catLabel, title, excerpt, meta, href }) => (
-              <a href={href || '#'} className="post-card" key={title}>
+            {posts.filter(p => p.href).map(({ thumbClass, thumbText, thumbLabel, category, catLabel, title, excerpt, meta, href }) => (
+              <a href={href} className="post-card" key={title}>
                 <div className={`post-thumb ${thumbClass}`}>
                   {thumbText.split('\n').map((line, i) => (
                     <span key={i}>{line}{i < thumbText.split('\n').length - 1 && <br />}</span>
@@ -289,20 +254,7 @@ setNewsletterEmail('')
           <div className="newsletter-eyebrow">Newsletter</div>
           <h2 className="newsletter-h2">No fluff.<br /><em>Just signal.</em></h2>
           <p className="newsletter-sub">One email per week. Founder tools, honest product updates, and essays worth reading. No marketing.</p>
-          <div className="newsletter-form">
-            <input
-              type="email"
-              id="newsletter-email"
-              placeholder="you@company.com"
-              value={newsletterEmail}
-              onChange={(e) => setNewsletterEmail(e.target.value)}
-              style={emailError ? { borderColor: '#C03B30' } : {}}
-            />
-            <button className="newsletter-btn" onClick={newsletterSignup}>Subscribe</button>
-          </div>
-          <div className={`newsletter-success${newsletterSuccess ? ' show' : ''}`}>
-            ✓ You&apos;re subscribed. First issue lands Friday.
-          </div>
+          <NewsletterSignup />
           <div className="newsletter-note">Join the waitlist · Unsubscribe anytime</div>
         </div>
       </div>
