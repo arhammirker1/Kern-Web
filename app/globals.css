@@ -8,13 +8,13 @@
   --pine:#0D6B4F;
 }
 html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:'Geist',sans-serif;overflow-x:hidden}
+html{overflow-x:hidden}body{background:var(--cream);color:var(--ink);font-family:'Geist',sans-serif;overflow-x:hidden;max-width:100vw}
 ::selection{background:rgba(76,63,212,0.18);color:var(--ink)}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-thumb{background:#ccc;border-radius:2px}
 
 /* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(246,244,239,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(14,14,13,0.06)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;background:rgba(246,244,239,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(14,14,13,0.06);width:100%;box-sizing:border-box}
 .nav-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
 .nav-mark{width:28px;height:28px;border-radius:8px;background:var(--ink);display:flex;align-items:center;justify-content:center}
 .nav-mark svg{width:16px;height:16px}
@@ -386,15 +386,16 @@ footer{padding:36px 48px;background:var(--ink2);display:flex;align-items:center;
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
-  nav{padding:0 20px}.nav-links{display:none}
-  .hero{grid-template-columns:1fr;padding:100px 20px 60px}
-  .hero-left{align-items:flex-start;text-align:left;max-width:100%}
-  .hero-right-img{min-height:220px;margin-top:24px;display:flex!important}
+  nav{padding:0 20px;width:100vw;left:0;right:0}.nav-links{display:none}
+  .hero{grid-template-columns:1fr;padding:100px 20px 60px;width:100%;overflow:hidden}
+  .hero-left{align-items:flex-start;text-align:left;max-width:100%;width:100%}
+  .hero-right-img{min-height:220px;margin-top:24px;display:flex!important;width:100%;justify-content:center}
   .hero-right-img img{max-width:240px}
   .chaos,.features,.ai-section,.testimonials,.pricing,.referral,.final,footer{padding-left:20px;padding-right:20px}
   .replace{padding:0 20px 80px}.replace-inner{grid-template-columns:1fr;padding:36px 24px}
   .replace-arrow{flex-direction:row}
   .ai-grid,.test-grid,.pricing-grid,.feat-grid,.chaos-stats{grid-template-columns:1fr}
+  .chaos-stats{gap:12px}
   .feat-grid{border:none;gap:16px;background:transparent}
   .feat-card{border:1px solid var(--wire);border-radius:16px}
   .ref-steps{flex-wrap:wrap;gap:24px}.ref-step::after{display:none}
