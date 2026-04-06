@@ -56,7 +56,7 @@ const jsonLd = {
       url: 'https://www.kobin.team',
       description:
         'Kobin is the AI workspace for agencies. AI that creates tasks from client messages, assigns team members by workload, drafts client updates from completed deliverables, generates pre-meeting briefs, and flags stale CRM leads — all automatically. Replaces Slack, Notion, HubSpot, Asana, and Zapier from $49/month.',
-      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD' },
+      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
       featureList: [
         'AI creates tasks from client messages automatically',
         'AI assigns to least-busy team member based on live workload',

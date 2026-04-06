@@ -56,7 +56,7 @@ const jsonLd = {
       url: 'https://www.kobin.team',
       description:
         'Kobin is the best ClickUp AI alternative for agencies. Unlike ClickUp AI which is scoped to tasks and docs, Kobin AI sees tasks, CRM pipeline, inbox messages, vault files, team workload, and calendar events simultaneously - and takes action across all of them.',
-      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD' },
+      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
     },
     {
       '@type': 'FAQPage',

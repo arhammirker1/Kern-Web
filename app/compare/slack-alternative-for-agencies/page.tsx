@@ -40,11 +40,12 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'Product',
-      name: 'Kobin',
-      description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, and more.',
-      brand: { '@type': 'Brand', name: 'Kobin' },
-      url: 'https://www.kobin.team',
+'@type': 'Product',
+name: 'Kobin',
+description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, and more.',
+brand: { '@type': 'Brand', name: 'Kobin' },
+url: 'https://www.kobin.team',
+image: 'https://www.kobin.team/og-image.png',
       offers: [
         { '@type': 'Offer', name: 'Founder', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
       ],

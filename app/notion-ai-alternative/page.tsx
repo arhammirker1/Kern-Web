@@ -55,7 +55,7 @@ const jsonLd = {
       url: 'https://www.kobin.team',
       description:
         'Kobin is the best Notion AI alternative for agencies. Unlike Notion AI which is scoped to documents only, Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and takes action on all of them.',
-      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD' },
+      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
     },
     {
       '@type': 'FAQPage',

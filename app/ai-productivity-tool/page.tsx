@@ -56,7 +56,7 @@ const jsonLd = {
       url: 'https://www.kobin.team',
       description:
         'Kobin is the best AI productivity tool for agency founders in 2026. AI that creates tasks from conversations, assigns team members by workload, queries CRM pipeline, drafts client updates, and generates pre-meeting briefs - all from one workspace replacing Slack, Notion, Asana, HubSpot, and Zapier.',
-      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD' },
+      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
       featureList: [
         'AI creates tasks from client conversations automatically',
         'AI assigns to least busy team member based on live workload',
