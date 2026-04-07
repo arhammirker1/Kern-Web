@@ -16,6 +16,46 @@ export default function BlogPage() {
   // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
+     {
+  thumbClass: 'thumb-vi', thumbText: 'AI for\nMarketing\nAgencies', thumbLabel: 'GUIDE',
+  category: 'cat-guide', catLabel: 'Guide',
+  title: 'AI for Marketing Agencies in 2026 — The Workspace That Runs Your Campaigns',
+  excerpt: 'Marketing agencies spend 50 minutes per client on weekly reports. Kobin AI does it in 4 minutes — from completed tasks, delivered assets, and client messages. Here is the full breakdown.',
+  meta: 'Apr 10 · 10 min',
+  href: '/blog/ai-for-marketing-agencies',
+},
+{
+  thumbClass: 'thumb-parch', thumbText: 'AI for\nFreelancers', thumbLabel: 'GUIDE',
+  category: 'cat-guide', catLabel: 'Guide',
+  title: 'AI for Freelancers in 2026 — Run Your Entire Business From One Tab',
+  excerpt: 'Freelancers lose 30% of their billable hours to admin. Kobin Solo at $19/month replaces Notion, Todoist, Calendly, and client portal tools — with an AI that handles follow-ups automatically.',
+  meta: 'Apr 10 · 9 min',
+  href: '/blog/ai-for-freelancers',
+},
+{
+  thumbClass: 'thumb-dark', thumbText: 'AI for\nStartups', thumbLabel: 'BUILD',
+  category: 'cat-build', catLabel: 'Startup',
+  title: 'AI for Startups in 2026 — Replace the Tool Stack Before It Slows You Down',
+  excerpt: 'Most startups build a $243/month Slack + Notion + Linear + HubSpot stack before their first customer. Here is why that is the wrong architecture — and what to use instead.',
+  meta: 'Apr 10 · 10 min',
+  href: '/blog/ai-for-startups',
+},
+{
+  thumbClass: 'thumb-vi', thumbText: 'AI for\nRemote\nTeams', thumbLabel: 'GUIDE',
+  category: 'cat-guide', catLabel: 'Guide',
+  title: 'AI for Remote Teams in 2026 — One Workspace Across Every Time Zone',
+  excerpt: 'Remote teams lose 2 hours per day reconstructing context across tools and time zones. Kobin AI generates personalized daily briefs, surfaces blockers, and keeps distributed teams aligned.',
+  meta: 'Apr 10 · 11 min',
+  href: '/blog/ai-for-remote-teams',
+},
+    {
+      thumbClass: 'thumb-parch', thumbText: 'AI for\nProject\nManagers', thumbLabel: 'GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'AI for Project Managers in 2026 — Risk Flags and Workload Balance on Autopilot',
+      excerpt: 'Project managers spend 11 hours per week on coordination overhead. Kobin AI monitors all projects for risk, generates client briefings, and balances team workload automatically.',
+      meta: 'Apr 10 · 11 min',
+      href: '/blog/ai-for-project-managers',
+    },
     {
       thumbClass: 'thumb-dark', thumbText: '@AI\nFull\nContext', thumbLabel: 'AI LAYER',
       category: 'cat-build', catLabel: 'AI Layer',

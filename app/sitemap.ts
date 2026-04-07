@@ -58,6 +58,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.95,
     },
+    {
+      url: `${SITE}/blog/ai-for-marketing-agencies`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/blog/ai-for-freelancers`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/blog/ai-for-startups`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/blog/ai-for-remote-teams`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+    {
+      url: `${SITE}/blog/ai-for-project-managers`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+
     // ── Compare pages (high commercial intent) ──────────────────────────────
         {
       url: `${SITE}/compare`,
