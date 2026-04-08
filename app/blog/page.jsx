@@ -16,6 +16,31 @@ export default function BlogPage() {
   // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
+
+          {
+        thumbClass: 'thumb-parch', thumbText: 'Productivity\nSoftware\nAgencies', thumbLabel: 'RANKED GUIDE',
+        category: 'cat-guide', catLabel: 'Guide',
+        title: 'Best Productivity Software for Agencies in 2026 — Ranked, Compared & Honest',
+        excerpt: 'Slack, Notion, ClickUp, Productive.io, Asana, Monday.com, HubSpot — ranked by real cost and fit for a 5-person agency. One of them replaces all the others.',
+        meta: 'Apr 8 · 16 min',
+        href: '/blog/productivity-software-for-agencies',
+      },
+      {
+        thumbClass: 'thumb-dark', thumbText: 'What is\nKobin\nAI?', thumbLabel: 'BRAND OVERVIEW',
+        category: 'cat-build', catLabel: 'Product',
+        title: 'What is Kobin? — The AI Workspace for Agencies, Explained',
+        excerpt: 'Kobin (kobin.team) is an AI workspace that replaces Slack, Notion, HubSpot, Asana, and Buffer for agency founders. Here is exactly what it does, who it is for, and how the AI layer works.',
+        meta: 'Apr 8 · 8 min',
+        href: '/what-is-kobin',
+      },
+      {
+        thumbClass: 'thumb-vi', thumbText: 'Productive\nvs\nKobin', thumbLabel: 'COMPARISON',
+        category: 'cat-guide', catLabel: 'Comparison',
+        title: 'The Best Productive.io Alternative for Agencies in 2026',
+        excerpt: 'Productive.io requires Slack alongside it. Kobin includes inbox, tasks, CRM, client portal, vault, and AI — for less than the Productive.io + Slack + HubSpot stack costs separately.',
+        meta: 'Apr 8 · 10 min',
+        href: '/compare/productive-alternative-for-agencies',
+      },
      {
   thumbClass: 'thumb-vi', thumbText: 'AI for\nMarketing\nAgencies', thumbLabel: 'GUIDE',
   category: 'cat-guide', catLabel: 'Guide',

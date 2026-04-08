@@ -28,6 +28,17 @@ export const metadata = {
 }
 
 const comparisons = [
+
+  {
+    slug: 'productive-alternative-for-agencies',
+    competitor: 'Productive.io',
+    tagline: 'Productive.io alternative for agencies',
+    summary:
+      "Productive.io is the go-to for resource planning and financials — but it still requires Slack ($87/mo) and HubSpot ($50/mo) alongside it. Kobin replaces all three for $49/month.",
+    saves: '$158/mo',
+    badge: 'Ranks #1',
+    badgeStyle: { background: 'rgba(192,59,48,0.1)', color: '#C03B30' },
+  },
   {
     slug: 'slack-alternative-for-agencies',
     competitor: 'Slack',

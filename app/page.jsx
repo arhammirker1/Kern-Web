@@ -845,6 +845,8 @@ track('Waitlist Signup', {
               { href: '/notion-ai-alternative', label: 'Notion AI Alternative' },
               { href: '/clickup-ai-alternative', label: 'ClickUp AI Alternative' },
               { href: '/ai-productivity-tool', label: 'AI Productivity Tool' },
+              { href: '/what-is-kobin', label: 'What is Kobin?' },
+              { href: '/blog/productivity-software-for-agencies', label: 'Productivity Software' },
             ].map(({ href, label }) => (
               <a key={href} href={href} style={{ fontSize: '13px', color: 'var(--vi)', textDecoration: 'none', padding: '8px 16px', border: '1px solid rgba(76,63,212,0.2)', borderRadius: '100px', background: 'rgba(76,63,212,0.04)' }}>
                 {label}

@@ -49,7 +49,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
         width: 180,
         height: 180,
       },
-      description: 'Kobin (kobin.team) is the AI workspace for agencies — where AI creates tasks, assigns team members, drafts client updates, and runs your workspace. Replaces Slack, Notion, HubSpot, Asana, and Zapier. Not affiliated with kobin.com (agricultural software) or kobin tiles (PT Kobin Keramik Industri). From $49/month.',
+      description: 'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Buffer. The AI creates tasks, assigns team members, queries CRM pipeline, and generates pre-meeting briefs — all from one workspace from $49/month. Distinct from kobin.com (agricultural analytics) and PT Kobin Keramik Industri (tiles).',
       foundingDate: '2026',
       sameAs: [
         'https://www.instagram.com/kobin.ai/',

@@ -158,6 +158,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-06'),
       changeFrequency: 'monthly',
       priority: 0.95,
-    },    
+    },
+    {
+      url: `${SITE}/what-is-kobin`,
+      lastModified: new Date('2026-04-08'),
+      changeFrequency: 'monthly',
+      priority: 0.98,
+    },
+    {
+      url: `${SITE}/blog/productivity-software-for-agencies`,
+      lastModified: new Date('2026-04-08'),
+      changeFrequency: 'monthly',
+      priority: 0.98,
+    },
+    {
+      url: `${SITE}/compare/productive-alternative-for-agencies`,
+      lastModified: new Date('2026-04-08'),
+      changeFrequency: 'monthly',
+      priority: 0.95,
+    },
+ 
   ]
 }
