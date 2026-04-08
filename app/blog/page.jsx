@@ -33,14 +33,6 @@ export default function BlogPage() {
         meta: 'Apr 8 · 8 min',
         href: '/what-is-kobin',
       },
-      {
-        thumbClass: 'thumb-vi', thumbText: 'Productive\nvs\nKobin', thumbLabel: 'COMPARISON',
-        category: 'cat-guide', catLabel: 'Comparison',
-        title: 'The Best Productive.io Alternative for Agencies in 2026',
-        excerpt: 'Productive.io requires Slack alongside it. Kobin includes inbox, tasks, CRM, client portal, vault, and AI — for less than the Productive.io + Slack + HubSpot stack costs separately.',
-        meta: 'Apr 8 · 10 min',
-        href: '/compare/productive-alternative-for-agencies',
-      },
      {
   thumbClass: 'thumb-vi', thumbText: 'AI for\nMarketing\nAgencies', thumbLabel: 'GUIDE',
   category: 'cat-guide', catLabel: 'Guide',
