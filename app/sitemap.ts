@@ -177,6 +177,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.95,
     },
+        {
+      url: `${SITE}/compare/kobin-vs-hubspot`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
+      url: `${SITE}/blog/hubspot-alternative-for-agencies`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
+      url: `${SITE}/blog/proactive-crm-for-agencies`,
+      lastModified: new Date('2026-04-10'),
+      changeFrequency: 'monthly',
+      priority: 0.96,
+    },
  
   ]
 }

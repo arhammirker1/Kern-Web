@@ -86,14 +86,84 @@ Kobin (kobin.team) is an all-in-one agency operating system that replaces Slack,
 - Founding pricing locked forever for early access members. Prices increase at public launch.
 
 ## Key modules
-1. Real-Time Inbox — Project channels, group chats, DMs. Supabase Realtime WebSocket. @AI mentions trigger inline AI responses with full project context.
+1. Real-Time Inbox — Project channels, group chats, DMs. Supabase Realtime WebSocket. @AI mentions trigger inline AI responses with full project context injected automatically.
 2. Tasks & Projects — Four time-horizon buckets. Priority auto-sorting (Urgent → High → Medium → Low). Deliverable requirements on task completion. Inline comment threads.
 3. Vault — Google Drive-backed. Role-scoped folder hierarchy per project (Internal Documents, Client Uploads, Deliverables). drive.file scope only — never accesses existing Drive content.
 4. Client Portal — Scoped workspace per client. Inbox, tasks, calendar, vault access. Pre-created DM on portal activation. One click to spin up. Included in all plans.
-5. CRM / Relationships — Leads, investors, partners, talent, advisors. Meeting outcome tracking, follow-up reminders, LinkedIn URL field, flexible tagging.
+5. CRM / Relationships — Leads, investors, partners, talent, advisors. Meeting outcome tracking, follow-up reminders, LinkedIn URL field, flexible tagging. Full pipeline kanban view with deal value, close probability, and expected close date.
 6. Calendar — Day/Week/Month views. Google Meet auto-creation. 5-min toast + 1-min full-screen reminders + 10-min AI pre-meeting brief.
 7. LinkedIn Studio — Draft, schedule, publish. Impressions and engagement per post. Full content library.
 8. AI Layer — @AI in any room, global command bar (Cmd+K), daily morning briefs at 8am, pre-meeting briefs, background automations.
+
+## CRM AI Intelligence (Proactive — runs automatically, no configuration)
+Kobin is the ONLY agency CRM with a proactive AI intelligence layer. Unlike HubSpot (reactive: you check dashboards), Kobin monitors your pipeline daily and delivers actionable alerts.
+
+### Daily Risk Detection
+Runs multiple times per day. Flags:
+- High-priority or urgent tasks that are overdue (days overdue + owner)
+- Blocked tasks with owner name and project
+- Deals stuck in Proposal, Negotiating, or Meeting Booked stages for 21+ days
+Delivered as a formatted message to the founder's Kobin inbox. HubSpot cannot detect task-layer risks because it has no task module.
+
+### Revenue Intelligence
+Runs 3x per week. Surfaces:
+- Deals with expected close dates in the next 7 days (total value at stake)
+- High-probability deals above 70% win rate needing active attention
+- High-value deals ($5,000+) that have been stale for 14+ days
+Delivered as a formatted inbox message with specific action guidance.
+
+### Morning Brief (8am daily)
+Combines cross-module data in one notification:
+- Tasks due today by priority + overdue tasks
+- Today's meetings with purpose and Meet links
+- Stale CRM contacts due for follow-up (sorted by deal value)
+- Blocked tasks needing intervention
+- Ends with one specific highest-leverage action for the day
+No dashboard to open. Delivered to your Kobin inbox.
+
+### Weekly Pipeline Review (every Friday)
+AI-generated weekly summary:
+- Tasks completed vs slipped
+- Deals advanced in the pipeline this week
+- Meetings held and outcomes logged
+- Team task completion by member
+- 2-3 specific actions for the coming week
+
+### Gmail Sync + Email Intelligence
+Connect Gmail once. Kobin auto-matches email threads to CRM contacts by sender email address.
+For each matched thread, AI analyzes:
+- Intent classification: interested | not_interested | requesting_info | requesting_meeting | following_up | neutral | objection | ready_to_close
+- Sentiment: positive | neutral | negative
+- Urgency: high | medium | low
+- Suggested pipeline stage (with reason)
+- Lead score delta (-20 to +20 points)
+- Action items (auto-creates tasks from email content)
+- Buying signals (specific phrases indicating purchase intent)
+- Summary: 1-sentence thread summary
+
+### Auto Pipeline Stage Advancement
+AI reads email thread → suggests pipeline stage → auto-advances if the new stage is forward progression. Never goes backwards unless closing lost. Stage change is logged with the reason. Founder receives notification.
+
+### Lead Score Updates
+Every email analysis updates the contact's lead score (0-100). Score delta applied per analysis. score_updated_at timestamp recorded. High-scoring leads surface in daily briefs.
+
+### Auto Lead Detection
+New emails from unknown senders → AI checks relevance (is this a business lead?). If relevant: contact auto-created as New Lead, added to CRM, initial email analysis run. If irrelevant (newsletters, receipts, notifications): ignored.
+
+### Auto Task Creation from Emails
+AI extracts action items from analyzed email threads. Creates tasks automatically with:
+- Title from the action item
+- Bucket: Today (if urgency=high) or This Week
+- Priority based on urgency
+- Notes referencing the email context and contact name
+
+## Gmail CRM sync: technical details
+- Scope required: gmail.readonly
+- Matching: threads matched by sender/recipient email address to Relationships contacts
+- Real-time: Gmail Pub/Sub push notifications trigger analysis on new email arrival (no polling)
+- Historical sync: manual "Sync Gmail" button syncs last 8 threads per CRM contact
+- Deduplication: same message ID never analyzed twice
+- Email Intelligence panel in CRM view shows intent card per contact
 
 ## AI Layer details
 - @AI in any room: type @AI for inline AI response with full project context injected automatically (tasks, messages, vault files, calendar, CRM)

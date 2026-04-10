@@ -18,6 +18,23 @@ export default function BlogPage() {
   const posts = [
 
           {
+        thumbClass: 'thumb-dark', thumbText: 'HubSpot\nAlternative\nAgencies', thumbLabel: 'DEEP GUIDE',
+        category: 'cat-guide', catLabel: 'Guide',
+        title: 'The Best HubSpot Alternative for Agencies in 2026 — Proactive CRM, AI Risk Alerts, Gmail Intelligence',
+        excerpt: 'HubSpot decays into shelfware for most small agencies. Here are 4 alternatives ranked by fit — plus why a proactive CRM that monitors your pipeline daily changes everything.',
+        meta: 'Apr 10 · 13 min',
+        href: '/blog/hubspot-alternative-for-agencies',
+      },
+      {
+        thumbClass: 'thumb-vi', thumbText: 'Proactive\nCRM\nIntelligence', thumbLabel: 'CRM AI',
+        category: 'cat-build', catLabel: 'CRM Intelligence',
+        title: 'Proactive CRM for Agencies: Revenue Intelligence, Risk Detection, and Gmail AI in 2026',
+        excerpt: 'HubSpot stores your pipeline. Kobin\'s CRM watches it — daily risk alerts, revenue intelligence on closing deals, Gmail intent analysis per contact, and a morning brief. Here\'s exactly how each routine works.',
+        meta: 'Apr 10 · 12 min',
+        href: '/blog/proactive-crm-for-agencies',
+      },
+
+          {
         thumbClass: 'thumb-parch', thumbText: 'Productivity\nSoftware\nAgencies', thumbLabel: 'RANKED GUIDE',
         category: 'cat-guide', catLabel: 'Guide',
         title: 'Best Productivity Software for Agencies in 2026 — Ranked, Compared & Honest',
