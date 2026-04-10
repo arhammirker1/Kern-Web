@@ -1,37 +1,32 @@
-// SAVE AS: app/compare/kobin-vs-hubspot/page.tsx
-// PRIMARY KEYWORD: "kobin vs hubspot", "hubspot alternative for agencies"
-// SECONDARY: "hubspot alternative small agency 2026", "crm for agencies 2026"
-// TERTIARY: "hubspot crm replacement", "agency crm with ai proactive alerts"
-
+// app/compare/hubspot-alternative-for-agencies/page.tsx
 import Link from 'next/link'
 import Nav from '../../../components/Nav'
 
 export const metadata = {
-  title: 'Kobin vs HubSpot: The CRM Built for Agencies vs the CRM Built for Enterprise | Kobin',
+  title: 'Best HubSpot Alternative for Agencies in 2026 — Proactive AI CRM, Not Just a Database | Kobin',
   description:
-    'HubSpot costs $50–90/month for a 5-person agency and is designed for enterprise sales teams. Kobin includes a proactive CRM with revenue intelligence, risk alerts, Gmail sync, and daily briefs — all from $49/month total. Here is the full comparison.',
+    'HubSpot is a reactive database — you check it when you remember. Kobin\'s CRM monitors your pipeline daily: AI risk alerts, revenue intelligence, Gmail intent analysis per thread, auto-lead detection, and a morning brief. From $49/month total including inbox, tasks, and client portal.',
   keywords: [
-    'kobin vs hubspot',
     'hubspot alternative for agencies',
-    'hubspot alternative small agency 2026',
-    'crm for agencies 2026',
-    'hubspot crm replacement',
-    'agency crm ai proactive',
-    'best crm for small agencies',
-    'hubspot vs kobin comparison',
-    'proactive crm for agencies',
-    'hubspot alternative all-in-one',
+    'best hubspot alternative 2026',
+    'kobin vs hubspot',
+    'free hubspot alternative',
+    'replace hubspot agency',
+    'lightweight crm for agencies',
+    'hubspot too expensive small team',
+    'proactive crm hubspot alternative',
+    'ai crm for agencies',
+    'crm with gmail intelligence',
   ],
   alternates: { canonical: 'https://www.kobin.team/compare/kobin-vs-hubspot' },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Kobin vs HubSpot — Which CRM Actually Works for a 5-Person Agency?',
-    description:
-      'HubSpot is built for sales teams with dedicated CRM admins. Kobin is built for agency founders who need proactive revenue intelligence, risk alerts, and Gmail-synced CRM in one tab.',
+    title: 'Best HubSpot Alternative for Agencies 2026 — AI CRM That Monitors Your Pipeline',
+    description: 'HubSpot waits for you to check it. Kobin AI monitors your pipeline every day — risk alerts, revenue intelligence, Gmail intent analysis. $49/month total.',
     type: 'website',
     url: 'https://www.kobin.team/compare/kobin-vs-hubspot',
     siteName: 'Kobin',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kobin vs HubSpot — CRM Comparison for Agencies 2026' }],
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kobin vs HubSpot — AI CRM Alternative for Agencies' }],
   },
   twitter: { card: 'summary_large_image', creator: '@arham_mirkar' },
 }
@@ -48,79 +43,46 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'SoftwareApplication',
-      name: 'Kobin',
-      applicationCategory: 'BusinessApplication',
-      applicationSubCategory: 'Agency CRM with Proactive Intelligence',
-      url: 'https://www.kobin.team',
-      description:
-        'Kobin is an all-in-one agency workspace with a built-in proactive CRM. Unlike HubSpot, Kobin AI monitors your pipeline daily, sends revenue intelligence alerts, detects deal risk before it becomes a crisis, syncs Gmail threads to contacts automatically, and delivers a morning brief with follow-up actions — all from $49/month for a team of 5.',
-      offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', url: 'https://www.kobin.team/#waitlist' },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '14', bestRating: '5' },
-      featureList: [
-        'Proactive revenue intelligence — AI flags deals closing this week',
-        'Daily risk alerts — overdue tasks, blocked work, stale deals in one notification',
-        'Gmail sync — threads auto-matched to CRM contacts',
-        'Email intent analysis — AI reads tone, sentiment, buying signals per thread',
-        'Weekly pipeline review — AI-generated with wins, losses, and next steps',
-        'Morning brief — tasks + meetings + follow-ups surfaced at 8am',
-        'Pipeline kanban view with drag-and-drop stage management',
-        'Deal value tracking with close probability and expected close date',
-        'Built-in inbox replacing Slack (included in $49/month)',
-        'Client portal included in all plans',
-      ],
-    },
-    {
-      '@type': 'SoftwareApplication',
-      name: 'HubSpot CRM',
-      applicationCategory: 'BusinessApplication',
-      applicationSubCategory: 'CRM',
-      url: 'https://hubspot.com',
-      description:
-        'HubSpot is an enterprise CRM platform designed for dedicated sales teams. The free tier handles basic contact tracking. Paid plans start at $20/user/month (Starter) and scale to $135/user/month (Professional). HubSpot does not include team messaging, task management, or client portals.',
-      offers: { '@type': 'Offer', price: '20', priceCurrency: 'USD', url: 'https://hubspot.com/pricing' },
-    },
-    {
       '@type': 'FAQPage',
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Is Kobin a good HubSpot alternative for small agencies?',
+          name: 'What is the best HubSpot alternative for small agencies?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Kobin is the best HubSpot alternative for agencies of 1–15 people. Unlike HubSpot, which requires dedicated CRM administration and costs $50–90/month for 5 seats on Starter, Kobin includes a proactive CRM as part of a $49/month all-in-one workspace. Kobin AI monitors your pipeline daily, sends risk alerts for stale deals, syncs Gmail threads to contacts, and delivers a morning brief — without any CRM setup or administration overhead.',
+            text: 'Kobin is the best HubSpot alternative for small agencies. Unlike HubSpot — a reactive database you must manually check — Kobin runs daily AI intelligence routines: risk detection (blocked tasks + stale deals), revenue intelligence (closing this week + high-probability deals), Gmail intent analysis per contact, auto-lead detection from unknown senders, and a morning brief combining CRM and task data. Included in all Kobin plans at no extra cost from $49/month for 5 seats.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What does Kobin have that HubSpot does not?',
+          name: 'What AI does Kobin CRM have that HubSpot does not?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin has several capabilities HubSpot does not offer: (1) Proactive revenue intelligence — AI detects deals closing this week and stale high-value deals before they go cold. (2) Cross-module AI — Kobin AI sees your CRM alongside tasks, inbox, calendar, and vault simultaneously. (3) Built-in team inbox replacing Slack. (4) Google Drive-backed file vault replacing Notion. (5) Client portal included at no extra cost. (6) Daily risk alerts combining overdue tasks, blocked work, and CRM signals in one notification.',
+            text: 'Kobin CRM has five AI capabilities HubSpot lacks: (1) Daily proactive risk detection — flags deals stuck 21+ days AND blocked tasks simultaneously. (2) Revenue intelligence alerts 3x/week — surfaces deals closing this week and high-probability deals before they go cold. (3) Gmail intent analysis — AI reads each email thread and classifies intent (interested, ready to close, objection), sentiment, and buying signals. (4) Auto pipeline stage advancement — AI moves deals forward based on email content. (5) Auto lead detection — unknown email senders are AI-screened and added as leads if relevant.',
           },
         },
         {
           '@type': 'Question',
-          name: 'How much does HubSpot cost vs Kobin for a 5-person agency?',
+          name: 'Is Kobin cheaper than HubSpot for a 5-person agency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'HubSpot Starter costs $50–90/month for a 5-person team (as of April 2026). This includes only CRM, email tracking, and basic sequences — no team messaging, project management, or client portal. Kobin costs $49/month for a team of 5 and includes CRM, proactive intelligence, team inbox (replacing Slack at $87/month), task management (replacing Asana at $55/month), vault (replacing Notion at $40/month), and client portal. The true HubSpot stack costs $243–350/month for the same functionality.',
+            text: 'Kobin Founder ($49/month for 5 seats) includes CRM, AI intelligence, team inbox, tasks, client portal, vault, calendar, and LinkedIn Studio. HubSpot Starter costs $50–90/month for CRM only — and agencies still need Slack ($87/month), Asana ($55/month), and Notion ($40/month) alongside it. The full HubSpot stack costs $232–272/month. Kobin replaces it all for $49/month.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Does Kobin sync Gmail to CRM contacts like HubSpot?',
+          name: 'How does Kobin detect risk in my CRM pipeline?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Kobin syncs Gmail threads to CRM contacts automatically. When you connect Gmail, Kobin matches incoming and outgoing emails by sender address to your Relationships contacts. For each thread, Kobin AI analyzes intent (interested, ready to close, objection, requesting meeting), sentiment (positive, neutral, negative), and buying signals. These are surfaced in the Email Intelligence panel in your CRM view — updated every time you sync. HubSpot offers Gmail sync on paid plans only and does not include this level of per-thread AI analysis.',
+            text: 'Kobin runs cross-module risk detection multiple times per day. It scans three signals: (1) Urgent or high-priority tasks that are overdue — showing owner and days overdue. (2) Tasks in Blocked status across all projects. (3) Deals in Proposal, Negotiating, or Meeting Booked stages for 21+ days without movement. These are combined into a single alert delivered to your Kobin inbox. HubSpot can only flag CRM-level signals — it has no visibility into your task layer.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is Kobin\'s proactive CRM and how is it different from HubSpot?',
+          name: 'Can Kobin auto-detect new leads from Gmail?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin\'s proactive CRM runs three daily intelligence routines: a risk detection scan (flags overdue high-priority tasks, blocked work, and deals stuck 21+ days), a revenue intelligence report (surfaces deals closing this week, high-probability deals above 70%, and stale high-value deals above $5,000), and a morning brief with your full pipeline context. These are delivered as AI-generated messages in your Kobin inbox at 8am. HubSpot requires you to configure notification rules and sequences manually — it is reactive, not proactive.',
+            text: 'Yes. When Gmail is connected, Kobin monitors incoming emails. For emails from unknown senders not in your CRM, an AI model screens relevance: is this a potential client, partner, investor, or collaborator? If yes, the contact is auto-created as a New Lead with their email, name, and source noted. The email thread is immediately analyzed for intent and sentiment. HubSpot requires manual contact creation or specific form submissions — it cannot auto-detect leads from inbound email.',
           },
         },
       ],
@@ -128,346 +90,346 @@ const jsonLd = {
   ],
 }
 
-const featureMatrix = [
-  { feature: 'CRM pipeline (kanban + list view)', kobin: '✓ Built in', hubspot: '✓ Built in' },
-  { feature: 'Deal value + close probability', kobin: '✓ Built in', hubspot: '✓ Built in' },
-  { feature: 'Contact types (leads, investors, partners)', kobin: '✓ All types', hubspot: '✗ Contacts only' },
-  { feature: 'Meeting outcome logging', kobin: '✓ One-click', hubspot: '✗ Manual setup required' },
-  { feature: 'Gmail sync to contacts', kobin: '✓ Auto-matched', hubspot: '✓ Paid plans only' },
-  { feature: 'Email intent analysis (AI)', kobin: '✓ Per thread', hubspot: '✗ Not available' },
-  { feature: 'Proactive revenue intelligence alerts', kobin: '✓ Daily auto-generated', hubspot: '✗ Manual sequences only' },
-  { feature: 'Risk detection (stale deals + blockers)', kobin: '✓ Cross-module AI', hubspot: '✗ CRM only signals' },
-  { feature: 'Daily morning brief (tasks + CRM)', kobin: '✓ Auto at 8am', hubspot: '✗ Not available' },
-  { feature: 'Weekly pipeline review (AI-generated)', kobin: '✓ Auto every Friday', hubspot: '✗ Manual reporting' },
-  { feature: 'Team inbox (replaces Slack)', kobin: '✓ Included', hubspot: '✗ Not included' },
-  { feature: 'Task management (replaces Asana)', kobin: '✓ Included', hubspot: '✗ Not included' },
-  { feature: 'Client portal', kobin: '✓ All plans', hubspot: '✗ Not included' },
-  { feature: 'Google Drive vault', kobin: '✓ Included', hubspot: '✗ Not included' },
-  { feature: 'AI that sees full workspace context', kobin: '✓ Cross-module', hubspot: '✗ HubSpot data only' },
-  { feature: 'Price (5 seats, April 2026)', kobin: '$49/mo all-in', hubspot: '$50–90/mo (CRM only)' },
+const aiIntelligenceRoutines = [
+  {
+    id: 'risk',
+    icon: '🚨',
+    label: 'Risk Detection',
+    frequency: 'Multiple times daily',
+    description: 'Scans your workspace for signals that revenue is at risk — before you discover them the hard way.',
+    signals: [
+      'High-priority or urgent tasks that are overdue (owner + days)',
+      'Tasks stuck in Blocked status across all active projects',
+      'Deals in Proposal / Negotiating / Meeting Booked for 21+ days',
+    ],
+    sampleAlert: `⚠️ Risk Alert — afternoon check-in
+
+🚨 2 critical tasks overdue:
+  • Landing page revisions (4d, high) — Ahmed
+  • Scope sign-off email (2d, urgent) — Beenish
+
+⛔ 1 blocked task:
+  • API integration spec — awaiting client sign-off
+
+💸 Deal going cold (24 days in Proposal):
+  • Maria Rodriguez (Globex) · $22,000`,
+    hubspotNote: 'HubSpot can send deal age notifications but cannot cross-reference task blockers or team workload against CRM data.',
+  },
+  {
+    id: 'revenue',
+    icon: '💼',
+    label: 'Revenue Intelligence',
+    frequency: '3× per week',
+    description: 'Proactively surfaces deals at critical moments — closing this week, high probability, and stale high-value relationships.',
+    signals: [
+      'Deals with expected close dates in the next 7 days — total value at stake',
+      'High-probability deals above 70% win rate needing active attention',
+      'High-value deals ($5,000+) stale for 14+ days',
+    ],
+    sampleAlert: `💼 Revenue Intelligence — Wednesday
+
+🎯 2 deals closing this week — $34,000 at stake:
+  • Sarah Chen (Acme) — closes Fri, $15,000 (75%)
+  • Speed testing (acme) — closes Mon, $5,000 (60%)
+
+💰 3 high-probability deals — ~$28k weighted:
+  • James Park — Proposal, 80%, $8,500
+  • Maria Rodriguez — Negotiating, 70%, $22,000`,
+    hubspotNote: 'HubSpot requires manual sequence enrollment and dashboard navigation. There is no automated revenue intelligence message.',
+  },
+  {
+    id: 'gmail',
+    icon: '📧',
+    label: 'Gmail Intent Analysis',
+    frequency: 'Real-time on new email + manual sync',
+    description: 'Every email thread matched to a CRM contact is analyzed by AI — not just tracked for opens.',
+    signals: [
+      'Intent: interested · requesting_meeting · ready_to_close · objection · not_interested',
+      'Sentiment: positive · neutral · negative',
+      'Buying signals: specific phrases indicating purchase intent',
+      'Lead score delta: −20 to +20 applied automatically',
+      'Suggested pipeline stage with reason',
+    ],
+    sampleAlert: `📧 Important email from Maria Rodriguez
+
+Strong buying signals detected. She referenced budget approval and asked about onboarding timelines.
+
+*Sentiment: positive · Intent: ready_to_close*
+📊 Stage auto-updated: Negotiating → Proposal
+⭐ Lead score: 45 → 63
+✅ Task auto-created: "Send proposal to Maria Rodriguez"`,
+    hubspotNote: 'HubSpot tracks email opens and clicks. It does not read email content or classify intent, sentiment, or buying signals.',
+  },
+  {
+    id: 'morning',
+    icon: '☀️',
+    label: 'Morning Brief',
+    frequency: 'Daily at 8am',
+    description: 'One message combining your tasks, meetings, and CRM follow-ups. No dashboards to open.',
+    signals: [
+      'Tasks due today by priority + overdue task count',
+      'Today\'s meetings with purpose and Meet link',
+      'Stale CRM contacts due for follow-up (by deal value)',
+      'One specific highest-leverage action',
+    ],
+    sampleAlert: `Good morning, Arham 🌅 Thursday, April 10.
+
+📋 Today: 3 tasks due, 2 overdue
+📅 10:00am: Reelix kickoff — Meet link ready
+📅 3:00pm: Maria Rodriguez intro call
+
+💸 Follow-ups due today:
+  • Maria Rodriguez — 14 days stale, $22,000
+  • Tom Williams — 20 days stale, $45,000
+
+▶ Highest leverage: Send the Globex proposal now.`,
+    hubspotNote: 'HubSpot has a Tasks view showing CRM-only tasks. No cross-module morning brief combining calendar, tasks, and CRM.',
+  },
 ]
 
-export default function KobinVsHubspotPage() {
+const featureMatrix = [
+  { feature: 'Pipeline kanban + list view', kobin: '✓', hubspot: '✓' },
+  { feature: 'Deal value + close probability', kobin: '✓', hubspot: '✓' },
+  { feature: 'Daily proactive risk alerts', kobin: '✓ Auto-delivered', hubspot: '✗ Manual dashboards' },
+  { feature: 'Revenue intelligence (3×/week)', kobin: '✓ Inbox message', hubspot: '✗ Not available' },
+  { feature: 'Gmail thread intent analysis (AI)', kobin: '✓ All 8 intent types', hubspot: '✗ Opens/clicks only' },
+  { feature: 'Auto pipeline stage advancement', kobin: '✓ From email AI', hubspot: '✗ Manual only' },
+  { feature: 'Lead score auto-update', kobin: '✓ Per email thread', hubspot: '⚠ Manual or sequences' },
+  { feature: 'Auto task creation from emails', kobin: '✓ AI extracts action items', hubspot: '✗ Not available' },
+  { feature: 'Auto lead detection (new senders)', kobin: '✓ AI screens relevance', hubspot: '✗ Manual only' },
+  { feature: 'Morning brief (tasks + CRM)', kobin: '✓ 8am daily', hubspot: '✗ CRM only, no tasks' },
+  { feature: 'Cross-module risk (tasks + CRM)', kobin: '✓ Same data model', hubspot: '✗ CRM-only signals' },
+  { feature: 'Team inbox (replaces Slack)', kobin: '✓ Included', hubspot: '✗ Requires Slack +$87/mo' },
+  { feature: 'Task management (replaces Asana)', kobin: '✓ Included', hubspot: '✗ Requires Asana +$55/mo' },
+  { feature: 'Client portal', kobin: '✓ All plans', hubspot: '✗ Not included' },
+  { feature: 'Price (5 seats)', kobin: '$49/mo all-in', hubspot: '$50–90/mo CRM only' },
+]
+
+export default function HubSpotAlternativePage() {
   return (
     <>
-      <Nav activePage="" />
+      <Nav activePage="compare" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* ── HERO ── */}
-      <section style={{ padding: '100px 64px 72px', background: 'var(--parch)', borderBottom: '1px solid var(--wire)' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      <article className="blog-post-layout">
+        <div className="blog-post-inner">
 
-          {/* Breadcrumb */}
-          <nav style={{ fontSize: '12px', color: 'var(--ghost2)', fontFamily: "'Geist Mono', monospace", marginBottom: '24px', display: 'flex', gap: '8px', alignItems: 'center' }}>
-            <Link href="/" style={{ color: 'var(--ghost2)', textDecoration: 'none' }}>Home</Link>
-            <span>/</span>
-            <Link href="/compare" style={{ color: 'var(--ghost2)', textDecoration: 'none' }}>Compare</Link>
-            <span>/</span>
-            <span style={{ color: 'var(--ink)' }}>Kobin vs HubSpot</span>
-          </nav>
-
-          {/* Last updated — trust signal */}
-          <div style={{ display: 'inline-block', fontSize: '11px', color: 'var(--ghost2)', background: 'rgba(0,0,0,0.04)', padding: '4px 10px', borderRadius: '100px', marginBottom: '20px', fontFamily: "'Geist Mono', monospace" }}>
-            Last updated April 2026 · Pricing verified from public pages
-          </div>
-
-          <h1 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(40px,6vw,72px)', fontWeight: 300, letterSpacing: '-0.04em', lineHeight: 0.97, color: 'var(--ink)', marginBottom: '20px' }}>
-            Kobin vs HubSpot<br /><em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>for agencies.</em>
-          </h1>
-
-          {/* Direct answer — 50 words (GEO citability) */}
-          <p style={{ fontSize: '18px', color: 'var(--ink)', lineHeight: 1.75, fontWeight: 300, maxWidth: '720px', marginBottom: '16px', background: 'rgba(76,63,212,0.04)', border: '1px solid rgba(76,63,212,0.15)', borderRadius: '10px', padding: '16px 20px' }}>
-            <strong>Kobin is the best HubSpot alternative for agencies in 2026.</strong> HubSpot Starter costs $50–90/month for CRM alone and is designed for dedicated sales teams. Kobin costs $49/month and includes a proactive CRM with daily revenue intelligence, risk alerts, Gmail sync, and email AI — plus team inbox, tasks, vault, and client portal at no extra cost.
-          </p>
-
-          <p style={{ fontSize: '15px', color: 'var(--ghost)', maxWidth: '660px', lineHeight: 1.75, marginBottom: '40px' }}>
-            This comparison covers pricing, CRM capabilities, AI intelligence features, Gmail integration, and the hidden cost of running HubSpot alongside the other tools agencies still need when they choose it.
-          </p>
-
-          {/* Disclosure */}
-          <div style={{ fontSize: '12px', color: 'var(--ghost2)', padding: '10px 16px', background: 'rgba(0,0,0,0.03)', borderRadius: '8px', border: '1px solid var(--wire)', maxWidth: '520px' }}>
-            <strong>Disclosure:</strong> Kobin is made by this site. HubSpot is an independent company. All HubSpot feature and pricing data is sourced from HubSpot&apos;s public website as of April 2026.
-          </div>
-        </div>
-      </section>
-
-      <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 40px 100px' }}>
-
-        {/* ── PRICING COMPARISON ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '12px' }}>
-            What does HubSpot actually cost a 5-person agency?
-          </h2>
-          <p style={{ fontSize: '16px', color: 'var(--ghost)', maxWidth: '640px', lineHeight: 1.75, marginBottom: '36px' }}>
-            HubSpot&apos;s Starter plan covers CRM only. An agency still needs Slack for messaging, Asana or Linear for projects, and Notion for documentation alongside it. Here is what the full stack costs vs Kobin.
-          </p>
-
-          {/* Math block */}
-          <div style={{ background: 'var(--ink2)', borderRadius: '14px', overflow: 'hidden', marginBottom: '32px' }}>
-            <div style={{ padding: '16px 24px', borderBottom: '1px solid rgba(255,255,255,0.06)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '13px', fontWeight: 600, color: '#F0EDE6' }}>HubSpot Starter + Required Stack (5 seats)</span>
+          <div className="post-header">
+            <div className="post-header-meta">
+              <Link href="/compare" className="post-back">← All comparisons</Link>
+              <span className="post-category cat-guide">Comparison</span>
             </div>
-            {[
-              ['HubSpot Starter CRM', '$50–90/mo'],
-              ['Slack Pro (team messaging)', '$87/mo'],
-              ['Asana Premium (project management)', '$55/mo'],
-              ['Notion Team (docs + wikis)', '$40/mo'],
-              ['Zapier Professional (connecting the above)', '$29/mo'],
-            ].map(([item, cost]) => (
-              <div key={item} style={{ padding: '12px 24px', borderBottom: '1px solid rgba(255,255,255,0.04)', display: 'flex', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: '13px', color: '#9C9890' }}>{item}</span>
-                <span style={{ fontSize: '13px', color: '#E57373', fontFamily: "'Geist Mono', monospace" }}>{cost}</span>
-              </div>
-            ))}
-            <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'space-between', background: 'rgba(229,83,75,0.08)' }}>
-              <span style={{ fontSize: '14px', fontWeight: 700, color: '#F0EDE6' }}>Monthly total (HubSpot stack)</span>
-              <span style={{ fontSize: '16px', fontWeight: 700, color: '#E57373', fontFamily: "'Geist Mono', monospace" }}>$261–$301/mo</span>
-            </div>
-          </div>
-
-          <div style={{ background: 'rgba(13,107,79,0.06)', borderRadius: '14px', overflow: 'hidden', border: '1px solid rgba(13,107,79,0.2)' }}>
-            <div style={{ padding: '16px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span style={{ fontSize: '14px', fontWeight: 700, color: 'var(--ink)' }}>Kobin Founder plan — everything included</span>
-              <span style={{ fontSize: '20px', fontWeight: 700, color: '#0D6B4F', fontFamily: "'Geist Mono', monospace" }}>$49/mo</span>
-            </div>
-            <div style={{ padding: '0 24px 16px' }}>
-              <p style={{ fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.7 }}>
-                Includes: CRM + revenue intelligence + Gmail sync + team inbox + tasks + vault + client portal + calendar + LinkedIn Studio + AI layer. No Zapier. No HubSpot. No Slack.
-              </p>
-            </div>
-          </div>
-
-          <p style={{ fontSize: '12px', color: 'var(--ghost2)', marginTop: '12px', fontFamily: "'Geist Mono', monospace" }}>
-            Pricing from published pages, April 2026. HubSpot Starter: $20/user/month (billed annually). Slack Pro: $7.25/user/month. Asana Premium: $10.99/user/month.
-          </p>
-        </section>
-
-        {/* ── FEATURE MATRIX ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '12px' }}>
-            Kobin vs HubSpot: full feature comparison
-          </h2>
-          <p style={{ fontSize: '16px', color: 'var(--ghost)', maxWidth: '600px', lineHeight: 1.75, marginBottom: '36px' }}>
-            Every feature listed here has been verified against HubSpot&apos;s public documentation and pricing pages as of April 2026.
-          </p>
-
-          <div style={{ background: '#fff', border: '1px solid var(--wire)', borderRadius: '14px', overflow: 'hidden' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr', background: 'var(--ink)', padding: '14px 24px', gap: '16px' }}>
-              {['Feature', 'Kobin', 'HubSpot Starter'].map((h, i) => (
-                <span key={h} style={{ fontSize: '11px', fontFamily: "'Geist Mono', monospace", letterSpacing: '0.08em', textTransform: 'uppercase', color: i === 1 ? '#6358E8' : '#555552' }}>{h}</span>
-              ))}
-            </div>
-            {featureMatrix.map(({ feature, kobin, hubspot }, idx) => (
-              <div key={feature} style={{ display: 'grid', gridTemplateColumns: '1.8fr 1fr 1fr', padding: '13px 24px', gap: '16px', borderTop: '1px solid var(--wire)', background: idx % 2 === 0 ? '#fff' : 'var(--cream)', alignItems: 'start' }}>
-                <span style={{ fontSize: '13px', fontWeight: 500, color: 'var(--ink)', lineHeight: 1.5 }}>{feature}</span>
-                <span style={{ fontSize: '12px', color: kobin.startsWith('✓') ? '#0D6B4F' : kobin.startsWith('✗') ? '#C03B30' : 'var(--ghost)', lineHeight: 1.5 }}>{kobin}</span>
-                <span style={{ fontSize: '12px', color: hubspot.startsWith('✓') ? '#0D6B4F' : hubspot.startsWith('✗') ? '#C03B30' : 'var(--ghost)', lineHeight: 1.5 }}>{hubspot}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── PROACTIVE CRM SECTION ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '12px' }}>
-            The feature HubSpot does not have: proactive CRM intelligence
-          </h2>
-          <p style={{ fontSize: '16px', color: 'var(--ghost)', maxWidth: '680px', lineHeight: 1.75, marginBottom: '36px' }}>
-            HubSpot is reactive — it stores your pipeline data and waits for you to query it. Kobin&apos;s CRM is proactive — it monitors your pipeline every day and surfaces risks, opportunities, and required actions before you even open your laptop.
-          </p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '16px', marginBottom: '40px' }}>
-            {[
-              {
-                title: 'Daily Risk Detection',
-                icon: '🚨',
-                description: 'Every day, Kobin AI scans all active deals for: high-priority tasks that are overdue, blocked work by team member, and deals stuck in key pipeline stages (proposal, negotiating, meeting booked) for 21+ days. These are delivered as a formatted alert in your inbox — not a dashboard you have to visit.',
-                hubspotNote: 'HubSpot can send deal age notifications, but does not cross-reference task blockers or team workload with CRM signals.',
-              },
-              {
-                title: 'Revenue Intelligence Alerts',
-                icon: '💼',
-                description: 'Kobin AI surfaces deals with expected close dates in the next 7 days, high-probability deals above 70% win rate, and high-value deals ($5,000+) that have been stale for 14+ days. Total pipeline value at stake is shown so you know which actions protect the most revenue.',
-                hubspotNote: 'HubSpot requires manual deal task creation and sequence enrollment to achieve similar notifications — there is no automated revenue intelligence layer.',
-              },
-              {
-                title: 'Morning Brief + Pipeline',
-                icon: '☀️',
-                description: 'At 8am every day, Kobin generates a personalized brief combining your task priorities, today\'s meetings, stale CRM contacts who need follow-up (sorted by deal value), and any blocked items. It ends with one specific highest-leverage action. Delivered to your Kobin inbox — no app to open.',
-                hubspotNote: 'HubSpot does not have a cross-module morning brief. It shows CRM activity summaries only, with no task or calendar integration.',
-              },
-              {
-                title: 'Gmail Thread Intelligence',
-                icon: '📧',
-                description: 'Kobin syncs Gmail threads to CRM contacts by email address. For each matched thread, an AI model analyzes intent (interested, ready to close, requesting meeting, objection), sentiment, and buying signals. These appear as insight cards in the CRM Email Intelligence panel — updated every time you sync.',
-                hubspotNote: 'HubSpot\'s Gmail sync tracks opens and clicks but does not provide AI intent analysis or sentiment scoring per conversation thread.',
-              },
-              {
-                title: 'Weekly Pipeline Review',
-                icon: '📊',
-                description: 'Every Friday, Kobin AI generates a formatted weekly pipeline review: deals advanced this week, tasks completed, meetings held with outcomes, deals at risk, and 2-3 specific actions for the coming week. Delivered to your Kobin inbox — no report to build, no dashboard to configure.',
-                hubspotNote: 'HubSpot has reporting dashboards that require manual setup and are only accessible by navigating to the Reports section.',
-              },
-              {
-                title: 'Cross-Module Risk Signals',
-                icon: '🔗',
-                description: 'Because Kobin\'s CRM shares a data model with tasks, inbox, vault, and calendar, risk signals are cross-module. A deal flagged at risk might be because a key deliverable task is blocked — not because of anything in the CRM. HubSpot cannot see your task layer, so it cannot make this connection.',
-                hubspotNote: 'HubSpot is a standalone CRM. It has no access to your task management layer, team workload, or project inbox — making true cross-operational risk detection impossible.',
-              },
-            ].map(({ title, icon, description, hubspotNote }) => (
-              <div key={title} style={{ background: '#fff', border: '1px solid var(--wire)', borderRadius: '14px', padding: '24px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                  <span style={{ fontSize: '24px' }}>{icon}</span>
-                  <h3 style={{ fontSize: '15px', fontWeight: 600, color: 'var(--ink)' }}>{title}</h3>
-                </div>
-                <p style={{ fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.7, margin: 0 }}>{description}</p>
-                <div style={{ padding: '10px 14px', background: 'rgba(192,59,48,0.04)', border: '1px solid rgba(192,59,48,0.12)', borderRadius: '8px', fontSize: '12px', color: '#C03B30', lineHeight: 1.6 }}>
-                  <strong>HubSpot:</strong> {hubspotNote}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── WHERE HUBSPOT WINS ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '12px' }}>
-            Where HubSpot is genuinely stronger
-          </h2>
-          <p style={{ fontSize: '16px', color: 'var(--ghost)', maxWidth: '660px', lineHeight: 1.75, marginBottom: '32px' }}>
-            This is an honest comparison. HubSpot has real strengths that Kobin does not match — and they matter for certain agency types and scales.
-          </p>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-            {[
-              { area: 'Email sequence automation', detail: 'HubSpot\'s sequence builder is best-in-class for outbound sales automation. Multi-step drip sequences with conditional branching, A/B testing, and reply detection. If you send more than 50 outbound emails per day in active sequences, HubSpot is the better tool.' },
-              { area: 'Deep third-party integrations', detail: 'HubSpot integrates with 1,000+ tools including Salesforce, Shopify, and enterprise marketing stacks. If your agency manages clients who require CRM data flowing into enterprise systems, HubSpot\'s integration ecosystem is significantly deeper than Kobin\'s.' },
-              { area: 'Marketing Hub (landing pages, email campaigns)', detail: 'HubSpot\'s Marketing Hub (separate from CRM) includes landing page builders, email campaign tools, and ad tracking. For agencies that manage their own marketing stack inside the same tool as their CRM, HubSpot\'s Marketing Hub has no equivalent in Kobin.' },
-              { area: 'Enterprise reporting and analytics', detail: 'HubSpot\'s Professional and Enterprise tiers have powerful custom reporting, attribution modeling, and revenue forecasting. For agencies above 25 people with a dedicated sales ops function, HubSpot\'s reporting depth exceeds what Kobin offers.' },
-            ].map(({ area, detail }) => (
-              <div key={area} style={{ background: '#fff', border: '1px solid var(--wire)', borderRadius: '12px', padding: '20px 24px' }}>
-                <div style={{ fontSize: '11px', fontWeight: 600, color: '#C4720A', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '8px', fontFamily: "'Geist Mono', monospace" }}>
-                  HubSpot wins here
-                </div>
-                <h3 style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>{area}</h3>
-                <p style={{ fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.65, margin: 0 }}>{detail}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* ── WHO SHOULD CHOOSE WHAT ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '40px' }}>
-            Kobin or HubSpot — which is right for your agency?
-          </h2>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-            <div style={{ background: 'rgba(76,63,212,0.04)', border: '1px solid rgba(76,63,212,0.2)', borderRadius: '14px', padding: '28px' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, color: 'var(--vi)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '14px', fontFamily: "'Geist Mono', monospace" }}>
-                Choose Kobin if…
-              </div>
-              {[
-                'You are a 1–15 person agency managing multiple client projects',
-                'You want proactive AI alerts instead of manual dashboard checking',
-                'You need to replace Slack + Notion + Asana + HubSpot in one workspace',
-                'You want Gmail synced to CRM contacts with intent analysis per thread',
-                'You need a client portal included without extra cost',
-                'You want a morning brief that combines tasks, meetings, and CRM follow-ups',
-                'Your monthly SaaS bill for the current tool stack exceeds $200',
-                'You have no dedicated CRM admin — you just need it to work',
-              ].map(item => (
-                <div key={item} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.55 }}>
-                  <span style={{ color: 'var(--vi)', flexShrink: 0 }}>✓</span>{item}
-                </div>
-              ))}
-            </div>
-            <div style={{ background: '#fff', border: '1px solid var(--wire)', borderRadius: '14px', padding: '28px' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, color: '#C4720A', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '14px', fontFamily: "'Geist Mono', monospace" }}>
-                Choose HubSpot if…
-              </div>
-              {[
-                'Your agency runs 15+ leads per month through active outbound sequences',
-                'You have a dedicated sales ops person who manages CRM configuration',
-                'You need enterprise integrations with Salesforce or Shopify',
-                'Your team uses HubSpot Marketing Hub for client campaigns',
-                'You are above 25 people and need custom attribution reporting',
-                'You are already deep in the HubSpot ecosystem with existing data',
-                'You need enterprise-grade data residency or HIPAA compliance',
-                'Your agency\'s primary revenue stream is marketing automation services',
-              ].map(item => (
-                <div key={item} style={{ display: 'flex', gap: '10px', marginBottom: '8px', fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.55 }}>
-                  <span style={{ color: '#C4720A', flexShrink: 0 }}>→</span>{item}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section style={{ padding: '72px 0 56px', borderBottom: '1px solid var(--wire)' }}>
-          <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(26px,3.5vw,40px)', fontWeight: 300, letterSpacing: '-0.03em', color: 'var(--ink)', marginBottom: '36px' }}>
-            Frequently asked questions
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              { q: 'Is Kobin a good HubSpot alternative for small agencies?', a: 'Yes. Kobin is the best HubSpot alternative for agencies of 1–15 people. HubSpot Starter costs $50–90/month for CRM alone and is designed for dedicated sales teams with CRM administration resources. Kobin includes a proactive CRM as part of a $49/month all-in-one workspace — with daily revenue intelligence, risk alerts, Gmail sync with intent analysis, weekly pipeline reviews, and a morning brief. No CRM admin required.' },
-              { q: 'Does Kobin replace HubSpot completely?', a: 'Kobin replaces HubSpot Starter and Free for the vast majority of agency use cases — pipeline management, contact tracking, deal value and probability, meeting outcome logging, follow-up reminders, and LinkedIn URL fields. What Kobin does not replace is HubSpot\'s outbound email sequence automation, Marketing Hub campaigns, or enterprise reporting tiers. If your agency\'s primary need is a proactive CRM integrated with your team workspace, Kobin is the better fit at a lower total cost.' },
-              { q: 'How do I migrate from HubSpot to Kobin?', a: 'Export your HubSpot contacts as a CSV from HubSpot\'s Contacts section. In Kobin, use the Import button in the Relationships view to upload your CSV. Kobin\'s import system maps standard fields (name, email, company, role) and handles deduplication automatically. Rows with missing name or email are flagged before import. Most agencies complete the migration in under 20 minutes, with historical CRM data available immediately after.' },
-              { q: 'What is Kobin\'s proactive CRM and how does it differ from HubSpot?', a: 'Kobin\'s proactive CRM runs three daily intelligence routines delivered to your Kobin inbox: (1) Risk Detection — flags overdue high-priority tasks, blocked work, and deals stuck in key stages 21+ days. (2) Revenue Intelligence — surfaces deals closing this week, high-probability deals above 70%, and stale high-value deals. (3) Morning Brief — combines tasks, meetings, and CRM follow-ups at 8am. HubSpot is reactive — it stores pipeline data and waits for you to query it.' },
-              { q: 'Can Kobin sync Gmail to CRM contacts?', a: 'Yes. Connect Gmail from Kobin settings. Kobin syncs threads by email address to your Relationships contacts, then AI analyzes each thread for intent (interested, ready to close, objection, requesting meeting), sentiment, and buying signals. These appear as insight cards in the Email Intelligence panel in the CRM view. HubSpot offers Gmail sync on paid plans but does not include this level of per-thread AI intent analysis.' },
-            ].map(({ q, a }) => (
-              <details key={q} style={{ background: '#fff', border: '1px solid var(--wire)', borderRadius: '10px', overflow: 'hidden' }}>
-                <summary style={{ padding: '16px 20px', fontSize: '15px', fontWeight: 500, color: 'var(--ink)', cursor: 'pointer', listStyle: 'none', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '16px' }}>
-                  {q}<span style={{ fontSize: '18px', color: 'var(--ghost)', flexShrink: 0 }}>+</span>
-                </summary>
-                <p style={{ padding: '0 20px 16px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.75, margin: 0 }}>{a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-
-        {/* ── RELATED COMPARISONS ── */}
-        <section style={{ padding: '56px 0 40px', borderBottom: '1px solid var(--wire)' }}>
-          <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: '20px', fontWeight: 300, color: 'var(--ink)', marginBottom: '16px' }}>Related comparisons</h3>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            {[
-              { href: '/compare/kobin-vs-slack', label: 'Kobin vs Slack' },
-              { href: '/compare/kobin-vs-notion', label: 'Kobin vs Notion' },
-              { href: '/compare/kobin-vs-asana', label: 'Kobin vs Asana' },
-              { href: '/compare/kobin-vs-clickup', label: 'Kobin vs ClickUp' },
-              { href: '/blog/slack-notion-asana-hubspot-alternatives', label: 'Full stack comparison' },
-              { href: '/blog/best-productivity-tools-for-agencies', label: '10 Best Tools 2026' },
-            ].map(({ href, label }) => (
-              <Link key={href} href={href} style={{ fontSize: '13px', color: 'var(--vi)', textDecoration: 'none', padding: '8px 16px', border: '1px solid rgba(76,63,212,0.25)', borderRadius: '100px' }}>
-                {label} →
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* ── CTA ── */}
-        <section style={{ padding: '72px 0 0', textAlign: 'center' }}>
-          <div style={{ background: 'var(--ink)', borderRadius: '20px', padding: '64px 48px' }}>
-            <div style={{ fontFamily: "'Geist Mono', monospace", fontSize: '11px', color: '#555552', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '16px' }}>
-              Try the HubSpot alternative
-            </div>
-            <h2 style={{ fontFamily: "'Fraunces', serif", fontSize: 'clamp(32px,4.5vw,56px)', fontWeight: 300, color: '#F0EDE6', letterSpacing: '-0.04em', lineHeight: 0.97, marginBottom: '16px' }}>
-              CRM + intelligence +<br /><em style={{ fontStyle: 'italic', color: '#6358E8' }}>everything else.</em>
-            </h2>
-            <p style={{ fontSize: '16px', color: '#555552', maxWidth: '420px', margin: '0 auto 36px', lineHeight: 1.65 }}>
-              $49/month. 5 seats. CRM, inbox, tasks, vault, client portal, AI, and proactive revenue intelligence included. No HubSpot. No Slack. No Zapier.
+            <h1 className="post-h1">
+              The best HubSpot alternative<br />for agencies in 2026
+            </h1>
+            <p className="post-subtitle">
+              HubSpot is a reactive database — it stores your pipeline and waits for you to open it. Kobin CRM is proactive: daily risk alerts, revenue intelligence, Gmail intent analysis per contact, auto-lead detection, and a morning brief. Here is what the difference looks like in practice.
             </p>
-            <Link href="/#waitlist" style={{ display: 'inline-block', padding: '16px 36px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>
-              Join the waitlist →
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '12px' }}>
+              <div className="byline-avatar">AM</div>
+              <div className="byline-info">
+                <strong>Arham Mirkar</strong>
+                <span>Founder, Kobin &nbsp;·&nbsp; April 2026 &nbsp;·&nbsp; Updated monthly</span>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
+            <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
+            The best HubSpot alternative for agencies is Kobin — the only CRM with a proactive AI intelligence layer. It monitors your pipeline daily, sends risk alerts for blocked work and stale deals, reads every matched Gmail thread for intent and sentiment, auto-advances pipeline stages, and delivers a morning brief combining tasks and CRM follow-ups. From $49/month — less than HubSpot alone.
+          </div>
+
+          <div className="post-stat-grid">
+            {[
+              { num: '$90/mo', label: 'HubSpot Starter for 5 seats', sub: 'CRM only — no inbox, tasks, or portal' },
+              { num: '4', label: 'Daily AI intelligence routines', sub: 'Risk · Revenue · Gmail · Morning Brief' },
+              { num: '8', label: 'Email intent types classified', sub: 'interested · ready_to_close · objection…' },
+              { num: '$0', label: 'Extra cost for CRM in Kobin', sub: 'Included in all plans from $49/mo' },
+            ].map(({ num, label, sub }) => (
+              <div className="post-stat" key={label}>
+                <div className="post-stat-num">{num}</div>
+                <div className="post-stat-label">{label}</div>
+                <div className="post-stat-sub">{sub}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="post-body-content">
+
+            <h2 id="reactive-vs-proactive">HubSpot is reactive. Kobin CRM is proactive.</h2>
+            <p>
+              This is the core architectural difference. HubSpot stores your contacts, deals, and pipeline data — and waits for you to check it. When a $22,000 deal has been sitting in Proposal for 24 days without movement, HubSpot does not tell you. When a task linked to your most important client is blocked, HubSpot has no visibility into that because it is a different tool. When an email from a warm prospect arrived yesterday with buying signals, HubSpot tracks that it was opened — it does not read what it said.
+            </p>
+            <p>
+              Kobin&apos;s CRM operates differently. It runs background intelligence routines continuously. It monitors your deals alongside your task layer and your inbox. When the same client relationship is at risk from both a stale deal and a blocked deliverable simultaneously, Kobin surfaces both in one alert — because they share the same data model.
+            </p>
+
+            <div className="post-pull-quote">
+              <p>&ldquo;HubSpot knows your pipeline. Kobin watches it. The difference is whether a $45,000 deal goes cold before you notice.&rdquo;</p>
+              <cite>— The core argument for proactive CRM intelligence</cite>
+            </div>
+
+            <h2 id="four-intelligence-routines">The four AI intelligence routines that run automatically</h2>
+            <p>
+              Each routine runs on its own schedule and delivers its output directly to your Kobin inbox — no dashboard, no navigation, no remembering to check.
+            </p>
+
+            {aiIntelligenceRoutines.map((routine) => (
+              <div key={routine.id} style={{ margin: '32px 0', background: '#fff', border: '1px solid var(--wire)', borderRadius: '14px', overflow: 'hidden' }}>
+                <div style={{ padding: '16px 20px', borderBottom: '1px solid var(--wire)', display: 'flex', alignItems: 'center', gap: '12px', background: 'var(--parch)' }}>
+                  <span style={{ fontSize: '22px' }}>{routine.icon}</span>
+                  <div>
+                    <h3 style={{ fontSize: '16px', fontWeight: 600, color: 'var(--ink)', margin: 0 }}>{routine.label}</h3>
+                    <span style={{ fontSize: '11px', color: 'var(--vi)', fontFamily: "'Geist Mono', monospace" }}>{routine.frequency}</span>
+                  </div>
+                </div>
+                <div style={{ padding: '16px 20px' }}>
+                  <p style={{ fontSize: '13px', color: 'var(--ghost)', lineHeight: 1.7, marginBottom: '12px' }}>{routine.description}</p>
+                  <div style={{ marginBottom: '16px' }}>
+                    {routine.signals.map((s, i) => (
+                      <div key={i} style={{ display: 'flex', gap: '8px', marginBottom: '5px', fontSize: '12.5px', color: 'var(--ghost)' }}>
+                        <span style={{ color: '#0D6B4F', flexShrink: 0 }}>✓</span>{s}
+                      </div>
+                    ))}
+                  </div>
+                  <p style={{ fontSize: '12px', fontWeight: 600, color: 'var(--ink)', marginBottom: '8px' }}>Sample output:</p>
+                  <pre style={{ background: '#0E0E0D', borderRadius: '10px', padding: '16px 20px', fontSize: '11.5px', color: '#9C9890', lineHeight: 1.8, whiteSpace: 'pre-wrap', fontFamily: "'Geist Mono', monospace", margin: '0 0 12px' }}>
+                    {routine.sampleAlert}
+                  </pre>
+                  <div style={{ padding: '10px 14px', background: 'rgba(192,59,48,0.04)', border: '1px solid rgba(192,59,48,0.12)', borderRadius: '8px', fontSize: '12px', color: '#C03B30', lineHeight: 1.6 }}>
+                    <strong>HubSpot:</strong> {routine.hubspotNote}
+                  </div>
+                </div>
+              </div>
+            ))}
+
+            <h2 id="gmail-crm-intelligence">Gmail CRM intelligence: reading the email, not just tracking it</h2>
+            <p>
+              Connect Gmail once. Kobin automatically matches every incoming and outgoing email thread to your CRM contacts by email address. For each matched thread where a new message has arrived, an AI model reads the full conversation — not just the metadata — and produces a structured analysis.
+            </p>
+            <p>
+              The intent classification distinguishes between eight states: <strong>interested</strong>, <strong>not_interested</strong>, <strong>requesting_info</strong>, <strong>requesting_meeting</strong>, <strong>following_up</strong>, <strong>neutral</strong>, <strong>objection</strong>, and <strong>ready_to_close</strong>. A deal with a &ldquo;ready_to_close&rdquo; intent signal in the last email is very different from one with an &ldquo;objection&rdquo; signal — and Kobin treats them differently in the revenue intelligence output.
+            </p>
+            <p>
+              When the AI detects a strong signal — a prospect asking about contract timelines, referencing internal approval processes, or requesting a proposal — it flags the email as important, sends you a notification in your Kobin inbox, auto-advances the pipeline stage if appropriate, updates the lead score, and creates a follow-up task automatically. You do none of this manually.
+            </p>
+            <p>
+              For emails from unknown senders, the same AI model runs a relevance check: is this a business lead, partner, or investor? If yes, a new contact is auto-created, added to your pipeline, and the email is immediately analyzed. If not (newsletter, automated notification, receipt), it is ignored. Your CRM grows automatically from your inbox.
+            </p>
+
+            <h2 id="cross-module-crm">Why cross-module CRM context changes the alert quality</h2>
+            <p>
+              The risk detection capability is unique to Kobin because no standalone CRM can replicate it. Consider a scenario: you have a $45,000 deal in negotiation that has been stale for 18 days. That alone warrants a risk flag. But if you add that the project delivery for that same client has a blocked task that has been waiting on their sign-off for a week, the risk is not just &ldquo;deal is old&rdquo; — it is &ldquo;relationship is at risk from two directions simultaneously.&rdquo;
+            </p>
+            <p>
+              HubSpot does not know about the blocked task. Asana does not know about the stale deal. Kobin knows about both because they live in the same workspace, linked by the same client record. The morning brief that mentions both tells you more in one notification than a week of checking two separate tools.
+            </p>
+
+            <h2 id="comparison">Kobin vs HubSpot: full feature comparison</h2>
+
+            <div className="post-cost-table">
+              <div className="cost-table-header" style={{ gridTemplateColumns: '1.8fr 1fr 1fr' }}>
+                <span>Feature</span><span>Kobin</span><span>HubSpot Starter</span>
+              </div>
+              {featureMatrix.map(({ feature, kobin, hubspot }) => (
+                <div className="cost-table-row" key={feature} style={{ gridTemplateColumns: '1.8fr 1fr 1fr' }}>
+                  <span className="cost-tool">{feature}</span>
+                  <span style={{ fontSize: '13px', color: kobin.startsWith('✓') ? '#0D6B4F' : kobin.startsWith('✗') ? '#C03B30' : 'var(--ghost)' }}>{kobin}</span>
+                  <span style={{ fontSize: '13px', color: hubspot.startsWith('✓') ? '#0D6B4F' : hubspot.startsWith('✗') ? '#C03B30' : '#C4720A' }}>{hubspot}</span>
+                </div>
+              ))}
+            </div>
+
+            <h2 id="pricing">The real cost: HubSpot stack vs Kobin</h2>
+            <div className="post-math-block">
+              <div className="math-row"><span>HubSpot Starter (5 seats)</span><span className="math-num negative">$50–90/mo</span></div>
+              <div className="math-row"><span>+ Slack Pro (messaging Kobin includes)</span><span className="math-num negative">$87/mo</span></div>
+              <div className="math-row"><span>+ Asana Premium (tasks Kobin includes)</span><span className="math-num negative">$55/mo</span></div>
+              <div className="math-row"><span>+ Notion Team (docs Kobin includes)</span><span className="math-num negative">$40/mo</span></div>
+              <div className="math-row math-total"><span>Full HubSpot stack monthly</span><span className="math-num negative">$232–$272/mo</span></div>
+            </div>
+            <div className="post-math-block" style={{ marginTop: '12px' }}>
+              <div className="math-row math-total">
+                <span>Kobin Founder — CRM + AI intelligence + inbox + tasks + portal + vault</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+              </div>
+            </div>
+
+            <h2 id="when-to-use-hubspot">When HubSpot is still the right choice</h2>
+            <p>
+              HubSpot wins when your agency runs high-volume outbound sequences (50+ emails/day), needs enterprise integrations with Salesforce or Shopify, uses the Marketing Hub for client campaigns, or has a dedicated sales ops administrator managing CRM configuration. Above 25 people with a revenue operations function, HubSpot&apos;s reporting depth and integration breadth are genuinely stronger.
+            </p>
+            <p>
+              For the majority of agencies under 15 people managing ongoing client relationships alongside delivery, Kobin&apos;s proactive intelligence layer — combined with a unified workspace — is a better fit at a fraction of the cost.
+            </p>
+
+            <div className="post-cta-block">
+              <div className="post-cta-eyebrow">Try the HubSpot alternative</div>
+              <h3>A CRM that monitors your pipeline — not a database you check</h3>
+              <p>Kobin includes proactive risk detection, revenue intelligence, Gmail intent analysis, auto-lead detection, auto-stage advancement, and a daily morning brief — alongside team inbox, tasks, vault, and client portal. No setup. No CRM admin required.</p>
+              <div className="post-cta-savings">
+                {[
+                  { tool: 'HubSpot', saves: 'replaced · saves ~$90/mo' },
+                  { tool: 'Slack', saves: 'replaced · saves ~$87/mo' },
+                  { tool: 'Asana', saves: 'replaced · saves ~$55/mo' },
+                  { tool: 'Notion', saves: 'replaced · saves ~$40/mo' },
+                ].map(({ tool, saves }) => (
+                  <div className="cta-saving" key={tool}>
+                    <span className="cta-tool">{tool}</span>
+                    <span className="cta-saves">{saves}</span>
+                  </div>
+                ))}
+              </div>
+              <Link href="/#waitlist" className="post-cta-btn">Join the waitlist →</Link>
+              <p className="post-cta-sub">Closed beta · 14-day free trial · No credit card required</p>
+            </div>
+
+            <h2 id="faq">Frequently asked questions</h2>
+            <div className="post-faq">
+              {[
+                {
+                  q: 'What is the best HubSpot alternative for agencies?',
+                  a: 'Kobin is the best HubSpot alternative for agencies. Unlike HubSpot — a reactive CRM database — Kobin includes a proactive AI intelligence layer: daily risk alerts for stale deals and blocked tasks, revenue intelligence 3× per week, Gmail thread intent analysis classifying 8 intent types, auto pipeline stage advancement, auto lead detection from inbound email, and a morning brief combining tasks and CRM. From $49/month for 5 seats including inbox, tasks, vault, and client portal.',
+                },
+                {
+                  q: 'How does Kobin auto-advance pipeline stages from email?',
+                  a: 'When Gmail is connected, Kobin analyzes each matched email thread using AI. If the AI detects a suggested pipeline stage that is forward progression from the current stage — for example, a contact in "new_lead" who just requested a meeting — the stage is automatically updated to "meeting_booked" with the reason logged. The AI never moves a deal backwards unless it detects a "closed_lost" signal. You are notified in your Kobin inbox for each stage change.',
+                },
+                {
+                  q: 'Does Kobin create tasks from emails automatically?',
+                  a: 'Yes. When the AI analyzes an email thread and identifies action items in the conversation, it creates tasks automatically. Up to one task per email analysis is created, placed in the Today bucket (if urgency is high) or This Week bucket. The task title is derived from the action item, and the notes reference the email context and contact name. Duplicate tasks are suppressed if a similar task was already created in the last 24 hours.',
+                },
+                {
+                  q: 'Can Kobin auto-detect new leads from my Gmail inbox?',
+                  a: 'Yes. When a new email arrives from a sender not in your CRM, Kobin\'s AI screens them for business relevance: is this a potential client, investor, partner, or collaborator? If yes, a new contact is created as a New Lead, tagged as auto-detected, and the email thread is immediately analyzed for intent and sentiment. If the email is a newsletter, receipt, automated notification, or irrelevant, it is ignored.',
+                },
+                {
+                  q: 'What are the 8 email intent types Kobin AI classifies?',
+                  a: 'Kobin AI classifies email threads into 8 intent categories: interested (engaged, asking questions), not_interested (declining or unresponsive), requesting_info (asking for more details or pricing), requesting_meeting (asking to schedule a call), following_up (checking in on a previous conversation), neutral (routine communication), objection (raising concerns or hesitations), and ready_to_close (referencing contract, approval, or onboarding timelines). High-signal intents trigger inbox notifications and lead score updates.',
+                },
+              ].map(({ q, a }) => (
+                <details className="faq-item" key={q}>
+                  <summary className="faq-q">{q}</summary>
+                  <p className="faq-a">{a}</p>
+                </details>
+              ))}
+            </div>
+
+          </div>
+
+          <div className="post-footer-nav">
+            <Link href="/compare/asana-alternative-for-agencies" className="post-nav-btn">
+              <span>← Previous</span>
+              <strong>Kobin vs Asana</strong>
             </Link>
-            <p style={{ fontSize: '13px', color: '#444441', marginTop: '16px', fontFamily: "'Geist Mono', monospace" }}>
-              14-day free trial · No credit card required · Kobin (kobin.team)
-            </p>
+            <Link href="/compare" className="post-nav-btn" style={{ textAlign: 'right' }}>
+              <span>See all →</span>
+              <strong>All comparisons</strong>
+            </Link>
           </div>
-        </section>
 
-      </div>
+        </div>
+      </article>
     </>
   )
 }
