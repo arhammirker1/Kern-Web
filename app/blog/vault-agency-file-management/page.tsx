@@ -256,7 +256,7 @@ const viewerCapabilities = [
 
 const problemVsSolution = [
   {
-    problem: 'Client asks "Where's the latest version?" — you search 4 tools',
+    problem: 'Client asks "Where\'s the latest version?" — you search 4 tools',
     solution: 'One Deliverables folder per project. Client sees every upload instantly in their portal.',
   },
   {
