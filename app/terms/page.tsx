@@ -87,6 +87,9 @@ export default function TermsPage() {
                 <li><strong style={{ color: 'var(--ink)' }}>Gmail:</strong> Gmail analysis is off by default. If you enable it, email content is analyzed in real-time and never stored on Kobin AI servers.</li>
                 <li><strong style={{ color: 'var(--ink)' }}>Revoking access:</strong> You may disconnect your Google account from Kobin AI at any time in Settings or directly via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--vi)', textDecoration: 'none' }}>myaccount.google.com/permissions</a>.</li>
               </ul>
+              <p style={{ marginTop: '16px', padding: '16px', background: 'rgba(76,63,212,0.04)', borderLeft: '3px solid var(--vi)', borderRadius: '4px' }}>
+                <strong style={{ color: 'var(--ink)' }}>Limited Use Compliance:</strong> Kobin AI's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--vi)', textDecoration: 'none' }}>Google API Services User Data Policy</a>, including the Limited Use requirements. We only use Google user data to provide or improve user-facing features and do not use this data for advertising, profiling, or training generalized AI models.
+              </p>
             </section>
 
             {/* 6 */}
@@ -98,7 +101,7 @@ export default function TermsPage() {
               <ul style={{ paddingLeft: '20px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
                 <li><strong style={{ color: 'var(--ink)' }}>No autonomous action:</strong> Kobin AI does not make autonomous decisions on behalf of users. All AI outputs are assistive and require human review before any action is taken.</li>
                 <li><strong style={{ color: 'var(--ink)' }}>Ownership:</strong> You own the data you input into Kobin AI and the outputs generated for your specific use case. We do not claim ownership over your content.</li>
-                <li><strong style={{ color: 'var(--ink)' }}>No training on your data:</strong> Your proprietary content is not used to train AI foundation models.</li>
+                <li><strong style={{ color: 'var(--ink)' }}>No training on your data:</strong> Your proprietary content is not used to train AI foundation models. Kobin AI may improve internal systems using aggregated and anonymised usage patterns, but never using identifiable or proprietary user content.</li>
                 <li><strong style={{ color: 'var(--ink)' }}>No warranty:</strong> AI outputs are provided "as-is" without warranty of accuracy. Always verify AI-generated information before acting on it.</li>
               </ul>
             </section>
@@ -145,7 +148,15 @@ export default function TermsPage() {
 
             {/* 12 */}
             <section>
-              <h2 style={h2Style}>12. Governing Law</h2>
+              <h2 style={h2Style}>12. Security</h2>
+              <p>
+                We implement industry-standard security measures to protect user data, including encrypted data transmission (HTTPS), secure credential storage, private object storage with access controls, and role-based permissions enforced at the API and database levels. While no system is completely secure, we continuously work to protect your information from unauthorised access, loss, or misuse. To report a security vulnerability, contact <a href="mailto:support@kobin.team" style={{ color: 'var(--vi)', textDecoration: 'none' }}>support@kobin.team</a>.
+              </p>
+            </section>
+
+            {/* 13 */}
+            <section>
+              <h2 style={h2Style}>13. Governing Law</h2>
               <p>
                 These Terms are governed by the laws of the jurisdiction in which Kobin operates, without regard to conflict of law principles. Any disputes will be resolved through good-faith negotiation before any formal legal proceedings.
               </p>

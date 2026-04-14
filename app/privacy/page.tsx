@@ -121,13 +121,19 @@ export default function PrivacyPage() {
               <p>
                 <strong style={{ color: 'var(--ink)' }}>Gmail data:</strong> If you enable Gmail integration, email content is fetched and analyzed in real-time. <strong style={{ color: 'var(--ink)' }}>Gmail messages, contact lists, and email metadata are never stored on Kobin AI servers.</strong> They are processed as a transient stream and the source data remains exclusively in your Google account. You may disable this integration at any time in Settings.
               </p>
+              <p style={{ marginTop: '16px', padding: '16px', background: 'rgba(76,63,212,0.04)', borderLeft: '3px solid var(--vi)', borderRadius: '4px' }}>
+                <strong style={{ color: 'var(--ink)' }}>Limited Use Compliance:</strong> Kobin AI's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--vi)', textDecoration: 'none' }}>Google API Services User Data Policy</a>, including the Limited Use requirements. We only use Google user data to provide or improve user-facing features and do not use this data for advertising, profiling, or training generalized AI models.
+              </p>
             </section>
 
             {/* 6 */}
             <section>
               <h2 style={h2Style}>6. AI Data Processing</h2>
-              <p>
+              <p style={{ marginBottom: '12px' }}>
                 Kobin AI uses Large Language Models (LLMs) provided by Groq to process text extracted from your files and workspace interactions. This data is used to generate semantic embeddings stored securely in Supabase to power features such as "Ask Vault" and intelligent search. <strong style={{ color: 'var(--ink)' }}>We do not use your proprietary data to train AI foundation models. Kobin AI does not make autonomous decisions on behalf of users — all outputs are assistive and require human review before action is taken.</strong>
+              </p>
+              <p>
+                Kobin AI may improve its internal systems using aggregated and anonymised usage patterns, but never using identifiable or proprietary user content.
               </p>
             </section>
 
@@ -150,8 +156,11 @@ export default function PrivacyPage() {
             {/* 9 */}
             <section>
               <h2 style={h2Style}>9. Data Retention</h2>
+              <p style={{ marginBottom: '12px' }}>
+                Waitlist and newsletter email addresses are retained until you request deletion. Anonymous analytics data is retained for up to 12 months.
+              </p>
               <p>
-                Waitlist and newsletter email addresses are retained until you request deletion. Workspace data (tasks, files, CRM records) is retained for the lifetime of your account and deleted within 30 days of account deletion. Anonymous analytics data is retained for up to 12 months. Supabase Storage files are deleted when you delete the associated vault item or close your account.
+                Upon account deletion, all associated workspace data — including files, embeddings, CRM records, and metadata — are permanently deleted within 30 days, except where retention is required by applicable law. You will receive a confirmation email once deletion is complete.
               </p>
             </section>
 
@@ -181,13 +190,20 @@ export default function PrivacyPage() {
                 To request deletion of any Kobin AI-stored data derived from your Google account (such as embeddings generated from file content), email <a href="mailto:support@kobin.team" style={{ color: 'var(--vi)', textDecoration: 'none' }}>support@kobin.team</a> with the subject line "Google Data Deletion Request". We will process your request within 30 days and confirm via email.
               </p>
               <p>
-                Files uploaded to Google Drive through Kobin AI remain in <em>your</em> Google Drive account. You can delete them directly from Google Drive at any time. Kobin AI does not retain copies of Drive-stored files on its own servers.
+                Files uploaded to Google Drive through Kobin AI remain in <em>your</em> Google Drive account. You can delete them directly from Google Drive at any time. Kobin AI does not store persistent copies of Google Drive files on its own servers outside of what is necessary for core functionality (such as temporary processing or semantic embeddings used for search).
               </p>
             </section>
 
             {/* 12 */}
             <section>
-              <h2 style={h2Style}>12. Changes to This Policy</h2>
+              <h2 style={h2Style}>12. Security</h2>
+              <p>
+                We implement industry-standard security measures to protect user data, including encrypted data transmission (HTTPS), secure credential storage via Supabase Auth, private object storage with signed URLs, and access controls enforced at both the API and database levels. While no system is completely secure, we continuously work to protect your information from unauthorised access, loss, or misuse. If you discover a security vulnerability, please disclose it responsibly to <a href="mailto:support@kobin.team" style={{ color: 'var(--vi)', textDecoration: 'none' }}>support@kobin.team</a>.
+              </p>
+            </section>
+
+            <section>
+              <h2 style={h2Style}>13. Changes to This Policy</h2>
               <p>
                 We may update this policy as Kobin AI grows. If we make material changes, we will notify active users by email. The date at the top of this page reflects the most recent update.
               </p>
@@ -195,7 +211,7 @@ export default function PrivacyPage() {
 
             {/* 13 */}
             <section>
-              <h2 style={h2Style}>13. Contact</h2>
+              <h2 style={h2Style}>14. Contact</h2>
               <p>
                 Questions about this policy? Email <a href="mailto:support@kobin.team" style={{ color: 'var(--vi)', textDecoration: 'none' }}>support@kobin.team</a> and we will get back to you within 2 business days.
               </p>
