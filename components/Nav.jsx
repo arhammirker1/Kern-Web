@@ -9,8 +9,8 @@ export default function Nav({ activePage }) {
     <>
       <nav style={{width:'100%',boxSizing:'border-box'}}>
         <Link href="/" className="nav-logo">
-          <img src="/kobin_icon_32.png" width="28" height="28" alt="Kobin" style={{ borderRadius: '7px' }} />
-          <span className="nav-wordmark">Kobin</span>
+          <img src="/kobin_icon_32.png" width="28" height="28" alt="Kobin AI" style={{ borderRadius: '7px' }} />
+          <span className="nav-wordmark">Kobin AI</span>
         </Link>
 
         <div className="nav-links">

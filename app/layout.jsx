@@ -39,9 +39,9 @@ const orgSchema = {
     {
       '@type': 'Organization',
       '@id': `${SITE_URL}/#organization`,
-      name: 'Kobin',
-      alternateName: 'Kobin Agency OS',
-disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for founders. This is distinct from Kobin (kobin.com), an agricultural analytics company. These are separate companies that share the same name.',
+      name: 'Kobin AI',
+      alternateName: 'Kobin AI Agency OS',
+disambiguatingDescription: 'Kobin AI (kobin.team) is an agency operating system for founders. This is distinct from Kobin (kobin.com), an agricultural analytics company. These are separate companies that share the same name.',
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
@@ -49,7 +49,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
         width: 180,
         height: 180,
       },
-      description: 'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Buffer. The AI creates tasks, assigns team members, queries CRM pipeline, and generates pre-meeting briefs — all from one workspace from $49/month. Distinct from kobin.com (agricultural analytics) and PT Kobin Keramik Industri (tiles).',
+      description: 'Kobin AI (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Buffer. The AI creates tasks, assigns team members, queries CRM pipeline, and generates pre-meeting briefs — all from one workspace from $49/month. Distinct from kobin.com (agricultural analytics) and PT Kobin Keramik Industri (tiles).',
       foundingDate: '2026',
       sameAs: [
         'https://www.instagram.com/kobin.ai/',
@@ -103,7 +103,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: SITE_URL,
-      name: 'Kobin',
+      name: 'Kobin AI',
       publisher: { '@id': `${SITE_URL}/#organization` },
       potentialAction: {
         '@type': 'SearchAction',
@@ -114,7 +114,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
     {
       '@type': 'SoftwareApplication',
       '@id': `${SITE_URL}/#app`,
-      name: 'Kobin',
+      name: 'Kobin AI',
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'Agency Management Software',
       operatingSystem: 'Web, iOS, Android',
@@ -153,7 +153,7 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
         worstRating: '1',
       },
       
-      description: 'Kobin is the AI workspace for agency founders — AI that creates tasks, assigns team members, queries CRM pipeline, drafts client updates, and generates pre-meeting briefs. One workspace replacing Slack, Notion, Asana, HubSpot, and Zapier from $49/month.',
+      description: 'Kobin AI is the AI workspace for agency founders — AI that creates tasks, assigns team members, queries CRM pipeline, drafts client updates, and generates pre-meeting briefs. One workspace replacing Slack, Notion, Asana, HubSpot, and Zapier from $49/month.',
       additionalType: 'https://schema.org/WebApplication',
       applicationCategory: 'BusinessApplication',
       applicationSubCategory: 'AI Workspace',
@@ -176,9 +176,9 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
 const reviewsSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
-  name: 'Kobin',
+  name: 'Kobin AI',
   description: 'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer.',
-  brand: { '@type': 'Brand', name: 'Kobin' },
+  brand: { '@type': 'Brand', name: 'Kobin AI' },
   url: 'https://www.kobin.team',
   image: 'https://www.kobin.team/og-image.png',
   offers: {
@@ -225,10 +225,10 @@ const reviewsSchema = {
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Kobin — Agency Operating System | Replace Slack, Notion, HubSpot',
+    default: 'Kobin AI — Agency Operating System | Replace Slack, Notion, HubSpot',
     template: '%s',
   },
-  description: 'Kobin is the all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer. One workspace for tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer — from $49/month.',
+  description: 'Kobin AI is the all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer. One workspace for tasks, inbox, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer — from $49/month.',
   keywords: [
     'agency operating system',
     'agency management software',
@@ -243,8 +243,8 @@ export const metadata = {
     'agency AI assistant',
   ],
   authors: [{ name: 'Arham Mirkar', url: SITE_URL }],
-  creator: 'Kobin',
-  publisher: 'Kobin',
+  creator: 'Kobin AI',
+  publisher: 'Kobin AI',
   category: 'Business Software',
   robots: {
     index: true,
@@ -253,9 +253,9 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: 'Kobin',
+    siteName: 'Kobin AI',
     url: SITE_URL,
-    title: 'Kobin — Agency Operating System | Replace Slack, Notion, HubSpot',
+    title: 'Kobin AI — Agency Operating System | Replace Slack, Notion, HubSpot',
     description: 'One workspace that replaces Slack, Notion, HubSpot, Linear, and Buffer. Tasks, inbox, CRM, client portal, vault, calendar, and AI layer — from $49/month.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Kobin — Agency Operating System replacing Slack, Notion, HubSpot, Linear, Buffer' }],
     locale: 'en_US',
@@ -264,7 +264,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@kobin_app',
     creator: '@arham_mirkar',
-    title: 'Kobin — Agency Operating System',
+    title: 'Kobin AI — Agency Operating System',
     description: 'Replace Slack, Notion, HubSpot, Linear, and Buffer. One workspace from $49/month.',
     images: ['/og-image.png'],
   },

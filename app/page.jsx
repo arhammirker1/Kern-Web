@@ -163,50 +163,50 @@ track('Waitlist Signup', {
                 mainEntity: [
                   {
                     '@type': 'Question',
-                    name: 'What is Kobin?',
+                    name: 'What is Kobin AI?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.',
+                      text: 'Kobin AI is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'What tools does Kobin replace?',
+                    name: 'What tools does Kobin AI replace?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin replaces Slack (real-time inbox), Notion (Google Drive-backed Vault), HubSpot (built-in CRM), Linear or Asana (task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet). It also includes a built-in client portal replacing tools like Basecamp.',
+                      text: 'Kobin AI replaces Slack (real-time inbox), Notion (Google Drive-backed Vault), HubSpot (built-in CRM), Linear or Asana (task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet). It also includes a built-in client portal replacing tools like Basecamp.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'How much does Kobin cost?',
+                    name: 'How much does Kobin AI cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals, LinkedIn Studio), and Agency at $99/month (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.',
+                      text: 'Kobin AI has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals, LinkedIn Studio), and Agency at $99/month (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'Does Kobin have a client portal?',
+                    name: 'Does Kobin AI have a client portal?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.',
+                      text: 'Yes. Every Kobin AI plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'Is Kobin a Slack alternative for agencies?',
+                    name: 'Is Kobin AI a Slack alternative for agencies?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Every conversation is natively linked to a project, client, and task. It supports file attachments, message replies, forwards, unread badges, and @AI mentions with full project context.',
+                      text: 'Yes. Kobin AI includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Every conversation is natively linked to a project, client, and task. It supports file attachments, message replies, forwards, unread badges, and @AI mentions with full project context.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'Does Kobin integrate with Google Drive?',
+                    name: 'Does Kobin AI integrate with Google Drive?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: "Kobin's Vault feature is backed by Google Drive using the drive.file scope — only accessing files the app creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.",
+                      text: "Kobin AI's Vault feature is backed by Google Drive using the drive.file scope — only accessing files the app creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.",
                     },
                   },
                   {
@@ -222,23 +222,23 @@ track('Waitlist Signup', {
                     name: 'Can one tool replace Slack, Notion, HubSpot, and Asana?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace from $49/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin.',
+                      text: 'Yes. Kobin AI consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace from $49/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin AI.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'Is Kobin a Notion alternative for agencies?',
+                    name: 'Is Kobin AI a Notion alternative for agencies?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin Vault replaces Notion for agency project knowledge management. It is backed by Google Drive with role-scoped folder hierarchies per project (Internal Documents, Client Uploads, Deliverables). Every item requires a title, description, and document type — enforcing the structure Notion rarely maintains in practice.',
+                      text: 'Yes. Kobin AI Vault replaces Notion for agency project knowledge management. It is backed by Google Drive with role-scoped folder hierarchies per project (Internal Documents, Client Uploads, Deliverables). Every item requires a title, description, and document type — enforcing the structure Notion rarely maintains in practice.',
                     },
                   },
                   {
                     '@type': 'Question',
-                    name: 'Is Kobin a HubSpot alternative for small agencies?',
+                    name: 'Is Kobin AI a HubSpot alternative for small agencies?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin includes a built-in CRM called Relationships, designed for agency founders rather than enterprise sales teams. It tracks leads, investors, partners, talent, and advisors with meeting outcome logging, follow-up reminders, LinkedIn URL fields, and flexible tagging — included in all plans at no extra cost.',
+                      text: 'Yes. Kobin AI includes a built-in CRM called Relationships, designed for agency founders rather than enterprise sales teams. It tracks leads, investors, partners, talent, and advisors with meeting outcome logging, follow-up reminders, LinkedIn URL fields, and flexible tagging — included in all plans at no extra cost.',
                     },
                   },
                 ],
@@ -339,7 +339,7 @@ track('Waitlist Signup', {
               e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
           <Image
             src="/mascot.png"
-            alt="Kobin mascot"
+            alt="Kobin AI mascot"
             width={480}
             height={520}
             priority
@@ -385,42 +385,42 @@ track('Waitlist Signup', {
         <div className="icons-arena">
           {/* Slack */}
           <div className="app-icon" style={{ top: '8%', left: '12%', animation: 'float1 5.2s ease-in-out infinite' }}>
-  <img src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin AI inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">1M+</div>
 </div>
 
           {/* Notion */}
 <div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
-  <img src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge blue">100</div>
 </div>
 
           {/* Linear */}
           <div className="app-icon" style={{ top: '60%', left: '6%', animation: 'float3 5.8s ease-in-out infinite' }}>
-  <img src="/asana.jpg" alt="Asana — task management replaced by Kobin tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/asana.jpg" alt="Asana — task management replaced by Kobin AI tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">665</div>
 </div>
 
           {/* Google Drive */}
           <div className="app-icon" style={{ bottom: '12%', left: '20%', animation: 'float4 7.2s ease-in-out infinite' }}>
-  <img src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
 </div>
 
           {/* HubSpot */}
           <div className="app-icon" style={{ bottom: '8%', right: '14%', animation: 'float5 5.5s ease-in-out infinite' }}>
-  <img src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin AI Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
 </div>
 
           {/* Google Calendar */}
           <div className="app-icon" style={{ top: '30%', left: '2%', animation: 'float6 6.8s ease-in-out infinite' }}>
-  <img src="/google-meet.jpg" alt="Google Meet — integrated into Kobin calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/google-meet.jpg" alt="Google Meet — integrated into Kobin AI calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
   <div className="app-badge">99+</div>
 </div>
 
           {/* Buffer */}
           <div className="app-icon" style={{ top: '25%', right: '3%', animation: 'float7 7.5s ease-in-out infinite' }}>
-  <img src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+  <img src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin AI unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
 </div>
 
           <div className="center-text">
@@ -488,7 +488,7 @@ track('Waitlist Signup', {
               <div className="nav-mark" style={{ width: '32px', height: '32px', borderRadius: '9px' }}>
                 <KernMark size={18} />
               </div>
-              <h3>Kobin</h3>
+              <h3>Kobin AI</h3>
             </div>
             <div className="from">From $49 per month</div>
             <div className="save-box">
@@ -845,7 +845,7 @@ track('Waitlist Signup', {
               { href: '/notion-ai-alternative', label: 'Notion AI Alternative' },
               { href: '/clickup-ai-alternative', label: 'ClickUp AI Alternative' },
               { href: '/ai-productivity-tool', label: 'AI Productivity Tool' },
-              { href: '/what-is-kobin', label: 'What is Kobin?' },
+              { href: '/what-is-kobin', label: 'What is Kobin AI?' },
               { href: '/blog/productivity-software-for-agencies', label: 'Productivity Software' },
             ].map(({ href, label }) => (
               <a key={href} href={href} style={{ fontSize: '13px', color: 'var(--vi)', textDecoration: 'none', padding: '8px 16px', border: '1px solid rgba(76,63,212,0.2)', borderRadius: '100px', background: 'rgba(76,63,212,0.04)' }}>
@@ -861,28 +861,28 @@ track('Waitlist Signup', {
           </h2>
           {[
             {
-              q: 'What is Kobin?',
-              a: 'Kobin is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.'
+              q: 'What is Kobin AI?',
+              a: 'Kobin AI is an all-in-one agency operating system that replaces Slack, Notion, HubSpot, Linear, and Buffer in a single workspace. It includes a real-time inbox, task management, client portal, CRM, Google Drive-backed vault, calendar, LinkedIn Studio, and AI layer — all sharing one data model.'
             },
             {
-              q: 'What tools does Kobin replace?',
-              a: 'Kobin replaces Slack (real-time inbox with project rooms, group chats, and DMs), Notion (Google Drive-backed Vault with role-scoped folders), HubSpot (built-in CRM for leads, investors, partners, and advisors), Linear or Asana (time-horizon task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet auto-generation).'
+              q: 'What tools does Kobin AI replace?',
+              a: 'Kobin AI replaces Slack (real-time inbox with project rooms, group chats, and DMs), Notion (Google Drive-backed Vault with role-scoped folders), HubSpot (built-in CRM for leads, investors, partners, and advisors), Linear or Asana (time-horizon task management), Buffer or Taplio (LinkedIn Studio), and Calendly (calendar with Google Meet auto-generation).'
             },
             {
-              q: 'How much does Kobin cost?',
-              a: 'Kobin starts at $19/month for solo founders (1 user, up to 3 projects), $49/month for the Founder plan (up to 5 team members, 3 client portals, LinkedIn Studio), and $99/month for the Agency plan (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.'
+              q: 'How much does Kobin AI cost?',
+              a: 'Kobin AI starts at $19/month for solo founders (1 user, up to 3 projects), $49/month for the Founder plan (up to 5 team members, 3 client portals, LinkedIn Studio), and $99/month for the Agency plan (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.'
             },
             {
-              q: 'Does Kobin have a client portal?',
-              a: 'Yes. Every Kobin plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access (Client Uploads and Deliverables folders). Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.'
+              q: 'Does Kobin AI have a client portal?',
+              a: 'Yes. Every Kobin AI plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access (Client Uploads and Deliverables folders). Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.'
             },
             {
-              q: 'Is Kobin a Slack alternative for agencies?',
-              a: 'Yes. Kobin includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Unlike Slack, every conversation is natively linked to a project, client, and task. It adds file attachments, message replies, forwards, unread badges, and @AI mentions that trigger inline AI responses with full project context.'
+              q: 'Is Kobin AI a Slack alternative for agencies?',
+              a: 'Yes. Kobin AI includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Unlike Slack, every conversation is natively linked to a project, client, and task. It adds file attachments, message replies, forwards, unread badges, and @AI mentions that trigger inline AI responses with full project context.'
             },
             {
-              q: 'Does Kobin integrate with Google Drive?',
-              a: "Yes. Kobin's Vault feature is backed by Google Drive using the drive.file scope — meaning it only accesses files it creates, never your existing Drive content. Each project automatically gets three Drive subfolders: Internal Documents (team only), Client Uploads (clients can upload), and Deliverables (clients view only)."
+              q: 'Does Kobin AI integrate with Google Drive?',
+              a: "Yes. Kobin AI's Vault feature is backed by Google Drive using the drive.file scope — meaning it only accesses files it creates, never your existing Drive content. Each project automatically gets three Drive subfolders: Internal Documents (team only), Client Uploads (clients can upload), and Deliverables (clients view only)."
             },
             {
               q: 'What is the Kobin AI layer?',
@@ -904,7 +904,7 @@ track('Waitlist Signup', {
       <footer>
         <div className="foot-brand">
           <div className="nav-mark"><KernMark /></div>
-          Kobin
+          Kobin AI
         </div>
         <div className="foot-links">
           <Link href="/#features">Features</Link>
@@ -913,6 +913,7 @@ track('Waitlist Signup', {
           <Link href="/blog">Blog</Link>
           <a href="mailto:support@kobin.team">Contact</a>
           <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms</Link>
           <a href="https://www.instagram.com/kobin.ai/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style={{display:'flex',alignItems:'center',gap:'5px'}}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             Instagram
@@ -926,8 +927,8 @@ track('Waitlist Signup', {
           <a href="https://www.producthunt.com/products/kobin?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-kobin" target="_blank" rel="noopener noreferrer">
             <img alt="Kobin on Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1109759&theme=dark&t=1774704126274" />
           </a>
-          <div className="foot-copy">© 2026 Kobin. All rights reserved.</div>
-        <div className="foot-copy" style={{ marginTop: '4px' }}>Kobin (kobin.team) is an agency operating system — not affiliated with Kobin (kobin.com), an agricultural analytics company.</div>
+          <div className="foot-copy">© 2026 Kobin AI. All rights reserved.</div>
+        <div className="foot-copy" style={{ marginTop: '4px' }}>Kobin AI (kobin.team) is an agency operating system — not affiliated with Kobin (kobin.com), an agricultural analytics company.</div>
         </div>
       </footer>
     </>
