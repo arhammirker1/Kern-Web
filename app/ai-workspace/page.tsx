@@ -211,6 +211,8 @@ const vsComparison = [
   ['AI sees CRM pipeline?', '✓ Full pipeline + contact history', '✗ Not in Notion', '✗ Not in ClickUp', '✗ Not in Monday'],
   ['AI sees team workload?', '✓ Live workload data before assigning', '✗ No', '⚠ ClickUp only', '⚠ Monday only'],
   ['Pre-meeting AI brief?', '✓ Auto-generated 10min before', '✗ Not available', '✗ Not available', '✗ Not available'],
+  ['Native file editor (code/docs/sheets)?', '✓ Monaco + TipTap + Spreadsheet', '✗ No', '✗ No', '✗ No'],
+['Semantic file search?', '✓ pgvector chunk-level', '✗ Keyword only', '✗ No', '✗ No'],
   ['Client portal included?', '✓ All plans, one click', '✗ Not included', '✗ Not included', 'Enterprise only'],
   ['Built-in CRM?', '✓ Full relationships module', '✗ Not included', '✗ Not included', 'Add-on cost'],
   ['Total cost (5 seats)?', '$49/month all-in', '$16/mo + $87 Slack + $55 Asana', '$95/mo + $87 Slack + HubSpot', '$120/mo + Slack + HubSpot'],

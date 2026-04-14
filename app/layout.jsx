@@ -75,6 +75,10 @@ disambiguatingDescription: 'Kobin (kobin.team) is an agency operating system for
         'ClickUp AI Alternative',
         'HubSpot Alternative for Agencies',
         'All-in-One Agency Workspace',
+        'Agency File Management Software',
+'Client Deliverable Tracking',
+'AI Document Management',
+'Project Vault Software',
       ],
     },
     {

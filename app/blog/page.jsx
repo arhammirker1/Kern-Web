@@ -16,6 +16,14 @@ export default function BlogPage() {
   // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
+    {
+  thumbClass: 'thumb-vi', thumbText: 'Vault\nFile\nManagement', thumbLabel: 'PRODUCT DEEP DIVE',
+  category: 'cat-build', catLabel: 'Product Deep Dive',
+  title: 'Agency File Management in 2026 — Why Google Drive Alone Fails and What Kobin Vault Does Instead',
+  excerpt: 'Scattered files, broken Drive links, clients who cannot find deliverables. Kobin Vault gives every project enforced 3-folder structure, AI auto-labeling, semantic search, Monaco editing, and a client portal that updates automatically on upload.',
+  meta: 'Apr 14 · 16 min',
+  href: '/blog/vault-agency-file-management',
+},
 
           {
         thumbClass: 'thumb-dark', thumbText: 'HubSpot\nAlternative\nAgencies', thumbLabel: 'DEEP GUIDE',
@@ -195,6 +203,15 @@ export default function BlogPage() {
               url: 'https://www.kobin.team',
             },
             blogPost: [
+              {
+  "@type": "BlogPosting",
+  "headline": "Agency File Management in 2026 — Kobin Vault Deep Dive",
+  "url": "https://www.kobin.team/blog/vault-agency-file-management",
+  "datePublished": "2026-04-14",
+  "author": { "@type": "Person", "name": "Arham Mirkar" },
+  "description": "How Kobin Vault solves agency file chaos with role-scoped folders, AI auto-labeling, pgvector semantic search, Monaco + TipTap editors, and automatic client delivery."
+},
+
               {
                 '@type': 'BlogPosting',
                 headline: "Why Founders Pay $283/Month for Tools That Don't Talk to Each Other",

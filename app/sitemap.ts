@@ -195,6 +195,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.96,
     },
+    {
+      url: `${SITE}/blog/vault-agency-file-management`,
+      lastModified: new Date('2026-04-14'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
+      url: `${SITE}/vault-for-agencies`,
+      lastModified: new Date('2026-04-14'),
+      changeFrequency: 'weekly',
+      priority: 0.98,
+    },
+
  
   ]
 }
