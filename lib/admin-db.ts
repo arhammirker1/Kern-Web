@@ -9,15 +9,15 @@
  * Uses ADMIN_SUPABASE_URL + ADMIN_SUPABASE_SERVICE_KEY env vars.
  * These point to the Founder-Assistant project (profiles, subscriptions, etc.)
  *
- * Only imported in: app/api/admin/**/route.ts
+ * 
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
-import { createClient, type SupabaseClient } from '@supabase/supabase-js'
+import { createClient } from '@supabase/supabase-js'
 
-let _adminClient: SupabaseClient | null = null
+let _adminClient = null
 
-export function getAdminDB(): SupabaseClient {
+export function getAdminDB() {
   if (_adminClient) return _adminClient
 
   const url = process.env.ADMIN_SUPABASE_URL
