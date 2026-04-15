@@ -29,14 +29,20 @@ export async function POST(req: NextRequest) {
     const planConfig = PLANS[plan]
     const order_id = `kobin_${plan}_${user_id || 'guest'}_${Date.now()}`
 
-    // 1. Create guest JWT for the user
-    const { session: guestSession, token: guestToken } = await createGuestToken({
-      email,
-      phone,
-      country: 'PK',
-      first_name: first_name || '',
-      last_name: last_name || '',
-    })
+    // 1. Create guest JWT for the user (non-fatal if Safepay endpoint unavailable)
+    let guestToken: string | null = null
+    try {
+      const guestResult = await createGuestToken({
+        email,
+        phone,
+        country: 'PK',
+        first_name: first_name || '',
+        last_name: last_name || '',
+      })
+      guestToken = guestResult.token
+    } catch (guestErr) {
+      console.warn('[payments/checkout] Guest token failed (non-fatal):', guestErr)
+    }
 
     // 2. Create a payment tracker
     const { token: trackerToken } = await createPaymentTracker({

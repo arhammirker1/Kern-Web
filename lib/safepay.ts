@@ -77,7 +77,7 @@ export async function createGuestToken(params: {
   first_name?: string
   last_name?: string
 }): Promise<{ session: string; token: string }> {
-  const json = await safepayFetch<any>('/user/v1/guest/', {
+  const json = await safepayFetch<any>('/user/v1/guest', {
     method: 'POST',
     body: JSON.stringify({
       email: params.email,
@@ -99,7 +99,7 @@ export async function createPaymentTracker(payload: {
   order_id: string
   source?: string
 }): Promise<{ token: string }> {
-  const json = await safepayFetch<any>('/order/v1/', {
+  const json = await safepayFetch<any>('/order/v1', {
     method: 'POST',
     body: JSON.stringify({
       merchant_api_key: PUBLIC_KEY,
@@ -146,7 +146,7 @@ export async function getPaymentStatus(tracker_token: string): Promise<{
   amount: number
   currency: string
 }> {
-  const json = await safepayFetch<any>(`/order/v1/${tracker_token}/`)
+  const json = await safepayFetch<any>(`/order/v1/${tracker_token}`)
   const order = json?.data?.order || json?.data || {}
   return {
     state: order.state || 'unknown',
