@@ -83,6 +83,9 @@ export async function POST(req: NextRequest) {
     })
   } catch (err: any) {
     console.error('[payments/checkout] error:', err)
-    return NextResponse.json({ error: err.message || 'Payment init failed' }, { status: 500 })
+    return NextResponse.json({ 
+      error: err.message || 'Payment init failed',
+      detail: String(err)
+    }, { status: 500 })
   }
 }

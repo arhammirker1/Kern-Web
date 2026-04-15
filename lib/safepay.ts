@@ -15,8 +15,7 @@ const SECRET_KEY = process.env.SAFEPAY_SECRET_KEY!
 const PUBLIC_KEY = process.env.SAFEPAY_PUBLIC_KEY!
 
 if (!SECRET_KEY || !PUBLIC_KEY) {
-  // Warn at module load time (won't crash build)
-  console.warn('[safepay] SAFEPAY_SECRET_KEY or SAFEPAY_PUBLIC_KEY not set')
+  throw new Error('[safepay] SAFEsPAY_SECRET_KEY or SAFEPAY_PUBLIC_KEY not set — check your .env.local')
 }
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -54,8 +53,9 @@ async function safepayFetch<T>(
   const json = await res.json()
 
   if (!res.ok) {
+    const rawText = JSON.stringify(json)
     throw new Error(
-      json?.status?.errors?.[0] || json?.error || `Safepay error: ${res.status}`
+      json?.status?.errors?.[0] || json?.error || `Safepay ${res.status}: ${rawText}`
     )
   }
 
