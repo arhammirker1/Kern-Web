@@ -50,12 +50,18 @@ async function safepayFetch<T>(
     },
   })
 
-  const json = await res.json()
+  const rawText = await res.text()
+  
+  let json: any = null
+  try {
+    json = JSON.parse(rawText)
+  } catch {
+    throw new Error(`Safepay ${res.status} — non-JSON response: ${rawText.slice(0, 200)}`)
+  }
 
   if (!res.ok) {
-    const rawText = JSON.stringify(json)
     throw new Error(
-      json?.status?.errors?.[0] || json?.error || `Safepay ${res.status}: ${rawText}`
+      json?.status?.errors?.[0] || json?.error || `Safepay ${res.status}: ${JSON.stringify(json)}`
     )
   }
 
