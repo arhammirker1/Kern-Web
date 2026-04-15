@@ -15,7 +15,7 @@
 
 import { createClient } from '@supabase/supabase-js'
 
-let _adminClient = null
+let _adminClient: any = null
 
 export function getAdminDB() {
   if (_adminClient) return _adminClient
