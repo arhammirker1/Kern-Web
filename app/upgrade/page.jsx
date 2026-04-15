@@ -8,8 +8,8 @@
 import { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import Nav from '../../../components/Nav'
-import { track } from '../../../lib/mixpanel'
+import Nav from '../../components/Nav'
+import { track } from '../../lib/mixpanel'
 
 const KernMark = ({ size = 16 }) => (
   <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
