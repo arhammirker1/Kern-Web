@@ -77,7 +77,7 @@ export async function createGuestToken(params: {
   first_name?: string
   last_name?: string
 }): Promise<{ session: string; token: string }> {
-  const json = await safepayFetch<any>('/user/v1/guest', {
+  const json = await safepayFetch<any>('/user/v1/guest/', {
     method: 'POST',
     body: JSON.stringify({
       email: params.email,
@@ -99,17 +99,19 @@ export async function createPaymentTracker(payload: {
   order_id: string
   source?: string
 }): Promise<{ token: string }> {
-  const json = await safepayFetch<any>('/order/v1', {
+  const json = await safepayFetch<any>('/order/payments/v3/', {
     method: 'POST',
     body: JSON.stringify({
       merchant_api_key: PUBLIC_KEY,
-      purpose: payload.source || 'kobin_subscription',
-      amount: payload.amount,
+      intent: 'CYBERSOURCE',
+      mode: 'payment',
+      entry_mode: 'raw',
       currency: payload.currency,
-      order_id: payload.order_id,
+      amount: payload.amount,
+      metadata: { order_id: payload.order_id, source: payload.source || 'kobin_subscription' },
     }),
   })
-  return { token: json?.data?.token }
+  return { token: json?.data?.tracker?.token }
 }
 
 // ── Build hosted checkout URL ─────────────────────────────────────────────────
@@ -128,7 +130,7 @@ export function buildCheckoutUrl(params: {
 
   const qs = new URLSearchParams({
     env: params.env === 'production' ? 'production' : 'sandbox',
-    beacon: params.token,
+    tracker: params.token,
     order_id: params.order_id,
     cancel_url: params.cancel_url,
     redirect_url: params.redirect_url,
@@ -146,13 +148,13 @@ export async function getPaymentStatus(tracker_token: string): Promise<{
   amount: number
   currency: string
 }> {
-  const json = await safepayFetch<any>(`/order/v1/${tracker_token}`)
-  const order = json?.data?.order || json?.data || {}
+  const json = await safepayFetch<any>(`/order/payments/v3/${tracker_token}`)
+  const tracker = json?.data?.tracker || json?.data || {}
   return {
-    state: order.state || 'unknown',
-    paid: order.state === 'PAID',
-    amount: order.amount,
-    currency: order.currency,
+    state: tracker.state || 'unknown',
+    paid: tracker.state === 'COMPLETE' || tracker.state === 'PAID',
+    amount: tracker.purchase_totals?.base_amount?.amount,
+    currency: tracker.purchase_totals?.base_amount?.currency,
   }
 }
 
