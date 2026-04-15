@@ -91,22 +91,22 @@ export async function GET(req: NextRequest) {
 
     // ── Process plan breakdown ───────────────────────────────────────────
     const profiles = profilesResult.data || []
-    const founders = profiles.filter(p => !p.created_by && p.user_type !== 'team_member' && p.user_type !== 'client')
-    const teamMembers = profiles.filter(p => p.user_type === 'team_member')
-    const clients = profiles.filter(p => p.user_type === 'client')
+    const founders = profiles.filter((p: any) => !p.created_by && p.user_type !== 'team_member' && p.user_type !== 'client')
+    const teamMembers = profiles.filter((p: any) => p.user_type === 'team_member')
+    const clients = profiles.filter((p: any) => p.user_type === 'client')
 
     const planBreakdown = {
-      free: founders.filter(p => p.plan === 'free' || !p.plan).length,
-      pro: founders.filter(p => p.plan === 'pro').length,
-      agency: founders.filter(p => p.plan === 'agency').length,
+      free: founders.filter((p: any) => p.plan === 'free' || !p.plan).length,
+      pro: founders.filter((p: any) => p.plan === 'pro').length,
+      agency: founders.filter((p: any) => p.plan === 'agency').length,
     }
 
     // ── Process subscription status ──────────────────────────────────────
     const subs = subscriptionsResult.data || []
     const subStatus = {
-      active: subs.filter(s => s.status === 'active').length,
-      cancelled: subs.filter(s => s.status === 'cancelled').length,
-      past_due: subs.filter(s => s.status === 'past_due').length,
+      active: subs.filter((s: any) => s.status === 'active').length,
+      cancelled: subs.filter((s: any) => s.status === 'cancelled').length,
+      past_due: subs.filter((s: any) => s.status === 'past_due').length,
     }
 
     return Response.json({
