@@ -182,7 +182,7 @@ track('Waitlist Signup', {
                     name: 'How much does Kobin AI cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 2 GB vault), Pro at $29/month (unlimited team, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial.'},
+                      text: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 2 GB vault), Pro at $29/month (unlimited team, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial.'
                     },
                   },
                   {
