@@ -57,7 +57,7 @@ export async function GET(req: NextRequest) {
     if (profilesError) throw profilesError
 
     // Get subscription data for these users
-    const founderIds = (profiles || []).map(p => p.id)
+    const founderIds = (profiles || []).map((p: any) => p.id)
 
     let subscriptions: Record<string, any> = {}
     if (founderIds.length > 0) {
@@ -104,7 +104,7 @@ export async function GET(req: NextRequest) {
     const { count: totalCount } = await countQuery
 
     // Merge data
-    const users = (profiles || []).map(profile => ({
+    const users = (profiles || []).map((profile: any) => ({
       ...profile,
       subscription: subscriptions[profile.id] || null,
       team_count: teamCounts[profile.id] || 0,

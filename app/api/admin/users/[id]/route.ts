@@ -106,15 +106,15 @@ export async function GET(
     // Get team member emails
     let teamMembers = teamMembersResult.data || []
     if (teamMembers.length > 0) {
-      const tmUserIds = teamMembers.map(tm => tm.user_id)
+      const tmUserIds = teamMembers.map((tm: any) => tm.user_id)
       const { data: tmProfiles } = await db
         .from('profiles')
         .select('id, email, full_name')
         .in('id', tmUserIds)
 
       if (tmProfiles) {
-        const profileMap = Object.fromEntries(tmProfiles.map(p => [p.id, p]))
-        teamMembers = teamMembers.map(tm => ({
+        const profileMap = Object.fromEntries(tmProfiles.map((p: any) => [p.id, p]))
+        teamMembers = teamMembers.map((tm: any) => ({
           ...tm,
           email: profileMap[tm.user_id]?.email,
           full_name: profileMap[tm.user_id]?.full_name,
