@@ -6,7 +6,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'Best ClickUp AI Alternative for Agencies 2026 - AI That Acts Across Your Whole Workspace | Kobin',
   description:
-    'ClickUp AI summarizes tasks inside ClickUp. Kobin AI sees tasks, inbox, CRM, vault, and calendar and creates, assigns, and updates across all of them. No client portal in ClickUp. No CRM. From $49/month.',
+    'ClickUp AI summarizes tasks inside ClickUp. Kobin AI sees tasks, inbox, CRM, vault, and calendar and creates, assigns, and updates across all of them. No client portal in ClickUp. No CRM. From $29/month.',
   keywords: [
     'ClickUp AI alternative',
     'better than ClickUp AI',
@@ -66,7 +66,7 @@ const jsonLd = {
           name: 'What is the best ClickUp AI alternative in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best ClickUp AI alternative in 2026 is Kobin. ClickUp AI is scoped to tasks and docs inside ClickUp only. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and can take action on all of them: creating tasks, assigning team members, drafting client updates, querying pipeline, and generating pre-meeting briefs. Kobin also includes a built-in CRM and client portal that ClickUp lacks, from $49/month for a team of 5.',
+            text: 'The best ClickUp AI alternative in 2026 is Kobin. ClickUp AI is scoped to tasks and docs inside ClickUp only. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and can take action on all of them: creating tasks, assigning team members, drafting client updates, querying pipeline, and generating pre-meeting briefs. Kobin also includes a built-in CRM and client portal that ClickUp lacks, from $29/month for a team of 5.',
           },
         },
         {
@@ -82,7 +82,7 @@ const jsonLd = {
           name: 'Is Kobin cheaper than ClickUp for a 5-person agency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. ClickUp Business costs $95/month for 5 users, but agencies still need Slack ($87/month) for messaging and HubSpot ($50/month) for CRM on top of it, making the real total $232/month or more. Kobin Founder is $49/month for 5 users and includes every module: real-time inbox, task management, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer that sees all of them.',
+            text: 'Yes. ClickUp Business costs $95/month for 5 users, but agencies still need Slack ($87/month) for messaging and HubSpot ($50/month) for CRM on top of it, making the real total $232/month or more. Kobin Pro is $29/month for 5 users and includes every module: real-time inbox, task management, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer that sees all of them.',
           },
         },
         {
@@ -90,7 +90,7 @@ const jsonLd = {
           name: 'Does ClickUp have a client portal for agencies?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'ClickUp does not include a client portal on standard plans. A client-facing workspace requires the ClickUp Enterprise plan, which has custom pricing significantly above the standard $19/user Business plan. Kobin includes a fully scoped client portal on every plan from $19/month, with automatic setup, pre-created DMs, and project-linked tasks visible to clients immediately.',
+            text: 'ClickUp does not include a client portal on standard plans. A client-facing workspace requires the ClickUp Enterprise plan, which has custom pricing significantly above the standard $19/user Business plan. Kobin includes a fully scoped client portal on every plan from $0/month, with automatic setup, pre-created DMs, and project-linked tasks visible to clients immediately.',
           },
         },
         {
@@ -167,7 +167,7 @@ const featureComparison = [
   ['LinkedIn Studio', 'Yes - draft, schedule, and track posts', 'No'],
   ['AI pre-meeting briefs', 'Yes - auto-generated 10 min before each call', 'No'],
   ['Setup time', '30 minutes, no templates required', 'Weeks of configuration'],
-  ['Price (5 seats)', '$49/mo total - all modules included', '$95/mo + $87 Slack + $50+ HubSpot'],
+  ['Price (5 seats)', '$29/mo total - all modules included', '$95/mo + $87 Slack + $50+ HubSpot'],
 ]
 
 export default function ClickUpAIAlternativePage() {
@@ -272,7 +272,7 @@ export default function ClickUpAIAlternativePage() {
             }}
           >
             ClickUp Business costs $95/month for 5 users - then you still pay $87/month for Slack
-            and $50/month for HubSpot. Kobin replaces all three for $49/month, with an AI layer
+            and $50/month for HubSpot. Kobin replaces all three for $29/month, with an AI layer
             that sees every module simultaneously.
           </p>
 
@@ -317,7 +317,7 @@ export default function ClickUpAIAlternativePage() {
           >
             {[
               { num: '$232+/mo', label: 'ClickUp stack real cost (5 seats)' },
-              { num: '$49/mo', label: 'Kobin replaces the whole stack' },
+              { num: '$29/mo', label: 'Kobin replaces the whole stack' },
               { num: '0', label: 'Client portals in ClickUp standard plans' },
             ].map(({ num, label }) => (
               <div
@@ -888,7 +888,7 @@ export default function ClickUpAIAlternativePage() {
             }}
           >
             <span style={{ fontSize: '14px', fontWeight: 600, color: '#F0EDE6' }}>
-              Kobin Founder - replaces all of the above
+              Kobin Pro - replaces all of the above
             </span>
             <span
               style={{
@@ -898,7 +898,7 @@ export default function ClickUpAIAlternativePage() {
                 color: '#4DD6A5',
               }}
             >
-              $49/mo
+              $29/mo
             </span>
           </div>
           <p
@@ -941,15 +941,15 @@ export default function ClickUpAIAlternativePage() {
             {[
               {
                 q: 'What is the best ClickUp AI alternative in 2026?',
-                a: 'Kobin is the best ClickUp AI alternative in 2026. Unlike ClickUp AI which is scoped to tasks and docs inside ClickUp, Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and takes action on all of them. It creates tasks, assigns team members by workload, drafts client updates, and generates pre-meeting briefs. From $49/month for 5 users.',
+                a: 'Kobin is the best ClickUp AI alternative in 2026. Unlike ClickUp AI which is scoped to tasks and docs inside ClickUp, Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and takes action on all of them. It creates tasks, assigns team members by workload, drafts client updates, and generates pre-meeting briefs. From $29/month for 5 users.',
               },
               {
                 q: 'Is Kobin cheaper than ClickUp for a small agency?',
-                a: 'Yes. ClickUp Business costs $95/month for 5 users, but agencies still need Slack ($87/month) for messaging and HubSpot ($50/month) for CRM, making the real total $232/month or more. Kobin Founder is $49/month and includes all of those modules plus a client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer with full workspace context.',
+                a: 'Yes. ClickUp Business costs $95/month for 5 users, but agencies still need Slack ($87/month) for messaging and HubSpot ($50/month) for CRM, making the real total $232/month or more. Kobin Pro is $29/month and includes all of those modules plus a client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer with full workspace context.',
               },
               {
                 q: 'Does ClickUp have a client portal?',
-                a: 'ClickUp does not include a client portal on standard plans. Client-facing workspaces require the ClickUp Enterprise plan, which is custom-priced above the standard Business tier. Kobin includes a fully scoped client portal on every plan from $19/month, activated in one click with automatic project rooms, task visibility, and file delivery folders.',
+                a: 'ClickUp does not include a client portal on standard plans. Client-facing workspaces require the ClickUp Enterprise plan, which is custom-priced above the standard Business tier. Kobin includes a fully scoped client portal on every plan from $0/month, activated in one click with automatic project rooms, task visibility, and file delivery folders.',
               },
               {
                 q: 'Why is ClickUp too complex for a 5-person agency?',
@@ -957,7 +957,7 @@ export default function ClickUpAIAlternativePage() {
               },
               {
                 q: 'Can I replace ClickUp, Slack, and HubSpot with one tool?',
-                a: 'Yes. Kobin replaces ClickUp (time-horizon task system), Slack (real-time inbox with project rooms and DMs), HubSpot (built-in CRM for leads, investors, partners, and advisors), Notion (Google Drive-backed vault), and Calendly (calendar with Google Meet) in one workspace from $49/month. No Zapier required - all modules share one native data model.',
+                a: 'Yes. Kobin replaces ClickUp (time-horizon task system), Slack (real-time inbox with project rooms and DMs), HubSpot (built-in CRM for leads, investors, partners, and advisors), Notion (Google Drive-backed vault), and Calendly (calendar with Google Meet) in one workspace from $29/month. No Zapier required - all modules share one native data model.',
               },
               {
                 q: 'How long does it take to switch from ClickUp to Kobin?',
@@ -1105,7 +1105,7 @@ export default function ClickUpAIAlternativePage() {
             fontWeight: 500,
           }}
         >
-          Get early access - $49/month
+          Get early access - $29/month
         </Link>
         <p
           style={{

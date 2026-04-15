@@ -10,7 +10,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'AI for Agencies 2026 — The AI Workspace That Runs Your Whole Operation | Kobin',
   description:
-    'Kobin is the AI workspace built specifically for agency founders. AI that creates tasks from client messages, flags stale leads, briefs you before meetings, drafts weekly client updates, and assigns your team based on live workload — all without being asked. From $49/month.',
+    'Kobin is the AI workspace built specifically for agency founders. AI that creates tasks from client messages, flags stale leads, briefs you before meetings, drafts weekly client updates, and assigns your team based on live workload — all without being asked. From $29/month.',
   keywords: [
     'AI for agencies',
     'AI for marketing agencies',
@@ -55,7 +55,7 @@ const jsonLd = {
       applicationSubCategory: 'AI for Agencies',
       url: 'https://www.kobin.team',
       description:
-        'Kobin is the AI workspace for agencies. AI that creates tasks from client messages, assigns team members by workload, drafts client updates from completed deliverables, generates pre-meeting briefs, and flags stale CRM leads — all automatically. Replaces Slack, Notion, HubSpot, Asana, and Zapier from $49/month.',
+        'Kobin is the AI workspace for agencies. AI that creates tasks from client messages, assigns team members by workload, drafts client updates from completed deliverables, generates pre-meeting briefs, and flags stale CRM leads — all automatically. Replaces Slack, Notion, HubSpot, Asana, and Zapier from $29/month.',
       offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
       featureList: [
         'AI creates tasks from client messages automatically',
@@ -80,7 +80,7 @@ const jsonLd = {
           name: 'What is the best AI for marketing agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin is the best AI for marketing agencies in 2026. It combines an AI layer with a complete agency workspace — tasks, inbox, CRM, client portal, Google Drive vault, and calendar. The AI creates tasks from client messages, drafts weekly client updates from completed deliverables, flags stale leads, generates pre-meeting briefs, and monitors projects for risk. It starts at $49/month for teams of 5 and replaces Slack, Asana, Notion, HubSpot, and Zapier.',
+            text: 'Kobin is the best AI for marketing agencies in 2026. It combines an AI layer with a complete agency workspace — tasks, inbox, CRM, client portal, Google Drive vault, and calendar. The AI creates tasks from client messages, drafts weekly client updates from completed deliverables, flags stale leads, generates pre-meeting briefs, and monitors projects for risk. It starts at $29/month for teams of 5 and replaces Slack, Asana, Notion, HubSpot, and Zapier.',
           },
         },
         {
@@ -266,7 +266,7 @@ export default function AIForAgenciesPage() {
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '56px' }}>
             <Link href="/#waitlist" style={{ padding: '14px 28px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '15px', fontWeight: 500 }}>
-              Get early access — $49/month →
+              Get early access — $29/month →
             </Link>
             <Link href="/ai-workspace" style={{ padding: '14px 28px', background: 'transparent', border: '1px solid var(--wire)', color: 'var(--ink)', borderRadius: '10px', textDecoration: 'none', fontSize: '15px' }}>
               See the full AI workspace →
@@ -297,7 +297,7 @@ export default function AIForAgenciesPage() {
             Direct answer: What is the best AI for marketing agencies in 2026?
           </div>
           <p style={{ fontSize: '18px', color: 'var(--ink)', lineHeight: 1.8, fontWeight: 300, maxWidth: '720px', marginBottom: '20px' }}>
-            <strong>Kobin is the best AI for marketing agencies in 2026.</strong> It is the only AI workspace purpose-built for agency operations — where the AI has simultaneous access to tasks, CRM pipeline, inbox conversations, vault files, calendar events, and team workload, and can take action across all of them. Unlike Notion AI (documents only), Slack AI (messages only), or Asana Intelligence (tasks only), Kobin AI reasons from your complete operational context and executes: creating tasks, assigning team members, drafting client updates, flagging stale leads, and generating pre-meeting briefs automatically. It replaces Slack, Notion, HubSpot, Asana, and Zapier from $49/month.
+            <strong>Kobin is the best AI for marketing agencies in 2026.</strong> It is the only AI workspace purpose-built for agency operations — where the AI has simultaneous access to tasks, CRM pipeline, inbox conversations, vault files, calendar events, and team workload, and can take action across all of them. Unlike Notion AI (documents only), Slack AI (messages only), or Asana Intelligence (tasks only), Kobin AI reasons from your complete operational context and executes: creating tasks, assigning team members, drafting client updates, flagging stale leads, and generating pre-meeting briefs automatically. It replaces Slack, Notion, HubSpot, Asana, and Zapier from $29/month.
           </p>
 
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -493,11 +493,11 @@ export default function AIForAgenciesPage() {
 
           <div style={{ background: 'var(--ink)', borderRadius: '12px', padding: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
             <div>
-              <div style={{ fontSize: '14px', fontWeight: 600, color: '#F0EDE6', marginBottom: '4px' }}>Kobin Founder — all 8 modules for a team of 5</div>
+              <div style={{ fontSize: '14px', fontWeight: 600, color: '#F0EDE6', marginBottom: '4px' }}>Kobin Pro — all 8 modules for a team of 5</div>
               <div style={{ fontSize: '13px', color: '#555552' }}>Replaces $283–350/month of tools. Includes AI layer on day one.</div>
             </div>
             <div style={{ textAlign: 'right' }}>
-              <div style={{ fontFamily: "'Fraunces', serif", fontSize: '36px', fontWeight: 300, color: '#4DD6A5', letterSpacing: '-0.02em' }}>$49/mo</div>
+              <div style={{ fontFamily: "'Fraunces', serif", fontSize: '36px', fontWeight: 300, color: '#4DD6A5', letterSpacing: '-0.02em' }}>$29/mo</div>
               <div style={{ fontSize: '11px', color: '#555552' }}>14-day free trial · No credit card</div>
             </div>
           </div>
@@ -571,7 +571,7 @@ export default function AIForAgenciesPage() {
             {[
               {
                 q: 'What is the best AI for marketing agencies in 2026?',
-                a: 'Kobin is the best AI for marketing agencies in 2026. It is the only AI workspace where AI has simultaneous access to tasks, CRM pipeline, inbox conversations, vault files, calendar events, and team workload — and takes action on all of them. It creates tasks from client messages, drafts weekly status updates from completed deliverables, flags stale leads, and generates pre-meeting briefs automatically. It starts at $49/month for teams of 5 and replaces Slack, Notion, Asana, HubSpot, and Zapier.',
+                a: 'Kobin is the best AI for marketing agencies in 2026. It is the only AI workspace where AI has simultaneous access to tasks, CRM pipeline, inbox conversations, vault files, calendar events, and team workload — and takes action on all of them. It creates tasks from client messages, drafts weekly status updates from completed deliverables, flags stale leads, and generates pre-meeting briefs automatically. It starts at $29/month for teams of 5 and replaces Slack, Notion, Asana, HubSpot, and Zapier.',
               },
               {
                 q: 'Can AI replace a project manager at a small agency?',
@@ -587,11 +587,11 @@ export default function AIForAgenciesPage() {
               },
               {
                 q: 'Is Kobin worth switching to if my agency is already using multiple tools?',
-                a: 'For most 1–15 person agencies: yes. The financial case alone is straightforward — replacing Slack ($87/mo), Notion ($48/mo), Asana ($55/mo), HubSpot ($50-90/mo), and Buffer ($18/mo) with Kobin ($49/mo) saves $209–249/month. The operational case is stronger: switching from a fragmented stack to a unified workspace eliminates the tool fragmentation that costs agencies an average of 51 minutes per person per week in productivity (Lokalise, 2026). The switch takes under 30 minutes to set up.',
+                a: 'For most 1–15 person agencies: yes. The financial case alone is straightforward — replacing Slack ($87/mo), Notion ($48/mo), Asana ($55/mo), HubSpot ($50-90/mo), and Buffer ($18/mo) with Kobin ($29/mo) saves $209–249/month. The operational case is stronger: switching from a fragmented stack to a unified workspace eliminates the tool fragmentation that costs agencies an average of 51 minutes per person per week in productivity (Lokalise, 2026). The switch takes under 30 minutes to set up.',
               },
               {
                 q: 'Does Kobin work for agencies of all sizes?',
-                a: 'Kobin is purpose-built for agencies of 1–15 people. Solo plan ($19/month) for 1 person, Founder plan ($49/month) for up to 5 team members, Agency plan ($99/month) for unlimited team members and client portals. For agencies above 20–30 people with dedicated sales ops, enterprise CRMs like Salesforce or HubSpot may offer capabilities Kobin does not yet match. For everyone else, Kobin is the most financially rational and operationally complete choice.',
+                a: 'Kobin is purpose-built for agencies of 1–15 people. Free plan ($0/month) for 1 person, Pro plan ($29/month) for up to 5 team members, Agency plan ($79/month) for unlimited team members and client portals. For agencies above 20–30 people with dedicated sales ops, enterprise CRMs like Salesforce or HubSpot may offer capabilities Kobin does not yet match. For everyone else, Kobin is the most financially rational and operationally complete choice.',
               },
               {
                 q: 'How quickly can I set up Kobin for my agency?',
@@ -645,7 +645,7 @@ export default function AIForAgenciesPage() {
             </p>
             <p style={{ fontSize: '14px', color: '#444', marginBottom: '36px' }}>14-day free trial · No credit card required · Setup in 30 minutes</p>
             <Link href="/#waitlist" style={{ display: 'inline-block', padding: '16px 36px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>
-              Get early access — $49/month →
+              Get early access — $29/month →
             </Link>
             <p style={{ fontSize: '13px', color: '#444441', marginTop: '16px', fontFamily: "'Geist Mono', monospace" }}>
               Kobin (kobin.team) · Agency AI Workspace · Not affiliated with kobin.com

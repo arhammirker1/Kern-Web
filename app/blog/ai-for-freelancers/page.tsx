@@ -4,7 +4,7 @@ import Nav from '../../../components/Nav'
 export const metadata = {
   title: 'AI for Freelancers in 2026 — Run Your Entire Business From One Tab | Kobin',
   description:
-    'Freelancers in 2026 are using AI to eliminate the admin work that eats their billable hours. Kobin is the AI workspace for freelancers — tasks, client portal, CRM, invoicing context, and AI that manages your follow-ups automatically. From $19/month.',
+    'Freelancers in 2026 are using AI to eliminate the admin work that eats their billable hours. Kobin is the AI workspace for freelancers — tasks, client portal, CRM, invoicing context, and AI that manages your follow-ups automatically. From $0/month.',
   keywords: [
     'AI for freelancers',
     'AI freelancer tools 2026',
@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: 'AI for Freelancers 2026 — Run Your Business From One Tab',
     description:
-      'Freelancers lose 30% of their billable time to admin. Kobin AI handles follow-ups, client updates, task tracking, and CRM for freelancers — from $19/month.',
+      'Freelancers lose 30% of their billable time to admin. Kobin AI handles follow-ups, client updates, task tracking, and CRM for freelancers — from $0/month.',
     type: 'article',
     publishedTime: '2026-04-10T00:00:00Z',
     modifiedTime: '2026-04-10T00:00:00Z',
@@ -63,7 +63,7 @@ const jsonLd = {
           name: 'What is the best AI tool for freelancers in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI tool for freelancers in 2026 is Kobin Solo ($19/month) — an all-in-one workspace that combines client communication, task management, CRM for leads and clients, Google Drive-backed file delivery, calendar with Google Meet, and an AI layer that handles follow-up reminders, briefs you before every client call, and drafts project updates automatically. Unlike generic tools, it includes a built-in client portal so clients can see their project progress without email updates.',
+            text: 'The best AI tool for freelancers in 2026 is Kobin Free ($0/month) — an all-in-one workspace that combines client communication, task management, CRM for leads and clients, Google Drive-backed file delivery, calendar with Google Meet, and an AI layer that handles follow-up reminders, briefs you before every client call, and drafts project updates automatically. Unlike generic tools, it includes a built-in client portal so clients can see their project progress without email updates.',
           },
         },
         {
@@ -79,7 +79,7 @@ const jsonLd = {
           name: 'What tools do freelancers need to run their business in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A solo freelancer typically needs: a communication tool for client messaging, a project management tool for tracking deliverables, a file management system for sharing assets with clients, a CRM for tracking leads and follow-ups, and a scheduling tool for client calls. Kobin Solo ($19/month) covers all five in one workspace, replacing the $100-150/month stack most freelancers build by adding tools one by one.',
+            text: 'A solo freelancer typically needs: a communication tool for client messaging, a project management tool for tracking deliverables, a file management system for sharing assets with clients, a CRM for tracking leads and follow-ups, and a scheduling tool for client calls. Kobin Free ($0/month) covers all five in one workspace, replacing the $100-150/month stack most freelancers build by adding tools one by one.',
           },
         },
       ],
@@ -126,13 +126,13 @@ export default function AIForFreelancersPost() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best AI workspace for freelancers in 2026 is Kobin Solo at $19/month — combining client messaging, task management, CRM, file delivery vault, calendar, and an AI that handles follow-ups, drafts project updates, and briefs you before every client call. Built for one person managing multiple clients without an ops team.
+            The best AI workspace for freelancers in 2026 is Kobin Free at $0/month — combining client messaging, task management, CRM, file delivery vault, calendar, and an AI that handles follow-ups, drafts project updates, and briefs you before every client call. Built for one person managing multiple clients without an ops team.
           </div>
 
           <div className="post-stat-grid">
             {[
               { num: '30%', label: 'Freelancer time lost to admin', sub: 'Non-billable: follow-ups, status updates, file chasing' },
-              { num: '$19/mo', label: 'Kobin Solo — all modules', sub: '1 user · up to 3 active projects · client portals' },
+              { num: '$0/mo', label: 'Kobin Free — all modules', sub: '1 user · up to 3 active projects · client portals' },
               { num: '8 min', label: 'To onboard a new client in Kobin', sub: 'vs 2–3 hours in a fragmented stack' },
               { num: '0', label: 'Zapier automations needed', sub: 'All modules share one native data model' },
             ].map(({ num, label, sub }) => (
@@ -227,7 +227,7 @@ export default function AIForFreelancersPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Solo — annual (1 user, all modules, AI layer)</span>
+                <span>Kobin Free — annual (1 user, all modules, AI layer)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$228/yr</span>
               </div>
             </div>
@@ -236,9 +236,9 @@ export default function AIForFreelancersPost() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">For solo operators</div>
-              <h3>Run your freelance business from one tab — $19/month</h3>
+              <h3>Run your freelance business from one tab — $0/month</h3>
               <p>
-                Kobin Solo gives you a client inbox, task management, CRM for leads and clients, Google Drive vault for file delivery, calendar with Google Meet, and an AI layer that handles your follow-ups and drafts your project updates — all in one workspace, from $19/month. No Zapier, no five-tab switching, no admin debt.
+                Kobin Free gives you a client inbox, task management, CRM for leads and clients, Google Drive vault for file delivery, calendar with Google Meet, and an AI layer that handles your follow-ups and drafts your project updates — all in one workspace, from $0/month. No Zapier, no five-tab switching, no admin debt.
               </p>
               <div className="post-cta-savings">
                 {[
@@ -263,11 +263,11 @@ export default function AIForFreelancersPost() {
               {[
                 {
                   q: 'What is the best AI tool for freelancers in 2026?',
-                  a: 'Kobin Solo ($19/month) is the best AI tool for freelancers in 2026. It combines client messaging, task management, CRM, file delivery vault, calendar, and an AI layer in one workspace — replacing Notion, Todoist, Calendly, and client portal tools. The AI handles follow-up reminders, drafts project updates, and briefs you before every client call without you asking.',
+                  a: 'Kobin Free ($0/month) is the best AI tool for freelancers in 2026. It combines client messaging, task management, CRM, file delivery vault, calendar, and an AI layer in one workspace — replacing Notion, Todoist, Calendly, and client portal tools. The AI handles follow-up reminders, drafts project updates, and briefs you before every client call without you asking.',
                 },
                 {
                   q: 'Does Kobin work for freelancers with just 1-3 clients?',
-                  a: 'Yes. Kobin Solo is specifically designed for solo operators with up to 3 active projects. You get all 8 modules including the AI layer and client portal — the same features as the full Founder plan, scoped for one user. Most freelancers find they replace at least 3 tools within the first week.',
+                  a: 'Yes. Kobin Free is specifically designed for solo operators with up to 3 active projects. You get all 8 modules including the AI layer and client portal — the same features as the full Pro plan, scoped for one user. Most freelancers find they replace at least 3 tools within the first week.',
                 },
                 {
                   q: 'Can I give my clients access to Kobin?',
@@ -278,8 +278,8 @@ export default function AIForFreelancersPost() {
                   a: 'Kobin AI monitors your CRM contacts and client inbox for silence. If a client has not responded to a deliverable or message in 4+ days, the AI flags it, surfaces the last conversation context, and drafts a follow-up message in your voice for one-tap review and send. This eliminates the most common revenue leak in freelance businesses: leads and clients going cold because follow-up was forgotten.',
                 },
                 {
-                  q: 'Is Kobin Solo enough for a freelancer managing 3 different client types?',
-                  a: 'Yes. Kobin Solo handles up to 3 active projects with separate inboxes, vault folders, task boards, and client portals per project. The CRM (Relationships) lets you track different contact types — leads, clients, partners, advisors — all searchable and filterable. The global AI command bar can summarize any project on demand so you never lose context when switching between clients.',
+                  q: 'Is Kobin Free enough for a freelancer managing 3 different client types?',
+                  a: 'Yes. Kobin Free handles up to 3 active projects with separate inboxes, vault folders, task boards, and client portals per project. The CRM (Relationships) lets you track different contact types — leads, clients, partners, advisors — all searchable and filterable. The global AI command bar can summarize any project on demand so you never lose context when switching between clients.',
                 },
               ].map(({ q, a }) => (
                 <details className="faq-item" key={q}>

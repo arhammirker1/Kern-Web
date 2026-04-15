@@ -72,7 +72,7 @@ export default function ThankYouPage() {
             marginBottom: '40px',
           }}>
             {[
-              { num: '$49/mo', label: 'Founding price locked' },
+              { num: '$29/mo', label: 'Founding price locked' },
               { num: '14 days', label: 'Free trial included' },
               { num: '0', label: 'Credit card needed' },
             ].map(({ num, label }) => (

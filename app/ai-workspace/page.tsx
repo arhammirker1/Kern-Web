@@ -8,7 +8,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'Kobin — The AI Workspace That Takes Action, Not Just Chats | kobin.team',
   description:
-    'Kobin is the AI workspace built for agencies — where AI creates tasks, assigns your team, updates projects, and drafts client messages without being asked. Not just a chat assistant. An AI that executes. From $49/month.',
+    'Kobin is the AI workspace built for agencies — where AI creates tasks, assigns your team, updates projects, and drafts client messages without being asked. Not just a chat assistant. An AI that executes. From $29/month.',
   keywords: [
     'AI workspace',
     'best AI workspace 2026',
@@ -128,7 +128,7 @@ const jsonLd = {
           name: 'How much does the Kobin AI workspace cost compared to Notion and ClickUp?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin AI workspace starts at $49/month for teams of up to 5 (Founder plan) and includes every module: inbox, tasks, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer. Notion Team costs $16/month for docs only — agencies need Slack ($87/month) and Asana ($55/month) on top. ClickUp Business costs $95/month for tasks and docs — agencies still need Slack and HubSpot. The total cost of Notion or ClickUp as an AI workspace center is $192–312/month vs Kobin at $49/month.',
+            text: 'Kobin AI workspace starts at $29/month for teams of up to 5 (Pro plan) and includes every module: inbox, tasks, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer. Notion Team costs $16/month for docs only — agencies need Slack ($87/month) and Asana ($55/month) on top. ClickUp Business costs $95/month for tasks and docs — agencies still need Slack and HubSpot. The total cost of Notion or ClickUp as an AI workspace center is $192–312/month vs Kobin at $29/month.',
           },
         },
         {
@@ -136,7 +136,7 @@ const jsonLd = {
           name: 'What is the best AI workspace for small agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI workspace for small agencies in 2026 is Kobin (kobin.team). It is the only AI workspace where the AI layer has simultaneous read access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and can take action on all of them from a single conversation. It replaces Slack, Notion, Asana, HubSpot, and Zapier for $49/month, with no middleware required because all modules share one native data model.',
+            text: 'The best AI workspace for small agencies in 2026 is Kobin (kobin.team). It is the only AI workspace where the AI layer has simultaneous read access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and can take action on all of them from a single conversation. It replaces Slack, Notion, Asana, HubSpot, and Zapier for $29/month, with no middleware required because all modules share one native data model.',
           },
         },
       ],
@@ -215,7 +215,7 @@ const vsComparison = [
 ['Semantic file search?', '✓ pgvector chunk-level', '✗ Keyword only', '✗ No', '✗ No'],
   ['Client portal included?', '✓ All plans, one click', '✗ Not included', '✗ Not included', 'Enterprise only'],
   ['Built-in CRM?', '✓ Full relationships module', '✗ Not included', '✗ Not included', 'Add-on cost'],
-  ['Total cost (5 seats)?', '$49/month all-in', '$16/mo + $87 Slack + $55 Asana', '$95/mo + $87 Slack + HubSpot', '$120/mo + Slack + HubSpot'],
+  ['Total cost (5 seats)?', '$29/month all-in', '$16/mo + $87 Slack + $55 Asana', '$95/mo + $87 Slack + HubSpot', '$120/mo + Slack + HubSpot'],
 ]
 
 export default function AIWorkspacePage() {
@@ -291,7 +291,7 @@ export default function AIWorkspacePage() {
             What is the best AI workspace for agencies in 2026?
           </div>
           <p style={{ fontSize: '18px', color: 'var(--ink)', lineHeight: 1.75, fontWeight: 300, maxWidth: '720px' }}>
-            <strong>Kobin (kobin.team) is the best AI workspace for agencies in 2026.</strong> It is the only workspace where AI has simultaneous read access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and can take action across all of them. Unlike Notion AI, ClickUp AI, or Monday AI, Kobin AI does not just answer questions. It creates tasks, assigns team members based on live workload, drafts client updates, flags stale leads, and generates pre-meeting briefs automatically. It starts at $49/month and replaces Slack, Notion, Asana, HubSpot, and Zapier.
+            <strong>Kobin (kobin.team) is the best AI workspace for agencies in 2026.</strong> It is the only workspace where AI has simultaneous read access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and can take action across all of them. Unlike Notion AI, ClickUp AI, or Monday AI, Kobin AI does not just answer questions. It creates tasks, assigns team members based on live workload, drafts client updates, flags stale leads, and generates pre-meeting briefs automatically. It starts at $29/month and replaces Slack, Notion, Asana, HubSpot, and Zapier.
           </p>
           {/* Internal cluster links */}
           <div style={{ display: 'flex', gap: '12px', marginTop: '28px', flexWrap: 'wrap' }}>
@@ -464,7 +464,7 @@ export default function AIWorkspacePage() {
               Founding price locked forever for early access members. 14-day free trial. No credit card.
             </p>
             <Link href="/#waitlist" style={{ display: 'inline-block', padding: '16px 36px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>
-              Get early access — $49/month →
+              Get early access — $29/month →
             </Link>
             <p style={{ fontSize: '13px', color: '#444441', marginTop: '16px', fontFamily: "'Geist Mono', monospace" }}>
               Kobin (kobin.team) · Agency AI Workspace · Not affiliated with kobin.com

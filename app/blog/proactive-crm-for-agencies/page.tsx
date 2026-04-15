@@ -236,7 +236,7 @@ export default function ProactiveCRMForAgenciesPost() {
           {/* Direct answer — AEO optimized, 50 words */}
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            A proactive CRM for agencies monitors your pipeline daily and delivers alerts — revenue intelligence on closing deals, risk detection for blocked work and stale deals, Gmail intent analysis per contact, and a morning brief combining tasks and CRM follow-ups. Kobin is the only agency workspace with this built in, from $49/month.
+            A proactive CRM for agencies monitors your pipeline daily and delivers alerts — revenue intelligence on closing deals, risk detection for blocked work and stale deals, Gmail intent analysis per contact, and a morning brief combining tasks and CRM follow-ups. Kobin is the only agency workspace with this built in, from $29/month.
           </div>
 
           <div className="post-stat-grid">
@@ -399,7 +399,7 @@ export default function ProactiveCRMForAgenciesPost() {
               <div className="post-cta-eyebrow">Try proactive CRM</div>
               <h3>Revenue intelligence. Risk detection. Gmail AI. All in one workspace.</h3>
               <p>
-                Kobin&apos;s proactive CRM runs daily intelligence routines, syncs Gmail to contacts, and surfaces cross-module risk signals — alongside team inbox, tasks, vault, and client portal. From $49/month for a team of 5.
+                Kobin&apos;s proactive CRM runs daily intelligence routines, syncs Gmail to contacts, and surfaces cross-module risk signals — alongside team inbox, tasks, vault, and client portal. From $29/month for a team of 5.
               </p>
               <div className="post-cta-savings">
                 {[

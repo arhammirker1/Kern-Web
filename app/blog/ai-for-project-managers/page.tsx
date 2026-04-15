@@ -4,7 +4,7 @@ import Nav from '../../../components/Nav'
 export const metadata = {
   title: 'AI for Project Managers in 2026 — Briefings, Risk Flags, and Workload Balance on Autopilot | Kobin',
   description:
-    'Project managers in 2026 are using AI to eliminate the coordination overhead that eats their time. Kobin AI monitors projects for risk, generates client briefings, balances team workload automatically, and flags blockers before they become delays. From $49/month.',
+    'Project managers in 2026 are using AI to eliminate the coordination overhead that eats their time. Kobin AI monitors projects for risk, generates client briefings, balances team workload automatically, and flags blockers before they become delays. From $29/month.',
   keywords: [
     'AI for project managers',
     'best AI tools for project managers 2026',
@@ -62,7 +62,7 @@ const jsonLd = {
           name: 'What is the best AI tool for project managers in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI tool for project managers in 2026 is Kobin — a unified workspace where AI monitors all active projects for deadline risk daily, balances team workload by checking live assignment data before each task assignment, generates automated client status briefings from completed tasks and delivered files, and surfaces blocked items before they cascade into delays. It replaces Slack, Asana, Notion, and HubSpot from $49/month for teams of 5.',
+            text: 'The best AI tool for project managers in 2026 is Kobin — a unified workspace where AI monitors all active projects for deadline risk daily, balances team workload by checking live assignment data before each task assignment, generates automated client status briefings from completed tasks and delivered files, and surfaces blocked items before they cascade into delays. It replaces Slack, Asana, Notion, and HubSpot from $29/month for teams of 5.',
           },
         },
         {
@@ -78,7 +78,7 @@ const jsonLd = {
           name: 'What tools do project managers use in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Project managers in 2026 typically use Asana or Monday.com for task management ($55-120/month), Slack for team communication ($87/month), Notion for project documentation ($40/month), and HubSpot for client CRM ($50-90/month) — totalling $232-337/month for tools that do not share data and require Zapier to simulate connections. Kobin consolidates all four into one workspace with a project risk monitoring AI layer for $49/month for 5 seats.',
+            text: 'Project managers in 2026 typically use Asana or Monday.com for task management ($55-120/month), Slack for team communication ($87/month), Notion for project documentation ($40/month), and HubSpot for client CRM ($50-90/month) — totalling $232-337/month for tools that do not share data and require Zapier to simulate connections. Kobin consolidates all four into one workspace with a project risk monitoring AI layer for $29/month for 5 seats.',
           },
         },
         {
@@ -157,7 +157,7 @@ export default function AIForProjectManagersPost() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best AI for project managers in 2026 is Kobin — where AI monitors all projects for deadline risk daily, generates client status reports from completed tasks, balances team workload with live data, and briefs you before every client call. One workspace replacing Slack, Asana, Notion, and HubSpot from $49/month.
+            The best AI for project managers in 2026 is Kobin — where AI monitors all projects for deadline risk daily, generates client status reports from completed tasks, balances team workload with live data, and briefs you before every client call. One workspace replacing Slack, Asana, Notion, and HubSpot from $29/month.
           </div>
 
           <div className="post-stat-grid">
@@ -165,7 +165,7 @@ export default function AIForProjectManagersPost() {
               { num: '11 hrs', label: 'PM coordination overhead per week', sub: 'Reports, blocker chasing, workload checks, prep' },
               { num: '4 min', label: 'To generate a client status report with AI', sub: 'vs 50 min manually per client' },
               { num: '30%', label: 'Of projects fail due to poor communication', sub: 'PMI Pulse of the Profession, 2025' },
-              { num: '$49/mo', label: 'Kobin Founder — all modules + AI layer', sub: '5 seats, inbox, tasks, CRM, vault, portal' },
+              { num: '$29/mo', label: 'Kobin Pro — all modules + AI layer', sub: '5 seats, inbox, tasks, CRM, vault, portal' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -283,7 +283,7 @@ export default function AIForProjectManagersPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder plan — annual (5 seats, AI layer, all modules)</span>
+                <span>Kobin Pro plan — annual (5 seats, AI layer, all modules)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$588/yr</span>
               </div>
             </div>
@@ -292,7 +292,7 @@ export default function AIForProjectManagersPost() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">For project managers</div>
-              <h3>Project risk monitoring, automated reporting, and workload intelligence — from $49/month</h3>
+              <h3>Project risk monitoring, automated reporting, and workload intelligence — from $29/month</h3>
               <p>
                 Kobin gives project managers one workspace where AI monitors all projects for deadline risk daily, generates weekly client briefings from actual task data, balances workload with live team capacity data, and briefs you before every client call. One tab replacing Slack, Asana, Notion, and HubSpot.
               </p>
@@ -319,7 +319,7 @@ export default function AIForProjectManagersPost() {
               {[
                 {
                   q: 'What is the best AI tool for project managers in 2026?',
-                  a: 'Kobin is the best AI tool for project managers in 2026. It monitors all active projects for deadline risk daily, generates client status reports from completed tasks and deliverables, checks live team workload before each task assignment, flags blocked items by owner, and briefs you before every client call — all from one workspace replacing Slack, Asana, Notion, and HubSpot for $49/month.',
+                  a: 'Kobin is the best AI tool for project managers in 2026. It monitors all active projects for deadline risk daily, generates client status reports from completed tasks and deliverables, checks live team workload before each task assignment, flags blocked items by owner, and briefs you before every client call — all from one workspace replacing Slack, Asana, Notion, and HubSpot for $29/month.',
                 },
                 {
                   q: 'Can AI replace the weekly project status report?',

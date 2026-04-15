@@ -5,7 +5,7 @@ import Nav from '../../../components/Nav'
 export const metadata = {
   title: 'Best HubSpot Alternative for Agencies in 2026 — Proactive AI CRM, Not Just a Database | Kobin',
   description:
-    'HubSpot is a reactive database — you check it when you remember. Kobin\'s CRM monitors your pipeline daily: AI risk alerts, revenue intelligence, Gmail intent analysis per thread, auto-lead detection, and a morning brief. From $49/month total including inbox, tasks, and client portal.',
+    'HubSpot is a reactive database — you check it when you remember. Kobin\'s CRM monitors your pipeline daily: AI risk alerts, revenue intelligence, Gmail intent analysis per thread, auto-lead detection, and a morning brief. From $29/month total including inbox, tasks, and client portal.',
   keywords: [
     'hubspot alternative for agencies',
     'best hubspot alternative 2026',
@@ -22,7 +22,7 @@ export const metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Best HubSpot Alternative for Agencies 2026 — AI CRM That Monitors Your Pipeline',
-    description: 'HubSpot waits for you to check it. Kobin AI monitors your pipeline every day — risk alerts, revenue intelligence, Gmail intent analysis. $49/month total.',
+    description: 'HubSpot waits for you to check it. Kobin AI monitors your pipeline every day — risk alerts, revenue intelligence, Gmail intent analysis. $29/month total.',
     type: 'website',
     url: 'https://www.kobin.team/compare/hubspot-alternative-for-agencies',
     siteName: 'Kobin',
@@ -50,7 +50,7 @@ const jsonLd = {
           name: 'What is the best HubSpot alternative for small agencies?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin is the best HubSpot alternative for small agencies. Unlike HubSpot — a reactive database you must manually check — Kobin runs daily AI intelligence routines: risk detection (blocked tasks + stale deals), revenue intelligence (closing this week + high-probability deals), Gmail intent analysis per contact, auto-lead detection from unknown senders, and a morning brief combining CRM and task data. Included in all Kobin plans at no extra cost from $49/month for 5 seats.',
+            text: 'Kobin is the best HubSpot alternative for small agencies. Unlike HubSpot — a reactive database you must manually check — Kobin runs daily AI intelligence routines: risk detection (blocked tasks + stale deals), revenue intelligence (closing this week + high-probability deals), Gmail intent analysis per contact, auto-lead detection from unknown senders, and a morning brief combining CRM and task data. Included in all Kobin plans at no extra cost from $29/month for 5 seats.',
           },
         },
         {
@@ -66,7 +66,7 @@ const jsonLd = {
           name: 'Is Kobin cheaper than HubSpot for a 5-person agency?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin Founder ($49/month for 5 seats) includes CRM, AI intelligence, team inbox, tasks, client portal, vault, calendar, and LinkedIn Studio. HubSpot Starter costs $50–90/month for CRM only — and agencies still need Slack ($87/month), Asana ($55/month), and Notion ($40/month) alongside it. The full HubSpot stack costs $232–272/month. Kobin replaces it all for $49/month.',
+            text: 'Kobin Pro ($29/month for 5 seats) includes CRM, AI intelligence, team inbox, tasks, client portal, vault, calendar, and LinkedIn Studio. HubSpot Starter costs $50–90/month for CRM only — and agencies still need Slack ($87/month), Asana ($55/month), and Notion ($40/month) alongside it. The full HubSpot stack costs $232–272/month. Kobin replaces it all for $29/month.',
           },
         },
         {
@@ -202,7 +202,7 @@ const featureMatrix = [
   { feature: 'Team inbox (replaces Slack)', kobin: '✓ Included', hubspot: '✗ Requires Slack +$87/mo' },
   { feature: 'Task management (replaces Asana)', kobin: '✓ Included', hubspot: '✗ Requires Asana +$55/mo' },
   { feature: 'Client portal', kobin: '✓ All plans', hubspot: '✗ Not included' },
-  { feature: 'Price (5 seats)', kobin: '$49/mo all-in', hubspot: '$50–90/mo CRM only' },
+  { feature: 'Price (5 seats)', kobin: '$29/mo all-in', hubspot: '$50–90/mo CRM only' },
 ]
 
 export default function HubSpotAlternativePage() {
@@ -236,7 +236,7 @@ export default function HubSpotAlternativePage() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best HubSpot alternative for agencies is Kobin — the only CRM with a proactive AI intelligence layer. It monitors your pipeline daily, sends risk alerts for blocked work and stale deals, reads every matched Gmail thread for intent and sentiment, auto-advances pipeline stages, and delivers a morning brief combining tasks and CRM follow-ups. From $49/month — less than HubSpot alone.
+            The best HubSpot alternative for agencies is Kobin — the only CRM with a proactive AI intelligence layer. It monitors your pipeline daily, sends risk alerts for blocked work and stale deals, reads every matched Gmail thread for intent and sentiment, auto-advances pipeline stages, and delivers a morning brief combining tasks and CRM follow-ups. From $29/month — less than HubSpot alone.
           </div>
 
           <div className="post-stat-grid">
@@ -244,7 +244,7 @@ export default function HubSpotAlternativePage() {
               { num: '$90/mo', label: 'HubSpot Starter for 5 seats', sub: 'CRM only — no inbox, tasks, or portal' },
               { num: '4', label: 'Daily AI intelligence routines', sub: 'Risk · Revenue · Gmail · Morning Brief' },
               { num: '8', label: 'Email intent types classified', sub: 'interested · ready_to_close · objection…' },
-              { num: '$0', label: 'Extra cost for CRM in Kobin', sub: 'Included in all plans from $49/mo' },
+              { num: '$0', label: 'Extra cost for CRM in Kobin', sub: 'Included in all plans from $29/mo' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -350,8 +350,8 @@ export default function HubSpotAlternativePage() {
             </div>
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder — CRM + AI intelligence + inbox + tasks + portal + vault</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro — CRM + AI intelligence + inbox + tasks + portal + vault</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
             </div>
 
@@ -389,7 +389,7 @@ export default function HubSpotAlternativePage() {
               {[
                 {
                   q: 'What is the best HubSpot alternative for agencies?',
-                  a: 'Kobin is the best HubSpot alternative for agencies. Unlike HubSpot — a reactive CRM database — Kobin includes a proactive AI intelligence layer: daily risk alerts for stale deals and blocked tasks, revenue intelligence 3× per week, Gmail thread intent analysis classifying 8 intent types, auto pipeline stage advancement, auto lead detection from inbound email, and a morning brief combining tasks and CRM. From $49/month for 5 seats including inbox, tasks, vault, and client portal.',
+                  a: 'Kobin is the best HubSpot alternative for agencies. Unlike HubSpot — a reactive CRM database — Kobin includes a proactive AI intelligence layer: daily risk alerts for stale deals and blocked tasks, revenue intelligence 3× per week, Gmail thread intent analysis classifying 8 intent types, auto pipeline stage advancement, auto lead detection from inbound email, and a morning brief combining tasks and CRM. From $29/month for 5 seats including inbox, tasks, vault, and client portal.',
                 },
                 {
                   q: 'How does Kobin auto-advance pipeline stages from email?',

@@ -47,7 +47,7 @@ const jsonLd = {
           name: 'What is the best Asana alternative for agencies?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Kobin is the best Asana alternative for agencies. It uses a time-horizon task system (Today, This Week, Delegated, Backlog) designed for agency delivery workflows, not engineering sprints. Unlike Asana, Kobin includes a built-in client portal, CRM, real-time inbox, Google Drive Vault, and AI layer — all natively connected, from $49/month.",
+            text: "Kobin is the best Asana alternative for agencies. It uses a time-horizon task system (Today, This Week, Delegated, Backlog) designed for agency delivery workflows, not engineering sprints. Unlike Asana, Kobin includes a built-in client portal, CRM, real-time inbox, Google Drive Vault, and AI layer — all natively connected, from $29/month.",
           },
         },
         {
@@ -63,7 +63,7 @@ const jsonLd = {
           name: 'Is Kobin cheaper than Asana?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Asana Premium costs $10.99/user/month ($55/month for 5 users), and Asana Business costs $24.99/user/month ($125/month for 5 users). Kobin Founder is $49/month for 5 users. But Asana requires Slack for messaging ($87/month) and HubSpot for CRM ($50–90/month) on top — making the total Asana stack $192–$302/month vs Kobin's $49/month.",
+            text: "Asana Premium costs $10.99/user/month ($55/month for 5 users), and Asana Business costs $24.99/user/month ($125/month for 5 users). Kobin Pro is $29/month for 5 users. But Asana requires Slack for messaging ($87/month) and HubSpot for CRM ($50–90/month) on top — making the total Asana stack $192–$302/month vs Kobin's $29/month.",
           },
         },
         {
@@ -89,7 +89,7 @@ const features = [
   ['Client portal', '✓ Included all plans', '✗ Requires external tool', 'Kobin portal activated in one click'],
   ['Google Drive vault', '✓ Built-in', '✗ Integration only', 'Kobin auto-creates Drive folders per project'],
   ['AI layer', '✓ Full workspace context', '⚠ Asana tasks only', "Kobin AI sees tasks, CRM, files, calendar"],
-  ['Price (5 seats)', '$49/mo (all modules)', '$55–125/mo (tasks only)', 'Kobin stack vs Asana + Slack + HubSpot'],
+  ['Price (5 seats)', '$29/mo (all modules)', '$55–125/mo (tasks only)', 'Kobin stack vs Asana + Slack + HubSpot'],
 ]
 
 export default function AsanaAlternativePage() {
@@ -206,8 +206,8 @@ export default function AsanaAlternativePage() {
             </div>
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder (tasks + inbox + CRM + portal + vault)</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro (tasks + inbox + CRM + portal + vault)</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
             </div>
 
@@ -224,7 +224,7 @@ export default function AsanaAlternativePage() {
               {[
                 {
                   q: 'What is the best Asana alternative for agencies?',
-                  a: "Kobin is the best Asana alternative for agencies. Its time-horizon task system (Today, This Week, Delegated, Backlog) maps to how agency founders think about work — not engineering sprints. Kobin includes a client portal, real-time inbox, CRM, and Google Drive Vault on top of task management, all from $49/month.",
+                  a: "Kobin is the best Asana alternative for agencies. Its time-horizon task system (Today, This Week, Delegated, Backlog) maps to how agency founders think about work — not engineering sprints. Kobin includes a client portal, real-time inbox, CRM, and Google Drive Vault on top of task management, all from $29/month.",
                 },
                 {
                   q: 'Is Kobin easier to set up than Asana?',

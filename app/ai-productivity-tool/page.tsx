@@ -6,7 +6,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'Best AI Productivity Tool 2026 - AI That Executes, Not Just Suggests | Kobin',
   description:
-    'Kobin is the AI productivity tool built for agency founders. Not a chatbot. An AI that creates tasks, queries your CRM, briefs you before meetings, and drafts client updates - all from one workspace. From $49/month.',
+    'Kobin is the AI productivity tool built for agency founders. Not a chatbot. An AI that creates tasks, queries your CRM, briefs you before meetings, and drafts client updates - all from one workspace. From $29/month.',
   keywords: [
     'AI productivity tool',
     'best AI productivity tool 2026',
@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: 'Best AI Productivity Tool 2026 - Kobin AI Workspace | kobin.team',
     description:
-      'The AI productivity tool where AI does not suggest - it acts. Creates tasks, assigns team, drafts updates, briefs you before meetings. From $49/month for agencies.',
+      'The AI productivity tool where AI does not suggest - it acts. Creates tasks, assigns team, drafts updates, briefs you before meetings. From $29/month for agencies.',
     type: 'website',
     url: 'https://www.kobin.team/ai-productivity-tool',
     siteName: 'Kobin',
@@ -76,7 +76,7 @@ const jsonLd = {
           name: 'What is the best AI productivity tool for agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI productivity tool for agencies in 2026 is Kobin. It is the only workspace where AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and takes action on all of them. It creates tasks from conversations, assigns team members based on live workload, drafts client updates, and generates pre-meeting briefs. It replaces Slack, Notion, Asana, HubSpot, and Zapier from $49/month with no middleware required.',
+            text: 'The best AI productivity tool for agencies in 2026 is Kobin. It is the only workspace where AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and takes action on all of them. It creates tasks from conversations, assigns team members based on live workload, drafts client updates, and generates pre-meeting briefs. It replaces Slack, Notion, Asana, HubSpot, and Zapier from $29/month with no middleware required.',
           },
         },
         {
@@ -116,7 +116,7 @@ const jsonLd = {
           name: 'Is Kobin a good AI productivity tool for small teams?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin is purpose-built for teams of 1 to 15 people, specifically agencies. The AI layer is designed around the workflows small agency teams actually run: converting client messages to tasks, tracking deliverables, managing a CRM pipeline without dedicated sales ops, and keeping clients informed without manual updates. It starts at $19/month for solo founders and $49/month for teams of up to 5.',
+            text: 'Kobin is purpose-built for teams of 1 to 15 people, specifically agencies. The AI layer is designed around the workflows small agency teams actually run: converting client messages to tasks, tracking deliverables, managing a CRM pipeline without dedicated sales ops, and keeping clients informed without manual updates. It starts at $0/month for solo founders and $29/month for teams of up to 5.',
           },
         },
       ],
@@ -212,7 +212,7 @@ const toolComparison = [
   ['Assigns by workload?', 'Yes - live data', 'No', 'No', 'No'],
   ['Drafts client updates?', 'Yes - from deliverables', 'No', 'No', 'No'],
   ['Cross-module actions?', 'Yes - one data model', 'No', 'No', 'No'],
-  ['Price (5 seats)', '$49/mo all-in', '$232+/mo stack', '$248+/mo stack', 'Free but no actions'],
+  ['Price (5 seats)', '$29/mo all-in', '$232+/mo stack', '$248+/mo stack', 'Free but no actions'],
 ]
 
 export default function AIProductivityToolPage() {
@@ -431,7 +431,7 @@ export default function AIProductivityToolPage() {
             in Notion and ClickUp that see only one module, Kobin AI operates on your full workspace
             data and executes: creating tasks, assigning team members, drafting updates, and
             briefing you before every meeting. It replaces Slack, Notion, Asana, HubSpot, and
-            Zapier from $49/month.
+            Zapier from $29/month.
           </p>
 
           <div style={{ display: 'flex', gap: '12px', marginTop: '28px', flexWrap: 'wrap' }}>
@@ -1108,7 +1108,7 @@ export default function AIProductivityToolPage() {
               },
               {
                 q: 'Is Kobin a good AI productivity tool for solo founders?',
-                a: 'Yes. Kobin Solo starts at $19/month and includes all 8 modules including the AI layer. For a solo founder managing multiple clients, the most valuable AI features are: the daily morning brief that surfaces all priorities in one view, pre-meeting briefs that replace 20 minutes of manual preparation, and the CRM follow-up system that ensures no lead or client relationship goes stale from lack of contact.',
+                a: 'Yes. Kobin Free starts at $0/month and includes all 8 modules including the AI layer. For a solo founder managing multiple clients, the most valuable AI features are: the daily morning brief that surfaces all priorities in one view, pre-meeting briefs that replace 20 minutes of manual preparation, and the CRM follow-up system that ensures no lead or client relationship goes stale from lack of contact.',
               },
             ].map(({ q, a }) => (
               <details
@@ -1213,7 +1213,7 @@ export default function AIProductivityToolPage() {
                 fontWeight: 500,
               }}
             >
-              Get early access - from $49/month
+              Get early access - from $29/month
             </Link>
 
             <div

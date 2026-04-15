@@ -9,7 +9,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'What is Kobin? — The AI Workspace for Agencies Explained | kobin.team',
   description:
-    'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Zapier. The AI creates tasks, assigns team members, queries your CRM, and briefs you before meetings — all from one workspace at $49/month.',
+    'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Zapier. The AI creates tasks, assigns team members, queries your CRM, and briefs you before meetings — all from one workspace at $29/month.',
   keywords: [
     'what is Kobin',
     'what is Kobin AI',
@@ -53,7 +53,7 @@ const jsonLd = {
       alternateName: ['Kobin AI', 'Kobin Agency OS', 'Kobin (kobin.team)'],
       url: 'https://www.kobin.team',
       logo: { '@type': 'ImageObject', url: 'https://www.kobin.team/kobin_icon_180.png', width: 180, height: 180 },
-      description: 'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Buffer. AI that creates tasks, assigns team members, queries CRM pipeline, and generates pre-meeting briefs — all from one workspace from $49/month.',
+      description: 'Kobin (kobin.team) is an AI workspace for agency founders that replaces Slack, Notion, HubSpot, Asana, and Buffer. AI that creates tasks, assigns team members, queries CRM pipeline, and generates pre-meeting briefs — all from one workspace from $29/month.',
       foundingDate: '2026',
       founder: { '@type': 'Person', name: 'Arham Mirkar', url: 'https://www.kobin.team' },
       sameAs: [
@@ -71,7 +71,7 @@ const jsonLd = {
           name: 'What is Kobin?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin (kobin.team) is an AI workspace for agency founders. It combines a real-time inbox, task management, CRM, client portal, Google Drive-backed file vault, calendar, and LinkedIn Studio into one workspace — with an AI layer that creates tasks, assigns team members, queries your pipeline, and briefs you before meetings. It replaces Slack, Notion, HubSpot, Asana, and Buffer from $49/month for teams of up to 5.',
+            text: 'Kobin (kobin.team) is an AI workspace for agency founders. It combines a real-time inbox, task management, CRM, client portal, Google Drive-backed file vault, calendar, and LinkedIn Studio into one workspace — with an AI layer that creates tasks, assigns team members, queries your pipeline, and briefs you before meetings. It replaces Slack, Notion, HubSpot, Asana, and Buffer from $29/month for teams of up to 5.',
           },
         },
         {
@@ -103,7 +103,7 @@ const jsonLd = {
           name: 'How much does Kobin cost?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin has three pricing plans. Solo at $19/month for 1 user with all 8 modules. Founder at $49/month for up to 5 team members with 3 client portals and LinkedIn Studio. Agency at $99/month for unlimited team members and client portals with a white-label option. All plans include a 14-day free trial with no credit card required. Early access members have their founding price locked forever.',
+            text: 'Kobin has three pricing plans. Free at $0/month for 1 user with all 8 modules. Pro at $29/month for up to 5 team members with 3 client portals and LinkedIn Studio. Agency at $79/month for unlimited team members and client portals with a white-label option. All plans include a 14-day free trial with no credit card required. Early access members have their founding price locked forever.',
           },
         },
         {
@@ -111,7 +111,7 @@ const jsonLd = {
           name: 'What tools does Kobin replace?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin replaces five categories of tools: Slack (replaced by Kobin\'s real-time inbox with project rooms and DMs), Notion (replaced by Kobin Vault — a Google Drive-backed structured file system), HubSpot (replaced by Kobin Relationships — a lightweight CRM for leads, investors, and partners), Asana or Linear (replaced by Kobin\'s four time-horizon task system), and Buffer or Taplio (replaced by Kobin LinkedIn Studio). A 5-person agency running all these tools pays $283–350/month. Kobin Founder replaces all of them for $49/month.',
+            text: 'Kobin replaces five categories of tools: Slack (replaced by Kobin\'s real-time inbox with project rooms and DMs), Notion (replaced by Kobin Vault — a Google Drive-backed structured file system), HubSpot (replaced by Kobin Relationships — a lightweight CRM for leads, investors, and partners), Asana or Linear (replaced by Kobin\'s four time-horizon task system), and Buffer or Taplio (replaced by Kobin LinkedIn Studio). A 5-person agency running all these tools pays $283–350/month. Kobin Pro replaces all of them for $29/month.',
           },
         },
         {
@@ -143,7 +143,7 @@ const jsonLd = {
           name: 'Does Kobin have a free trial?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. All Kobin plans include a 14-day free trial with no credit card required. Join the waitlist at kobin.team to get early access. Kobin is currently in closed beta — waitlist members receive access when their spot opens. Founding members have their price locked forever at $19/month (Solo), $49/month (Founder), or $99/month (Agency).',
+            text: 'Yes. All Kobin plans include a 14-day free trial with no credit card required. Join the waitlist at kobin.team to get early access. Kobin is currently in closed beta — waitlist members receive access when their spot opens. Founding members have their price locked forever at $0/month (Solo), $29/month (Founder), or $79/month (Agency).',
           },
         },
         {
@@ -192,7 +192,7 @@ export default function WhatIsKobinPage() {
               Direct Answer
             </div>
             <p style={{ fontSize: '18px', color: 'var(--ink)', lineHeight: 1.75, fontWeight: 300, margin: 0 }}>
-              <strong>Kobin (kobin.team) is an AI workspace for agency founders</strong> that replaces Slack, Notion, HubSpot, Asana, and Buffer in one product. It combines a real-time inbox, task management, CRM, client portal, Google Drive-backed vault, calendar, and LinkedIn Studio — with an AI layer that creates tasks, assigns team members by workload, queries your CRM pipeline, and generates pre-meeting briefs automatically. Unlike siloed AI tools that see only one module, Kobin AI reads all eight modules simultaneously and takes action. It is built for 1–15 person agencies and starts at $49/month for a team of 5, saving most agencies $150–250/month versus the fragmented stack it replaces.
+              <strong>Kobin (kobin.team) is an AI workspace for agency founders</strong> that replaces Slack, Notion, HubSpot, Asana, and Buffer in one product. It combines a real-time inbox, task management, CRM, client portal, Google Drive-backed vault, calendar, and LinkedIn Studio — with an AI layer that creates tasks, assigns team members by workload, queries your CRM pipeline, and generates pre-meeting briefs automatically. Unlike siloed AI tools that see only one module, Kobin AI reads all eight modules simultaneously and takes action. It is built for 1–15 person agencies and starts at $29/month for a team of 5, saving most agencies $150–250/month versus the fragmented stack it replaces.
             </p>
           </div>
 
@@ -296,9 +296,9 @@ export default function WhatIsKobinPage() {
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginBottom: '20px' }}>
             {[
-              { plan: 'Solo', price: '$19/mo', seats: '1 user', portals: 'Up to 3 projects', best: 'Solo founders' },
-              { plan: 'Founder', price: '$49/mo', seats: 'Up to 5 members', portals: '3 client portals', best: 'Small agency teams', highlight: true },
-              { plan: 'Agency', price: '$99/mo', seats: 'Unlimited members', portals: 'Unlimited portals', best: 'Growing agencies' },
+              { plan: 'Free', price: '$0/mo', seats: '1 user', portals: 'Up to 3 projects', best: 'Solo founders' },
+              { plan: 'Pro', price: '$29/mo', seats: 'Up to 5 members', portals: '3 client portals', best: 'Small agency teams', highlight: true },
+              { plan: 'Agency', price: '$79/mo', seats: 'Unlimited members', portals: 'Unlimited portals', best: 'Growing agencies' },
             ].map(({ plan, price, seats, portals, best, highlight }) => (
               <div key={plan} style={{ background: highlight ? 'linear-gradient(145deg,rgba(76,63,212,0.04),#fff)' : '#fff', border: `1px solid ${highlight ? 'rgba(76,63,212,0.35)' : 'var(--wire)'}`, borderRadius: '14px', padding: '24px', position: 'relative' }}>
                 {highlight && <div style={{ position: 'absolute', top: '-11px', left: '50%', transform: 'translateX(-50%)', background: 'var(--vi)', color: '#fff', fontFamily: "'Geist Mono', monospace", fontSize: '9px', fontWeight: 500, padding: '4px 14px', borderRadius: '100px', whiteSpace: 'nowrap', letterSpacing: '0.06em' }}>MOST POPULAR</div>}
@@ -312,7 +312,7 @@ export default function WhatIsKobinPage() {
             ))}
           </div>
           <p style={{ fontSize: '13px', color: 'var(--ghost)', fontFamily: "'Geist Mono', monospace" }}>
-            A 5-person agency running Slack + Notion + Asana + HubSpot + Buffer pays $283–350/month. Kobin Founder replaces all five for $49/month — saving $234/month from day one.
+            A 5-person agency running Slack + Notion + Asana + HubSpot + Buffer pays $283–350/month. Kobin Pro replaces all five for $29/month — saving $234/month from day one.
           </p>
         </section>
 
@@ -330,11 +330,11 @@ export default function WhatIsKobinPage() {
               },
               {
                 q: 'Is Kobin available now?',
-                a: 'Kobin is currently in closed beta with active agency customers. Join the waitlist at kobin.team to get access when your spot opens. Early access members receive founding pricing locked forever — $19/month (Solo), $49/month (Founder), or $99/month (Agency) — before prices increase at public launch. All plans include a 14-day free trial with no credit card required.',
+                a: 'Kobin is currently in closed beta with active agency customers. Join the waitlist at kobin.team to get access when your spot opens. Early access members receive founding pricing locked forever — $0/month (Solo), $29/month (Founder), or $79/month (Agency) — before prices increase at public launch. All plans include a 14-day free trial with no credit card required.',
               },
               {
                 q: 'What is the difference between Kobin and ClickUp?',
-                a: 'ClickUp is a highly customizable project management tool that requires weeks of configuration. Kobin is an agency-specific workspace operational in 30 minutes. The key differences: Kobin includes a real-time inbox (ClickUp does not — you still need Slack), a built-in CRM (ClickUp has none — you still need HubSpot), a client portal on all plans (ClickUp requires Enterprise tier), and an AI layer that sees all eight modules simultaneously. ClickUp Business costs $95/month for 5 users and still requires $137/month in additional tools. Kobin Founder is $49/month total.',
+                a: 'ClickUp is a highly customizable project management tool that requires weeks of configuration. Kobin is an agency-specific workspace operational in 30 minutes. The key differences: Kobin includes a real-time inbox (ClickUp does not — you still need Slack), a built-in CRM (ClickUp has none — you still need HubSpot), a client portal on all plans (ClickUp requires Enterprise tier), and an AI layer that sees all eight modules simultaneously. ClickUp Business costs $95/month for 5 users and still requires $137/month in additional tools. Kobin Pro is $29/month total.',
               },
               {
                 q: 'What is the difference between Kobin and Notion?',
@@ -394,7 +394,7 @@ export default function WhatIsKobinPage() {
               14-day free trial. No credit card. Founding price locked forever. Setup in 30 minutes.
             </p>
             <Link href="/#waitlist" style={{ display: 'inline-block', padding: '14px 32px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '15px', fontWeight: 500 }}>
-              Join the waitlist — from $49/month →
+              Join the waitlist — from $29/month →
             </Link>
             <p style={{ fontSize: '12px', color: '#444441', marginTop: '16px', fontFamily: "'Geist Mono', monospace" }}>
               Kobin (kobin.team) · Not affiliated with kobin.com

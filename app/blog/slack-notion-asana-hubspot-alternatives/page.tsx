@@ -109,7 +109,7 @@ const jsonLd = {
           acceptedAnswer: {
             '@type': 'Answer',
             text:
-              'Yes. Kobin is an agency operating system that replaces Slack (real-time inbox), Notion (Vault and project docs), Asana or Linear (task management), HubSpot (CRM), Buffer (LinkedIn Studio), and Calendly (calendar with Google Meet). It starts at $19/month for solo founders and $49/month for teams — saving most agencies between $150–$250 per month.',
+              'Yes. Kobin is an agency operating system that replaces Slack (real-time inbox), Notion (Vault and project docs), Asana or Linear (task management), HubSpot (CRM), Buffer (LinkedIn Studio), and Calendly (calendar with Google Meet). It starts at $0/month for solo founders and $29/month for teams — saving most agencies between $150–$250 per month.',
           },
         },
       ],
@@ -154,7 +154,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
           {/* ── TL;DR ── */}
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Key takeaway</strong>
-            Running Slack, Notion, Asana, and HubSpot costs a 5-person agency $203–$504/month — tools that were each built in isolation and don't share data. Kobin replaces all four in one workspace from $49/month, with a built-in client portal included at no extra cost.
+            Running Slack, Notion, Asana, and HubSpot costs a 5-person agency $203–$504/month — tools that were each built in isolation and don't share data. Kobin replaces all four in one workspace from $29/month, with a built-in client portal included at no extra cost.
           </div>
 
           {/* ── STAT BLOCK ── */}
@@ -163,7 +163,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
               { num: '4+', label: 'Tools the average agency runs', sub: 'Slack · Notion · Asana · HubSpot' },
               { num: '$283', label: 'Median monthly SaaS spend', sub: '5-person agency team' },
               { num: '23 min', label: 'Focus recovery after each app switch', sub: 'UC Irvine, 2024' },
-              { num: '1 tab', label: 'All of the above replaced by Kobin', sub: 'From $49/month' },
+              { num: '1 tab', label: 'All of the above replaced by Kobin', sub: 'From $29/month' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={num}>
                 <div className="post-stat-num">{num}</div>
@@ -218,7 +218,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 ['File attachments', '✓ (storage limits on free)', '✓ (backed by Google Drive)'],
                 ['@AI responses', '✗', '✓ (full project context)'],
                 ['Task ↔ message link', '✗ (via Zapier only)', '✓ Native'],
-                ['Price (5 seats)', '$87/month', 'Included in $49/month plan'],
+                ['Price (5 seats)', '$87/month', 'Included in $29/month plan'],
               ].map(([feature, slack, kobin]) => (
                 <div className="cost-table-row" key={feature}>
                   <span className="cost-tool">{feature}</span>
@@ -254,7 +254,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 ['Mandatory metadata', '✗ (anything goes)', '✓ Title, desc, type required'],
                 ['Folder hierarchy', 'DIY', 'Auto-created per project (3 folders)'],
                 ['Internal vs client files', 'Manual permissions', 'Structural: Internal / Uploads / Deliverables'],
-                ['Price (5 seats)', '$48/month', 'Included in $49/month plan'],
+                ['Price (5 seats)', '$48/month', 'Included in $29/month plan'],
               ].map(([feature, notion, kobin]) => (
                 <div className="cost-table-row" key={feature}>
                   <span className="cost-tool">{feature}</span>
@@ -287,7 +287,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 ['Client task visibility', '✗ (separate portal required)', '✓ Auto-visible in client portal'],
                 ['Deliverable enforcement', '✗', '✓ Submission modal on completion'],
                 ['Linked to inbox/files', '✗ (via integration)', '✓ Native'],
-                ['Price (5 seats)', '$40–80/month', 'Included in $49/month plan'],
+                ['Price (5 seats)', '$40–80/month', 'Included in $29/month plan'],
               ].map(([feature, asana, kobin]) => (
                 <div className="cost-table-row" key={feature}>
                   <span className="cost-tool">{feature}</span>
@@ -320,7 +320,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 ['Follow-up reminders', '✓ (sequence-based)', '✓ (date-based, simple)'],
                 ['LinkedIn URL field', '✗ (via custom property)', '✓ Native'],
                 ['Linked to project inbox', '✗', '✓ Native'],
-                ['Price (5 seats)', '$50–90/month', 'Included in $49/month plan'],
+                ['Price (5 seats)', '$50–90/month', 'Included in $29/month plan'],
               ].map(([feature, hubspot, kobin]) => (
                 <div className="cost-table-row" key={feature}>
                   <span className="cost-tool">{feature}</span>
@@ -347,7 +347,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
 
             <h2 id="what-the-math-says">What the Math Says About Consolidating</h2>
             <p>
-              The subscription argument is the obvious one. Replacing Slack ($87), Notion ($48), Asana or Linear ($40–80), and HubSpot ($50–90) with a $49/month Kobin Founder plan saves most 5-person agencies between $170–$230 per month — roughly $2,000–$2,800 per year. That is real money, especially for agencies in their first two years.
+              The subscription argument is the obvious one. Replacing Slack ($87), Notion ($48), Asana or Linear ($40–80), and HubSpot ($50–90) with a $29/month Kobin Pro plan saves most 5-person agencies between $170–$230 per month — roughly $2,000–$2,800 per year. That is real money, especially for agencies in their first two years.
             </p>
             <p>
               But the less visible cost is the one that compounds every single day: the time spent switching. Research from UC Irvine shows it takes an average of 23 minutes to fully recover focus after switching contexts. Harvard Business Review found knowledge workers toggle between applications over 1,200 times per day. A Lokalise study of 1,000 workers published in 2026 found the average employee loses 51 minutes per week to tool fatigue alone — more than 44 hours per year, or a full working week gone.
@@ -366,7 +366,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 <span className="math-num negative">− $15,938/yr</span>
               </div>
               <div className="math-row">
-                <span>Annual Kobin Founder plan (team of 5)</span>
+                <span>Annual Kobin Pro plan (team of 5)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$588/yr</span>
               </div>
               <div className="math-row math-total">
@@ -381,7 +381,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
 
             <h2 id="what-kobin-includes">Everything That Replaces the Stack — In One Plan</h2>
             <p>
-              For completeness, here is what the Kobin Founder plan ($49/month) includes — and what it replaces:
+              For completeness, here is what the Kobin Pro plan ($29/month) includes — and what it replaces:
             </p>
 
             <div className="post-cost-table">
@@ -406,9 +406,9 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 </div>
               ))}
               <div className="cost-table-total">
-                <span>Kobin Founder plan</span>
+                <span>Kobin Pro plan</span>
                 <span></span>
-                <span className="cost-total-num">$49/month total</span>
+                <span className="cost-total-num">$29/month total</span>
               </div>
             </div>
 
@@ -433,7 +433,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">Try the alternative</div>
-              <h3>Replace Slack, Notion, Asana, and HubSpot — from $49/month</h3>
+              <h3>Replace Slack, Notion, Asana, and HubSpot — from $29/month</h3>
               <p>
                 Kobin is the agency operating system built for founders running real client work. One workspace for your team, your clients, and every project — with a real-time inbox, task management, CRM, Vault, calendar, LinkedIn Studio, and a built-in client portal. No credit card to join the waitlist.
               </p>
@@ -482,7 +482,7 @@ export default function SlackNotionAsanaHubspotAlternatives() {
                 },
                 {
                   q: 'Can I really replace all four tools with Kobin?',
-                  a: 'Yes. Kobin replaces Slack (inbox), Notion (Vault), Asana/Linear (tasks), HubSpot (CRM), Buffer (LinkedIn Studio), and Calendly (calendar with Google Meet) in a single workspace. It starts at $19/month for solo founders and $49/month for teams of up to 5. Most agencies save between $150–$250 per month in subscription costs alone.',
+                  a: 'Yes. Kobin replaces Slack (inbox), Notion (Vault), Asana/Linear (tasks), HubSpot (CRM), Buffer (LinkedIn Studio), and Calendly (calendar with Google Meet) in a single workspace. It starts at $0/month for solo founders and $29/month for teams of up to 5. Most agencies save between $150–$250 per month in subscription costs alone.',
                 },
                 {
                   q: 'How long does it take to set up Kobin?',

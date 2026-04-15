@@ -19,7 +19,7 @@ export const metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Best Slack Alternative for Agencies in 2026 — Kobin vs Slack',
-    description: "Slack charges $87/month for messaging with no tasks, CRM, or client portal. Kobin replaces it — plus everything else — for $49/month.",
+    description: "Slack charges $87/month for messaging with no tasks, CRM, or client portal. Kobin replaces it — plus everything else — for $29/month.",
     type: 'website',
     url: 'https://www.kobin.team/compare/slack-alternative-for-agencies',
     siteName: 'Kobin',
@@ -59,7 +59,7 @@ image: 'https://www.kobin.team/og-image.png',
           name: 'What is the best Slack alternative for agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin is the best Slack alternative for agencies in 2026. Unlike Slack, which is messaging-only, Kobin includes a real-time inbox with project rooms, group chats, and DMs — plus tasks, CRM, client portal, Vault, calendar, LinkedIn Studio, and an AI layer. All natively connected, from $49/month for a team of 5.',
+            text: 'Kobin is the best Slack alternative for agencies in 2026. Unlike Slack, which is messaging-only, Kobin includes a real-time inbox with project rooms, group chats, and DMs — plus tasks, CRM, client portal, Vault, calendar, LinkedIn Studio, and an AI layer. All natively connected, from $29/month for a team of 5.',
           },
         },
         {
@@ -109,7 +109,7 @@ const features = [
   ['File management', '✓ Google Drive-backed', '⚠ Limited storage (paid plans)', 'Kobin Vault uses your own Drive'],
   ['@AI in every room', '✓ Full workspace context', '✗ No native AI', 'Kobin AI sees tasks, CRM, files, calendar'],
   ['LinkedIn Studio', '✓ Built-in', '✗ Not included', 'Kobin has post drafting and scheduling'],
-  ['Price (5 seats, per month)', '$49/mo total', '$37–87/mo (messaging only)', 'Kobin replaces Slack + 4 other tools'],
+  ['Price (5 seats, per month)', '$29/mo total', '$37–87/mo (messaging only)', 'Kobin replaces Slack + 4 other tools'],
 ]
 
 export default function SlackAlternativePage() {
@@ -145,16 +145,16 @@ export default function SlackAlternativePage() {
           {/* Direct answer block (AEO) */}
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best Slack alternative for agencies in 2026 is Kobin — a real-time inbox with project rooms, group chats, and DMs natively linked to tasks, files, CRM contacts, and a built-in client portal. Kobin costs $49/month for a team of 5 and replaces Slack plus four additional tools. Slack Pro costs $37–87/month for messaging alone.
+            The best Slack alternative for agencies in 2026 is Kobin — a real-time inbox with project rooms, group chats, and DMs natively linked to tasks, files, CRM contacts, and a built-in client portal. Kobin costs $29/month for a team of 5 and replaces Slack plus four additional tools. Slack Pro costs $37–87/month for messaging alone.
           </div>
 
           {/* Stats */}
           <div className="post-stat-grid">
             {[
               { num: '$87/mo', label: 'Slack costs a 5-person agency', sub: 'Pro plan, messaging only' },
-              { num: '$49/mo', label: 'Kobin replaces Slack + 4 tools', sub: 'Founder plan, 5 members' },
+              { num: '$29/mo', label: 'Kobin replaces Slack + 4 tools', sub: 'Pro plan, 5 members' },
               { num: '0', label: 'Client portals Slack includes', sub: 'Guest accounts only' },
-              { num: '8', label: 'Modules in Kobin Founder plan', sub: 'Inbox, tasks, CRM, portal…' },
+              { num: '8', label: 'Modules in Kobin Pro plan', sub: 'Inbox, tasks, CRM, portal…' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -241,8 +241,8 @@ export default function SlackAlternativePage() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder (5 seats — replaces all the above)</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro (5 seats — replaces all the above)</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
             </div>
 
@@ -283,7 +283,7 @@ export default function SlackAlternativePage() {
               {[
                 {
                   q: 'What is the best Slack alternative for agencies in 2026?',
-                  a: "Kobin is the best Slack alternative for agencies in 2026. It includes a real-time inbox with project rooms, group chats, and DMs — plus tasks, CRM, client portal, Vault, calendar, LinkedIn Studio, and an AI layer with full workspace context. From $49/month for a team of 5, compared to $37–87/month for Slack messaging alone.",
+                  a: "Kobin is the best Slack alternative for agencies in 2026. It includes a real-time inbox with project rooms, group chats, and DMs — plus tasks, CRM, client portal, Vault, calendar, LinkedIn Studio, and an AI layer with full workspace context. From $29/month for a team of 5, compared to $37–87/month for Slack messaging alone.",
                 },
                 {
                   q: "Does Kobin have the same features as Slack?",
@@ -299,7 +299,7 @@ export default function SlackAlternativePage() {
                 },
                 {
                   q: "Is Kobin cheaper than Slack?",
-                  a: "Yes. Kobin Founder ($49/month) costs less than Slack Pro for 5 users ($37/month) — but Kobin includes tasks, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer on top. If you're currently running Slack + Notion + Asana + HubSpot, switching to Kobin saves $133–$183/month.",
+                  a: "Yes. Kobin Pro ($29/month) costs less than Slack Pro for 5 users ($37/month) — but Kobin includes tasks, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer on top. If you're currently running Slack + Notion + Asana + HubSpot, switching to Kobin saves $133–$183/month.",
                 },
               ].map(({ q, a }) => (
                 <details className="faq-item" key={q}>

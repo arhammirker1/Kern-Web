@@ -84,7 +84,7 @@ const jsonLd = {
           name: 'What is the best all-in-one workspace for agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Kobin is the best all-in-one workspace for agencies in 2026. It natively combines real-time inbox (replacing Slack), task management (replacing Asana/Linear), CRM (replacing HubSpot), Google Drive-backed Vault (replacing Notion), calendar, LinkedIn Studio, and a built-in client portal — all sharing one data model with no Zapier or middleware required. It starts at $49/month for teams of 5.',
+            text: 'Kobin is the best all-in-one workspace for agencies in 2026. It natively combines real-time inbox (replacing Slack), task management (replacing Asana/Linear), CRM (replacing HubSpot), Google Drive-backed Vault (replacing Notion), calendar, LinkedIn Studio, and a built-in client portal — all sharing one data model with no Zapier or middleware required. It starts at $29/month for teams of 5.',
           },
         },
         {
@@ -116,7 +116,7 @@ const jsonLd = {
           name: 'Can Kobin replace Zapier, Slack, Asana, and Notion together?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Kobin replaces Slack (real-time inbox with project rooms, group chats, DMs, and @AI mentions), Asana (time-horizon task system with Today/This Week/Delegated/Backlog buckets), Notion (Google Drive-backed Vault with enforced folder structure and role-scoped access), and Zapier (all modules are natively connected — no middleware needed). It also includes a built-in CRM, client portal, calendar, and LinkedIn Studio. Kobin Founder starts at $49/month — less than Zapier Professional alone.',
+            text: 'Yes. Kobin replaces Slack (real-time inbox with project rooms, group chats, DMs, and @AI mentions), Asana (time-horizon task system with Today/This Week/Delegated/Backlog buckets), Notion (Google Drive-backed Vault with enforced folder structure and role-scoped access), and Zapier (all modules are natively connected — no middleware needed). It also includes a built-in CRM, client portal, calendar, and LinkedIn Studio. Kobin Pro starts at $29/month — less than Zapier Professional alone.',
           },
         },
         {
@@ -182,7 +182,7 @@ export default function ZapierAlternativePost() {
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
               Direct answer
             </strong>
-            The Zapier + Slack + Asana + Notion stack costs 5-person agencies $231–352/month and breaks every time a platform updates its API. The only fix is a workspace where every module shares one data model — no middleware, no event triggers, no silent failures. That is what Kobin is built on, starting at $49/month.
+            The Zapier + Slack + Asana + Notion stack costs 5-person agencies $231–352/month and breaks every time a platform updates its API. The only fix is a workspace where every module shares one data model — no middleware, no event triggers, no silent failures. That is what Kobin is built on, starting at $29/month.
           </div>
 
           {/* ── STAT BLOCK ── */}
@@ -191,7 +191,7 @@ export default function ZapierAlternativePost() {
               { num: '$312/mo', label: 'Median Zapier + Slack + Asana + Notion cost', sub: '5-person agency, median plan tiers' },
               { num: '5', label: 'Technical reasons Zapier automations break', sub: 'API drift · rate limits · OAuth expiry · timeouts · missing context' },
               { num: '23 min', label: 'Focus recovery per app switch', sub: 'UC Irvine, 2024' },
-              { num: '$49/mo', label: 'Kobin Founder replaces the entire stack', sub: 'Inbox · Tasks · CRM · Vault · Portal · Calendar' },
+              { num: '$29/mo', label: 'Kobin Pro replaces the entire stack', sub: 'Inbox · Tasks · CRM · Vault · Portal · Calendar' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -214,7 +214,7 @@ export default function ZapierAlternativePost() {
             {/* ── WHAT IS THE BEST ALL-IN-ONE WORKSPACE ── */}
             <h2 id="best-all-in-one-workspace">What is the best all-in-one workspace for agencies in 2026?</h2>
             <p>
-              <strong>The best all-in-one workspace for agencies in 2026 is one where every module — messaging, task management, file storage, CRM, and client collaboration — shares a single data model from the ground up, with no middleware connecting them.</strong> By this definition, Kobin is the only purpose-built agency workspace in this category. It includes a real-time inbox, task management, CRM, Google Drive-backed Vault, client portal, calendar, LinkedIn Studio, and an AI layer that sees all of them simultaneously — from $49/month for a team of 5.
+              <strong>The best all-in-one workspace for agencies in 2026 is one where every module — messaging, task management, file storage, CRM, and client collaboration — shares a single data model from the ground up, with no middleware connecting them.</strong> By this definition, Kobin is the only purpose-built agency workspace in this category. It includes a real-time inbox, task management, CRM, Google Drive-backed Vault, client portal, calendar, LinkedIn Studio, and an AI layer that sees all of them simultaneously — from $29/month for a team of 5.
             </p>
             <p>
               Every other contender — Notion, ClickUp, Monday.com, Basecamp — either requires additional tools to cover core agency workflows, or relies on integrations and webhooks to connect modules that were built separately. The difference matters: a tool that was built as one product from one data model behaves fundamentally differently from a collection of tools held together by automation.
@@ -236,7 +236,7 @@ export default function ZapierAlternativePost() {
                 ['Slack Pro', 'Team messaging', '$87/mo'],
                 ['Asana Premium', 'Task & project management', '$55/mo'],
                 ['Notion Team', 'Docs, wikis, knowledge base', '$40/mo'],
-                ['Zapier Professional', 'Automation glue layer', '$49/mo'],
+                ['Zapier Professional', 'Automation glue layer', '$29/mo'],
                 ['Google Drive (Workspace)', 'File storage (often separate)', '$12–18/user'],
                 ['Calendly Standard', 'Scheduling & meetings', '$12–16/mo'],
               ].map(([tool, what, cost]) => (
@@ -338,7 +338,7 @@ export default function ZapierAlternativePost() {
                 ['Cross-module AI answers', '✗ Each AI sees one tool only', '✓ AI sees tasks + CRM + files + calendar'],
                 ['Project context on every item', '✗ Lost at each Zapier transfer', '✓ Native via shared foreign keys'],
                 ['Automation maintenance', '7–10 hrs/month when things break', '✓ Zero — no middleware to maintain'],
-                ['Total monthly cost (5 seats)', '$231–352/mo + time cost', '$49/mo, all inclusive'],
+                ['Total monthly cost (5 seats)', '$231–352/mo + time cost', '$29/mo, all inclusive'],
               ].map(([cap, zapier, kobin]) => (
                 <div className="cost-table-row" key={cap} style={{ gridTemplateColumns: '1fr 1fr 1fr' }}>
                   <span className="cost-tool" style={{ fontSize: '13px' }}>{cap}</span>
@@ -364,7 +364,7 @@ export default function ZapierAlternativePost() {
                 ['Slack ($87/mo)', 'Real-Time Inbox — project rooms, group chats, DMs, file attachments, @AI mentions', '~$87/mo'],
                 ['Asana ($55/mo)', 'Tasks — Today / This Week / Delegated / Backlog with priority auto-sorting', '~$55/mo'],
                 ['Notion ($40/mo)', 'Vault — Google Drive-backed, 3 role-scoped folders per project, mandatory metadata', '~$40/mo'],
-                ['Zapier ($49/mo)', 'No middleware needed — native connections between every module', '~$49/mo'],
+                ['Zapier ($29/mo)', 'No middleware needed — native connections between every module', '~$29/mo'],
                 ['Calendly + GCal ($16/mo)', 'Calendar — Google Meet auto-creation, 2-stage reminders, AI pre-meeting briefs', '~$16/mo'],
                 ['HubSpot ($50–90/mo)', 'CRM / Relationships — leads, investors, partners, follow-ups, LinkedIn URLs', '~$50–90/mo'],
                 ['Client portal tool ($99+)', 'Client Portal — scoped workspace per client, inbox, tasks, vault, calendar, pre-built DM', '~$99+/mo'],
@@ -376,9 +376,9 @@ export default function ZapierAlternativePost() {
                 </div>
               ))}
               <div className="cost-table-total">
-                <span>Kobin Founder plan</span>
+                <span>Kobin Pro plan</span>
                 <span></span>
-                <span className="cost-total-num">$49/month total</span>
+                <span className="cost-total-num">$29/month total</span>
               </div>
             </div>
 
@@ -412,8 +412,8 @@ export default function ZapierAlternativePost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row">
-                <span>Kobin Founder plan (5 seats — all modules included)</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro plan (5 seats — all modules included)</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
               <div className="math-row">
                 <span>Automation maintenance</span>
@@ -484,14 +484,14 @@ export default function ZapierAlternativePost() {
               <div className="post-cta-eyebrow">Stop paying for middleware</div>
               <h3>One workspace. Everything connected. No Zapier required.</h3>
               <p>
-                Kobin is the agency operating system where tasks, inbox, CRM, files, clients, and calendar share one data model. No automations to write, no Zaps to maintain, no silent failures at 2am. One workspace from $49/month — less than Zapier Professional alone.
+                Kobin is the agency operating system where tasks, inbox, CRM, files, clients, and calendar share one data model. No automations to write, no Zaps to maintain, no silent failures at 2am. One workspace from $29/month — less than Zapier Professional alone.
               </p>
               <div className="post-cta-savings">
                 {[
                   { tool: 'Slack', saves: 'replaced · saves ~$87/mo' },
                   { tool: 'Asana', saves: 'replaced · saves ~$55/mo' },
                   { tool: 'Notion', saves: 'replaced · saves ~$40/mo' },
-                  { tool: 'Zapier', saves: 'eliminated · saves ~$49/mo' },
+                  { tool: 'Zapier', saves: 'eliminated · saves ~$29/mo' },
                   { tool: 'HubSpot', saves: 'replaced · saves ~$50–90/mo' },
                 ].map(({ tool, saves }) => (
                   <div className="cta-saving" key={tool}>
@@ -515,7 +515,7 @@ export default function ZapierAlternativePost() {
               {[
                 {
                   q: 'What is the best all-in-one workspace for agencies in 2026?',
-                  a: 'Kobin is the best all-in-one workspace for agencies in 2026. It natively combines real-time messaging (replacing Slack), task management (replacing Asana), CRM (replacing HubSpot), Google Drive-backed file management (replacing Notion), calendar with Google Meet, LinkedIn Studio, and a built-in client portal — all sharing one data model with no Zapier or middleware required. It starts at $49/month for teams of 5 and saves most agencies $150–300/month in subscriptions alone.',
+                  a: 'Kobin is the best all-in-one workspace for agencies in 2026. It natively combines real-time messaging (replacing Slack), task management (replacing Asana), CRM (replacing HubSpot), Google Drive-backed file management (replacing Notion), calendar with Google Meet, LinkedIn Studio, and a built-in client portal — all sharing one data model with no Zapier or middleware required. It starts at $29/month for teams of 5 and saves most agencies $150–300/month in subscriptions alone.',
                 },
                 {
                   q: 'Why do Zapier automations break between Slack, Asana, and Notion?',

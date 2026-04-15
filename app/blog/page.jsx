@@ -70,7 +70,7 @@ export default function BlogPage() {
   thumbClass: 'thumb-parch', thumbText: 'AI for\nFreelancers', thumbLabel: 'GUIDE',
   category: 'cat-guide', catLabel: 'Guide',
   title: 'AI for Freelancers in 2026 — Run Your Entire Business From One Tab',
-  excerpt: 'Freelancers lose 30% of their billable hours to admin. Kobin Solo at $19/month replaces Notion, Todoist, Calendly, and client portal tools — with an AI that handles follow-ups automatically.',
+  excerpt: 'Freelancers lose 30% of their billable hours to admin. Kobin Free at $0/month replaces Notion, Todoist, Calendly, and client portal tools — with an AI that handles follow-ups automatically.',
   meta: 'Apr 10 · 9 min',
   href: '/blog/ai-for-freelancers',
 },

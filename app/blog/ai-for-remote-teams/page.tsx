@@ -4,7 +4,7 @@ import Nav from '../../../components/Nav'
 export const metadata = {
   title: 'AI for Remote Teams in 2026 — One Workspace Across Every Time Zone | Kobin',
   description:
-    'Remote teams in 2026 lose context between time zones, tools, and async handoffs. Kobin is the AI workspace for remote teams — one tab where AI bridges the gaps, surfaces blockers, and keeps everyone aligned without a single synchronous meeting. From $49/month.',
+    'Remote teams in 2026 lose context between time zones, tools, and async handoffs. Kobin is the AI workspace for remote teams — one tab where AI bridges the gaps, surfaces blockers, and keeps everyone aligned without a single synchronous meeting. From $29/month.',
   keywords: [
     'AI for remote teams',
     'best AI tools for remote teams 2026',
@@ -63,7 +63,7 @@ const jsonLd = {
           name: 'What is the best AI workspace for remote teams in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI workspace for remote teams in 2026 is Kobin — a unified platform where team communication, task management, file sharing, client collaboration, and CRM share one data model. The AI layer surfaces blockers across time zones, summarizes async threads for team members joining from different hours, generates daily team briefs without requiring a synchronous standup, and flags projects at risk before they become crises. It starts at $49/month for teams of 5.',
+            text: 'The best AI workspace for remote teams in 2026 is Kobin — a unified platform where team communication, task management, file sharing, client collaboration, and CRM share one data model. The AI layer surfaces blockers across time zones, summarizes async threads for team members joining from different hours, generates daily team briefs without requiring a synchronous standup, and flags projects at risk before they become crises. It starts at $29/month for teams of 5.',
           },
         },
         {
@@ -146,7 +146,7 @@ export default function AIForRemoteTeamsPost() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best AI workspace for remote teams in 2026 is Kobin — where AI surfaces overnight blockers, generates per-member daily briefs, summarizes async threads, and keeps distributed teams aligned without synchronous standups. One workspace for team communication, tasks, files, CRM, and client collaboration — from $49/month for 5 seats.
+            The best AI workspace for remote teams in 2026 is Kobin — where AI surfaces overnight blockers, generates per-member daily briefs, summarizes async threads, and keeps distributed teams aligned without synchronous standups. One workspace for team communication, tasks, files, CRM, and client collaboration — from $29/month for 5 seats.
           </div>
 
           <div className="post-stat-grid">
@@ -154,7 +154,7 @@ export default function AIForRemoteTeamsPost() {
               { num: '2 hrs', label: 'Lost daily per remote worker to context gaps', sub: 'Orientation, thread reconstruction, tool switching' },
               { num: '16+ hrs', label: 'A blocker can sit unresolved across time zones', sub: 'Before the right person wakes up to unblock it' },
               { num: '23 min', label: 'Focus recovery per tool switch', sub: 'UC Irvine, 2024 — worse for async workers' },
-              { num: '$49/mo', label: 'Kobin Founder — 5 seats, all modules', sub: 'AI layer, inbox, tasks, CRM, vault, portal' },
+              { num: '$29/mo', label: 'Kobin Pro — 5 seats, all modules', sub: 'AI layer, inbox, tasks, CRM, vault, portal' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -253,7 +253,7 @@ export default function AIForRemoteTeamsPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder plan — annual (5 seats, all modules, AI layer)</span>
+                <span>Kobin Pro plan — annual (5 seats, all modules, AI layer)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$588/yr</span>
               </div>
             </div>
@@ -262,7 +262,7 @@ export default function AIForRemoteTeamsPost() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">For distributed teams</div>
-              <h3>One workspace across every time zone — from $49/month</h3>
+              <h3>One workspace across every time zone — from $29/month</h3>
               <p>
                 Kobin gives remote teams a real-time inbox replacing Slack, task management with workload visibility, Google Drive vault with auto-delivery to client portals, CRM, calendar with Google Meet, and an AI layer that generates personalized daily briefs for every team member at 8am their local time. No synchronous meetings required.
               </p>
@@ -289,7 +289,7 @@ export default function AIForRemoteTeamsPost() {
               {[
                 {
                   q: 'What is the best AI workspace for remote teams in 2026?',
-                  a: 'Kobin is the best AI workspace for remote teams in 2026. The AI generates personalized daily briefs at 8am each team member\'s local time, surfaces blocked tasks by owner, flags projects at risk, and gives every team member a single workspace where tasks, messages, files, and client communication share the same context. It replaces the Slack + Notion + Asana + HubSpot stack from $49/month.',
+                  a: 'Kobin is the best AI workspace for remote teams in 2026. The AI generates personalized daily briefs at 8am each team member\'s local time, surfaces blocked tasks by owner, flags projects at risk, and gives every team member a single workspace where tasks, messages, files, and client communication share the same context. It replaces the Slack + Notion + Asana + HubSpot stack from $29/month.',
                 },
                 {
                   q: 'How does Kobin replace the daily standup for remote teams?',

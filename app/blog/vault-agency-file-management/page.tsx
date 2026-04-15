@@ -335,7 +335,7 @@ export default function VaultFileManagementPost() {
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
               Direct answer
             </strong>
-            Kobin Vault is a Google Drive-backed agency file management system with role-scoped project folders, AI auto-labeling on upload, semantic pgvector search, Monaco code editing, DOCX and spreadsheet editing, deliverable approval workflows, client portal integration, and a RAG-powered AI Writer that can generate content from any file in your vault. It replaces Google Drive chaos and Notion for agency project file management — included in all Kobin plans from $49/month.
+            Kobin Vault is a Google Drive-backed agency file management system with role-scoped project folders, AI auto-labeling on upload, semantic pgvector search, Monaco code editing, DOCX and spreadsheet editing, deliverable approval workflows, client portal integration, and a RAG-powered AI Writer that can generate content from any file in your vault. It replaces Google Drive chaos and Notion for agency project file management — included in all Kobin plans from $29/month.
           </div>
 
           {/* ── LAST UPDATED ── */}
@@ -875,7 +875,7 @@ export default function VaultFileManagementPost() {
                 ],
                 [
                   'Monthly cost (5 seats)',
-                  '$49/mo (all Kobin modules)',
+                  '$29/mo (all Kobin modules)',
                   '$12–18/user → $60–90/mo',
                   '$40/mo (Team plan)',
                 ],
@@ -981,8 +981,8 @@ export default function VaultFileManagementPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row">
-                <span>Kobin Founder plan (all 8 modules including Vault + client portal)</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro plan (all 8 modules including Vault + client portal)</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
               <div className="math-row math-total">
                 <span>Annual saving from consolidating onto Kobin Vault</span>

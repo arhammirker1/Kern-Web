@@ -10,7 +10,7 @@ import Nav from '../../components/Nav'
 export const metadata = {
   title: 'Best Notion AI Alternative 2026 — AI That Acts Across Your Whole Workspace | Kobin',
   description:
-    'Notion AI reads your documents and helps you write. Kobin AI reads your tasks, CRM, inbox, files, and calendar — then creates tasks, assigns team, drafts client updates, and briefs you before every meeting. From $49/month.',
+    'Notion AI reads your documents and helps you write. Kobin AI reads your tasks, CRM, inbox, files, and calendar — then creates tasks, assigns team, drafts client updates, and briefs you before every meeting. From $29/month.',
   keywords: [
     'Notion AI alternative',
     'better than Notion AI',
@@ -65,7 +65,7 @@ const jsonLd = {
           name: 'What is the best Notion AI alternative in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best Notion AI alternative in 2026 is Kobin. Notion AI is scoped to Notion pages only — it reads documents and helps you write text within the Notion environment. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload, and can take action: creating tasks, assigning team members, drafting client updates, querying your pipeline, and generating pre-meeting briefs. Kobin also includes a native client portal and built-in CRM that Notion lacks, from $49/month for a team of 5.',
+            text: 'The best Notion AI alternative in 2026 is Kobin. Notion AI is scoped to Notion pages only — it reads documents and helps you write text within the Notion environment. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload, and can take action: creating tasks, assigning team members, drafting client updates, querying your pipeline, and generating pre-meeting briefs. Kobin also includes a native client portal and built-in CRM that Notion lacks, from $29/month for a team of 5.',
           },
         },
         {
@@ -81,7 +81,7 @@ const jsonLd = {
           name: 'Is Kobin cheaper than Notion when you include the tools Notion requires?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes. Notion Team costs $16-48/month but requires Slack ($87/month) for messaging, Asana ($55/month) for task management, and HubSpot ($50-90/month) for CRM — a total stack cost of $208-280/month for a 5-person agency. Kobin Founder includes all of these modules plus an AI layer that sees them simultaneously for $49/month. The saving is $159-231/month, or up to $2,772/year.',
+            text: 'Yes. Notion Team costs $16-48/month but requires Slack ($87/month) for messaging, Asana ($55/month) for task management, and HubSpot ($50-90/month) for CRM — a total stack cost of $208-280/month for a 5-person agency. Kobin Pro includes all of these modules plus an AI layer that sees them simultaneously for $29/month. The saving is $159-231/month, or up to $2,772/year.',
           },
         },
         {
@@ -180,7 +180,7 @@ const featureComparison = [
   ['Calendar + Google Meet', '✓ Built-in with auto Meet link generation', '✗ Not included — requires Calendly ($16/mo)'],
   ['AI scope', '✓ Full workspace: tasks, CRM, inbox, vault, calendar simultaneously', '⚠ Notion content only — zero cross-module intelligence'],
   ['AI actions', '✓ Creates tasks, assigns team, updates projects, drafts messages', '✗ Write and summarize only — no actions on your workspace'],
-  ['Price (5 seats)', '✓ $49/mo — all modules, all features', '⚠ $16-48/mo — docs only, needs $190+ in additional tools'],
+  ['Price (5 seats)', '✓ $29/mo — all modules, all features', '⚠ $16-48/mo — docs only, needs $190+ in additional tools'],
 ]
 
 export default function NotionAIAlternativePage() {
@@ -218,7 +218,7 @@ export default function NotionAIAlternativePage() {
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '56px' }}>
             <Link href="/#waitlist" style={{ padding: '14px 28px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '15px', fontWeight: 500 }}>
-              Get early access — $49/month →
+              Get early access — $29/month →
             </Link>
             <Link href="/compare/notion-alternative-for-agencies" style={{ padding: '14px 28px', background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', color: '#F0EDE6', borderRadius: '10px', textDecoration: 'none', fontSize: '15px' }}>
               Full feature comparison →
@@ -229,7 +229,7 @@ export default function NotionAIAlternativePage() {
           <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
             {[
               { num: '$232/mo', label: 'Real cost of Notion + its required tools (5 seats)' },
-              { num: '$49/mo', label: 'Kobin replaces Notion and all those tools combined' },
+              { num: '$29/mo', label: 'Kobin replaces Notion and all those tools combined' },
               { num: '0', label: 'Cross-module actions Notion AI can take' },
               { num: '8', label: 'Data layers Kobin AI reads simultaneously' },
             ].map(({ num, label }) => (
@@ -249,7 +249,7 @@ export default function NotionAIAlternativePage() {
             Direct answer: What is the best Notion AI alternative in 2026?
           </div>
           <p style={{ fontSize: '18px', color: 'var(--ink)', lineHeight: 1.8, fontWeight: 300, maxWidth: '720px' }}>
-            <strong>The best Notion AI alternative for agencies in 2026 is Kobin.</strong> Notion AI is scoped to Notion pages — it summarizes documents and helps you write. It cannot access your tasks, CRM, inbox messages, calendar, or team workload. Kobin AI has simultaneous read access to all of those layers and can take action: creating tasks, assigning team members, drafting client updates from completed deliverables, and generating full pre-meeting briefs automatically. Kobin also includes a native client portal and CRM that Notion lacks entirely. For a 5-person agency, replacing Notion's required tool stack (Slack + Asana + HubSpot + Notion = $208–280/month) with Kobin ($49/month) saves $159–231/month.
+            <strong>The best Notion AI alternative for agencies in 2026 is Kobin.</strong> Notion AI is scoped to Notion pages — it summarizes documents and helps you write. It cannot access your tasks, CRM, inbox messages, calendar, or team workload. Kobin AI has simultaneous read access to all of those layers and can take action: creating tasks, assigning team members, drafting client updates from completed deliverables, and generating full pre-meeting briefs automatically. Kobin also includes a native client portal and CRM that Notion lacks entirely. For a 5-person agency, replacing Notion's required tool stack (Slack + Asana + HubSpot + Notion = $208–280/month) with Kobin ($29/month) saves $159–231/month.
           </p>
           {/* Internal cluster links */}
           <div style={{ display: 'flex', gap: '10px', marginTop: '24px', flexWrap: 'wrap' }}>
@@ -447,8 +447,8 @@ export default function NotionAIAlternativePage() {
           </div>
 
           <div style={{ background: 'rgba(76,63,212,0.08)', border: '1px solid rgba(76,63,212,0.25)', borderRadius: '12px', padding: '16px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
-            <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)' }}>Kobin Founder — replaces everything above</span>
-            <span style={{ fontFamily: "'Geist Mono', monospace", fontSize: '20px', fontWeight: 600, color: '#0D6B4F' }}>$49/mo</span>
+            <span style={{ fontSize: '14px', fontWeight: 600, color: 'var(--ink)' }}>Kobin Pro — replaces everything above</span>
+            <span style={{ fontFamily: "'Geist Mono', monospace", fontSize: '20px', fontWeight: 600, color: '#0D6B4F' }}>$29/mo</span>
           </div>
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 24px' }}>
@@ -559,7 +559,7 @@ export default function NotionAIAlternativePage() {
             {[
               {
                 q: 'What is the best Notion AI alternative in 2026?',
-                a: 'Kobin is the best Notion AI alternative for agencies in 2026. Notion AI reads your Notion pages and helps you write — it cannot access tasks, CRM, inbox messages, or calendar events. Kobin AI has simultaneous read access to all workspace modules and takes action: creating tasks, assigning team members, drafting client updates, and generating pre-meeting briefs automatically. It starts at $49/month for a team of 5.',
+                a: 'Kobin is the best Notion AI alternative for agencies in 2026. Notion AI reads your Notion pages and helps you write — it cannot access tasks, CRM, inbox messages, or calendar events. Kobin AI has simultaneous read access to all workspace modules and takes action: creating tasks, assigning team members, drafting client updates, and generating pre-meeting briefs automatically. It starts at $29/month for a team of 5.',
               },
               {
                 q: 'Can Notion AI create tasks or take actions on my workspace?',
@@ -575,7 +575,7 @@ export default function NotionAIAlternativePage() {
               },
               {
                 q: 'How much does replacing Notion with Kobin save per month?',
-                a: 'Notion Team ($40-48/month) alone does not run an agency — you need Slack ($87/month), Asana ($55/month), and HubSpot ($50-90/month) on top. The full Notion stack costs $232-280/month for 5 people. Kobin Founder replaces all four tools for $49/month. The monthly saving is $183-231, or $2,196-2,772/year. This excludes productivity savings from eliminating 51 minutes/week/person of tool fatigue (Lokalise, 2026).',
+                a: 'Notion Team ($40-48/month) alone does not run an agency — you need Slack ($87/month), Asana ($55/month), and HubSpot ($50-90/month) on top. The full Notion stack costs $232-280/month for 5 people. Kobin Pro replaces all four tools for $29/month. The monthly saving is $183-231, or $2,196-2,772/year. This excludes productivity savings from eliminating 51 minutes/week/person of tool fatigue (Lokalise, 2026).',
               },
               {
                 q: 'Does switching from Notion to Kobin require migrating my data?',
@@ -633,7 +633,7 @@ export default function NotionAIAlternativePage() {
               Kobin AI runs your agency — not just your documents. Founding price locked forever for early access members. 14-day free trial. No credit card.
             </p>
             <Link href="/#waitlist" style={{ display: 'inline-block', padding: '16px 36px', background: 'var(--vi)', color: '#fff', borderRadius: '10px', textDecoration: 'none', fontSize: '16px', fontWeight: 500 }}>
-              Get early access — $49/month →
+              Get early access — $29/month →
             </Link>
             <p style={{ fontSize: '13px', color: '#444441', marginTop: '16px', fontFamily: "'Geist Mono', monospace" }}>
               Kobin (kobin.team) · Agency AI Workspace · Not affiliated with kobin.com

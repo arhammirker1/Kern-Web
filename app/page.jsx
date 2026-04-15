@@ -182,7 +182,7 @@ track('Waitlist Signup', {
                     name: 'How much does Kobin AI cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin AI has three plans: Solo at $19/month (1 user, up to 3 projects), Founder at $49/month (up to 5 team members, 3 client portals, LinkedIn Studio), and Agency at $99/month (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.',
+                      text: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 2 GB vault), Pro at $29/month (unlimited team, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial.'},
                     },
                   },
                   {
@@ -222,7 +222,7 @@ track('Waitlist Signup', {
                     name: 'Can one tool replace Slack, Notion, HubSpot, and Asana?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin AI consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace from $49/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin AI.',
+                      text: 'Yes. Kobin AI consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace — free to start, Pro from $29/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin AI.',
                     },
                   },
                   {
@@ -272,7 +272,7 @@ track('Waitlist Signup', {
           </h1>
 
           <p className="hero-sub">
-            Replace Slack, Notion & ClickUp with one AI that understands everything and takes action.
+            Replace Slack, Notion & ClickUp with one AI workspace — free to start.
           </p>
 
           {/* Email form or success state */}
@@ -490,9 +490,9 @@ track('Waitlist Signup', {
               </div>
               <h3>Kobin AI</h3>
             </div>
-            <div className="from">From $49 per month</div>
+            <div className="from">Free to start · Pro from $29/mo</div>
             <div className="save-box">
-              Save up to <strong>$234 every month</strong><br />
+              Save up to <strong>$254 every month</strong><br />
               <span style={{ fontWeight: 400, fontSize: '12px', opacity: 0.8 }}>One login · One tab · Zero context switching</span>
             </div>
           </div>
@@ -513,55 +513,57 @@ track('Waitlist Signup', {
           <div className="feat-grid reveal">
             {[
               {
-                tagClass: 'vi', tagLabel: '$87/mo saved',
+                tagClass: 'vi', tagLabel: 'Free',
                 title: 'Real-Time Inbox',
                 desc: 'Project channels, group chats, and DMs. Reactions, file sharing, task references, and meeting invites — wired into every room.',
                 replaces: 'Slack',
               },
               {
-                tagClass: 'gr', tagLabel: '$48/mo saved',
+                tagClass: 'vi', tagLabel: 'Free',
                 title: 'Vault',
                 desc: 'Google Drive-backed project knowledge base. Internal docs, client uploads, and deliverables — role-scoped. Your files stay in your Drive.',
                 replaces: 'Notion + Drive',
               },
               {
-                tagClass: 'am', tagLabel: '$40/mo saved',
+                tagClass: 'vi', tagLabel: 'Free',
                 title: 'Tasks & Projects',
                 desc: 'Today · This Week · Delegated · Backlog. Priority sorting, team assignment, real-time comments, and automatic client visibility.',
                 replaces: 'Linear / Asana',
               },
               {
-                tagClass: 'vi', tagLabel: 'Built-in',
-                tagStyle: { background: 'rgba(74,144,217,0.1)', color: '#185FA5' },
-                title: 'Calendar',
-                desc: 'Day / Week / Month views. 5-min meeting reminders, Google Meet auto-creation, client invite cards sent in chat.',
-                replaces: 'Calendly + GCal',
-              },
-              {
-                tagClass: 'vi', tagLabel: '$90/mo saved',
-                tagStyle: { background: 'rgba(192,59,48,0.08)', color: '#C03B30' },
+                tagClass: 'vi', tagLabel: 'Pro',
+                tagStyle: { background: 'rgba(99,88,232,0.12)', color: '#6358E8' },
                 title: 'CRM / Relationships',
-                desc: 'Track leads, investors, partners, and clients. Log meeting outcomes, set follow-up reminders, link contacts to events and tasks.',
+                desc: 'Track leads, investors, partners, and clients. Full pipeline stages, deal values, follow-up reminders, and LinkedIn URL fields.',
                 replaces: 'HubSpot',
               },
               {
-                tagClass: 'vi', tagLabel: 'Unique',
+                tagClass: 'vi', tagLabel: 'Pro',
+                tagStyle: { background: 'rgba(99,88,232,0.12)', color: '#6358E8' },
+                title: 'Gmail & Calendar',
+                desc: 'Smart email analysis, Google Calendar sync, Google Meet auto-creation, and 5-min meeting reminders.',
+                replaces: 'Calendly + GCal',
+              },
+              {
+                tagClass: 'vi', tagLabel: 'Free',
                 tagStyle: { background: 'rgba(124,58,237,0.08)', color: '#7C3AED' },
                 title: 'Client Portal',
                 desc: 'A scoped workspace for every client. Their tasks, files, meetings, and inbox. One click to spin up. Included in every plan.',
                 replaces: '$200+/mo portal tools',
               },
               {
-                tagClass: 'gr', tagLabel: '$18/mo saved',
-                title: 'LinkedIn Studio',
-                desc: 'Draft, schedule, and track your personal branding content. Build in public without leaving your workspace.',
-                replaces: 'Buffer / Hootsuite',
+                tagClass: 'vi', tagLabel: 'Pro',
+                tagStyle: { background: 'rgba(99,88,232,0.12)', color: '#6358E8' },
+                title: 'AI Command Bar',
+                desc: 'Press ⌘K anywhere. Create tasks, query CRM, search vault, draft messages — AI that sees your full workspace context.',
+                replaces: 'Manual workflows',
               },
               {
-                tagClass: 'vi', tagLabel: 'Coming soon',
-                title: 'AI Layer',
-                desc: 'Your workspace gets smarter. Task creation from chat, smart summaries, auto-scheduling, and intelligent follow-ups.',
-                replaces: null,
+                tagClass: 'gr', tagLabel: 'Agency',
+                tagStyle: { background: 'rgba(13,107,79,0.1)', color: '#0D6B4F' },
+                title: 'AI Writer & RAG',
+                desc: 'AI Writer powered by your vault. Meeting recorder with auto-transcription. Proactive briefings. AI memory that learns your patterns.',
+                replaces: 'Otter.ai + AI tools',
               },
             ].map(({ tagClass, tagLabel, tagStyle, title, desc, replaces }) => (
               <div className="feat-card" key={title}>
@@ -587,20 +589,20 @@ track('Waitlist Signup', {
       <section className="ai-section reveal">
         <div className="ai-grid">
           <div className="ai-left">
-            <div className="section-eyebrow">AI Layer — coming soon</div>
+            <div className="section-eyebrow">AI Layer — Live</div>
             <div className="ai-chip">
               <div className="ai-chip-dot" />
-              <span className="ai-chip-text">In development</span>
+              <span className="ai-chip-text">Available on Pro+</span>
             </div>
-            <h2 className="section-h2">Your workspace<br /><em>learns</em> with you.</h2>
+            <h2 className="section-h2">Your workspace<br /><em>executes</em> for you.</h2>
             <p className="section-sub" style={{ color: '#555552' }}>
-              The AI layer turns natural conversation into structured work. No prompt engineering needed.
+              The AI layer turns natural conversation into structured work. Context-aware, action-oriented, zero prompt engineering.
             </p>
             <div className="ai-features">
               {[
-                { title: 'Task from chat', desc: '"Ahmed can you finish the landing page by Friday" → task created, assigned, due date set.' },
-                { title: 'Smart summaries', desc: 'Missed a thread? Ko summarises what happened and what needs your attention.' },
-                { title: 'Client brief → project', desc: 'Paste a brief, get a full project structure with tasks, timeline, and team assignments.' },
+                { title: 'AI Command Bar (Pro)', desc: 'Press ⌘K anywhere. Create tasks, query CRM pipeline, search vault semantically, and draft messages — all from one input.' },
+                { title: 'Meeting Recorder (Agency)', desc: 'Auto-transcribe meetings with Whisper. Get AI summaries, action items, and auto-created tasks from recordings.' },
+                { title: 'Proactive AI (Agency)', desc: 'Morning briefings, risk alerts, auto-lead detection from Gmail, and AI memory that learns your patterns over time.' },
               ].map(({ title, desc }) => (
                 <div className="ai-feat" key={title}>
                   <div className="ai-feat-icon">
@@ -619,10 +621,10 @@ track('Waitlist Signup', {
             <div className="ai-card">
               <div className="ai-card-header">
                 <div className="ai-card-dot" />
-                kobin ai · parsing message
+                kobin ai · command bar
               </div>
               <div className="ai-prompt">
-                &quot;can you please draft this task for the landing page redesign? need it done by friday&quot;
+                &quot;create a task for the landing page redesign, assign to Ahmed, due friday, high priority&quot;
               </div>
               <div className="ai-response">
                 Creating task: <strong>&quot;Landing page redesign&quot;</strong><br />
@@ -633,12 +635,12 @@ track('Waitlist Signup', {
             <div className="ai-card">
               <div className="ai-card-header">
                 <div className="ai-card-dot" />
-                kobin ai · thread summary
+                kobin ai · vault rag
               </div>
-              <div className="ai-prompt">Last 3 hours of #reelix channel</div>
+              <div className="ai-prompt">What did we agree on in the Reelix brand guidelines?</div>
               <div className="ai-response">
-                2 decisions made · 1 task created · 3 open questions.{' '}
-                <strong>Action needed:</strong> Client is waiting on deliverable upload.
+                Based on <strong>brand-guidelines.pdf</strong> in your Vault: Primary color is #2563EB, font is Inter, logo spacing minimum 24px.{' '}
+                <strong>3 documents</strong> referenced.
               </div>
             </div>
           </div>
@@ -692,61 +694,74 @@ track('Waitlist Signup', {
       <section className="pricing reveal" id="pricing">
         <div className="pricing-inner">
           <div className="section-eyebrow">Pricing</div>
-          <h2 className="section-h2">Lock in founding price.</h2>
+          <h2 className="section-h2">Start free. Scale when ready.</h2>
           <p className="section-sub">
-            Early access members keep founding pricing forever. Prices increase at public launch.
+            No credit card required. Upgrade when you need integrations, AI, or unlimited seats.
           </p>
           <div className="pricing-grid">
-            {/* Solo */}
+            {/* Free */}
             <div className="plan">
-              <div className="plan-label">Solo</div>
-              <div className="plan-price"><sup>$</sup>19</div>
-              <div className="plan-period">/ month · billed monthly</div>
-              <p className="plan-desc">For solopreneurs running everything alone.</p>
+              <div className="plan-label">Free</div>
+              <div className="plan-price"><sup>$</sup>0</div>
+              <div className="plan-period">/ forever</div>
+              <p className="plan-desc">For solopreneurs getting started.</p>
               <ul className="plan-list">
-                <li>All 8 modules included</li>
-                <li>Up to 3 active projects</li>
-                <li>Google Drive connected</li>
-                <li>Web push notifications</li>
+                <li>Up to 2 team members</li>
+                <li>Up to 3 projects</li>
+                <li>Up to 3 clients</li>
+                <li>2 GB vault storage</li>
+                <li>Real-time inbox</li>
+                <li>Tasks \u0026 client portal</li>
+                <li>AI auto-labeling on uploads</li>
               </ul>
-              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_solo')}>Join Waitlist</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_free')}>Get Started Free</button>
             </div>
 
-            {/* Founder (best) */}
+            {/* Pro (best) */}
             <div className="plan best">
               <div className="plan-badge">MOST POPULAR</div>
-              <div className="plan-label">Founder</div>
-              <div className="plan-price"><sup>$</sup>49</div>
+              <div className="plan-label">Pro</div>
+              <div className="plan-price"><sup>$</sup>29</div>
               <div className="plan-period">/ month · billed monthly</div>
-              <p className="plan-desc">For founders with a growing team and active clients.</p>
+              <p className="plan-desc">For founders with a team, clients, and integrations.</p>
               <ul className="plan-list">
-                <li>Everything in Solo</li>
-                <li>Up to 5 team members</li>
-                <li>Up to 3 client portals</li>
-                <li>LinkedIn Studio included</li>
-                <li>Granular permissions (12 toggles)</li>
-                <li>Unlimited projects</li>
+                <li>Everything in Free</li>
+                <li>Unlimited team members</li>
+                <li>Unlimited projects \u0026 clients</li>
+                <li>50 GB vault storage</li>
+                <li>Gmail integration</li>
+                <li>CRM pipeline</li>
+                <li>Google Calendar sync</li>
+                <li>AI Command Bar (⌘K)</li>
+                <li>Semantic vault search</li>
+                <li>Workspace intelligence</li>
+                <li>Push notifications</li>
               </ul>
-              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_founder')}>Get Founding Price</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_pro')}>Start Free Trial</button>
             </div>
 
             {/* Agency */}
             <div className="plan">
               <div className="plan-label">Agency</div>
-              <div className="plan-price"><sup>$</sup>99</div>
+              <div className="plan-price"><sup>$</sup>79</div>
               <div className="plan-period">/ month · billed monthly</div>
-              <p className="plan-desc">For agencies managing multiple clients at scale.</p>
+              <p className="plan-desc">For agencies at scale with advanced AI.</p>
               <ul className="plan-list">
-                <li>Everything in Founder</li>
-                <li>Unlimited team members</li>
-                <li>Unlimited client portals</li>
-                <li>White-label portal option</li>
+                <li>Everything in Pro</li>
+                <li>500 GB vault storage</li>
+                <li>Meeting recorder + transcription</li>
+                <li>AI Writer (vault-powered)</li>
+                <li>Vault RAG (AI reads your files)</li>
+                <li>Proactive AI briefings</li>
+                <li>AI memory system</li>
+                <li>Auto lead detection</li>
+                <li>White-label client portal</li>
                 <li>Priority support</li>
               </ul>
-              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_agency')}>Join Waitlist</button>
+              <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_agency')}>Start Free Trial</button>
             </div>
           </div>
-          <p className="pricing-note">14-day free trial on all plans · No credit card to join waitlist</p>
+          <p className="pricing-note">14-day free trial on paid plans · No credit card required</p>
         </div>
       </section>
 
@@ -870,7 +885,7 @@ track('Waitlist Signup', {
             },
             {
               q: 'How much does Kobin AI cost?',
-              a: 'Kobin AI starts at $19/month for solo founders (1 user, up to 3 projects), $49/month for the Founder plan (up to 5 team members, 3 client portals, LinkedIn Studio), and $99/month for the Agency plan (unlimited team members and client portals, white-label option). All plans include a 14-day free trial with no credit card required.'
+              a: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 3 clients, 2 GB vault), Pro at $29/month (unlimited team, projects, clients, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (everything in Pro plus Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial with no credit card required.'
             },
             {
               q: 'Does Kobin AI have a client portal?',

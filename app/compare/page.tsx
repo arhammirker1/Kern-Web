@@ -34,7 +34,7 @@ const comparisons = [
     competitor: 'Productive.io',
     tagline: 'Productive.io alternative for agencies',
     summary:
-      "Productive.io is the go-to for resource planning and financials — but it still requires Slack ($87/mo) and HubSpot ($50/mo) alongside it. Kobin replaces all three for $49/month.",
+      "Productive.io is the go-to for resource planning and financials — but it still requires Slack ($87/mo) and HubSpot ($50/mo) alongside it. Kobin replaces all three for $29/month.",
     saves: '$158/mo',
     badge: 'Ranks #1',
     badgeStyle: { background: 'rgba(192,59,48,0.1)', color: '#C03B30' },
@@ -44,7 +44,7 @@ const comparisons = [
     competitor: 'Slack',
     tagline: 'Slack alternative for agencies',
     summary:
-      'Slack charges $87/month for messaging alone — no tasks, no CRM, no client portal. Kobin replaces it with a natively connected workspace for $49/month total.',
+      'Slack charges $87/month for messaging alone — no tasks, no CRM, no client portal. Kobin replaces it with a natively connected workspace for $29/month total.',
     saves: '$87/mo',
     badge: 'Most searched',
     badgeStyle: { background: 'rgba(76,63,212,0.1)', color: 'var(--vi)' },
@@ -161,7 +161,7 @@ export default function ComparePage() {
           <div style={{ background: 'var(--ink)', borderRadius: '16px', padding: '32px', marginBottom: '48px', textAlign: 'center' }}>
             <div style={{ fontFamily: "'Geist Mono', monospace", fontSize: '11px', color: '#555552', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '12px' }}>Total monthly saving</div>
             <div style={{ fontFamily: "'Fraunces', serif", fontSize: '48px', fontWeight: 300, color: '#F0EDE6', letterSpacing: '-0.03em', marginBottom: '8px' }}>$234/month</div>
-            <p style={{ fontSize: '14px', color: '#555552', marginBottom: '24px' }}>when you replace Slack + Notion + Asana + HubSpot + Buffer with Kobin Founder ($49/month)</p>
+            <p style={{ fontSize: '14px', color: '#555552', marginBottom: '24px' }}>when you replace Slack + Notion + Asana + HubSpot + Buffer with Kobin Pro ($29/month)</p>
             <Link href="/#waitlist" style={{ display: 'inline-block', background: 'var(--vi)', color: '#fff', padding: '12px 28px', borderRadius: '10px', fontSize: '14px', fontWeight: 500, textDecoration: 'none' }}>
               Join the waitlist →
             </Link>

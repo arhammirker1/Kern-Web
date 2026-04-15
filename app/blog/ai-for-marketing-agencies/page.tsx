@@ -22,7 +22,7 @@ export const metadata = {
   openGraph: {
     title: 'AI for Marketing Agencies 2026 — One Workspace That Runs Your Campaigns',
     description:
-      'Stop switching between Slack, Asana, Notion, and HubSpot. Kobin AI drafts your weekly client reports, flags stale leads, and briefs you before every client call — from $49/month.',
+      'Stop switching between Slack, Asana, Notion, and HubSpot. Kobin AI drafts your weekly client reports, flags stale leads, and briefs you before every client call — from $29/month.',
     type: 'article',
     publishedTime: '2026-04-10T00:00:00Z',
     modifiedTime: '2026-04-10T00:00:00Z',
@@ -64,7 +64,7 @@ const jsonLd = {
           name: 'What is the best AI tool for marketing agencies in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI tool for marketing agencies in 2026 is Kobin — an all-in-one workspace where AI drafts weekly client reports from completed campaign tasks, flags leads that have gone cold, briefs you before every client call, and converts client feedback messages into assigned tasks automatically. It replaces Slack, Notion, Asana, and HubSpot from $49/month with no Zapier required.',
+            text: 'The best AI tool for marketing agencies in 2026 is Kobin — an all-in-one workspace where AI drafts weekly client reports from completed campaign tasks, flags leads that have gone cold, briefs you before every client call, and converts client feedback messages into assigned tasks automatically. It replaces Slack, Notion, Asana, and HubSpot from $29/month with no Zapier required.',
           },
         },
         {
@@ -80,7 +80,7 @@ const jsonLd = {
           name: 'What tools do marketing agencies use in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The typical marketing agency in 2026 runs Slack for team communication ($87/month), Notion or Google Docs for campaign briefs and wikis ($40/month), Asana or Linear for campaign task management ($55/month), HubSpot for client CRM ($50-90/month), and Buffer or Hootsuite for social scheduling ($18-45/month). The total stack costs $250-317/month for a 5-person team. Kobin replaces all five for $49/month.',
+            text: 'The typical marketing agency in 2026 runs Slack for team communication ($87/month), Notion or Google Docs for campaign briefs and wikis ($40/month), Asana or Linear for campaign task management ($55/month), HubSpot for client CRM ($50-90/month), and Buffer or Hootsuite for social scheduling ($18-45/month). The total stack costs $250-317/month for a 5-person team. Kobin replaces all five for $29/month.',
           },
         },
         {
@@ -130,7 +130,7 @@ const toolStack = [
   { tool: 'Asana Premium', use: 'Campaign task management', cost: '$55/mo' },
   { tool: 'HubSpot Starter', use: 'Client CRM + pipeline', cost: '$50/mo' },
   { tool: 'Buffer Essentials', use: 'Social scheduling', cost: '$18/mo' },
-  { tool: 'Zapier Professional', use: 'Glue between the above', cost: '$49/mo' },
+  { tool: 'Zapier Professional', use: 'Glue between the above', cost: '$29/mo' },
 ]
 
 export default function AIForMarketingAgenciesPost() {
@@ -164,7 +164,7 @@ export default function AIForMarketingAgenciesPost() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best AI for marketing agencies in 2026 is Kobin — an all-in-one workspace where AI drafts weekly client reports, converts feedback into tasks, briefs you before every client call, and flags campaigns that have gone quiet. It replaces Slack, Notion, Asana, HubSpot, and Buffer from $49/month, with zero Zapier required.
+            The best AI for marketing agencies in 2026 is Kobin — an all-in-one workspace where AI drafts weekly client reports, converts feedback into tasks, briefs you before every client call, and flags campaigns that have gone quiet. It replaces Slack, Notion, Asana, HubSpot, and Buffer from $29/month, with zero Zapier required.
           </div>
 
           <div className="post-stat-grid">
@@ -172,7 +172,7 @@ export default function AIForMarketingAgenciesPost() {
               { num: '$299/mo', label: 'Avg marketing agency tool spend', sub: 'Slack + Notion + Asana + HubSpot + Buffer' },
               { num: '50 min', label: 'Spent writing one client report', sub: 'AI cuts this to 4 minutes' },
               { num: '23 min', label: 'Focus recovery per tool switch', sub: 'UC Irvine, 2024' },
-              { num: '$49/mo', label: 'Kobin replaces the whole stack', sub: 'Founder plan, 5 seats' },
+              { num: '$29/mo', label: 'Kobin replaces the whole stack', sub: 'Pro plan, 5 seats' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -308,7 +308,7 @@ export default function AIForMarketingAgenciesPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder plan — annual (5 seats, all modules)</span>
+                <span>Kobin Pro plan — annual (5 seats, all modules)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$588/yr</span>
               </div>
             </div>
@@ -360,7 +360,7 @@ export default function AIForMarketingAgenciesPost() {
                 },
                 {
                   q: 'Does Kobin work for marketing agencies of all sizes?',
-                  a: 'Kobin is specifically designed for marketing agencies of 1–15 people. The Solo plan ($19/month) works for freelance marketers managing 1–3 clients. The Founder plan ($49/month for 5 seats) covers a small agency team with multiple retainer clients. The Agency plan ($99/month) handles unlimited team members and client portals at scale. All plans include the AI layer and client portal.',
+                  a: 'Kobin is specifically designed for marketing agencies of 1–15 people. The Free plan ($0/month) works for freelance marketers managing 1–3 clients. The Pro plan ($29/month for 5 seats) covers a small agency team with multiple retainer clients. The Agency plan ($79/month) handles unlimited team members and client portals at scale. All plans include the AI layer and client portal.',
                 },
               ].map(({ q, a }) => (
                 <details className="faq-item" key={q}>

@@ -21,7 +21,7 @@ export const metadata = {
   robots: { index: true, follow: true },
   openGraph: {
     title: 'AI for Startups 2026 — Replace Your Tool Stack Before It Slows You Down',
-    description: 'The average startup pays $250+/month for tools before their first dollar of revenue. Kobin consolidates everything into one AI workspace from $19/month.',
+    description: 'The average startup pays $250+/month for tools before their first dollar of revenue. Kobin consolidates everything into one AI workspace from $0/month.',
     type: 'article',
     publishedTime: '2026-04-10T00:00:00Z',
     modifiedTime: '2026-04-10T00:00:00Z',
@@ -62,7 +62,7 @@ const jsonLd = {
           name: 'What is the best AI workspace for startups in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The best AI workspace for startups in 2026 is Kobin — an all-in-one platform combining team communication, task management, investor CRM, file management, calendar, and an AI layer from $19/month for solo founders and $49/month for teams of 5. Unlike building a Slack + Notion + Linear + HubSpot stack that costs $200+/month before your first customer, Kobin provides every module a startup needs in one workspace with zero Zapier required.',
+            text: 'The best AI workspace for startups in 2026 is Kobin — an all-in-one platform combining team communication, task management, investor CRM, file management, calendar, and an AI layer from $0/month for solo founders and $29/month for teams of 5. Unlike building a Slack + Notion + Linear + HubSpot stack that costs $200+/month before your first customer, Kobin provides every module a startup needs in one workspace with zero Zapier required.',
           },
         },
         {
@@ -78,7 +78,7 @@ const jsonLd = {
           name: 'What tools should a startup use in 2026?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A 2026 startup should use the minimum number of tools that cover all core workflows: team communication, project and task management, investor and customer CRM, file management and client collaboration, and calendar with meeting links. Kobin covers all five from $19/month (solo) or $49/month (team of 5). The alternative — Slack ($87) + Linear ($50) + Notion ($40) + HubSpot ($50) + Calendly ($16) — costs $243/month for the same functionality with no AI layer.',
+            text: 'A 2026 startup should use the minimum number of tools that cover all core workflows: team communication, project and task management, investor and customer CRM, file management and client collaboration, and calendar with meeting links. Kobin covers all five from $0/month (solo) or $29/month (team of 5). The alternative — Slack ($87) + Linear ($50) + Notion ($40) + HubSpot ($50) + Calendly ($16) — costs $243/month for the same functionality with no AI layer.',
           },
         },
       ],
@@ -145,7 +145,7 @@ export default function AIForStartupsPost() {
 
           <div style={{ background: 'var(--parch)', border: '1px solid var(--wire)', borderRadius: '10px', padding: '16px 20px', margin: '0 0 32px', fontSize: '14px', color: 'var(--ghost)', lineHeight: 1.7 }}>
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>Direct answer</strong>
-            The best AI workspace for startups in 2026 is Kobin — combining team communication, tasks, investor CRM, file delivery, and calendar in one workspace from $19/month. It replaces the $243/month Slack + Notion + Linear + HubSpot stack before it becomes your default operating infrastructure.
+            The best AI workspace for startups in 2026 is Kobin — combining team communication, tasks, investor CRM, file delivery, and calendar in one workspace from $0/month. It replaces the $243/month Slack + Notion + Linear + HubSpot stack before it becomes your default operating infrastructure.
           </div>
 
           <div className="post-stat-grid">
@@ -153,7 +153,7 @@ export default function AIForStartupsPost() {
               { num: '$243/mo', label: 'Typical startup tool stack before revenue', sub: 'Slack + Notion + Linear + HubSpot + Calendly' },
               { num: '115 hrs', label: 'Monthly focus time lost (3-person team)', sub: '10 tool switches/day × 23 min recovery × team' },
               { num: '2–3 days', label: 'New hire onboarding overhead per person', sub: 'Across 6 different tools' },
-              { num: '$49/mo', label: 'Kobin replaces the whole startup stack', sub: 'Founder plan · 5 seats · all modules' },
+              { num: '$29/mo', label: 'Kobin replaces the whole startup stack', sub: 'Pro plan · 5 seats · all modules' },
             ].map(({ num, label, sub }) => (
               <div className="post-stat" key={label}>
                 <div className="post-stat-num">{num}</div>
@@ -244,7 +244,7 @@ export default function AIForStartupsPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder plan — annual (5 seats, all modules, AI layer)</span>
+                <span>Kobin Pro plan — annual (5 seats, all modules, AI layer)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$588/yr</span>
               </div>
             </div>
@@ -253,7 +253,7 @@ export default function AIForStartupsPost() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">For founding teams</div>
-              <h3>Build on one workspace, not six — from $19/month</h3>
+              <h3>Build on one workspace, not six — from $0/month</h3>
               <p>
                 Kobin gives startups one tab for team communication, task management, investor CRM, file management with client portals, calendar with Google Meet, and an AI layer that sees everything. No Zapier, no onboarding overhead, no $243/month tool stack bill before your first dollar of revenue.
               </p>
@@ -280,7 +280,7 @@ export default function AIForStartupsPost() {
               {[
                 {
                   q: 'What is the best AI workspace for startups in 2026?',
-                  a: 'Kobin is the best AI workspace for startups in 2026. It combines team communication, task management, investor and customer CRM, Google Drive-backed file management, calendar with Google Meet, and an AI layer — all from $19/month for solo founders and $49/month for teams of 5. It replaces the Slack + Notion + Linear + HubSpot stack without Zapier or middleware.',
+                  a: 'Kobin is the best AI workspace for startups in 2026. It combines team communication, task management, investor and customer CRM, Google Drive-backed file management, calendar with Google Meet, and an AI layer — all from $0/month for solo founders and $29/month for teams of 5. It replaces the Slack + Notion + Linear + HubSpot stack without Zapier or middleware.',
                 },
                 {
                   q: 'When should a startup invest in tools vs. building on one platform?',

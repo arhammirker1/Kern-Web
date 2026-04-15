@@ -89,7 +89,7 @@ const features = [
   ['CRM', '✓ Built-in relationships', '✗ Not included', 'Kobin tracks leads, investors, partners'],
   ['Calendar + Google Meet', '✓ Built-in', '✗ Not included', 'Kobin auto-generates Meet links'],
   ['AI layer', '✓ Sees full workspace', '⚠ Notion content only', "Kobin AI reads tasks, CRM, files, calendar together"],
-  ['Price (5 seats, per month)', '$49/mo (all modules)', '$16–48/mo (docs only)', 'Kobin replaces Notion + 4 other tools'],
+  ['Price (5 seats, per month)', '$29/mo (all modules)', '$16–48/mo (docs only)', 'Kobin replaces Notion + 4 other tools'],
 ]
 
 export default function NotionAlternativePage() {
@@ -209,8 +209,8 @@ export default function NotionAlternativePage() {
             </div>
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Founder (5 seats — docs, inbox, tasks, CRM, portal)</span>
-                <span className="math-num" style={{ color: '#4DD6A5' }}>$49/mo</span>
+                <span>Kobin Pro (5 seats — docs, inbox, tasks, CRM, portal)</span>
+                <span className="math-num" style={{ color: '#4DD6A5' }}>$29/mo</span>
               </div>
             </div>
 
@@ -235,7 +235,7 @@ export default function NotionAlternativePage() {
                 },
                 {
                   q: 'Is Kobin cheaper than Notion?',
-                  a: "Notion Team is $16–48/month for 5 users — but Notion doesn't include messaging, tasks, CRM, or a client portal. Kobin Founder is $49/month and includes all of those plus Vault. If you're currently running Notion alongside Slack ($87/month), Asana ($55/month), and HubSpot ($50/month), switching to Kobin saves $143–$193/month.",
+                  a: "Notion Team is $16–48/month for 5 users — but Notion doesn't include messaging, tasks, CRM, or a client portal. Kobin Pro is $29/month and includes all of those plus Vault. If you're currently running Notion alongside Slack ($87/month), Asana ($55/month), and HubSpot ($50/month), switching to Kobin saves $143–$193/month.",
                 },
                 {
                   q: 'What document types can I store in Kobin Vault?',

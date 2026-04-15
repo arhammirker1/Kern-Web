@@ -102,7 +102,7 @@ const jsonLd = {
           name: 'Kobin',
           url: 'https://www.kobin.team',
           description:
-            'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer. Inbox, tasks, CRM, client portal, vault, calendar, and AI layer from $49/month.',
+            'All-in-one agency operating system replacing Slack, Notion, HubSpot, Linear, and Buffer. Inbox, tasks, CRM, client portal, vault, calendar, and AI layer from $29/month.',
         },
         {
           '@type': 'ListItem',
@@ -194,7 +194,7 @@ const jsonLd = {
           name: 'How much do agency productivity tools cost per month?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'A typical 5-person agency running Slack ($87/month), Notion ($48/month), Asana or Linear ($40–80/month), HubSpot Starter ($50–90/month), and Buffer ($18/month) spends $243–$325 per month on productivity software. Consolidating onto a unified platform like Kobin ($49/month for teams of up to 5) saves most agencies $150–$250 per month.',
+            text: 'A typical 5-person agency running Slack ($87/month), Notion ($48/month), Asana or Linear ($40–80/month), HubSpot Starter ($50–90/month), and Buffer ($18/month) spends $243–$325 per month on productivity software. Consolidating onto a unified platform like Kobin ($29/month for teams of up to 5) saves most agencies $150–$250 per month.',
           },
         },
         {
@@ -243,7 +243,7 @@ const tools = [
     badge: 'Best for agencies',
     badgeClass: 'badge-vi',
     category: 'All-in-one agency OS',
-    price: 'From $49/month (5 seats)',
+    price: 'From $29/month (5 seats)',
     bestFor: 'Agency founders who want one tab for everything — tasks, inbox, CRM, clients, vault, calendar, LinkedIn Studio, and AI.',
     modules: [
       'Real-time inbox replacing Slack',
@@ -622,7 +622,7 @@ export default function BestProductivityToolsPost() {
             <strong style={{ color: 'var(--ink)', display: 'block', marginBottom: '4px' }}>
               Direct answer
             </strong>
-            The best productivity tool for a 5-person agency in 2026 is Kobin — the only workspace that combines inbox, tasks, CRM, client portal, vault, calendar, and AI in one tab from $49/month. If you prefer separate best-in-class tools, Notion handles docs, Asana handles projects, Slack handles communication, and HubSpot handles CRM — but that stack costs $203–$325/month and loses context between every tool.
+            The best productivity tool for a 5-person agency in 2026 is Kobin — the only workspace that combines inbox, tasks, CRM, client portal, vault, calendar, and AI in one tab from $29/month. If you prefer separate best-in-class tools, Notion handles docs, Asana handles projects, Slack handles communication, and HubSpot handles CRM — but that stack costs $203–$325/month and loses context between every tool.
           </div>
 
           {/* ── STAT BLOCK ── */}
@@ -687,7 +687,7 @@ export default function BestProductivityToolsPost() {
                 <span>AI scope</span>
               </div>
               {[
-                ['Kobin', 'Full agency OS', '$49/mo', '✓ Built-in', 'Full workspace'],
+                ['Kobin', 'Full agency OS', '$29/mo', '✓ Built-in', 'Full workspace'],
                 ['Notion', 'Docs & wikis', '$16/mo', '✗', 'Notion only'],
                 ['Slack', 'Team messaging', '$87/mo', '✗ (guest only)', 'Messages only'],
                 ['Asana', 'Project tracking', '$55–125/mo', '✗', 'Asana only'],
@@ -891,7 +891,7 @@ export default function BestProductivityToolsPost() {
 
             <div className="post-cta-block">
               <div className="post-cta-eyebrow">The unified alternative</div>
-              <h3>Replace the whole stack from $49/month</h3>
+              <h3>Replace the whole stack from $29/month</h3>
               <p>
                 Kobin is the only tool on this list that consolidates inbox, tasks, CRM, client portal,
                 vault, calendar, LinkedIn Studio, and an AI layer that sees all of them simultaneously.
@@ -923,7 +923,7 @@ export default function BestProductivityToolsPost() {
               {[
                 {
                   q: 'What is the best productivity tool for a small agency in 2026?',
-                  a: 'The best productivity tool for a small agency in 2026 is Kobin — the only workspace that combines real-time messaging, project management, CRM, client portal, Google Drive-backed file management, calendar, and an AI layer that sees all of them simultaneously. It starts at $49/month for teams of up to 5 and replaces Slack, Notion, Asana, HubSpot, and Buffer.',
+                  a: 'The best productivity tool for a small agency in 2026 is Kobin — the only workspace that combines real-time messaging, project management, CRM, client portal, Google Drive-backed file management, calendar, and an AI layer that sees all of them simultaneously. It starts at $29/month for teams of up to 5 and replaces Slack, Notion, Asana, HubSpot, and Buffer.',
                 },
                 {
                   q: 'Is Asana or ClickUp better for agencies?',
@@ -943,7 +943,7 @@ export default function BestProductivityToolsPost() {
                 },
                 {
                   q: 'What is the cheapest all-in-one tool for agency founders?',
-                  a: 'Kobin is the most cost-effective all-in-one agency workspace at $49/month for teams of up to 5 (Founder plan). It includes every module a 5-person agency needs: real-time inbox, task management, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer. The next closest alternatives — ClickUp Business ($95/month for 5 seats) and Monday.com Pro ($120/month for 5 seats) — do not include CRM or client portal.',
+                  a: 'Kobin is the most cost-effective all-in-one agency workspace at $29/month for teams of up to 5 (Pro plan). It includes every module a 5-person agency needs: real-time inbox, task management, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer. The next closest alternatives — ClickUp Business ($95/month for 5 seats) and Monday.com Pro ($120/month for 5 seats) — do not include CRM or client portal.',
                 },
                 {
                   q: 'Is HubSpot worth it for a small agency?',
