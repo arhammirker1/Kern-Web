@@ -130,7 +130,7 @@ export function buildCheckoutUrl(params: {
 
   const qs = new URLSearchParams({
     env: params.env === 'production' ? 'production' : 'sandbox',
-    tracker: params.token,
+    beacon: params.token,
     order_id: params.order_id,
     cancel_url: params.cancel_url,
     redirect_url: params.redirect_url,

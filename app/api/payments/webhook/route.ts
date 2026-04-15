@@ -35,7 +35,7 @@ export async function POST(req: NextRequest) {
         .from('payment_attempts')
         .update({ status: 'paid', paid_at: new Date().toISOString() })
         .eq('order_id', data.order_id)
-        .catch(() => {}) // non-fatal if table doesn't exist
+        .catch(() => { }) // non-fatal if table doesn't exist
 
       // 2. Upgrade user plan
       if (user_id && plan && ['pro', 'agency'].includes(plan)) {
@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
         .from('payment_attempts')
         .update({ status: 'failed' })
         .eq('order_id', data.order_id)
-        .catch(() => {})
+        .catch(() => { })
 
       return NextResponse.json({ received: true, upgraded: false })
     }
