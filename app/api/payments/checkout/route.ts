@@ -3,7 +3,7 @@
 // Called by the frontend upgrade page.
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createGuestToken, createPaymentTracker, buildCheckoutUrl } from '@/lib/safepay'
+import { createGuestToken, createPaymentTracker, createPassportToken, buildCheckoutUrl } from '@/lib/safepay'
 import { getAdminDB } from '@/lib/admin-db'
 
 // Plan config: amount in PKR lowest denomination (1 PKR = 100 paisas)
@@ -52,17 +52,22 @@ export async function POST(req: NextRequest) {
       source: `kobin_${plan}`,
     })
 
-    // 3. Build checkout URL
+    // 3. Create passport / authentication token (required by Safepay checkout)
+    const tbt = await createPassportToken()
+
+    // 4. Build checkout URL
     const origin = req.headers.get('origin') || 'https://www.kobin.team'
     const checkout_url = buildCheckoutUrl({
       token: trackerToken,
-      order_id,
+      tbt,
       cancel_url: `${origin}/upgrade?cancelled=1&plan=${plan}`,
       redirect_url: `${origin}/upgrade/success?order_id=${order_id}&plan=${plan}&tracker=${trackerToken}`,
       env: process.env.SAFEPAY_ENV === 'production' ? 'production' : 'sandbox',
+      source: 'hosted',
+      user_id: guestToken || undefined,
     })
 
-    // 4. Log pending payment in DB
+    // 5. Log pending payment in DB
     if (user_id) {
       try {
         const db = getAdminDB()

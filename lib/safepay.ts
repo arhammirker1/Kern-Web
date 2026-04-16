@@ -119,14 +119,41 @@ export async function createPaymentTracker(payload: {
   return { token }
 }
 
+// ── Create a passport / authentication token ──────────────────────────────────
+// Required by Safepay Express Checkout — short-lived token (1 hour) that
+// authorises the checkout session on the client side.
+
+export async function createPassportToken(): Promise<string> {
+  const json = await safepayFetch<any>('/client/passport/v1/token', {
+    method: 'POST',
+  })
+  // Response shape: { data: "<token_string>" }
+  const token = json?.data
+  if (!token || typeof token !== 'string') {
+    console.error('[safepay] createPassportToken: unexpected response:', JSON.stringify(json))
+    throw new Error('Safepay did not return a passport token.')
+  }
+  return token
+}
+
 // ── Build hosted checkout URL ─────────────────────────────────────────────────
+// Per Safepay Express Checkout docs the URL requires:
+//   beacon        – tracker token from createPaymentTracker
+//   tbt           – passport / auth token from createPassportToken
+//   environment   – 'sandbox' | 'production'
+//   source        – 'hosted' | 'popup' | 'mobile' | 'custom'
+//   redirect_url  – success redirect
+//   cancel_url    – cancellation redirect
+//   user_id       – (optional) customer token from createGuestToken
 
 export function buildCheckoutUrl(params: {
   token: string
-  order_id: string
+  tbt: string
   cancel_url: string
   redirect_url: string
   env?: 'sandbox' | 'production'
+  source?: string
+  user_id?: string
 }): string {
   const base =
     params.env === 'production'
@@ -136,16 +163,27 @@ export function buildCheckoutUrl(params: {
   if (!params.token) {
     throw new Error('[safepay] buildCheckoutUrl: tracker token is missing or undefined')
   }
+  if (!params.tbt) {
+    throw new Error('[safepay] buildCheckoutUrl: passport (tbt) token is missing or undefined')
+  }
 
-  const qs = new URLSearchParams({
+  const environment = params.env === 'production' ? 'production' : 'sandbox'
+
+  const qsObj: Record<string, string> = {
     beacon: params.token,
-    merchant_api_key: PUBLIC_KEY,
-    order_id: params.order_id,
-    cancel_url: params.cancel_url,
+    tbt: params.tbt,
+    environment,
+    source: params.source || 'hosted',
     redirect_url: params.redirect_url,
-    source: 'custom',
-  })
+    cancel_url: params.cancel_url,
+  }
 
+  // Optionally attach customer token to prefill details on checkout page
+  if (params.user_id) {
+    qsObj.user_id = params.user_id
+  }
+
+  const qs = new URLSearchParams(qsObj)
   return `${base}/checkout/pay?${qs.toString()}`
 }
 
