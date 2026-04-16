@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
       token: trackerToken,
       order_id,
       cancel_url: `${origin}/upgrade?cancelled=1&plan=${plan}`,
-      redirect_url: `${origin}/upgrade/success?order_id=${order_id}&plan=${plan}&tracker=${trackerToken}`,
+      redirect_url: `${origin}/upgrade/success?order_id=${order_id}&plan=${plan}`,
       env: process.env.SAFEPAY_ENV === 'production' ? 'production' : 'sandbox',
       source: 'custom',
       webhooks: true,
