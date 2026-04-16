@@ -42,8 +42,8 @@ export async function POST(req: NextRequest) {
     const checkout_url = buildCheckoutUrl({
       token: trackerToken,
       order_id,
-      cancel_url: `${origin}/upgrade?cancelled=1&plan=${plan}`,
-      redirect_url: `${origin}/upgrade/success?order_id=${order_id}&plan=${plan}`,
+      cancel_url: `${origin}/upgrade?cancelled=1`,
+      redirect_url: `${origin}/upgrade/success`,
       env: process.env.SAFEPAY_ENV === 'production' ? 'production' : 'sandbox',
       source: 'custom',
       webhooks: true,

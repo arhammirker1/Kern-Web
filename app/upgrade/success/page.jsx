@@ -25,7 +25,10 @@ function SuccessContent() {
   const searchParams = useSearchParams()
   const tracker  = searchParams.get('tracker')
   const order_id = searchParams.get('order_id')
-  const plan     = searchParams.get('plan') ?? 'pro'
+  
+  // Extract plan from order_id (format: kobin_plan_userid_time) if it's not in the URL
+  const planFromOrder = order_id ? order_id.split('_')[1] : null;
+  const plan     = searchParams.get('plan') || planFromOrder || 'pro'
 
   const [status, setStatus] = useState('verifying') // verifying | success | failed | error
   const [attempts, setAttempts] = useState(0)
