@@ -9,8 +9,8 @@ import { getAdminDB } from '@/lib/admin-db'
 // Plan config: amount in PKR lowest denomination (1 PKR = 100 paisas)
 // Adjust these to your actual pricing in PKR or USD
 const PLANS: Record<string, { amount: number; currency: string; label: string }> = {
-  pro:    { amount: 2900,  currency: 'PKR', label: 'Kobin AI Pro'    }, // adjust to real PKR price
-  agency: { amount: 7900,  currency: 'PKR', label: 'Kobin AI Agency' },
+  pro: { amount: 8000, currency: 'PKR', label: 'Kobin AI Pro' },
+  agency: { amount: 22000, currency: 'PKR', label: 'Kobin AI Agency' },
 }
 
 export async function POST(req: NextRequest) {
@@ -89,7 +89,7 @@ export async function POST(req: NextRequest) {
     })
   } catch (err: any) {
     console.error('[payments/checkout] error:', err)
-    return NextResponse.json({ 
+    return NextResponse.json({
       error: err.message || 'Payment init failed',
       detail: String(err)
     }, { status: 500 })

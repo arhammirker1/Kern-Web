@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
     const plan = orderParts[1]
     const user_id = orderParts[2]
 
-    if (event === 'payment.success' || data.state === 'PAID') {
+    if (event === 'payment.succeeded' || data.state === 'TRACKER_ENDED') {
       // 1. Update payment attempt status
       await db
         .from('payment_attempts')
@@ -77,7 +77,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ received: true, upgraded: true })
     }
 
-    if (event === 'payment.failed' || data.state === 'FAILED') {
+    if (event === 'payment.failed' || data.state === 'TRACKER_ENROLLED') {
       await db
         .from('payment_attempts')
         .update({ status: 'failed' })

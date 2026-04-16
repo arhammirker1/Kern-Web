@@ -51,7 +51,7 @@ async function safepayFetch<T>(
   })
 
   const rawText = await res.text()
-  
+
   let json: any = null
   try {
     json = JSON.parse(rawText)
@@ -129,8 +129,8 @@ export function buildCheckoutUrl(params: {
       : 'https://sandbox.getsafepay.com'
 
   const qs = new URLSearchParams({
-    env: params.env === 'production' ? 'production' : 'sandbox',
     beacon: params.token,
+    merchant_api_key: PUBLIC_KEY,
     order_id: params.order_id,
     cancel_url: params.cancel_url,
     redirect_url: params.redirect_url,
@@ -152,7 +152,7 @@ export async function getPaymentStatus(tracker_token: string): Promise<{
   const tracker = json?.data?.tracker || json?.data || {}
   return {
     state: tracker.state || 'unknown',
-    paid: tracker.state === 'COMPLETE' || tracker.state === 'PAID',
+    paid: tracker.state === 'COMPLETE' || tracker.state === 'TRACKER_ENDED',
     amount: tracker.purchase_totals?.base_amount?.amount,
     currency: tracker.purchase_totals?.base_amount?.currency,
   }
