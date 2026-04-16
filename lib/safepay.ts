@@ -186,14 +186,14 @@ export async function getPaymentStatus(tracker_token: string): Promise<{
   amount: number
   currency: string
 }> {
-  const json = await safepayFetch<any>(`/order/payments/v3/${tracker_token}`)
+  const json = await safepayFetch<any>(`/order/v1/${tracker_token}`)
   const tracker = json?.data?.tracker || json?.data || {}
 
   return {
     state: tracker.state || 'unknown',
     paid: tracker.state === 'COMPLETE' || tracker.state === 'TRACKER_ENDED',
-    amount: tracker.purchase_totals?.base_amount?.amount,
-    currency: tracker.purchase_totals?.base_amount?.currency,
+    amount: tracker.amount || tracker.purchase_totals?.base_amount?.amount,
+    currency: tracker.currency || tracker.purchase_totals?.base_amount?.currency,
   }
 }
 
