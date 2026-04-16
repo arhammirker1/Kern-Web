@@ -19,10 +19,10 @@ const config: NextConfig = {
       {
         source: '/(.*)',
         headers: [
-          { key: 'X-Frame-Options',          value: 'DENY' },
-          { key: 'X-Content-Type-Options',   value: 'nosniff' },
-          { key: 'Referrer-Policy',          value: 'strict-origin-when-cross-origin' },
-          { key: 'X-XSS-Protection',         value: '1; mode=block' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
           // HSTS — tells browsers to always use HTTPS for 2 years
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           {
@@ -39,7 +39,7 @@ const config: NextConfig = {
               "font-src 'self' https://fonts.gstatic.com data:",
               "img-src 'self' data: https: blob:",
               "connect-src 'self' https://*.supabase.co wss://*.supabase.co https://api.mixpanel.com https://api-js.mixpanel.com https://cdn.mxpnl.com https://www.google-analytics.com https://www.googletagmanager.com https://api.anthropic.com https://sandbox.api.getsafepay.com https://api.getsafepay.com",
-              "frame-src https://www.googletagmanager.com https://www.producthunt.com https://sandbox.getsafepay.com https://getsafepay.com",
+              "frame-src https://www.googletagmanager.com https://www.producthunt.com https://sandbox.api.getsafepay.com https://www.getsafepay.com",
               "worker-src blob: 'self'",
               "form-action 'self' https://sandbox.getsafepay.com https://getsafepay.com",
             ].join('; '),

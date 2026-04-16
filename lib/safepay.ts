@@ -125,10 +125,11 @@ export function buildCheckoutUrl(params: {
 }): string {
   const base =
     params.env === 'production'
-      ? 'https://getsafepay.com'
-      : 'https://sandbox.getsafepay.com'
+      ? 'https://www.getsafepay.com'
+      : 'https://sandbox.api.getsafepay.com'   // ← was sandbox.getsafepay.com (doesn't exist)
 
   const qs = new URLSearchParams({
+    env: params.env === 'production' ? 'production' : 'sandbox',  // ← add env param
     beacon: params.token,
     merchant_api_key: PUBLIC_KEY,
     order_id: params.order_id,
@@ -137,7 +138,7 @@ export function buildCheckoutUrl(params: {
     source: 'custom',
   })
 
-  return `${base}/checkout/pay?${qs.toString()}`
+  return `${base}/components?${qs.toString()}`  // ← was /checkout/pay, should be /components
 }
 
 // ── Retrieve order/payment status ─────────────────────────────────────────────
