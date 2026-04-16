@@ -157,7 +157,7 @@ export function buildCheckoutUrl(params: {
 }): string {
   const base =
     params.env === 'production'
-      ? 'https://www.getsafepay.com'
+      ? 'https://getsafepay.com'
       : 'https://sandbox.api.getsafepay.com'
 
   if (!params.token) {
@@ -172,7 +172,7 @@ export function buildCheckoutUrl(params: {
   const qsObj: Record<string, string> = {
     beacon: params.token,
     tbt: params.tbt,
-    environment,
+    env: environment,
     source: params.source || 'hosted',
     redirect_url: params.redirect_url,
     cancel_url: params.cancel_url,
@@ -184,7 +184,7 @@ export function buildCheckoutUrl(params: {
   }
 
   const qs = new URLSearchParams(qsObj)
-  return `${base}/checkout/pay?${qs.toString()}`
+  return `${base}/components?${qs.toString()}`
 }
 
 // ── Retrieve order/payment status ─────────────────────────────────────────────
