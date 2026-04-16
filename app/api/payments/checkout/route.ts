@@ -3,7 +3,7 @@
 // Called by the frontend upgrade page.
 
 import { NextRequest, NextResponse } from 'next/server'
-import { createGuestToken, createPaymentTracker, createPassportToken, buildCheckoutUrl } from '@/lib/safepay'
+import { createPaymentTracker, buildCheckoutUrl } from '@/lib/safepay'
 import { getAdminDB } from '@/lib/admin-db'
 
 // Plan config: amount in PKR lowest denomination (1 PKR = 100 paisas)
@@ -16,7 +16,7 @@ const PLANS: Record<string, { amount: number; currency: string; label: string }>
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { plan, email, phone, user_id, first_name, last_name } = body
+    const { plan, email, phone, user_id } = body
 
     // Validate plan
     if (!plan || !PLANS[plan]) {
@@ -29,22 +29,7 @@ export async function POST(req: NextRequest) {
     const planConfig = PLANS[plan]
     const order_id = `kobin_${plan}_${user_id || 'guest'}_${Date.now()}`
 
-    // 1. Create guest JWT for the user (non-fatal if Safepay endpoint unavailable)
-    let guestToken: string | null = null
-    try {
-      const guestResult = await createGuestToken({
-        email,
-        phone,
-        country: 'PK',
-        first_name: first_name || '',
-        last_name: last_name || '',
-      })
-      guestToken = guestResult.token
-    } catch (guestErr) {
-      console.warn('[payments/checkout] Guest token failed (non-fatal):', guestErr)
-    }
-
-    // 2. Create a payment tracker
+    // 1. Create a payment tracker via /order/v1/init (matches @sfpy/node-sdk)
     const { token: trackerToken } = await createPaymentTracker({
       amount: planConfig.amount,
       currency: planConfig.currency,
@@ -52,22 +37,19 @@ export async function POST(req: NextRequest) {
       source: `kobin_${plan}`,
     })
 
-    // 3. Create passport / authentication token (required by Safepay checkout)
-    const tbt = await createPassportToken()
-
-    // 4. Build checkout URL
+    // 2. Build checkout URL (matches @sfpy/node-sdk checkout.create)
     const origin = req.headers.get('origin') || 'https://www.kobin.team'
     const checkout_url = buildCheckoutUrl({
       token: trackerToken,
-      tbt,
+      order_id,
       cancel_url: `${origin}/upgrade?cancelled=1&plan=${plan}`,
       redirect_url: `${origin}/upgrade/success?order_id=${order_id}&plan=${plan}&tracker=${trackerToken}`,
       env: process.env.SAFEPAY_ENV === 'production' ? 'production' : 'sandbox',
-      source: 'hosted',
-      user_id: guestToken || undefined,
+      source: 'custom',
+      webhooks: true,
     })
 
-    // 5. Log pending payment in DB
+    // 3. Log pending payment in DB
     if (user_id) {
       try {
         const db = getAdminDB()
@@ -90,7 +72,6 @@ export async function POST(req: NextRequest) {
       checkout_url,
       tracker: trackerToken,
       order_id,
-      guest_token: guestToken,
     })
   } catch (err: any) {
     console.error('[payments/checkout] error:', err)

@@ -99,19 +99,17 @@ export async function createPaymentTracker(payload: {
   order_id: string
   source?: string
 }): Promise<{ token: string }> {
-  const json = await safepayFetch<any>('/order/payments/v3/', {
+  const environment = process.env.SAFEPAY_ENV === 'production' ? 'production' : 'sandbox'
+  const json = await safepayFetch<any>('/order/v1/init', {
     method: 'POST',
     body: JSON.stringify({
-      merchant_api_key: PUBLIC_KEY,
-      intent: 'CYBERSOURCE',
-      mode: 'payment',
-      entry_mode: 'raw',
-      currency: payload.currency,
+      client: PUBLIC_KEY,
       amount: payload.amount,
-      metadata: { order_id: payload.order_id, source: payload.source || 'kobin_subscription' },
+      currency: payload.currency,
+      environment,
     }),
   })
-  const token = json?.data?.tracker?.token
+  const token = json?.data?.token
   if (!token) {
     console.error('[safepay] createPaymentTracker: unexpected response shape:', JSON.stringify(json))
     throw new Error('Safepay did not return a tracker token. Check the response shape above.')
@@ -137,23 +135,23 @@ export async function createPassportToken(): Promise<string> {
 }
 
 // ── Build hosted checkout URL ─────────────────────────────────────────────────
-// Per Safepay Express Checkout docs the URL requires:
+// Per @sfpy/node-sdk the URL requires:
 //   beacon        – tracker token from createPaymentTracker
-//   tbt           – passport / auth token from createPassportToken
-//   environment   – 'sandbox' | 'production'
-//   source        – 'hosted' | 'popup' | 'mobile' | 'custom'
+//   env           – 'sandbox' | 'production'
+//   source        – 'custom' | 'hosted' | 'popup' | 'mobile'
+//   order_id      – your internal order reference
 //   redirect_url  – success redirect
 //   cancel_url    – cancellation redirect
-//   user_id       – (optional) customer token from createGuestToken
+//   webhooks      – 'true' | 'false'
 
 export function buildCheckoutUrl(params: {
   token: string
-  tbt: string
+  order_id: string
   cancel_url: string
   redirect_url: string
   env?: 'sandbox' | 'production'
   source?: string
-  user_id?: string
+  webhooks?: boolean
 }): string {
   const base =
     params.env === 'production'
@@ -163,24 +161,17 @@ export function buildCheckoutUrl(params: {
   if (!params.token) {
     throw new Error('[safepay] buildCheckoutUrl: tracker token is missing or undefined')
   }
-  if (!params.tbt) {
-    throw new Error('[safepay] buildCheckoutUrl: passport (tbt) token is missing or undefined')
-  }
 
   const environment = params.env === 'production' ? 'production' : 'sandbox'
 
   const qsObj: Record<string, string> = {
     beacon: params.token,
-    tbt: params.tbt,
-    env: environment,
-    source: params.source || 'hosted',
-    redirect_url: params.redirect_url,
     cancel_url: params.cancel_url,
-  }
-
-  // Optionally attach customer token to prefill details on checkout page
-  if (params.user_id) {
-    qsObj.user_id = params.user_id
+    env: environment,
+    order_id: params.order_id,
+    redirect_url: params.redirect_url,
+    source: params.source || 'custom',
+    webhooks: String(params.webhooks ?? true),
   }
 
   const qs = new URLSearchParams(qsObj)
