@@ -157,8 +157,8 @@ export function buildCheckoutUrl(params: {
 }): string {
   const base =
     params.env === 'production'
-      ? 'https://getsafepay.com'
-      : 'https://sandbox.api.getsafepay.com'
+      ? 'https://getsafepay.com/checkout'
+      : 'https://sandbox.api.getsafepay.com/checkout'
 
   if (!params.token) {
     throw new Error('[safepay] buildCheckoutUrl: tracker token is missing or undefined')
@@ -184,7 +184,7 @@ export function buildCheckoutUrl(params: {
   }
 
   const qs = new URLSearchParams(qsObj)
-  return `${base}/components?${qs.toString()}`
+  return `${base}/pay?${qs.toString()}`
 }
 
 // ── Retrieve order/payment status ─────────────────────────────────────────────
