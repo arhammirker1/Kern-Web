@@ -111,7 +111,12 @@ export async function createPaymentTracker(payload: {
       metadata: { order_id: payload.order_id, source: payload.source || 'kobin_subscription' },
     }),
   })
-  return { token: json?.data?.tracker?.token }
+  const token = json?.data?.tracker?.token
+  if (!token) {
+    console.error('[safepay] createPaymentTracker: unexpected response shape:', JSON.stringify(json))
+    throw new Error('Safepay did not return a tracker token. Check the response shape above.')
+  }
+  return { token }
 }
 
 // ── Build hosted checkout URL ─────────────────────────────────────────────────
@@ -126,10 +131,13 @@ export function buildCheckoutUrl(params: {
   const base =
     params.env === 'production'
       ? 'https://www.getsafepay.com'
-      : 'https://sandbox.api.getsafepay.com'   // ← was sandbox.getsafepay.com (doesn't exist)
+      : 'https://sandbox.api.getsafepay.com'
+
+  if (!params.token) {
+    throw new Error('[safepay] buildCheckoutUrl: tracker token is missing or undefined')
+  }
 
   const qs = new URLSearchParams({
-    env: params.env === 'production' ? 'production' : 'sandbox',  // ← add env param
     beacon: params.token,
     merchant_api_key: PUBLIC_KEY,
     order_id: params.order_id,
@@ -138,7 +146,7 @@ export function buildCheckoutUrl(params: {
     source: 'custom',
   })
 
-  return `${base}/components?${qs.toString()}`  // ← was /checkout/pay, should be /components
+  return `${base}/checkout/pay?${qs.toString()}`
 }
 
 // ── Retrieve order/payment status ─────────────────────────────────────────────
