@@ -186,13 +186,12 @@ export async function getPaymentStatus(tracker_token: string): Promise<{
   amount: number
   currency: string
 }> {
-  // Use the reporter API for the newer SDK flow
-  const json = await safepayFetch<any>(`/reporter/api/v1/payments/${tracker_token}`)
+  const json = await safepayFetch<any>(`/order/payments/v3/${tracker_token}`)
   const tracker = json?.data?.tracker || json?.data || {}
 
   return {
     state: tracker.state || 'unknown',
-    paid: tracker.state === 'TRACKER_ENDED' || tracker.state === 'COMPLETE',
+    paid: tracker.state === 'COMPLETE' || tracker.state === 'TRACKER_ENDED',
     amount: tracker.purchase_totals?.base_amount?.amount,
     currency: tracker.purchase_totals?.base_amount?.currency,
   }
