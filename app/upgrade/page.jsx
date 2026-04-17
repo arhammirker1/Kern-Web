@@ -61,17 +61,17 @@ const Check = () => (
 
 // ── Main component (wrapped for useSearchParams) ──────────────────────────────
 function UpgradeContent() {
-  const searchParams  = useSearchParams()
-  const cancelled     = searchParams.get('cancelled')
-  const preselect     = searchParams.get('plan') ?? 'pro'
-  const featureHit    = searchParams.get('feature')   // e.g. 'crm', 'gmail'
+  const searchParams = useSearchParams()
+  const cancelled = searchParams.get('cancelled')
+  const preselect = searchParams.get('plan') ?? 'pro'
+  const featureHit = searchParams.get('feature')   // e.g. 'crm', 'gmail'
   const [selected, setSelected] = useState(preselect === 'agency' ? 'agency' : 'pro')
 
   // ── Track page view ──────────────────────────────────────────────────────
   useEffect(() => {
     track('Upgrade Page Viewed', {
       preselected_plan: preselect,
-      cancelled:        !!cancelled,
+      cancelled: !!cancelled,
       feature_wall_hit: featureHit ?? null,
     })
   }, [])
@@ -83,16 +83,16 @@ function UpgradeContent() {
   }
 
   const features = selected === 'agency' ? AGENCY_FEATURES : PRO_FEATURES
-  const price    = selected === 'agency' ? 'PKR 22,000' : 'PKR 8,000'
+  const price = selected === 'agency' ? 'PKR 22,000' : 'PKR 8,000'
 
   return (
     <>
       <Nav />
       <div style={{
-        paddingTop:   '56px',
-        background:   '#F6F4EF',
-        minHeight:    '100vh',
-        fontFamily:   "'Geist', sans-serif",
+        paddingTop: '56px',
+        background: '#F6F4EF',
+        minHeight: '100vh',
+        fontFamily: "'Geist', sans-serif",
       }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '64px 24px 120px' }}>
 
@@ -112,16 +112,16 @@ function UpgradeContent() {
           {/* Cancelled banner */}
           {cancelled && (
             <div style={{
-              padding:      '12px 16px',
-              background:   'rgba(192,59,48,0.06)',
-              border:       '1px solid rgba(192,59,48,0.2)',
+              padding: '12px 16px',
+              background: 'rgba(192,59,48,0.06)',
+              border: '1px solid rgba(192,59,48,0.2)',
               borderRadius: '10px',
-              fontSize:     '13px',
-              color:        '#C03B30',
+              fontSize: '13px',
+              color: '#C03B30',
               marginBottom: '24px',
-              display:      'flex',
-              alignItems:   'center',
-              gap:          '8px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
             }}>
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <circle cx="7" cy="7" r="6.5" stroke="#C03B30" strokeWidth="1.2" />
@@ -134,16 +134,16 @@ function UpgradeContent() {
           {/* Feature wall message */}
           {featureHit && (
             <div style={{
-              padding:      '14px 18px',
-              background:   'rgba(76,63,212,0.06)',
-              border:       '1px solid rgba(76,63,212,0.18)',
+              padding: '14px 18px',
+              background: 'rgba(76,63,212,0.06)',
+              border: '1px solid rgba(76,63,212,0.18)',
               borderRadius: '10px',
-              fontSize:     '14px',
-              color:        '#4C3FD4',
+              fontSize: '14px',
+              color: '#4C3FD4',
               marginBottom: '32px',
-              display:      'flex',
-              alignItems:   'center',
-              gap:          '10px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
             }}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M8 1l1.8 3.6L14 5.6l-3 2.9.7 4.1L8 10.5l-3.7 2.1.7-4.1-3-2.9 4.2-.9L8 1z"
@@ -157,17 +157,17 @@ function UpgradeContent() {
           {/* Header */}
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <div style={{
-              display:     'inline-flex',
-              alignItems:  'center',
-              gap:         '8px',
-              padding:     '6px 14px',
-              background:  'rgba(76,63,212,0.08)',
-              border:      '1px solid rgba(76,63,212,0.18)',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 14px',
+              background: 'rgba(76,63,212,0.08)',
+              border: '1px solid rgba(76,63,212,0.18)',
               borderRadius: '100px',
-              fontSize:    '12px',
-              color:       '#4C3FD4',
+              fontSize: '12px',
+              color: '#4C3FD4',
               marginBottom: '20px',
-              fontFamily:  "'Geist Mono', monospace",
+              fontFamily: "'Geist Mono', monospace",
               letterSpacing: '0.06em',
               textTransform: 'uppercase',
             }}>
@@ -175,13 +175,13 @@ function UpgradeContent() {
               Early Founder Pricing
             </div>
             <h1 style={{
-              fontFamily:    "'Fraunces', serif",
-              fontSize:      'clamp(36px, 4vw, 56px)',
-              fontWeight:    300,
+              fontFamily: "'Fraunces', serif",
+              fontSize: 'clamp(36px, 4vw, 56px)',
+              fontWeight: 300,
               letterSpacing: '-0.03em',
-              color:         '#0E0E0D',
-              lineHeight:    1.1,
-              marginBottom:  '16px',
+              color: '#0E0E0D',
+              lineHeight: 1.1,
+              marginBottom: '16px',
             }}>
               Unlock your full<br /><em style={{ color: '#4C3FD4' }}>agency workspace.</em>
             </h1>
@@ -193,36 +193,36 @@ function UpgradeContent() {
 
           {/* Plan Toggle */}
           <div style={{
-            display:        'flex',
+            display: 'flex',
             justifyContent: 'center',
-            gap:            '0',
-            marginBottom:   '40px',
-            background:     '#EDE9E1',
-            borderRadius:   '12px',
-            padding:        '4px',
-            maxWidth:       '320px',
-            margin:         '0 auto 40px',
+            gap: '0',
+            marginBottom: '40px',
+            background: '#EDE9E1',
+            borderRadius: '12px',
+            padding: '4px',
+            maxWidth: '320px',
+            margin: '0 auto 40px',
           }}>
             {[
-              { key: 'pro',    label: 'Pro — PKR 8K/mo'    },
+              { key: 'pro', label: 'Pro — PKR 8K/mo' },
               { key: 'agency', label: 'Agency — PKR 22K/mo' },
             ].map(({ key, label }) => (
               <button
                 key={key}
                 onClick={() => selectPlan(key)}
                 style={{
-                  flex:         1,
-                  padding:      '10px 12px',
+                  flex: 1,
+                  padding: '10px 12px',
                   borderRadius: '9px',
-                  border:       'none',
-                  cursor:       'pointer',
-                  fontSize:     '13px',
-                  fontWeight:   selected === key ? 600 : 400,
-                  color:        selected === key ? '#0E0E0D' : '#9C9890',
-                  background:   selected === key ? '#fff' : 'transparent',
-                  boxShadow:    selected === key ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
-                  transition:   'all 0.15s ease',
-                  fontFamily:   "'Geist', sans-serif",
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '13px',
+                  fontWeight: selected === key ? 600 : 400,
+                  color: selected === key ? '#0E0E0D' : '#9C9890',
+                  background: selected === key ? '#fff' : 'transparent',
+                  boxShadow: selected === key ? '0 1px 4px rgba(0,0,0,0.08)' : 'none',
+                  transition: 'all 0.15s ease',
+                  fontFamily: "'Geist', sans-serif",
                 }}
               >
                 {label}
@@ -232,18 +232,18 @@ function UpgradeContent() {
 
           {/* Main grid */}
           <div style={{
-            display:             'grid',
+            display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap:                 '24px',
-            alignItems:          'start',
+            gap: '24px',
+            alignItems: 'start',
           }}>
 
             {/* ── Plan card ── */}
             <div style={{
-              background:   '#0E0E0D',
+              background: '#0E0E0D',
               borderRadius: '20px',
-              overflow:     'hidden',
-              color:        '#F0EDE6',
+              overflow: 'hidden',
+              color: '#F0EDE6',
             }}>
               {/* Top accent */}
               <div style={{ height: '3px', background: 'linear-gradient(90deg, #4C3FD4, #6358E8)' }} />
@@ -252,16 +252,16 @@ function UpgradeContent() {
                 {/* Badge */}
                 {selected === 'pro' && (
                   <div style={{
-                    display:      'inline-flex',
-                    alignItems:   'center',
-                    gap:          '6px',
-                    padding:      '4px 10px',
-                    background:   'rgba(76,63,212,0.2)',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '4px 10px',
+                    background: 'rgba(76,63,212,0.2)',
                     borderRadius: '100px',
-                    fontSize:     '11px',
-                    color:        '#8B81F8',
+                    fontSize: '11px',
+                    color: '#8B81F8',
                     marginBottom: '16px',
-                    fontFamily:   "'Geist Mono', monospace",
+                    fontFamily: "'Geist Mono', monospace",
                     letterSpacing: '0.05em',
                     textTransform: 'uppercase',
                   }}>
@@ -287,11 +287,11 @@ function UpgradeContent() {
                 {/* Price */}
                 <div style={{ marginBottom: '6px' }}>
                   <span style={{
-                    fontFamily:    "'Fraunces', serif",
-                    fontSize:      '48px',
-                    fontWeight:    300,
+                    fontFamily: "'Fraunces', serif",
+                    fontSize: '48px',
+                    fontWeight: 300,
                     letterSpacing: '-0.03em',
-                    lineHeight:    1,
+                    lineHeight: 1,
                   }}>
                     {price}
                   </span>
@@ -319,16 +319,16 @@ function UpgradeContent() {
 
                 {/* 14-day trial note */}
                 <div style={{
-                  padding:      '10px 14px',
-                  background:   'rgba(13,107,79,0.12)',
-                  border:       '1px solid rgba(13,107,79,0.2)',
+                  padding: '10px 14px',
+                  background: 'rgba(13,107,79,0.12)',
+                  border: '1px solid rgba(13,107,79,0.2)',
                   borderRadius: '8px',
-                  fontSize:     '12px',
-                  color:        '#3DB88A',
+                  fontSize: '12px',
+                  color: '#3DB88A',
                   marginBottom: '20px',
-                  display:      'flex',
-                  alignItems:   'center',
-                  gap:          '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
                 }}>
                   <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <circle cx="6.5" cy="6.5" r="5.8" stroke="#3DB88A" strokeWidth="1.2" />
@@ -352,10 +352,10 @@ function UpgradeContent() {
 
               {/* Safepay trust badge */}
               <div style={{
-                background:   '#fff',
-                border:       '1px solid #E0DDD6',
+                background: '#fff',
+                border: '1px solid #E0DDD6',
                 borderRadius: '16px',
-                padding:      '24px',
+                padding: '24px',
               }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '16px' }}>
                   {/* Safepay shield */}
@@ -395,40 +395,40 @@ function UpgradeContent() {
 
               {/* Savings calculator */}
               <div style={{
-                background:   '#0E0E0D',
-                border:       '1px solid #2A2A28',
+                background: '#0E0E0D',
+                border: '1px solid #2A2A28',
                 borderRadius: '16px',
-                padding:      '24px',
-                color:        '#F0EDE6',
+                padding: '24px',
+                color: '#F0EDE6',
               }}>
                 <div style={{ fontSize: '12px', color: '#555552', fontFamily: "'Geist Mono', monospace", letterSpacing: '0.06em', textTransform: 'uppercase', marginBottom: '12px' }}>
                   What you replace
                 </div>
                 {[
-                  { tool: 'Slack',   price: '$15/user/mo' },
-                  { tool: 'Notion',  price: '$16/mo'      },
-                  { tool: 'HubSpot', price: '$90/mo'      },
-                  { tool: 'Linear',  price: '$8/user/mo'  },
-                  { tool: 'Buffer',  price: '$18/mo'      },
+                  { tool: 'Slack', price: '$15/user/mo' },
+                  { tool: 'Notion', price: '$16/mo' },
+                  { tool: 'HubSpot', price: '$90/mo' },
+                  { tool: 'Linear', price: '$8/user/mo' },
+                  { tool: 'Buffer', price: '$18/mo' },
                 ].map(({ tool, price }) => (
                   <div key={tool} style={{
-                    display:         'flex',
-                    justifyContent:  'space-between',
-                    alignItems:      'center',
-                    borderBottom:    '1px solid #1A1A18',
-                    padding:         '8px 0',
-                    fontSize:        '13px',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    borderBottom: '1px solid #1A1A18',
+                    padding: '8px 0',
+                    fontSize: '13px',
                   }}>
                     <span style={{ color: '#555552' }}><s>{tool}</s></span>
                     <span style={{ color: '#3A3A38' }}>{price}</span>
                   </div>
                 ))}
                 <div style={{
-                  display:        'flex',
+                  display: 'flex',
                   justifyContent: 'space-between',
-                  marginTop:      '12px',
-                  fontSize:       '15px',
-                  fontWeight:     600,
+                  marginTop: '12px',
+                  fontSize: '15px',
+                  fontWeight: 600,
                 }}>
                   <span style={{ color: '#F0EDE6' }}>You save</span>
                   <span style={{ color: '#3DB88A' }}>~$220/mo</span>
@@ -437,10 +437,10 @@ function UpgradeContent() {
 
               {/* FAQ */}
               <div style={{
-                background:   '#fff',
-                border:       '1px solid #E0DDD6',
+                background: '#fff',
+                border: '1px solid #E0DDD6',
                 borderRadius: '16px',
-                padding:      '24px',
+                padding: '24px',
               }}>
                 <div style={{ fontSize: '13px', fontWeight: 600, color: '#0E0E0D', marginBottom: '14px' }}>
                   Common questions
@@ -461,13 +461,13 @@ function UpgradeContent() {
                 ].map(({ q, a }) => (
                   <details key={q} style={{ borderBottom: '1px solid #F0EDE6', paddingBottom: '4px' }}>
                     <summary style={{
-                      fontSize:  '13px',
+                      fontSize: '13px',
                       fontWeight: 500,
-                      cursor:    'pointer',
-                      color:     '#0E0E0D',
-                      padding:   '10px 0',
+                      cursor: 'pointer',
+                      color: '#0E0E0D',
+                      padding: '10px 0',
                       listStyle: 'none',
-                      display:   'flex',
+                      display: 'flex',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                     }}>
@@ -485,13 +485,13 @@ function UpgradeContent() {
               <Link
                 href="/"
                 style={{
-                  fontSize:       '13px',
-                  color:          '#9C9890',
+                  fontSize: '13px',
+                  color: '#9C9890',
                   textDecoration: 'none',
-                  fontFamily:     "'Geist Mono', monospace",
-                  textAlign:      'center',
-                  display:        'block',
-                  padding:        '8px',
+                  fontFamily: "'Geist Mono', monospace",
+                  textAlign: 'center',
+                  display: 'block',
+                  padding: '8px',
                 }}
               >
                 ← Back to home

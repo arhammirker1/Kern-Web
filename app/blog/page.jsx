@@ -16,6 +16,15 @@ export default function BlogPage() {
   // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
+        {
+  thumbClass: 'thumb-dark', thumbText: 'Agency\nFile\nSystem', thumbLabel: 'OPERATIONS GUIDE',
+  category: 'cat-guide', catLabel: 'Guide',
+  title: 'Your Agency Is Losing 12 Hours a Week to File Chaos — Here\'s the System That Fixes It',
+  excerpt: 'Google Drive works at 3 clients. It quietly breaks at 10. Here are the six failure modes every agency hits — and the file management architecture that scales to 50+ clients without a dedicated ops person.',
+  meta: 'Apr 17 · 14 min',
+  href: '/blog/agency-file-management',
+},
+
     {
   thumbClass: 'thumb-vi', thumbText: 'Vault\nFile\nManagement', thumbLabel: 'PRODUCT DEEP DIVE',
   category: 'cat-build', catLabel: 'Product Deep Dive',
@@ -203,6 +212,16 @@ export default function BlogPage() {
               url: 'https://www.kobin.team',
             },
             blogPost: [
+              {
+  "@type": "BlogPosting",
+  "headline": "Your Agency Is Losing 12 Hours a Week to File Chaos — Here's the System That Fixes It",
+  "url": "https://www.kobin.team/blog/agency-file-management",
+  "datePublished": "2026-04-17",
+  "author": { "@type": "Person", "name": "Arham Mirkar" },
+  "keywords": "agency file management, how to organize client files agency, client deliverable management, google drive alternatives for agencies, client approval process agency",
+  "description": "Why Google Drive fails agencies at scale, the six file management failure modes, and the structured vault system agencies with 20+ clients use to keep deliverables organized and delivered on time."
+},
+
               {
   "@type": "BlogPosting",
   "headline": "Agency File Management in 2026 — Kobin Vault Deep Dive",

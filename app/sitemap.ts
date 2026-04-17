@@ -208,6 +208,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.98,
     },
     {
+      url: `${SITE}/blog/agency-file-management`,
+      lastModified: new Date('2026-04-14'),
+      changeFrequency: 'weekly',
+      priority: 0.98,
+    },
+    {
       url: `${SITE}/privacy`,
       lastModified: new Date('2026-04-15'),
       changeFrequency: 'monthly',
