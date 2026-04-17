@@ -1055,7 +1055,7 @@ export default function AgencyFileManagementPost() {
 
             <div className="post-math-block" style={{ marginTop: '12px' }}>
               <div className="math-row math-total">
-                <span>Kobin Agency — annual (5 seats, Vault + all modules)</span>
+                <span>Kobin Agency — monthy (unlimited seats, Vault + all modules)</span>
                 <span className="math-num" style={{ color: '#4DD6A5' }}>$79/mo</span>
               </div>
             </div>
