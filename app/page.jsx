@@ -8,10 +8,6 @@ import { supabase } from '../lib/supabase'
 import { track, identifyUser } from '../lib/mixpanel'
 import Image from 'next/image'
 
-// ─── Base64 mascot image (stored outside component to avoid re-creation) ───
-const MASCOT_SRC =
-  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAGvCAYAAABy0V2hAAEAAElEQVR4nOxdd5gV1fl+z9Q7t28BFlilKgIWQEUpdsC6doMtxlhiTTEm9miiv5ii0cSYaGxYo9hl7QWMwooiUkUUkA7L1ttm5k49vz/OPbN3l6UYscV5n2efhd27994ZO3O+uznnnN87AIQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIESJEiBAhQoQIEeL/FrKjnzJEiBAhvvMgRNzq773fByEEhHReliml9NHnsm0bsixDEATYtg1FUSCKIorFImRZhu/7cBwH8XgcxWIRkiTB8zyoqgrHcYK/kSQJtm0DADyPQpZlOI4DTdOg6zqi0SgIREiyAEkSY4cxX099Ap+6IBBB4UEgEnzqwrZtRKNROI4D27bR3d2NWCyGWCyGWCyGWCyGWCwGAMhms8hms8hkMujo6MDOnTsRj8cRCoXQ1NSEeDyOWCyGWCyGXC6HQqGAYrGIdDqNRCIBAKiurkYsFgMA5PN5FItF5PN5ZLNZFItF5HI5lEolFAoFFAoFVFRUIJfLQZIkuK4LVVXhuq7380VRgG3bcBwHtm0jGo0im80in8+jWCzCcRwUCgUUi0UAQCaTge/7yGazKJVKqKyshG3byGazKBaLKBQKKJVKqKqoQKFQQKFQgG3byGazKBQKKJVKKJVKKJfLKJVKcF0XxWIRxWIRhUIBxWIRhUIBxWIR5XIZpVIJxWIR5XIZxWIRhUIBxWIRpVIJpVIJlUoFpWIRpWIR5XIZpVIJpVIJpVIJpVIJpVIJpVIJpVIJpVIJuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwOuVwO+X9wTiNSKkMWGQAAAABJRU5ErkJggg=='
-
 const KernMark = ({ size = 16 }) => (
   <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
     <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
@@ -22,16 +18,12 @@ const KernMark = ({ size = 16 }) => (
   </svg>
 )
 
-// Generate a simple referral code from email
 function makeRefCode(email) {
   return email.replace(/[^a-z0-9]/gi, '').slice(0, 8).toLowerCase() +
     Math.random().toString(36).slice(2, 6)
 }
 
-
-
 export default function Home() {
-  // null = not submitted, { message, refLink } = submitted
   const [heroResult, setHeroResult]   = useState(null)
   const [finalResult, setFinalResult] = useState(null)
 
@@ -42,7 +34,6 @@ export default function Home() {
   const [copiedHero,  setCopiedHero]  = useState(false)
   const [waitlistCount, setWaitlistCount] = useState(312)
 
-  // Scroll-reveal
   useEffect(() => {
     const obs = new IntersectionObserver(
       (els) => els.forEach((el) => { if (el.isIntersecting) el.target.classList.add('in') }),
@@ -52,7 +43,6 @@ export default function Home() {
     return () => obs.disconnect()
   }, [])
 
-  // Live waitlist counter
   useEffect(() => {
     supabase
       .from('waitlist')
@@ -62,90 +52,83 @@ export default function Home() {
       })
   }, [])
 
-  // Read ?ref= from URL once on mount
   const urlRef = typeof window !== 'undefined'
     ? new URLSearchParams(window.location.search).get('ref')
     : null
 
   async function signup(email, setResult, setErr, clearEmail, source = 'hero') {
-  if (!email || !email.includes('@')) {
-    setErr(true)
-    setTimeout(() => setErr(false), 1500)
-    return
-  }
+    if (!email || !email.includes('@')) {
+      setErr(true)
+      setTimeout(() => setErr(false), 1500)
+      return
+    }
+    const { data, error } = await supabase
+      .from('waitlist')
+      .insert({
+        email,
+        source,
+        referred_by: urlRef,
+        metadata: {
+          user_agent: navigator.userAgent,
+          referrer: document.referrer || null,
+          url: window.location.href,
+          timestamp: new Date().toISOString()
+        }
+      })
+      .select('position, referral_code')
+      .single()
 
-  const { data, error } = await supabase
-    .from('waitlist')
-    .insert({
-      email,
-      source,
-      referred_by: urlRef,
-      metadata: {
-        user_agent: navigator.userAgent,
-        referrer: document.referrer || null,
-        url: window.location.href,
-        timestamp: new Date().toISOString()
+    if (error) {
+      if (error.code === '23505') {
+        setResult({ message: "You're already on the list! Check your inbox.", refLink: null })
+        identifyUser(email)
+        track('Waitlist Signup Duplicate', { source })
+        return
       }
+      setErr(true)
+      setTimeout(() => setErr(false), 1500)
+      return
+    }
+
+    const refLink = `${window.location.origin}${window.location.pathname}?ref=${data.referral_code}`
+    setResult({ message: `You're #${data.position} on the waitlist!`, refLink })
+    setTimeout(() => { window.location.href = '/thank-you' }, 1500)
+
+    identifyUser(email, {
+      'Waitlist Position': data.position,
+      'Signup Source': source,
+      'Referred By': urlRef || null,
+      'Referral Code': data.referral_code,
     })
-    .select('position, referral_code')
-    .single()
-
-  if (error) {
-    // Already on the list
-    if (error.code === '23505') {
-  setResult({ message: "You're already on the list! Check your inbox.", refLink: null })
-  identifyUser(email)
-  track('Waitlist Signup Duplicate', { source })
-  return
-}
-    setErr(true)
-    setTimeout(() => setErr(false), 1500)
-    return
+    track('Waitlist Signup', {
+      source,
+      position: data.position,
+      referred_by: urlRef || null,
+      referral_code: data.referral_code,
+    })
+    clearEmail('')
   }
-
-  const refLink = `${window.location.origin}${window.location.pathname}?ref=${data.referral_code}`
-setResult({ message: `You're #${data.position} on the waitlist!`, refLink })
-setTimeout(() => {
-  window.location.href = '/thank-you'
-}, 1500)
-
-// Identify the user now that we have their email
-identifyUser(email, {
-  'Waitlist Position': data.position,
-  'Signup Source': source,
-  'Referred By': urlRef || null,
-  'Referral Code': data.referral_code,
-})
-
-track('Waitlist Signup', {
-  source,
-  position: data.position,
-  referred_by: urlRef || null,
-  referral_code: data.referral_code,
-})
-  clearEmail('')
-}
 
   const copyRef = useCallback((link, setCopied) => {
-  navigator.clipboard.writeText(link).then(() => {
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-    track('Referral Link Copied', { link, source: 'hero' })
-  })
-}, [])
+    navigator.clipboard.writeText(link).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+      track('Referral Link Copied', { link, source: 'hero' })
+    })
+  }, [])
 
   function scrollToWaitlist(e, section = 'unknown') {
-  e?.preventDefault()
-  track('CTA Clicked', {
-    button: 'join_waitlist',
-    section,
-    scroll_pct_at_click: Math.round(
-      ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
-    ),
-  })
-  document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
-  setTimeout(() => document.getElementById('email1')?.focus(), 600)
-}
+    e?.preventDefault()
+    track('CTA Clicked', {
+      button: 'join_waitlist',
+      section,
+      scroll_pct_at_click: Math.round(
+        ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
+      ),
+    })
+    document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' })
+    setTimeout(() => document.getElementById('email1')?.focus(), 600)
+  }
 
   return (
     <>
@@ -182,7 +165,7 @@ track('Waitlist Signup', {
                     name: 'How much does Kobin AI cost?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 2 GB vault), Pro at $29/month (unlimited team, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial.'
+                      text: 'Kobin AI has three plans: Free ($0/month, 2 team members, 3 projects, 3 clients, 2 GB vault), Pro at $29/month (unlimited team, Gmail, CRM, Calendar, AI Command Bar, 50 GB vault), and Agency at $79/month (everything in Pro plus Meeting Recorder, AI Writer, Vault RAG, Proactive AI, white-label portal, 500 GB vault). Paid plans include a 14-day free trial.'
                     },
                   },
                   {
@@ -190,7 +173,7 @@ track('Waitlist Signup', {
                     name: 'Does Kobin AI have a client portal?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Every Kobin AI plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click, require no separate tool or subscription, and include a pre-created DM between founder and client before they even log in.',
+                      text: 'Yes. Every Kobin AI plan includes built-in client portals — a scoped workspace per client with their own inbox, tasks, calendar, and file access. Client portals are activated in one click, require no separate tool or subscription.',
                     },
                   },
                   {
@@ -198,47 +181,7 @@ track('Waitlist Signup', {
                     name: 'Is Kobin AI a Slack alternative for agencies?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes. Kobin AI includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Every conversation is natively linked to a project, client, and task. It supports file attachments, message replies, forwards, unread badges, and @AI mentions with full project context.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Does Kobin AI integrate with Google Drive?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: "Kobin AI's Vault feature is backed by Google Drive using the drive.file scope — only accessing files the app creates, never your existing Drive content. Each project automatically gets three Drive folders: Internal Documents, Client Uploads, and Deliverables.",
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'What is the Kobin AI layer?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'The Kobin AI layer is a context-aware assistant built into every part of the workspace. Type @AI in any inbox room for inline AI responses, or press Cmd+K to open the global command bar. The AI sees your full workspace — tasks, projects, clients, files, meetings, and CRM — before responding.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Can one tool replace Slack, Notion, HubSpot, and Asana?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Yes. Kobin AI consolidates Slack, Notion, HubSpot, Linear, Buffer, and Calendly into one workspace — free to start, Pro from $29/month. Most 5-person agencies save between $150–$250 per month in subscription costs alone by switching to Kobin AI.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Is Kobin AI a Notion alternative for agencies?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Yes. Kobin AI Vault replaces Notion for agency project knowledge management. It is backed by Google Drive with role-scoped folder hierarchies per project (Internal Documents, Client Uploads, Deliverables). Every item requires a title, description, and document type — enforcing the structure Notion rarely maintains in practice.',
-                    },
-                  },
-                  {
-                    '@type': 'Question',
-                    name: 'Is Kobin AI a HubSpot alternative for small agencies?',
-                    acceptedAnswer: {
-                      '@type': 'Answer',
-                      text: 'Yes. Kobin AI includes a built-in CRM called Relationships, designed for agency founders rather than enterprise sales teams. It tracks leads, investors, partners, talent, and advisors with meeting outcome logging, follow-up reminders, LinkedIn URL fields, and flexible tagging — included in all plans at no extra cost.',
+                      text: 'Yes. Kobin AI includes a real-time inbox with project channels, group chats, and direct messages — a purpose-built Slack alternative for agencies. Every conversation is natively linked to a project, client, and task.',
                     },
                   },
                 ],
@@ -248,63 +191,64 @@ track('Waitlist Signup', {
         }}
       />
 
-      
-
-      {/* ── HERO ── */}
+      {/* ══════════════════════════════════════════
+          ── HERO (redesigned) ──
+          Centered layout · dot-grid bg · pill inputs
+          product mockup · floating chips
+          ══════════════════════════════════════════ */}
       <section className="hero" id="waitlist">
-        <div className="hero-noise" />
 
-        {/* Left column */}
-        <div className="hero-left">
-          <div className="hero-badge">
-            <div className="hero-badge-dot">
-              <svg viewBox="0 0 10 10">
-                <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
-            </div>
-            The AI workspace that executes — early access open
+        {/* Announce badge */}
+        <div className="hero-badge">
+          <div className="hero-badge-dot">
+            <svg viewBox="0 0 10 10" fill="none">
+              <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </div>
+          <span className="hero-badge-label">Early access now open</span>
+          <span className="hero-badge-arr">— {waitlistCount} founders waiting →</span>
+        </div>
 
-          <h1>
-            Your agency&apos;s<br />
-            <em>operating</em>
-            <span className="line2">system.</span>
-          </h1>
+        {/* Headline */}
+        <h1>
+          Your agency&apos;s<br />
+          <em>operating</em>
+          <span className="line2">system.</span>
+        </h1>
 
-          <p className="hero-sub">
-            Replace Slack, Notion & ClickUp with one AI workspace — free to start.
-          </p>
+        <p className="hero-sub">
+          Replace Slack, Notion &amp; ClickUp with one AI workspace — free to start.
+        </p>
 
-          {/* Email form or success state */}
-          {!heroResult ? (
-            <div className="hero-form" id="hero-form">
-              <input
-                type="email"
-                id="email1"
-                placeholder="you@company.com"
-                autoComplete="email"
-                value={email1}
-                onChange={(e) => setEmail1(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
-                style={email1Err ? { borderColor: '#C03B30' } : {}}
-              />
-              <button
-                className="btn-hero"
-                onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
-              >
-                Get early access
-              </button>
-            </div>
-          ) : (
-            <div className="hero-success show">
-              <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {heroResult.message}
-              </span>
-
-              {/* Referral link box */}
+        {/* Email form or success state */}
+        {!heroResult ? (
+          <div className="hero-form" id="hero-form">
+            <input
+              type="email"
+              id="email1"
+              placeholder="you@company.com"
+              autoComplete="email"
+              value={email1}
+              onChange={(e) => setEmail1(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
+              style={email1Err ? { borderColor: '#C03B30' } : {}}
+            />
+            <button
+              className="btn-hero"
+              onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
+            >
+              Get early access →
+            </button>
+          </div>
+        ) : (
+          <div className="hero-success show">
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              {heroResult.message}
+            </span>
+            {heroResult.refLink && (
               <div className="ref-link-box">
                 <div className="ref-link-label">SHARE TO MOVE UP THE LIST</div>
                 <div className="ref-link-row">
@@ -318,35 +262,151 @@ track('Waitlist Signup', {
                   </button>
                 </div>
               </div>
-            </div>
-          )}
-
-          <div className="hero-proof">
-            <div className="av-row">
-              <div className="av" style={{ background: '#5B5BD6' }}>A</div>
-              <div className="av" style={{ background: '#1D9E75' }}>J</div>
-              <div className="av" style={{ background: '#C4720A' }}>M</div>
-              <div className="av" style={{ background: '#C03B30' }}>S</div>
-              <div className="av" style={{ background: '#7C3AED' }}>T</div>
-            </div>
-            <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
+            )}
           </div>
+        )}
+
+        {/* Social proof */}
+        <div className="hero-proof">
+          <div className="av-row">
+            <div className="av" style={{ background: '#5B5BD6' }}>A</div>
+            <div className="av" style={{ background: '#1D9E75' }}>J</div>
+            <div className="av" style={{ background: '#C4720A' }}>M</div>
+            <div className="av" style={{ background: '#C03B30' }}>S</div>
+            <div className="av" style={{ background: '#7C3AED' }}>T</div>
+          </div>
+          <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
         </div>
 
-        {/* Right column — mascot image */}
-        <div className="hero-right-img">
-          {/* Replace MASCOT_SRC with a real /public path once you have the image file,
-              e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
-          <Image
-            src="/mascot.png"
-            alt="Kobin AI mascot"
-            width={480}
-            height={520}
-            priority
-            style={{ objectFit: 'contain', objectPosition: 'center bottom', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))', animation: 'float1 7s ease-in-out infinite' }}
-          />
+        {/* ── Product mockup ── */}
+        <div className="hero-mockup-wrap">
+          <div className="hero-mockup">
+
+            {/* Browser chrome */}
+            <div className="mockup-bar">
+              <span className="mockup-dot" style={{ background: '#FF5F57' }} />
+              <span className="mockup-dot" style={{ background: '#FEBC2E' }} />
+              <span className="mockup-dot" style={{ background: '#28C840' }} />
+              <div className="mockup-url-pill">app.kobin.team / inbox</div>
+              <div style={{ width: 40 }} />
+            </div>
+
+            {/* App body */}
+            <div className="mockup-body">
+
+              {/* Sidebar */}
+              <div className="mockup-sidebar">
+                <div className="mockup-nav-label">Workspace</div>
+                <div className="mockup-nav-item active">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h12M2 12h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  Inbox
+                  <span className="mockup-nav-badge">3</span>
+                </div>
+                <div className="mockup-nav-item">
+                  <svg viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="12" height="12" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M5 8h6M5 5h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  Tasks
+                </div>
+                <div className="mockup-nav-item">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" strokeWidth="1.5"/><path d="M8 5.5V8l1.5 1.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  Calendar
+                </div>
+                <div className="mockup-nav-item">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="M2 5c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v5c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V5z" stroke="currentColor" strokeWidth="1.5"/></svg>
+                  CRM
+                </div>
+                <div className="mockup-nav-label" style={{ marginTop: '8px' }}>Clients</div>
+                <div className="mockup-nav-item">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.5"/><path d="M2.5 14c0-3.04 2.46-5.5 5.5-5.5s5.5 2.46 5.5 5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  Reelix Design
+                </div>
+                <div className="mockup-nav-item">
+                  <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.5"/><path d="M2.5 14c0-3.04 2.46-5.5 5.5-5.5s5.5 2.46 5.5 5.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
+                  Minted Co.
+                </div>
+              </div>
+
+              {/* Main panel */}
+              <div className="mockup-main">
+                <div className="mockup-title-row">
+                  <span className="mockup-title">Inbox — Reelix Design</span>
+                  <button className="mockup-add-btn">+ New task</button>
+                </div>
+
+                <div className="mockup-task">
+                  <div className="task-check done">
+                    <svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2.5 2.5L8 2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                  <span className="task-name done">Brand guidelines v2 sent</span>
+                  <span className="task-tag" style={{ background: 'rgba(13,107,79,0.08)', color: '#0D6B4F' }}>Done</span>
+                  <div className="task-av" style={{ background: '#5B5BD6' }}>A</div>
+                </div>
+
+                <div className="mockup-task">
+                  <div className="task-check" />
+                  <span className="task-name">Landing page redesign</span>
+                  <span className="task-tag" style={{ background: 'rgba(76,63,212,0.08)', color: '#4C3FD4' }}>High</span>
+                  <div className="task-av" style={{ background: '#1D9E75' }}>J</div>
+                </div>
+
+                <div className="mockup-task">
+                  <div className="task-check" />
+                  <span className="task-name">Client review — deck v3</span>
+                  <span className="task-tag" style={{ background: 'rgba(196,114,10,0.08)', color: '#C4720A' }}>Due Fri</span>
+                  <div className="task-av" style={{ background: '#C4720A' }}>M</div>
+                </div>
+
+                {/* AI bar */}
+                <div className="mockup-ai-bar">
+                  <div className="ai-bar-icon">
+                    <svg viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2.5 2.5L8 2" stroke="#4C3FD4" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div className="ai-bar-label">Kobin AI</div>
+                    <div className="ai-bar-text">
+                      Assigned &quot;Landing page redesign&quot; to Ahmed · Due Friday
+                      <span className="ai-cursor" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Floating chip — top right */}
+          <div className="hero-chip hero-chip-1">
+            <div className="hero-chip-icon" style={{ background: '#ECFDF5' }}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path d="M2 7l3 3 7-7" stroke="#0D6B4F" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <div className="hero-chip-sub">Monthly savings</div>
+              <div className="hero-chip-val" style={{ color: '#0D6B4F' }}>$254 saved / mo</div>
+            </div>
+          </div>
+
+          {/* Floating chip — bottom left */}
+          <div className="hero-chip hero-chip-2">
+            <div className="hero-chip-icon" style={{ background: '#EEF2FF' }}>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="5" stroke="#4C3FD4" strokeWidth="1.5"/>
+                <path d="M5 7l1.5 1.5L9 5" stroke="#4C3FD4" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <div className="hero-chip-sub">Integrations</div>
+              <div className="hero-chip-val" style={{ color: '#4C3FD4' }}>Gmail · Drive · Meet</div>
+            </div>
+          </div>
+
         </div>
+        {/* end hero-mockup-wrap */}
+
       </section>
+      {/* end hero */}
 
       {/* ── MARQUEE ── */}
       <div className="marquee-wrap">
@@ -385,43 +445,43 @@ track('Waitlist Signup', {
         <div className="icons-arena">
           {/* Slack */}
           <div className="app-icon" style={{ top: '8%', left: '12%', animation: 'float1 5.2s ease-in-out infinite' }}>
-  <img src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin AI inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-  <div className="app-badge">1M+</div>
-</div>
+            <img src="/slack.jpg" alt="Slack — team messaging tool replaced by Kobin AI inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <div className="app-badge">1M+</div>
+          </div>
 
           {/* Notion */}
-<div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
-  <img src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-  <div className="app-badge blue">100</div>
-</div>
+          <div className="app-icon" style={{ top: '6%', right: '18%', animation: 'float2 6.1s ease-in-out infinite' }}>
+            <img src="/notion.png" alt="Notion — docs and wiki tool replaced by Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <div className="app-badge blue">100</div>
+          </div>
 
-          {/* Linear */}
+          {/* Asana */}
           <div className="app-icon" style={{ top: '60%', left: '6%', animation: 'float3 5.8s ease-in-out infinite' }}>
-  <img src="/asana.jpg" alt="Asana — task management replaced by Kobin AI tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-  <div className="app-badge">665</div>
-</div>
+            <img src="/asana.jpg" alt="Asana — task management replaced by Kobin AI tasks" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <div className="app-badge">665</div>
+          </div>
 
           {/* Google Drive */}
           <div className="app-icon" style={{ bottom: '12%', left: '20%', animation: 'float4 7.2s ease-in-out infinite' }}>
-  <img src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-  <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
-</div>
+            <img src="/google-drive.jpg" alt="Google Drive — file storage integrated into Kobin AI Vault" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <div className="app-badge amber" style={{ fontSize: '8px' }}>Offline</div>
+          </div>
 
           {/* HubSpot */}
           <div className="app-icon" style={{ bottom: '8%', right: '14%', animation: 'float5 5.5s ease-in-out infinite' }}>
-  <img src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin AI Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-</div>
+            <img src="/hubspot.jpg" alt="HubSpot — CRM replaced by Kobin AI Relationships module" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+          </div>
 
-          {/* Google Calendar */}
+          {/* Google Meet */}
           <div className="app-icon" style={{ top: '30%', left: '2%', animation: 'float6 6.8s ease-in-out infinite' }}>
-  <img src="/google-meet.jpg" alt="Google Meet — integrated into Kobin AI calendar for auto-generated meeting links" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-  <div className="app-badge">99+</div>
-</div>
+            <img src="/google-meet.jpg" alt="Google Meet — integrated into Kobin AI calendar" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+            <div className="app-badge">99+</div>
+          </div>
 
-          {/* Buffer */}
+          {/* Gmail */}
           <div className="app-icon" style={{ top: '25%', right: '3%', animation: 'float7 7.5s ease-in-out infinite' }}>
-  <img src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin AI unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
-</div>
+            <img src="/gmail.jpg" alt="Gmail — email fragmentation solved by Kobin AI unified inbox" width="36" height="36" style={{ borderRadius: '8px', objectFit: 'cover' }} />
+          </div>
 
           <div className="center-text">
             <p>Context switching<br />is killing your focus.</p>
@@ -711,7 +771,7 @@ track('Waitlist Signup', {
                 <li>Up to 3 clients</li>
                 <li>2 GB vault storage</li>
                 <li>Real-time inbox</li>
-                <li>Tasks \u0026 client portal</li>
+                <li>Tasks &amp; client portal</li>
                 <li>AI auto-labeling on uploads</li>
               </ul>
               <button className="plan-btn" onClick={(e) => scrollToWaitlist(e, 'pricing_free')}>Get Started Free</button>
@@ -727,7 +787,7 @@ track('Waitlist Signup', {
               <ul className="plan-list">
                 <li>Everything in Free</li>
                 <li>Unlimited team members</li>
-                <li>Unlimited projects \u0026 clients</li>
+                <li>Unlimited projects &amp; clients</li>
                 <li>50 GB vault storage</li>
                 <li>Gmail integration</li>
                 <li>CRM pipeline</li>
@@ -852,7 +912,6 @@ track('Waitlist Signup', {
       <section style={{ padding: '80px 48px', background: 'var(--parch)', borderTop: '1px solid var(--wire)' }} id="faq">
         <div style={{ maxWidth: '720px', margin: '0 auto' }}>
 
-          {/* AI Workspace cluster links strip */}
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center', padding: '0 0 40px', borderTop: '1px solid var(--wire)', paddingTop: '40px', marginTop: '-40px' }}>
             {[
               { href: '/ai-workspace', label: 'AI Workspace' },
@@ -869,7 +928,6 @@ track('Waitlist Signup', {
             ))}
           </div>
 
-          
           <div className="section-eyebrow" style={{ marginBottom: '8px' }}>Common questions</div>
           <h2 style={{ fontFamily: "'Fraunces',serif", fontSize: 'clamp(32px,4vw,44px)', fontWeight: 300, letterSpacing: '-0.03em', marginBottom: '36px', lineHeight: 1.05 }}>
             Everything you need<br />to know.
@@ -943,7 +1001,7 @@ track('Waitlist Signup', {
             <img alt="Kobin on Product Hunt" width="200" height="43" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1109759&theme=dark&t=1774704126274" />
           </a>
           <div className="foot-copy">© 2026 Kobin AI. All rights reserved.</div>
-        <div className="foot-copy" style={{ marginTop: '4px' }}>Kobin AI (kobin.team) is an agency operating system — not affiliated with Kobin (kobin.com), an agricultural analytics company.</div>
+          <div className="foot-copy" style={{ marginTop: '4px' }}>Kobin AI (kobin.team) is an agency operating system — not affiliated with Kobin (kobin.com), an agricultural analytics company.</div>
         </div>
       </footer>
     </>
