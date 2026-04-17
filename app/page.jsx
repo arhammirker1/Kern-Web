@@ -521,20 +521,20 @@ track('Waitlist Signup', {
               {
                 tagClass: 'vi', tagLabel: 'Free',
                 title: 'Vault',
-                desc: 'Google Drive-backed project knowledge base. Internal docs, client uploads, and deliverables — role-scoped. Your files stay in your Drive.',
+                desc: 'Project knowledge base backed by Supabase Storage with Google Drive sync. Server-side OCR indexes every word in PDFs and DOCX files. AI auto-labels by content (not just filename), and semantic search via pgvector finds any file from a natural-language query.',
                 replaces: 'Notion + Drive',
               },
               {
                 tagClass: 'vi', tagLabel: 'Free',
                 title: 'Tasks & Projects',
-                desc: 'Today · This Week · Delegated · Backlog. Priority sorting, team assignment, real-time comments, and automatic client visibility.',
+                desc: 'Today · This Week · Delegated · Backlog. Attach files and deliverable requirements to any task. Analytics bar shows completion rate, overdue tasks, and a live team workload chart across all members.',
                 replaces: 'Linear / Asana',
               },
               {
                 tagClass: 'vi', tagLabel: 'Pro',
                 tagStyle: { background: 'rgba(99,88,232,0.12)', color: '#6358E8' },
                 title: 'CRM / Relationships',
-                desc: 'Track leads, investors, partners, and clients. Full pipeline stages, deal values, follow-up reminders, and LinkedIn URL fields.',
+                desc: 'Track leads, investors, partners, and clients through full pipeline stages. AI scans incoming Gmail to auto-detect and classify leads — no manual entry. Email sentiment analysis flags follow-ups, meeting interest, and critical roadblocks.',
                 replaces: 'HubSpot',
               },
               {
@@ -562,7 +562,7 @@ track('Waitlist Signup', {
                 tagClass: 'gr', tagLabel: 'Agency',
                 tagStyle: { background: 'rgba(13,107,79,0.1)', color: '#0D6B4F' },
                 title: 'AI Writer & RAG',
-                desc: 'AI Writer powered by your vault. Meeting recorder with auto-transcription. Proactive briefings. AI memory that learns your patterns.',
+                desc: 'Record meetings via the desktop app — Groq Whisper transcribes in near-real-time. AI extracts action items into tasks, logs decisions, and updates the relevant CRM contact automatically. Morning briefings, risk alerts, and an AI memory that learns your patterns over time.',
                 replaces: 'Otter.ai + AI tools',
               },
             ].map(({ tagClass, tagLabel, tagStyle, title, desc, replaces }) => (
@@ -600,7 +600,7 @@ track('Waitlist Signup', {
             </p>
             <div className="ai-features">
               {[
-                { title: 'AI Command Bar (Pro)', desc: 'Press ⌘K anywhere. Create tasks, query CRM pipeline, search vault semantically, and draft messages — all from one input.' },
+                { title: 'AI Command Bar (Pro)', desc: 'Press ⌘K anywhere. A multi-step agentic loop (up to 4 steps) reads your tasks, projects, CRM, and vault before acting. Creates tasks, updates relationships, searches files, and drafts messages — context-aware, no prompt engineering needed.' },
                 { title: 'Meeting Recorder (Agency)', desc: 'Auto-transcribe meetings with Whisper. Get AI summaries, action items, and auto-created tasks from recordings.' },
                 { title: 'Proactive AI (Agency)', desc: 'Morning briefings, risk alerts, auto-lead detection from Gmail, and AI memory that learns your patterns over time.' },
               ].map(({ title, desc }) => (
