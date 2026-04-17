@@ -251,102 +251,185 @@ track('Waitlist Signup', {
       
 
       {/* ── HERO ── */}
-      <section className="hero" id="waitlist">
-        <div className="hero-noise" />
+<section id="waitlist" style={{
+  background: 'var(--cream)', minHeight: '100vh',
+  display: 'flex', alignItems: 'center', justifyContent: 'center',
+  padding: '120px 48px 80px', position: 'relative', overflow: 'hidden',
+}}>
+  <div className="hero-noise" />
 
-        {/* Left column */}
-        <div className="hero-left">
-          <div className="hero-badge">
-            <div className="hero-badge-dot">
-              <svg viewBox="0 0 10 10">
-                <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              </svg>
-            </div>
-            The AI workspace that executes — early access open
-          </div>
+  {/* Dot grid background */}
+  <div style={{
+    position: 'absolute', inset: 0, zIndex: 0, pointerEvents: 'none',
+    backgroundImage: 'radial-gradient(circle, rgba(14,14,13,0.09) 1px, transparent 1px)',
+    backgroundSize: '28px 28px',
+  }} />
 
-          <h1>
-            Your agency&apos;s<br />
-            <em>operating</em>
-            <span className="line2">system.</span>
-          </h1>
+  {/* ── Floating Card 1 — Inbox ── */}
+  <div className="hero-float-card" style={{
+    top: '22%', left: '5%', animation: 'float1 6s ease-in-out infinite',
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
+      <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#1D9E75', flexShrink: 0 }} />
+      <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--ghost)', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.06em' }}>INBOX · REELIX PROJECT</span>
+    </div>
+    <p style={{ fontSize: 13, color: 'var(--ink)', fontWeight: 500, margin: '0 0 3px' }}>Ahmed sent the final mockups</p>
+    <p style={{ fontSize: 12, color: 'var(--ghost)', margin: 0 }}>3 files attached · just now</p>
+  </div>
 
-          <p className="hero-sub">
-            Replace Slack, Notion & ClickUp with one AI workspace — free to start.
-          </p>
+  {/* ── Floating Card 2 — AI Command Bar ── */}
+  <div className="hero-float-card" style={{
+    top: '20%', right: '5%', background: 'var(--ink)',
+    border: '1px solid rgba(255,255,255,0.07)',
+    animation: 'float2 7s ease-in-out infinite', width: 248,
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
+      <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--vi)' }} />
+      <span style={{ fontSize: 10, color: '#555552', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.06em' }}>AI COMMAND BAR · ⌘K</span>
+    </div>
+    <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.38)', fontStyle: 'italic', margin: '0 0 9px' }}>"create task for logo redesign, due friday"</p>
+    <div style={{ fontSize: 12, color: '#D4D1CA', borderLeft: '2px solid var(--vi)', paddingLeft: 9, lineHeight: 1.5 }}>
+      Task created · Assigned to Ahmed · Due Fri
+      <span style={{ display: 'inline-block', width: 2, height: 12, background: 'var(--vi)', animation: 'blink 1s infinite', verticalAlign: 'middle', marginLeft: 3 }} />
+    </div>
+  </div>
 
-          {/* Email form or success state */}
-          {!heroResult ? (
-            <div className="hero-form" id="hero-form">
-              <input
-                type="email"
-                id="email1"
-                placeholder="you@company.com"
-                autoComplete="email"
-                value={email1}
-                onChange={(e) => setEmail1(e.target.value)}
-                onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
-                style={email1Err ? { borderColor: '#C03B30' } : {}}
-              />
+  {/* ── Floating Card 3 — CRM Lead ── */}
+  <div className="hero-float-card" style={{
+    bottom: '24%', left: '4%', animation: 'float3 8s ease-in-out infinite',
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
+      <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--vi)', flexShrink: 0 }} />
+      <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--ghost)', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.06em' }}>CRM · LEAD DETECTED</span>
+    </div>
+    <p style={{ fontSize: 13, color: 'var(--ink)', fontWeight: 500, margin: '0 0 3px' }}>Marcus Chen · Sequoia</p>
+    <p style={{ fontSize: 12, color: 'var(--ghost)', margin: 0 }}>AI detected via Gmail · Investor</p>
+  </div>
+
+  {/* ── Floating Card 4 — Tasks ── */}
+  <div className="hero-float-card" style={{
+    bottom: '26%', right: '4%', animation: 'float4 5.5s ease-in-out infinite', width: 206,
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 10 }}>
+      <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#C4720A', flexShrink: 0 }} />
+      <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--ghost)', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.06em' }}>TASKS · TODAY</span>
+    </div>
+    {[
+      { label: 'Landing page copy', done: true },
+      { label: 'Client review call', done: false },
+      { label: 'Send invoice', done: false },
+    ].map(({ label, done }) => (
+      <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 6 }}>
+        <div style={{
+          width: 14, height: 14, borderRadius: 3, flexShrink: 0,
+          border: `1.5px solid ${done ? '#1D9E75' : 'var(--wire)'}`,
+          background: done ? '#1D9E75' : 'transparent',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+        }}>
+          {done && <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 4l2 2 4-3" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/></svg>}
+        </div>
+        <span style={{ fontSize: 12, color: done ? 'var(--ghost)' : 'var(--ink)', textDecoration: done ? 'line-through' : 'none' }}>{label}</span>
+      </div>
+    ))}
+  </div>
+
+  {/* ── Centered content ── */}
+  <div style={{ textAlign: 'center', maxWidth: 620, position: 'relative', zIndex: 2 }}>
+    <div className="hero-badge" style={{ display: 'inline-flex', marginBottom: 28 }}>
+      <div className="hero-badge-dot">
+        <svg viewBox="0 0 10 10" width="10" height="10">
+          <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        </svg>
+      </div>
+      The AI workspace that executes — early access open
+    </div>
+
+    <h1 style={{
+      fontFamily: "'Fraunces', serif",
+      fontSize: 'clamp(52px, 7vw, 96px)',
+      lineHeight: 0.95, letterSpacing: '-0.04em',
+      fontWeight: 300, color: 'var(--ink)', margin: '0 0 24px',
+      animation: 'fadeUp 0.6s 0.08s ease both',
+    }}>
+      Your agency&apos;s<br />
+      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>operating</em><br />
+      system.
+    </h1>
+
+    <p style={{
+      fontSize: 'clamp(16px, 2vw, 19px)', color: 'var(--ghost)',
+      maxWidth: 460, margin: '0 auto 36px', fontWeight: 300,
+      lineHeight: 1.65, animation: 'fadeUp 0.6s 0.16s ease both',
+    }}>
+      Replace Slack, Notion &amp; ClickUp with one AI workspace — free to start.
+    </p>
+
+    {!heroResult ? (
+      <div className="hero-form" id="hero-form" style={{ justifyContent: 'center', animation: 'fadeUp 0.6s 0.24s ease both' }}>
+        <input
+          type="email" id="email1" placeholder="you@company.com"
+          autoComplete="email" value={email1}
+          onChange={(e) => setEmail1(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
+          style={email1Err ? { borderColor: '#C03B30' } : {}}
+        />
+        <button className="btn-hero" onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}>
+          Get early access
+        </button>
+      </div>
+    ) : (
+      <div className="hero-success show">
+        <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {heroResult.message}
+        </span>
+        {heroResult.refLink && (
+          <div className="ref-link-box">
+            <div className="ref-link-label">SHARE TO MOVE UP THE LIST</div>
+            <div className="ref-link-row">
+              <code>{heroResult.refLink}</code>
               <button
-                className="btn-hero"
-                onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
+                className="ref-copy-btn"
+                style={copiedHero ? { background: '#0D6B4F' } : {}}
+                onClick={() => copyRef(heroResult.refLink, setCopiedHero)}
               >
-                Get early access
+                {copiedHero ? 'Copied!' : 'Copy link'}
               </button>
             </div>
-          ) : (
-            <div className="hero-success show">
-              <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {heroResult.message}
-              </span>
-
-              {/* Referral link box */}
-              <div className="ref-link-box">
-                <div className="ref-link-label">SHARE TO MOVE UP THE LIST</div>
-                <div className="ref-link-row">
-                  <code>{heroResult.refLink}</code>
-                  <button
-                    className="ref-copy-btn"
-                    style={copiedHero ? { background: '#0D6B4F' } : {}}
-                    onClick={() => copyRef(heroResult.refLink, setCopiedHero)}
-                  >
-                    {copiedHero ? 'Copied!' : 'Copy link'}
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
-          <div className="hero-proof">
-            <div className="av-row">
-              <div className="av" style={{ background: '#5B5BD6' }}>A</div>
-              <div className="av" style={{ background: '#1D9E75' }}>J</div>
-              <div className="av" style={{ background: '#C4720A' }}>M</div>
-              <div className="av" style={{ background: '#C03B30' }}>S</div>
-              <div className="av" style={{ background: '#7C3AED' }}>T</div>
-            </div>
-            <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
           </div>
-        </div>
+        )}
+      </div>
+    )}
 
-        {/* Right column — mascot image */}
-        <div className="hero-right-img">
-          {/* Replace MASCOT_SRC with a real /public path once you have the image file,
-              e.g. src="/mascot.png". The base64 constant at the top is a placeholder. */}
-          <Image
-            src="/mascot.png"
-            alt="Kobin AI mascot"
-            width={480}
-            height={520}
-            priority
-            style={{ objectFit: 'contain', objectPosition: 'center bottom', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))', animation: 'float1 7s ease-in-out infinite' }}
-          />
-        </div>
-      </section>
+    <div className="hero-proof" style={{ justifyContent: 'center', animation: 'fadeUp 0.6s 0.32s ease both' }}>
+      <div className="av-row">
+        <div className="av" style={{ background: '#5B5BD6' }}>A</div>
+        <div className="av" style={{ background: '#1D9E75' }}>J</div>
+        <div className="av" style={{ background: '#C4720A' }}>M</div>
+        <div className="av" style={{ background: '#C03B30' }}>S</div>
+        <div className="av" style={{ background: '#7C3AED' }}>T</div>
+      </div>
+      <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
+    </div>
+  </div>
+
+  {/* Floating card shared styles */}
+  <style>{`
+    .hero-float-card {
+      position: absolute;
+      background: #fff;
+      border: 1px solid var(--wire);
+      border-radius: 14px;
+      padding: 14px 16px;
+      width: 220px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+      z-index: 1;
+    }
+    @media (max-width: 960px) { .hero-float-card { display: none; } }
+  `}</style>
+</section>
 
       {/* ── MARQUEE ── */}
       <div className="marquee-wrap">
