@@ -334,7 +334,7 @@ track('Waitlist Signup', {
   </div>
 
   {/* ── Centered content ── */}
-  <div style={{ textAlign: 'center', maxWidth: 620, position: 'relative', zIndex: 2 }}>
+  <div style={{ textAlign: 'center', maxWidth: 720, position: 'relative', zIndex: 2 }}>
     <div className="hero-badge" style={{ display: 'inline-flex', marginBottom: 28 }}>
       <div className="hero-badge-dot">
         <svg viewBox="0 0 10 10" width="10" height="10">
@@ -346,14 +346,13 @@ track('Waitlist Signup', {
 
     <h1 style={{
       fontFamily: "'Fraunces', serif",
-      fontSize: 'clamp(52px, 7vw, 96px)',
+      fontSize: 'clamp(52px, 6.5vw, 84px)',
       lineHeight: 0.95, letterSpacing: '-0.04em',
       fontWeight: 300, color: 'var(--ink)', margin: '0 0 24px',
       animation: 'fadeUp 0.6s 0.08s ease both',
     }}>
       Your agency&apos;s<br />
-      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>operating</em><br />
-      system.
+      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>operating</em> system.
     </h1>
     <p style={{
       fontSize: 'clamp(14px, 1.5vw, 16px)', color: 'var(--ghost2)',
