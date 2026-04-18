@@ -372,21 +372,23 @@ track('Waitlist Signup', {
     </p>
 
     {!heroResult ? (
-      <div className="hero-form" id="hero-form" style={{ justifyContent: 'center', animation: 'fadeUp 0.6s 0.24s ease both' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0, animation: 'fadeUp 0.6s 0.24s ease both' }}>
         <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '0 0 10px', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
           No credit card · No commitment · Founding pricing locked for life
         </p>
-        <input
-          type="email" id="email1" placeholder="you@company.com"
-          autoComplete="email" value={email1}
-          onChange={(e) => setEmail1(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
-          style={email1Err ? { borderColor: '#C03B30' } : {}}
-        />
-        <button className="btn-hero" onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}>
-          Request founding access →
-        </button>
-      <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '10px 0 0', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
+        <div className="hero-form" id="hero-form" style={{ justifyContent: 'center', margin: 0 }}>
+          <input
+            type="email" id="email1" placeholder="you@company.com"
+            autoComplete="email" value={email1}
+            onChange={(e) => setEmail1(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}
+            style={email1Err ? { borderColor: '#C03B30' } : {}}
+          />
+          <button className="btn-hero" onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}>
+            Request founding access →
+          </button>
+        </div>
+        <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '10px 0 0', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
           We review applications within 24 hours · Founding pricing locked for life.
         </p>
       </div>
