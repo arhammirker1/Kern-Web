@@ -356,8 +356,8 @@ track('Waitlist Signup', {
         letterSpacing: '-0.04em',
         lineHeight: 0.9,
         marginBottom: '8px',
-        color: 'var(--ghost)',
-        fontWeight: 300,
+        color: 'var(--ink)',
+        fontWeight: 400,
       }}>
         Your
       </span>
