@@ -346,13 +346,32 @@ track('Waitlist Signup', {
 
     <h1 style={{
       fontFamily: "'Fraunces', serif",
-      fontSize: 'clamp(72px, 9vw, 128px)',
-      lineHeight: 0.92, letterSpacing: '-0.045em',
       fontWeight: 300, color: 'var(--ink)', margin: '0 0 28px',
+      lineHeight: 1, letterSpacing: '-0.04em',
       animation: 'fadeUp 0.6s 0.08s ease both',
     }}>
-      Your<br />
-      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>agency OS.</em>
+      <span style={{
+        display: 'block',
+        fontSize: 'clamp(48px, 6vw, 80px)',
+        letterSpacing: '-0.04em',
+        lineHeight: 0.9,
+        marginBottom: '8px',
+        color: 'var(--ghost)',
+        fontWeight: 300,
+      }}>
+        Your
+      </span>
+      <span style={{
+        display: 'block',
+        fontSize: 'clamp(44px, 6.5vw, 96px)',
+        letterSpacing: '-0.04em',
+        fontStyle: 'italic',
+        color: 'var(--vi)',
+        whiteSpace: 'nowrap',
+        lineHeight: 1,
+      }}>
+        Agency Operating System.
+      </span>
     </h1>
 
     <p style={{
