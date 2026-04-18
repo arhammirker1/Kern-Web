@@ -267,7 +267,7 @@ track('Waitlist Signup', {
 
   {/* ── Floating Card 1 — Inbox ── */}
   <div className="hero-float-card" style={{
-    top: '22%', left: '5%', animation: 'float1 6s ease-in-out infinite',
+    top: '18%', left: '3%', animation: 'float1 6s ease-in-out infinite',
   }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
       <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#1D9E75', flexShrink: 0 }} />
@@ -279,9 +279,9 @@ track('Waitlist Signup', {
 
   {/* ── Floating Card 2 — AI Command Bar ── */}
   <div className="hero-float-card" style={{
-    top: '20%', right: '5%', background: 'var(--ink)',
+    top: '15%', right: '2%', background: 'var(--ink)',
     border: '1px solid rgba(255,255,255,0.07)',
-    animation: 'float2 7s ease-in-out infinite', width: 248,
+    animation: 'float2 7s ease-in-out infinite', width: 256,
   }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10 }}>
       <div style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--vi)' }} />
@@ -296,7 +296,7 @@ track('Waitlist Signup', {
 
   {/* ── Floating Card 3 — CRM Lead ── */}
   <div className="hero-float-card" style={{
-    bottom: '24%', left: '4%', animation: 'float3 8s ease-in-out infinite',
+    bottom: '28%', left: '2%', animation: 'float3 8s ease-in-out infinite',
   }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 8 }}>
       <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--vi)', flexShrink: 0 }} />
@@ -308,7 +308,7 @@ track('Waitlist Signup', {
 
   {/* ── Floating Card 4 — Tasks ── */}
   <div className="hero-float-card" style={{
-    bottom: '26%', right: '4%', animation: 'float4 5.5s ease-in-out infinite', width: 206,
+    bottom: '30%', right: '2%', animation: 'float4 5.5s ease-in-out infinite', width: 214,
   }}>
     <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 10 }}>
       <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#C4720A', flexShrink: 0 }} />
@@ -335,7 +335,7 @@ track('Waitlist Signup', {
 
   {/* ── Centered content ── */}
   <div style={{ textAlign: 'center', maxWidth: 720, position: 'relative', zIndex: 2 }}>
-    <div className="hero-badge" style={{ display: 'inline-flex', marginBottom: 28 }}>
+    <div className="hero-badge" style={{ display: 'inline-flex', marginBottom: 24 }}>
       <div className="hero-badge-dot">
         <svg viewBox="0 0 10 10" width="10" height="10">
           <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
@@ -346,28 +346,23 @@ track('Waitlist Signup', {
 
     <h1 style={{
       fontFamily: "'Fraunces', serif",
-      fontSize: 'clamp(52px, 6.5vw, 84px)',
-      lineHeight: 0.95, letterSpacing: '-0.04em',
-      fontWeight: 300, color: 'var(--ink)', margin: '0 0 24px',
+      fontSize: 'clamp(72px, 9vw, 128px)',
+      lineHeight: 0.92, letterSpacing: '-0.045em',
+      fontWeight: 300, color: 'var(--ink)', margin: '0 0 28px',
       animation: 'fadeUp 0.6s 0.08s ease both',
     }}>
-      Your agency&apos;s<br />
-      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>operating</em> system.
+      Your<br />
+      <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>agency OS.</em>
     </h1>
-    <p style={{
-      fontSize: 'clamp(14px, 1.5vw, 16px)', color: 'var(--ghost2)',
-      margin: '-16px auto 0', fontWeight: 400, letterSpacing: '-0.01em',
-      animation: 'fadeUp 0.6s 0.12s ease both',
-    }}>
-      Built for founders who are done managing tools.
-    </p>
 
     <p style={{
-      fontSize: 'clamp(16px, 2vw, 19px)', color: 'var(--ghost)',
-      maxWidth: 460, margin: '0 auto 36px', fontWeight: 300,
-      lineHeight: 1.65, animation: 'fadeUp 0.6s 0.16s ease both',
+      fontSize: 'clamp(17px, 1.8vw, 21px)', color: 'var(--ink)',
+      maxWidth: 560, margin: '0 auto 36px', fontWeight: 400,
+      lineHeight: 1.6, letterSpacing: '-0.01em',
+      animation: 'fadeUp 0.6s 0.16s ease both',
     }}>
-      The only workspace where your meetings become tasks, emails become leads, and documents become reports — automatically.
+      Meetings become tasks. Emails become leads.<br />
+      Documents become reports. <span style={{ color: 'var(--ghost)', fontWeight: 300 }}>Automatically.</span>
     </p>
 
     {!heroResult ? (
