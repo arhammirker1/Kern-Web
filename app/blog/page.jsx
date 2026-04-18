@@ -4,11 +4,11 @@ import NewsletterSignup from '../../components/NewsletterSignup'
 import RevealInit from '../../components/RevealInit'
 const KernMark = ({ size = 16 }) => (
   <svg viewBox="0 0 512 512" fill="none" width={size} height={size}>
-    <rect width="512" height="512" rx="116" fill="#0D0D0C"/>
-    <rect x="148" y="128" width="52" height="256" rx="26" fill="#F0EDE6"/>
-    <line x1="196" y1="238" x2="352" y2="108" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
-    <line x1="196" y1="272" x2="352" y2="402" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round"/>
-    <circle cx="196" cy="256" r="34" fill="#5B4FE8"/>
+    <rect width="512" height="512" rx="116" fill="#0D0D0C" />
+    <rect x="148" y="128" width="52" height="256" rx="26" fill="#F0EDE6" />
+    <line x1="196" y1="238" x2="352" y2="108" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round" />
+    <line x1="196" y1="272" x2="352" y2="402" stroke="#F0EDE6" strokeWidth="52" strokeLinecap="round" />
+    <circle cx="196" cy="256" r="34" fill="#5B4FE8" />
   </svg>
 )
 
@@ -16,89 +16,105 @@ export default function BlogPage() {
   // server component — client interactivity via NewsletterSignup and RevealInit
 
   const posts = [
-        {
-  thumbClass: 'thumb-dark', thumbText: 'Agency\nFile\nSystem', thumbLabel: 'OPERATIONS GUIDE',
-  category: 'cat-guide', catLabel: 'Guide',
-  title: 'Your Agency Is Losing 12 Hours a Week to File Chaos — Here\'s the System That Fixes It',
-  excerpt: 'Google Drive works at 3 clients. It quietly breaks at 10. Here are the six failure modes every agency hits — and the file management architecture that scales to 50+ clients without a dedicated ops person.',
-  meta: 'Apr 17 · 14 min',
-  href: '/blog/agency-file-management',
-},
+    {
+      thumbClass: 'thumb-dark', thumbText: 'Stop\nLosing\nLeads', thumbLabel: 'CRM GUIDE',
+      category: 'cat-guide', catLabel: 'CRM & Lead Management',
+      title: 'How to Stop Losing Leads When You\'re Managing 5+ Clients Simultaneously',
+      excerpt: '67% of B2B leads go cold within the first hour of no response. When you\'re deep in client delivery, that hour vanishes. Here\'s the exact proactive CRM system — with AI — that keeps your pipeline alive without stealing time from the work you\'re paid to do.',
+      meta: 'Apr 18 · 13 min',
+      href: '/blog/stop-losing-leads-managing-clients',
+    },
+    {
+      thumbClass: 'thumb-vi', thumbText: 'Replace\nSlack\nNotion', thumbLabel: 'MIGRATION GUIDE',
+      category: 'cat-guide', catLabel: 'Tool Consolidation',
+      title: 'How to Replace Slack, Notion, and Asana With One Tool (Without Losing Your Team)',
+      excerpt: 'The average 5-person agency pays $175/month for three tools that don\'t share data or talk to each other. Here\'s the exact 4-week migration playbook that consolidates all three — without a team revolt.',
+      meta: 'Apr 18 · 14 min',
+      href: '/blog/replace-slack-notion-asana',
+    },
+    {
+      thumbClass: 'thumb-dark', thumbText: 'Agency\nFile\nSystem', thumbLabel: 'OPERATIONS GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'Your Agency Is Losing 12 Hours a Week to File Chaos — Here\'s the System That Fixes It',
+      excerpt: 'Google Drive works at 3 clients. It quietly breaks at 10. Here are the six failure modes every agency hits — and the file management architecture that scales to 50+ clients without a dedicated ops person.',
+      meta: 'Apr 17 · 14 min',
+      href: '/blog/agency-file-management',
+    },
 
     {
-  thumbClass: 'thumb-vi', thumbText: 'Vault\nFile\nManagement', thumbLabel: 'PRODUCT DEEP DIVE',
-  category: 'cat-build', catLabel: 'Product Deep Dive',
-  title: 'Agency File Management in 2026 — Why Google Drive Alone Fails and What Kobin Vault Does Instead',
-  excerpt: 'Scattered files, broken Drive links, clients who cannot find deliverables. Kobin Vault gives every project enforced 3-folder structure, AI auto-labeling, semantic search, Monaco editing, and a client portal that updates automatically on upload.',
-  meta: 'Apr 14 · 16 min',
-  href: '/blog/vault-agency-file-management',
-},
+      thumbClass: 'thumb-vi', thumbText: 'Vault\nFile\nManagement', thumbLabel: 'PRODUCT DEEP DIVE',
+      category: 'cat-build', catLabel: 'Product Deep Dive',
+      title: 'Agency File Management in 2026 — Why Google Drive Alone Fails and What Kobin Vault Does Instead',
+      excerpt: 'Scattered files, broken Drive links, clients who cannot find deliverables. Kobin Vault gives every project enforced 3-folder structure, AI auto-labeling, semantic search, Monaco editing, and a client portal that updates automatically on upload.',
+      meta: 'Apr 14 · 16 min',
+      href: '/blog/vault-agency-file-management',
+    },
 
-          {
-        thumbClass: 'thumb-dark', thumbText: 'HubSpot\nAlternative\nAgencies', thumbLabel: 'DEEP GUIDE',
-        category: 'cat-guide', catLabel: 'Guide',
-        title: 'The Best HubSpot Alternative for Agencies in 2026 — Proactive CRM, AI Risk Alerts, Gmail Intelligence',
-        excerpt: 'HubSpot decays into shelfware for most small agencies. Here are 4 alternatives ranked by fit — plus why a proactive CRM that monitors your pipeline daily changes everything.',
-        meta: 'Apr 10 · 13 min',
-        href: '/blog/hubspot-alternative-for-agencies',
-      },
-      {
-        thumbClass: 'thumb-vi', thumbText: 'Proactive\nCRM\nIntelligence', thumbLabel: 'CRM AI',
-        category: 'cat-build', catLabel: 'CRM Intelligence',
-        title: 'Proactive CRM for Agencies: Revenue Intelligence, Risk Detection, and Gmail AI in 2026',
-        excerpt: 'HubSpot stores your pipeline. Kobin\'s CRM watches it — daily risk alerts, revenue intelligence on closing deals, Gmail intent analysis per contact, and a morning brief. Here\'s exactly how each routine works.',
-        meta: 'Apr 10 · 12 min',
-        href: '/blog/proactive-crm-for-agencies',
-      },
+    {
+      thumbClass: 'thumb-dark', thumbText: 'HubSpot\nAlternative\nAgencies', thumbLabel: 'DEEP GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'The Best HubSpot Alternative for Agencies in 2026 — Proactive CRM, AI Risk Alerts, Gmail Intelligence',
+      excerpt: 'HubSpot decays into shelfware for most small agencies. Here are 4 alternatives ranked by fit — plus why a proactive CRM that monitors your pipeline daily changes everything.',
+      meta: 'Apr 10 · 13 min',
+      href: '/blog/hubspot-alternative-for-agencies',
+    },
+    {
+      thumbClass: 'thumb-vi', thumbText: 'Proactive\nCRM\nIntelligence', thumbLabel: 'CRM AI',
+      category: 'cat-build', catLabel: 'CRM Intelligence',
+      title: 'Proactive CRM for Agencies: Revenue Intelligence, Risk Detection, and Gmail AI in 2026',
+      excerpt: 'HubSpot stores your pipeline. Kobin\'s CRM watches it — daily risk alerts, revenue intelligence on closing deals, Gmail intent analysis per contact, and a morning brief. Here\'s exactly how each routine works.',
+      meta: 'Apr 10 · 12 min',
+      href: '/blog/proactive-crm-for-agencies',
+    },
 
-          {
-        thumbClass: 'thumb-parch', thumbText: 'Productivity\nSoftware\nAgencies', thumbLabel: 'RANKED GUIDE',
-        category: 'cat-guide', catLabel: 'Guide',
-        title: 'Best Productivity Software for Agencies in 2026 — Ranked, Compared & Honest',
-        excerpt: 'Slack, Notion, ClickUp, Productive.io, Asana, Monday.com, HubSpot — ranked by real cost and fit for a 5-person agency. One of them replaces all the others.',
-        meta: 'Apr 8 · 16 min',
-        href: '/blog/productivity-software-for-agencies',
-      },
-      {
-        thumbClass: 'thumb-dark', thumbText: 'What is\nKobin\nAI?', thumbLabel: 'BRAND OVERVIEW',
-        category: 'cat-build', catLabel: 'Product',
-        title: 'What is Kobin? — The AI Workspace for Agencies, Explained',
-        excerpt: 'Kobin (kobin.team) is an AI workspace that replaces Slack, Notion, HubSpot, Asana, and Buffer for agency founders. Here is exactly what it does, who it is for, and how the AI layer works.',
-        meta: 'Apr 8 · 8 min',
-        href: '/what-is-kobin',
-      },
-     {
-  thumbClass: 'thumb-vi', thumbText: 'AI for\nMarketing\nAgencies', thumbLabel: 'GUIDE',
-  category: 'cat-guide', catLabel: 'Guide',
-  title: 'AI for Marketing Agencies in 2026 — The Workspace That Runs Your Campaigns',
-  excerpt: 'Marketing agencies spend 50 minutes per client on weekly reports. Kobin AI does it in 4 minutes — from completed tasks, delivered assets, and client messages. Here is the full breakdown.',
-  meta: 'Apr 10 · 10 min',
-  href: '/blog/ai-for-marketing-agencies',
-},
-{
-  thumbClass: 'thumb-parch', thumbText: 'AI for\nFreelancers', thumbLabel: 'GUIDE',
-  category: 'cat-guide', catLabel: 'Guide',
-  title: 'AI for Freelancers in 2026 — Run Your Entire Business From One Tab',
-  excerpt: 'Freelancers lose 30% of their billable hours to admin. Kobin Free at $0/month replaces Notion, Todoist, Calendly, and client portal tools — with an AI that handles follow-ups automatically.',
-  meta: 'Apr 10 · 9 min',
-  href: '/blog/ai-for-freelancers',
-},
-{
-  thumbClass: 'thumb-dark', thumbText: 'AI for\nStartups', thumbLabel: 'BUILD',
-  category: 'cat-build', catLabel: 'Startup',
-  title: 'AI for Startups in 2026 — Replace the Tool Stack Before It Slows You Down',
-  excerpt: 'Most startups build a $243/month Slack + Notion + Linear + HubSpot stack before their first customer. Here is why that is the wrong architecture — and what to use instead.',
-  meta: 'Apr 10 · 10 min',
-  href: '/blog/ai-for-startups',
-},
-{
-  thumbClass: 'thumb-vi', thumbText: 'AI for\nRemote\nTeams', thumbLabel: 'GUIDE',
-  category: 'cat-guide', catLabel: 'Guide',
-  title: 'AI for Remote Teams in 2026 — One Workspace Across Every Time Zone',
-  excerpt: 'Remote teams lose 2 hours per day reconstructing context across tools and time zones. Kobin AI generates personalized daily briefs, surfaces blockers, and keeps distributed teams aligned.',
-  meta: 'Apr 10 · 11 min',
-  href: '/blog/ai-for-remote-teams',
-},
+    {
+      thumbClass: 'thumb-parch', thumbText: 'Productivity\nSoftware\nAgencies', thumbLabel: 'RANKED GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'Best Productivity Software for Agencies in 2026 — Ranked, Compared & Honest',
+      excerpt: 'Slack, Notion, ClickUp, Productive.io, Asana, Monday.com, HubSpot — ranked by real cost and fit for a 5-person agency. One of them replaces all the others.',
+      meta: 'Apr 8 · 16 min',
+      href: '/blog/productivity-software-for-agencies',
+    },
+    {
+      thumbClass: 'thumb-dark', thumbText: 'What is\nKobin\nAI?', thumbLabel: 'BRAND OVERVIEW',
+      category: 'cat-build', catLabel: 'Product',
+      title: 'What is Kobin? — The AI Workspace for Agencies, Explained',
+      excerpt: 'Kobin (kobin.team) is an AI workspace that replaces Slack, Notion, HubSpot, Asana, and Buffer for agency founders. Here is exactly what it does, who it is for, and how the AI layer works.',
+      meta: 'Apr 8 · 8 min',
+      href: '/what-is-kobin',
+    },
+    {
+      thumbClass: 'thumb-vi', thumbText: 'AI for\nMarketing\nAgencies', thumbLabel: 'GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'AI for Marketing Agencies in 2026 — The Workspace That Runs Your Campaigns',
+      excerpt: 'Marketing agencies spend 50 minutes per client on weekly reports. Kobin AI does it in 4 minutes — from completed tasks, delivered assets, and client messages. Here is the full breakdown.',
+      meta: 'Apr 10 · 10 min',
+      href: '/blog/ai-for-marketing-agencies',
+    },
+    {
+      thumbClass: 'thumb-parch', thumbText: 'AI for\nFreelancers', thumbLabel: 'GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'AI for Freelancers in 2026 — Run Your Entire Business From One Tab',
+      excerpt: 'Freelancers lose 30% of their billable hours to admin. Kobin Free at $0/month replaces Notion, Todoist, Calendly, and client portal tools — with an AI that handles follow-ups automatically.',
+      meta: 'Apr 10 · 9 min',
+      href: '/blog/ai-for-freelancers',
+    },
+    {
+      thumbClass: 'thumb-dark', thumbText: 'AI for\nStartups', thumbLabel: 'BUILD',
+      category: 'cat-build', catLabel: 'Startup',
+      title: 'AI for Startups in 2026 — Replace the Tool Stack Before It Slows You Down',
+      excerpt: 'Most startups build a $243/month Slack + Notion + Linear + HubSpot stack before their first customer. Here is why that is the wrong architecture — and what to use instead.',
+      meta: 'Apr 10 · 10 min',
+      href: '/blog/ai-for-startups',
+    },
+    {
+      thumbClass: 'thumb-vi', thumbText: 'AI for\nRemote\nTeams', thumbLabel: 'GUIDE',
+      category: 'cat-guide', catLabel: 'Guide',
+      title: 'AI for Remote Teams in 2026 — One Workspace Across Every Time Zone',
+      excerpt: 'Remote teams lose 2 hours per day reconstructing context across tools and time zones. Kobin AI generates personalized daily briefs, surfaces blockers, and keeps distributed teams aligned.',
+      meta: 'Apr 10 · 11 min',
+      href: '/blog/ai-for-remote-teams',
+    },
     {
       thumbClass: 'thumb-parch', thumbText: 'AI for\nProject\nManagers', thumbLabel: 'GUIDE',
       category: 'cat-guide', catLabel: 'Guide',
@@ -122,7 +138,7 @@ export default function BlogPage() {
       excerpt: 'The average agency pays $312/month running Zapier to glue four tools together — tools that still break every time one API updates. Here\'s the real cost, why it fails architecturally, and what a true all-in-one workspace looks like.',
       meta: 'Apr 5 · 12 min',
       href: '/blog/zapier-slack-asana-notion-alternative',
-    },    
+    },
     {
       thumbClass: 'thumb-dark', thumbText: '@AI\n⌘K', thumbLabel: 'AI LAYER',
       category: 'cat-build', catLabel: 'AI Layer',
@@ -131,14 +147,14 @@ export default function BlogPage() {
       meta: 'Apr 1 · 10 min',
       href: '/blog/ai-layer-launch',
     },
-        {
+    {
       thumbClass: 'thumb-parch', thumbText: 'Top 10\nTools\n2026', thumbLabel: 'RANKED GUIDE',
       category: 'cat-guide', catLabel: 'Guide',
       title: '10 Best Productivity Tools for Agency Founders in 2026 — Ranked & Compared',
       excerpt: 'Slack, Notion, Asana, ClickUp, HubSpot, Linear, Monday.com, Basecamp — ranked by real cost and fit for a 5-person agency. Real pricing. Real tradeoffs. One of them replaces all the others.',
       meta: 'Apr 3 · 14 min',
       href: '/blog/best-productivity-tools-for-agencies',
-    },    
+    },
     {
       thumbClass: 'thumb-vi', thumbText: 'Slack\nNotion\nAsana', thumbLabel: 'COMPARISON GUIDE',
       category: 'cat-guide', catLabel: 'Guide',
@@ -213,23 +229,41 @@ export default function BlogPage() {
             },
             blogPost: [
               {
-  "@type": "BlogPosting",
-  "headline": "Your Agency Is Losing 12 Hours a Week to File Chaos — Here's the System That Fixes It",
-  "url": "https://www.kobin.team/blog/agency-file-management",
-  "datePublished": "2026-04-17",
-  "author": { "@type": "Person", "name": "Arham Mirkar" },
-  "keywords": "agency file management, how to organize client files agency, client deliverable management, google drive alternatives for agencies, client approval process agency",
-  "description": "Why Google Drive fails agencies at scale, the six file management failure modes, and the structured vault system agencies with 20+ clients use to keep deliverables organized and delivered on time."
-},
+                '@type': 'BlogPosting',
+                headline: 'How to Stop Losing Leads When You\'re Managing 5+ Clients Simultaneously',
+                url: 'https://www.kobin.team/blog/stop-losing-leads-managing-clients',
+                datePublished: '2026-04-18',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                keywords: 'stop losing leads agency, proactive CRM, AI lead detection, agency pipeline management',
+                description: '67% of B2B leads go cold within the first hour. Here\'s the proactive CRM system with automatic Gmail lead detection, daily risk alerts, and revenue intelligence briefs that keeps pipelines active while you deliver client work.',
+              },
+              {
+                '@type': 'BlogPosting',
+                headline: 'How to Replace Slack, Notion, and Asana With One Tool (Without Losing Your Team)',
+                url: 'https://www.kobin.team/blog/replace-slack-notion-asana',
+                datePublished: '2026-04-18',
+                author: { '@type': 'Person', name: 'Arham Mirkar' },
+                keywords: 'replace slack notion asana, all-in-one agency workspace, agency tool consolidation, Kobin AI',
+                description: 'The 4-week migration playbook for replacing Slack, Notion, and Asana with one unified workspace — covering inbox migration, task migration, vault migration, and AI layer activation — saving agencies $175–$240/month.',
+              },
+              {
+                "@type": "BlogPosting",
+                "headline": "Your Agency Is Losing 12 Hours a Week to File Chaos — Here's the System That Fixes It",
+                "url": "https://www.kobin.team/blog/agency-file-management",
+                "datePublished": "2026-04-17",
+                "author": { "@type": "Person", "name": "Arham Mirkar" },
+                "keywords": "agency file management, how to organize client files agency, client deliverable management, google drive alternatives for agencies, client approval process agency",
+                "description": "Why Google Drive fails agencies at scale, the six file management failure modes, and the structured vault system agencies with 20+ clients use to keep deliverables organized and delivered on time."
+              },
 
               {
-  "@type": "BlogPosting",
-  "headline": "Agency File Management in 2026 — Kobin Vault Deep Dive",
-  "url": "https://www.kobin.team/blog/vault-agency-file-management",
-  "datePublished": "2026-04-14",
-  "author": { "@type": "Person", "name": "Arham Mirkar" },
-  "description": "How Kobin Vault solves agency file chaos with role-scoped folders, AI auto-labeling, pgvector semantic search, Monaco + TipTap editors, and automatic client delivery."
-},
+                "@type": "BlogPosting",
+                "headline": "Agency File Management in 2026 — Kobin Vault Deep Dive",
+                "url": "https://www.kobin.team/blog/vault-agency-file-management",
+                "datePublished": "2026-04-14",
+                "author": { "@type": "Person", "name": "Arham Mirkar" },
+                "description": "How Kobin Vault solves agency file chaos with role-scoped folders, AI auto-labeling, pgvector semantic search, Monaco + TipTap editors, and automatic client delivery."
+              },
 
               {
                 '@type': 'BlogPosting',
@@ -246,7 +280,7 @@ export default function BlogPage() {
                 author: { '@type': 'Person', name: 'Arham Mirkar' },
                 description: 'Research shows 1.2 months of productivity lost per year to tool switching.',
               },
-                            {
+              {
                 '@type': 'BlogPosting',
                 headline: 'How we built a real-time inbox that replaces Slack in 3 weeks',
                 datePublished: '2026-03-12',
@@ -283,20 +317,20 @@ export default function BlogPage() {
               <div className="featured-img">
                 <div className="feat-visual">
                   <div className="feat-visual-icons">
-  <div className="feat-app-icon">
-    <img src="/slack.jpg" alt="Slack" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
-  </div>
-                      <div className="feat-app-icon">
-    <img src="/notion.png" alt="Notion" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
-  </div>
-                      <div className="feat-app-icon">
-    <img src="/asana.jpg" alt="Asana" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
-  </div>
-  <div className="feat-app-icon">
-    <img src="/hubspot.jpg" alt="HubSpot" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
-  </div>
                     <div className="feat-app-icon">
-                      <img src="/google-drive.jpg" alt="Google Drive" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />                   
+                      <img src="/slack.jpg" alt="Slack" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+                    </div>
+                    <div className="feat-app-icon">
+                      <img src="/notion.png" alt="Notion" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+                    </div>
+                    <div className="feat-app-icon">
+                      <img src="/asana.jpg" alt="Asana" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+                    </div>
+                    <div className="feat-app-icon">
+                      <img src="/hubspot.jpg" alt="HubSpot" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
+                    </div>
+                    <div className="feat-app-icon">
+                      <img src="/google-drive.jpg" alt="Google Drive" width="26" height="26" style={{ borderRadius: '6px', objectFit: 'cover' }} />
                     </div>
                   </div>
                   <div className="feat-chaos-text">Too many tools.<br />Not enough focus.</div>

@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date('2026-04-01'),
       changeFrequency: 'monthly',
       priority: 0.9,
-    },  
+    },
     {
       url: `${SITE}/blog/best-productivity-tools-for-agencies`,
       lastModified: new Date('2026-04-03'),
@@ -90,7 +90,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     // ── Compare pages (high commercial intent) ──────────────────────────────
-        {
+    {
       url: `${SITE}/compare`,
       lastModified: new Date('2026-04-04'),
       changeFrequency: 'monthly',
@@ -128,7 +128,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
 
-     // ── AI Workspace hub pages (brand + keyword domination) ──────────────────
+    // ── AI Workspace hub pages (brand + keyword domination) ──────────────────
     {
       url: `${SITE}/ai-workspace`,
       lastModified: new Date('2026-04-06'),
@@ -177,7 +177,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.95,
     },
-        {
+    {
       url: `${SITE}/compare/kobin-vs-hubspot`,
       lastModified: new Date('2026-04-10'),
       changeFrequency: 'monthly',
@@ -214,6 +214,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.98,
     },
     {
+      url: `${SITE}/blog/stop-losing-leads-managing-clients`,
+      lastModified: new Date('2026-04-18'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
+      url: `${SITE}/blog/replace-slack-notion-asana`,
+      lastModified: new Date('2026-04-18'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
       url: `${SITE}/privacy`,
       lastModified: new Date('2026-04-15'),
       changeFrequency: 'monthly',
@@ -226,6 +238,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
 
- 
+
   ]
 }
