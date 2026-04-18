@@ -372,9 +372,7 @@ track('Waitlist Signup', {
 
     {!heroResult ? (
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 0, animation: 'fadeUp 0.6s 0.24s ease both' }}>
-        <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '0 0 10px', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
-          No credit card · No commitment · Founding pricing locked for life
-        </p>
+        
         <div className="hero-form" id="hero-form" style={{ justifyContent: 'center', margin: 0 }}>
           <input
             type="email" id="email1" placeholder="you@company.com"
