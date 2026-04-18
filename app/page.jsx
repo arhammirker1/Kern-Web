@@ -302,8 +302,8 @@ track('Waitlist Signup', {
       <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--vi)', flexShrink: 0 }} />
       <span style={{ fontSize: 10, fontWeight: 600, color: 'var(--ghost)', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.06em' }}>CRM · LEAD DETECTED</span>
     </div>
-    <p style={{ fontSize: 13, color: 'var(--ink)', fontWeight: 500, margin: '0 0 3px' }}>Marcus Chen · Sequoia</p>
-    <p style={{ fontSize: 12, color: 'var(--ghost)', margin: 0 }}>AI detected via Gmail · Investor</p>
+    <p style={{ fontSize: 13, color: 'var(--ink)', fontWeight: 500, margin: '0 0 3px' }}>Sarah Mitchell · Bloom Creative</p>
+    <p style={{ fontSize: 12, color: 'var(--ghost)', margin: 0 }}>AI detected via Gmail · New client inquiry</p>
   </div>
 
   {/* ── Floating Card 4 — Tasks ── */}
@@ -341,7 +341,7 @@ track('Waitlist Signup', {
           <path d="M2 5L4.5 7.5 8 2.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
         </svg>
       </div>
-      The AI workspace that executes — early access open
+      Now accepting founding members — 47 spots remaining
     </div>
 
     <h1 style={{
@@ -355,17 +355,27 @@ track('Waitlist Signup', {
       <em style={{ fontStyle: 'italic', color: 'var(--vi)' }}>operating</em><br />
       system.
     </h1>
+    <p style={{
+      fontSize: 'clamp(14px, 1.5vw, 16px)', color: 'var(--ghost2)',
+      margin: '-16px auto 0', fontWeight: 400, letterSpacing: '-0.01em',
+      animation: 'fadeUp 0.6s 0.12s ease both',
+    }}>
+      Built for founders who are done managing tools.
+    </p>
 
     <p style={{
       fontSize: 'clamp(16px, 2vw, 19px)', color: 'var(--ghost)',
       maxWidth: 460, margin: '0 auto 36px', fontWeight: 300,
       lineHeight: 1.65, animation: 'fadeUp 0.6s 0.16s ease both',
     }}>
-      Replace Slack, Notion &amp; ClickUp with one AI workspace — free to start.
+      The only workspace where your meetings become tasks, emails become leads, and documents become reports — automatically.
     </p>
 
     {!heroResult ? (
       <div className="hero-form" id="hero-form" style={{ justifyContent: 'center', animation: 'fadeUp 0.6s 0.24s ease both' }}>
+        <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '0 0 10px', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
+          No credit card · No commitment · Founding pricing locked for life
+        </p>
         <input
           type="email" id="email1" placeholder="you@company.com"
           autoComplete="email" value={email1}
@@ -374,8 +384,11 @@ track('Waitlist Signup', {
           style={email1Err ? { borderColor: '#C03B30' } : {}}
         />
         <button className="btn-hero" onClick={() => signup(email1, setHeroResult, setEmail1Err, setEmail1, 'hero')}>
-          Get early access
+          Request founding access →
         </button>
+      <p style={{ fontSize: 12, color: 'var(--ghost2)', margin: '10px 0 0', fontFamily: "'Geist Mono',monospace", letterSpacing: '0.02em' }}>
+          We review applications within 24 hours · Founding pricing locked for life.
+        </p>
       </div>
     ) : (
       <div className="hero-success show">
@@ -411,7 +424,7 @@ track('Waitlist Signup', {
         <div className="av" style={{ background: '#C03B30' }}>S</div>
         <div className="av" style={{ background: '#7C3AED' }}>T</div>
       </div>
-      <span>Join <strong>{waitlistCount} founders</strong> already on the waitlist</span>
+      <span><strong>{waitlistCount} agency founders</strong> already accepted</span>
     </div>
   </div>
 
