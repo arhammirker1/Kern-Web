@@ -13,9 +13,32 @@ const KernMark = ({ size = 16 }) => (
 )
 
 export default function BlogPage() {
-  // server component — client interactivity via NewsletterSignup and RevealInit
-
+  // server component — client interactivity via NewsletterSignup and RevealInit  
   const posts = [
+    {
+      thumbClass: 'thumb-dark', thumbText: 'Agency\nManagement\nSoftware', thumbLabel: 'PILLAR GUIDE',
+      category: 'cat-guide', catLabel: 'Agency Operations',
+      title: 'Best Agency Management Software 2026 — For Teams of 5 to 500',
+      excerpt: 'We compared 12 platforms — Kobin, Productive.io, Teamwork, Scoro — across project management, CRM, and client portals for agencies at every growth stage.',
+      meta: 'Apr 22 · 16 min',
+      href: '/blog/agency-management-software',
+    },
+    {
+      thumbClass: 'thumb-vi', thumbText: 'Marketing\nAgency\nTools', thumbLabel: 'RANKED LIST',
+      category: 'cat-guide', catLabel: 'Marketing Agencies',
+      title: 'Top Rated Tools for Marketing Agencies 2026 — What 500+ Agencies Actually Use',
+      excerpt: 'The definitive ranked list of tools for marketing agencies in 2026. We rated 15 platforms by client delivery, AI capability, and real monthly cost.',
+      meta: 'Apr 22 · 16 min',
+      href: '/blog/best-tools-for-marketing-agencies',
+    },
+    {
+      thumbClass: 'thumb-parch', thumbText: 'Agency\nWorkflow\nSoftware', thumbLabel: 'FRAMEWORK',
+      category: 'cat-guide', catLabel: 'Operations',
+      title: 'Agency Workflow Software 2026 — How to Fix Broken Operations Before They Break You',
+      excerpt: 'The 8-week agency workflow rebuild framework. How to identify broken processes, choose the right software, and build operations that scale to 100+ clients.',
+      meta: 'Apr 22 · 15 min',
+      href: '/blog/agency-workflow-software',
+    },
     {
       thumbClass: 'thumb-dark', thumbText: 'Stop\nLosing\nLeads', thumbLabel: 'CRM GUIDE',
       category: 'cat-guide', catLabel: 'CRM & Lead Management',
