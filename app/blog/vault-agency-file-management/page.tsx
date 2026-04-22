@@ -1103,6 +1103,8 @@ export default function VaultFileManagementPost() {
             </h3>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               {[
+                { href: '/blog/agency-management-software', label: 'Agency management software →' },
+                { href: '/blog/agency-workflow-software', label: 'Agency workflow software →' },
                 { href: '/ai-workspace', label: 'Full AI workspace overview' },
                 { href: '/ai-for-agencies', label: 'AI for agencies' },
                 { href: '/blog/slack-notion-asana-hubspot-alternatives', label: 'Replace Slack + Notion + HubSpot' },

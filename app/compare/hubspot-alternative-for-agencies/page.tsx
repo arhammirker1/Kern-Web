@@ -42,51 +42,6 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Kobin vs HubSpot' },
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best HubSpot alternative for small agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin is the best HubSpot alternative for small agencies. Unlike HubSpot — a reactive database you must manually check — Kobin runs daily AI intelligence routines: risk detection (blocked tasks + stale deals), revenue intelligence (closing this week + high-probability deals), Gmail intent analysis per contact, auto-lead detection from unknown senders, and a morning brief combining CRM and task data. Included in all Kobin plans at no extra cost from $29/month for 5 seats.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What AI does Kobin CRM have that HubSpot does not?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin CRM has five AI capabilities HubSpot lacks: (1) Daily proactive risk detection — flags deals stuck 21+ days AND blocked tasks simultaneously. (2) Revenue intelligence alerts 3x/week — surfaces deals closing this week and high-probability deals before they go cold. (3) Gmail intent analysis — AI reads each email thread and classifies intent (interested, ready to close, objection), sentiment, and buying signals. (4) Auto pipeline stage advancement — AI moves deals forward based on email content. (5) Auto lead detection — unknown email senders are AI-screened and added as leads if relevant.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin cheaper than HubSpot for a 5-person agency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin Pro ($29/month for 5 seats) includes CRM, AI intelligence, team inbox, tasks, client portal, vault, calendar, and LinkedIn Studio. HubSpot Starter costs $50–90/month for CRM only — and agencies still need Slack ($87/month), Asana ($55/month), and Notion ($40/month) alongside it. The full HubSpot stack costs $232–272/month. Kobin replaces it all for $29/month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does Kobin detect risk in my CRM pipeline?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin runs cross-module risk detection multiple times per day. It scans three signals: (1) Urgent or high-priority tasks that are overdue — showing owner and days overdue. (2) Tasks in Blocked status across all projects. (3) Deals in Proposal, Negotiating, or Meeting Booked stages for 21+ days without movement. These are combined into a single alert delivered to your Kobin inbox. HubSpot can only flag CRM-level signals — it has no visibility into your task layer.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can Kobin auto-detect new leads from Gmail?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. When Gmail is connected, Kobin monitors incoming emails. For emails from unknown senders not in your CRM, an AI model screens relevance: is this a potential client, partner, investor, or collaborator? If yes, the contact is auto-created as a New Lead with their email, name, and source noted. The email thread is immediately analyzed for intent and sentiment. HubSpot requires manual contact creation or specific form submissions — it cannot auto-detect leads from inbound email.',
-          },
-        },
-      ],
-    },
   ],
 }
 

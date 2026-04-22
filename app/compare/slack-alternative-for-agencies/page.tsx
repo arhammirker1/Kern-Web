@@ -51,51 +51,6 @@ image: 'https://www.kobin.team/og-image.png',
       ],
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '12', bestRating: '5' },
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best Slack alternative for agencies in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin is the best Slack alternative for agencies in 2026. Unlike Slack, which is messaging-only, Kobin includes a real-time inbox with project rooms, group chats, and DMs — plus tasks, CRM, client portal, Vault, calendar, LinkedIn Studio, and an AI layer. All natively connected, from $29/month for a team of 5.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does Slack cost for a 5-person agency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Slack Pro costs $7.25/user/month billed annually, which is approximately $36/month for 5 users. However, most agencies need Slack Business+ ($12.50/user) for guest access features, bringing the total to $62.50/month for 5 seats. This is for messaging only — no tasks, CRM, client portal, or calendar.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "What are the limitations of using Slack for agency client work?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Slack has several critical limitations for agency work: no native task management, no client portal (guest accounts expose other channels), no CRM or project tracking, no calendar integration, and no file management beyond Slack's own storage. Every client conversation must be bridged to separate tools via fragile Zapier integrations.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Kobin have a client portal like Slack does not?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes. Every Kobin plan includes a built-in client portal — a scoped workspace per client with their own inbox, tasks, calendar, and file access (Client Uploads and Deliverables). It's activated in one click, requires no separate tool, and includes a pre-created DM between founder and client. Slack has no native client portal — guest accounts are fragile and can expose other team channels.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I migrate from Slack to Kobin easily?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Kobin setup takes under 30 minutes. Connect Google (for Drive and Calendar), create your first project (an inbox room is auto-created), invite your team (instant access, no invite email flow), and activate client portals in one click. Most founders cancel their Slack subscription within two weeks.',
-          },
-        },
-      ],
-    },
   ],
 }
 

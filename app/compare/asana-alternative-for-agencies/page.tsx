@@ -39,43 +39,6 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Kobin vs Asana' },
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best Asana alternative for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Kobin is the best Asana alternative for agencies. It uses a time-horizon task system (Today, This Week, Delegated, Backlog) designed for agency delivery workflows, not engineering sprints. Unlike Asana, Kobin includes a built-in client portal, CRM, real-time inbox, Google Drive Vault, and AI layer — all natively connected, from $29/month.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Kobin different from Asana?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Asana organizes work by project boards and sprint-style workflows. Kobin organizes tasks by time horizon (Today, This Week, Delegated, Backlog) — which maps to how agency founders actually think about priorities. Kobin also includes a client portal, real-time inbox, CRM, Google Drive Vault, and AI layer that Asana does not have.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin cheaper than Asana?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Asana Premium costs $10.99/user/month ($55/month for 5 users), and Asana Business costs $24.99/user/month ($125/month for 5 users). Kobin Pro is $29/month for 5 users. But Asana requires Slack for messaging ($87/month) and HubSpot for CRM ($50–90/month) on top — making the total Asana stack $192–$302/month vs Kobin's $29/month.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Kobin have a client portal that Asana lacks?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes. Every Kobin plan includes a built-in client portal — a scoped workspace per client with their own inbox, task view, calendar, and file access. Clients can see their project's task progress, upload files, receive deliverables, and message the team. Asana has no native client portal — you would need a separate tool like Basecamp ($15/user/month) on top.",
-          },
-        },
-      ],
-    },
   ],
 }
 

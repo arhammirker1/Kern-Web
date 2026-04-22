@@ -88,59 +88,6 @@ const jsonLd = {
         name: 'Kobin AI Workspace',
       },
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is an AI workspace?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'An AI workspace is a collaborative digital environment where artificial intelligence is natively embedded across all work modules — tasks, messaging, files, CRM, and calendar — rather than bolted on as a chatbot. The best AI workspaces in 2026 allow AI to both read and act on your work data, not just answer questions about it. Kobin is the only AI workspace purpose-built for agency founders that combines all work modules in one data model and lets the AI take action across all of them.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Kobin different from Notion AI or ClickUp AI as an AI workspace?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Notion AI reads your notes and helps you write. ClickUp AI summarizes tasks in ClickUp. Kobin AI sees your entire workspace — tasks, project rooms, CRM pipeline, vault files, calendar events, and team workload — and can take action on all of it. Ask Kobin AI to create a task, assign the least busy team member, attach a vault file, and send a client update — it does all four in one response. No other AI workspace offers this level of cross-module action for agencies.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What does "AI that takes action" mean in an AI workspace?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'In most AI workspaces, "AI" means a chatbot that reads your data and gives you answers. In Kobin, "AI that takes action" means the AI has 5 action tools it can execute on your behalf: create tasks (with all fields auto-filled from context), update tasks, delete tasks, create projects, and update projects. It also auto-assigns based on live team workload, attaches vault files by fuzzy-matching titles, and drafts client messages based on your CRM history. The AI acts as an operator, not just an advisor.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin an AI workspace for marketing agencies specifically?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Kobin is purpose-built as an AI workspace for agencies including marketing agencies, creative agencies, consulting firms, and digital agencies of 1–15 people. It handles the complete agency workflow: client communication (inbox), deliverable tracking (tasks + client portal), file delivery (Google Drive vault), pipeline management (CRM), and scheduling (calendar with Google Meet) — all with an AI layer that can brief you on any project, surface stale leads, and draft client-facing updates.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does the Kobin AI workspace cost compared to Notion and ClickUp?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin AI workspace starts at $29/month for teams of up to 5 (Pro plan) and includes every module: inbox, tasks, CRM, client portal, vault, calendar, LinkedIn Studio, and AI layer. Notion Team costs $16/month for docs only — agencies need Slack ($87/month) and Asana ($55/month) on top. ClickUp Business costs $95/month for tasks and docs — agencies still need Slack and HubSpot. The total cost of Notion or ClickUp as an AI workspace center is $192–312/month vs Kobin at $29/month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the best AI workspace for small agencies in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The best AI workspace for small agencies in 2026 is Kobin (kobin.team). It is the only AI workspace where the AI layer has simultaneous read access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and can take action on all of them from a single conversation. It replaces Slack, Notion, Asana, HubSpot, and Zapier for $29/month, with no middleware required because all modules share one native data model.',
-          },
-        },
-      ],
-    },
   ],
 }
 

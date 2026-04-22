@@ -57,59 +57,6 @@ const jsonLd = {
         'Kobin is the best Notion AI alternative for agencies. Unlike Notion AI which is scoped to documents only, Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload — and takes action on all of them.',
       offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best Notion AI alternative in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The best Notion AI alternative in 2026 is Kobin. Notion AI is scoped to Notion pages only — it reads documents and helps you write text within the Notion environment. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload, and can take action: creating tasks, assigning team members, drafting client updates, querying your pipeline, and generating pre-meeting briefs. Kobin also includes a native client portal and built-in CRM that Notion lacks, from $29/month for a team of 5.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What can Notion AI not do that Kobin AI can?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Notion AI cannot: create tasks or take any action on your workspace, access CRM contacts or pipeline data, read inbox messages or conversations, query calendar events, check team workload before assigning work, generate pre-meeting briefs, draft client updates from completed deliverables, or flag projects at risk based on task velocity. Notion AI is a writing assistant scoped to Notion content. Kobin AI is a workspace operator that reads and acts across all modules simultaneously.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin cheaper than Notion when you include the tools Notion requires?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Notion Team costs $16-48/month but requires Slack ($87/month) for messaging, Asana ($55/month) for task management, and HubSpot ($50-90/month) for CRM — a total stack cost of $208-280/month for a 5-person agency. Kobin Pro includes all of these modules plus an AI layer that sees them simultaneously for $29/month. The saving is $159-231/month, or up to $2,772/year.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Notion AI have access to your tasks and CRM?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Notion AI is exclusively scoped to Notion pages, databases, and documents. It cannot access task management systems, CRM pipelines, calendar events, inbox messages, or file storage outside of Notion. When you ask Notion AI "what should I focus on today?" it can only answer based on your Notion documents — it has no knowledge of your tasks, your sales pipeline, or your team workload.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the difference between Notion AI and Kobin AI?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Notion AI is a document writing assistant — it summarizes pages, generates content, and answers questions about your Notion workspace. Kobin AI is a workspace operator — it reads tasks, CRM, inbox, vault, and calendar simultaneously, then takes action: creating tasks from conversations, assigning by team workload, drafting client status updates from completed deliverables, and generating pre-meeting briefs automatically 10 minutes before every call.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use Kobin as a Notion replacement for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Kobin Vault replaces Notion for agency project knowledge management. It is backed by Google Drive with automatic folder hierarchies per project (Internal Documents, Client Uploads, Deliverables), mandatory metadata on every item, and role-scoped access. Clients see only what they should, without any manual permission management. Unlike Notion, Kobin also includes real-time messaging, task management, CRM, calendar, and a built-in client portal.',
-          },
-        },
-      ],
-    },
   ],
 }
 

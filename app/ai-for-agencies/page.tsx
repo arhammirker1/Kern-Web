@@ -72,59 +72,6 @@ const jsonLd = {
         'Zero Zapier — one native data model',
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best AI for marketing agencies in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin is the best AI for marketing agencies in 2026. It combines an AI layer with a complete agency workspace — tasks, inbox, CRM, client portal, Google Drive vault, and calendar. The AI creates tasks from client messages, drafts weekly client updates from completed deliverables, flags stale leads, generates pre-meeting briefs, and monitors projects for risk. It starts at $29/month for teams of 5 and replaces Slack, Asana, Notion, HubSpot, and Zapier.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What does AI for agencies actually mean?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI for agencies means AI that understands agency operations specifically — not generic business workflows. It means an AI that knows the difference between a client message that needs a task created versus one that needs a CRM note logged. It knows that a "deliverable" lives in a specific folder visible to the client. It knows that "prep me for the call" means fetching client history, open tasks, pending approvals, and last conversation context. Kobin AI does all of this automatically because every module shares one data model.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How does AI help agencies save time on client work?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI helps agencies save time on client work in six specific ways: (1) converting client messages to tasks automatically with full context and assignee suggestion, (2) drafting weekly client status updates from completed deliverables in under 3 minutes, (3) generating pre-meeting briefs 10 minutes before every call — client profile, open items, suggested talking points, (4) flagging clients who have gone silent in 4+ days and drafting follow-up messages, (5) assigning tasks to the least-busy team member based on live workload data, and (6) monitoring all projects for deadline risk and surfacing them in a daily brief at 8am. Kobin AI does all six.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What AI tools do agencies use in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Most agencies in 2026 use a fragmented AI stack: Slack AI (messages only), Notion AI (documents only), Asana Intelligence (tasks only), and ChatGPT for general assistance. Each sees only its own data, making cross-module questions impossible to answer. The most effective agencies have consolidated onto a unified AI workspace like Kobin — where one AI sees tasks, CRM, inbox, vault, calendar, and team workload simultaneously and can take action across all of them.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can AI replace a project manager at an agency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'AI can automate the administrative work of project management — creating tasks from conversations, tracking deadlines, flagging blocked items, sending client updates, and monitoring team workload. Kobin AI handles all of these automatically. What AI cannot replace is the judgment, client relationships, creative direction, and strategic thinking that human project managers provide. For 1–10 person agencies where the founder often acts as PM, AI eliminates 2–3 hours of daily administrative overhead, freeing time for the work that requires human judgment.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Kobin different from other AI tools for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The architectural difference. Kobin was built as one data model from the start — tasks, inbox, CRM, vault, and calendar all share the same database. The AI has native access to all of it before responding. Tools like Notion AI, ClickUp AI, and Monday AI each see only their own module. When you ask Kobin AI "what should I focus on today?", it reasons from your actual tasks, your CRM pipeline, your calendar, and your team workload simultaneously. No other agency AI workspace offers this level of cross-module intelligence plus action capabilities.',
-          },
-        },
-      ],
-    },
   ],
 }
 
@@ -614,6 +561,9 @@ export default function AIForAgenciesPage() {
           <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: '22px', fontWeight: 300, color: 'var(--ink)', marginBottom: '20px' }}>More about Kobin AI</h3>
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             {[
+              { href: '/blog/agency-management-software', label: 'Agency management software' },
+              { href: '/blog/best-tools-for-marketing-agencies', label: 'Marketing agency tools' },
+              { href: '/blog/agency-workflow-software', label: 'Agency workflow guide' },
               { href: '/ai-workspace', label: 'Full AI workspace overview' },
               { href: '/notion-ai-alternative', label: 'vs Notion AI' },
               { href: '/clickup-ai-alternative', label: 'vs ClickUp AI' },

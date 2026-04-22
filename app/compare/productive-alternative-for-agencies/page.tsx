@@ -44,43 +44,6 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Kobin vs Productive.io' },
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best Productive.io alternative for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The best Productive.io alternative for agencies is Kobin (kobin.team). Unlike Productive.io which focuses on project management, resource planning, and financials, Kobin adds a real-time inbox (replacing Slack), built-in CRM (replacing HubSpot), a client portal on all plans, and an AI layer with full workspace context — all from $29/month for 5 people. Productive.io requires Slack alongside it for team communication and has no native CRM.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Productive.io have a real-time inbox like Slack?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Productive.io does not include a real-time messaging inbox equivalent to Slack. Most Productive.io users run Slack alongside it for team communication, adding $87/month to their total cost. Kobin includes a full real-time inbox with project rooms, group chats, DMs, @AI mentions, and file attachments — all natively linked to your projects and tasks.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin cheaper than Productive.io?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin Pro ($29/month for 5 users) costs less than Productive.io Essential ($9/user = $45/month for 5 users), but includes significantly more modules: real-time inbox, CRM, client portal, Google Drive vault, LinkedIn Studio, and a full AI layer. The full Productive.io stack for a 5-person agency (Productive + Slack + HubSpot) costs $182–242/month. Kobin replaces all of that for $29/month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'When should I use Productive.io instead of Kobin?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Use Productive.io when your agency has 15+ people, a dedicated operations manager, and a strong need for resource capacity planning (utilization rates, bench management), time tracking with billing integration, and budget vs actual financial reporting per project. Productive.io is purpose-built for these financial and resource workflows in a way Kobin currently is not. For agencies that primarily need to consolidate communication, task management, CRM, and client delivery in one place, Kobin is the better fit.',
-          },
-        },
-      ],
-    },
   ],
 }
 

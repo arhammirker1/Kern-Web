@@ -1,6 +1,6 @@
 // app/what-is-kobin/page.tsx
 // PURPOSE: Fix "What is Kobin AI?" zero PAA results + Gemini not citing us
-// GEO STRATEGY: 134-167 word self-contained answer blocks, heavy FAQPage schema,
+// GEO STRATEGY: 134-167 word self-contained answer blocks.
 // entity disambiguation, question-first H2s, direct answer in first 60 words.
 
 import Link from 'next/link'
@@ -62,99 +62,6 @@ const jsonLd = {
         'https://www.producthunt.com/products/kobin',
       ],
       disambiguatingDescription: 'Kobin (kobin.team) is an AI workspace for agencies, distinct from kobin.com (agricultural analytics), PT Kobin Keramik Industri (tiles), and kobin PyPI package.',
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is Kobin?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin (kobin.team) is an AI workspace for agency founders. It combines a real-time inbox, task management, CRM, client portal, Google Drive-backed file vault, calendar, and LinkedIn Studio into one workspace — with an AI layer that creates tasks, assigns team members, queries your pipeline, and briefs you before meetings. It replaces Slack, Notion, HubSpot, Asana, and Buffer from $29/month for teams of up to 5.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is Kobin AI?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin AI is the artificial intelligence layer built into Kobin, the agency workspace at kobin.team. Unlike siloed AI features in tools like Notion AI or ClickUp AI, Kobin AI has simultaneous access to all workspace modules — tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload. It can take action: creating tasks from conversations, assigning to the least-busy team member, drafting client updates from completed deliverables, and generating pre-meeting briefs 10 minutes before every call. Access it via @AI in any project room or the global ⌘K command bar.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What does Kobin do?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin does eight things in one workspace: (1) Real-time inbox replacing Slack — project rooms, group chats, DMs. (2) Task management replacing Asana — four time-horizon buckets with priority auto-sorting. (3) CRM replacing HubSpot — leads, investors, partners with follow-up reminders. (4) Client portal — a scoped workspace per client included in all plans. (5) Vault replacing Notion — Google Drive-backed file management with role-scoped folders. (6) Calendar with Google Meet auto-generation. (7) LinkedIn Studio replacing Buffer. (8) AI layer that reads all modules and executes tasks, assignments, and client updates.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Who is Kobin for?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin is purpose-built for agency founders and small agency teams of 1 to 15 people — marketing agencies, creative agencies, consulting firms, and digital agencies managing multiple clients simultaneously. It is specifically designed for founders who currently run a fragmented stack of Slack, Notion, Asana, HubSpot, and Buffer and want to consolidate onto one workspace that costs less than any single one of those tools.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much does Kobin cost?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin has three pricing plans. Free at $0/month for 1 user with all 8 modules. Pro at $29/month for up to 5 team members with 3 client portals and LinkedIn Studio. Agency at $79/month for unlimited team members and client portals with a white-label option. All plans include a 14-day free trial with no credit card required. Early access members have their founding price locked forever.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What tools does Kobin replace?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin replaces five categories of tools: Slack (replaced by Kobin\'s real-time inbox with project rooms and DMs), Notion (replaced by Kobin Vault — a Google Drive-backed structured file system), HubSpot (replaced by Kobin Relationships — a lightweight CRM for leads, investors, and partners), Asana or Linear (replaced by Kobin\'s four time-horizon task system), and Buffer or Taplio (replaced by Kobin LinkedIn Studio). A 5-person agency running all these tools pays $283–350/month. Kobin Pro replaces all of them for $29/month.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin the same as kobin.com?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Kobin at kobin.team and kobin.com are entirely separate, unrelated companies that share the same name. Kobin (kobin.team) is an AI workspace for agency founders, founded in 2026 by Arham Mirkar. kobin.com is KOBIN Decision Support, an agricultural data analytics platform for farmers, developed by the University of California Davis. Always use "Kobin (kobin.team)" to refer to the agency workspace product.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Who founded Kobin?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin (kobin.team) was founded in 2026 by Arham Mirkar. The company is currently in closed beta with active agency customers. Arham Mirkar is the founder and CEO. The product is headquartered at kobin.team and can be reached at support@kobin.team.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is Kobin different from Notion, Slack, and HubSpot?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Notion, Slack, and HubSpot each solve one part of an agency\'s workflow — and each requires the others to fill the gaps. Kobin solves all three simultaneously. The key architectural difference: all Kobin modules share one database, so the AI sees tasks, messages, CRM, files, and calendar at the same time and can act across all of them in a single conversation. Notion AI only sees Notion documents. Slack AI only sees Slack messages. HubSpot AI only sees HubSpot data. Kobin AI sees the full operation.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Kobin have a free trial?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. All Kobin plans include a 14-day free trial with no credit card required. Join the waitlist at kobin.team to get early access. Kobin is currently in closed beta — waitlist members receive access when their spot opens. Founding members have their price locked forever at $0/month (Solo), $29/month (Founder), or $79/month (Agency).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What AI model does Kobin use?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin AI uses Groq-hosted Llama 3.3 70B as the default model — providing sub-2-second response times with no API key required. All Kobin plans include AI access from day one at no extra cost. Phase 2 will add bring-your-own-model support for Anthropic Claude, OpenAI GPT-4o, and Google Gemini for users who prefer those models.',
-          },
-        },
-      ],
     },
   ],
 }

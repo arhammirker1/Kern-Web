@@ -39,43 +39,6 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Kobin vs Notion' },
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best Notion alternative for agencies in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Kobin Vault is the best Notion alternative for agencies in 2026. It replaces Notion's unstructured wiki with a Google Drive-backed file system that auto-creates three role-scoped folders per project: Internal Documents (team only), Client Uploads (clients can upload), and Deliverables (clients view-only). Every item requires a title, description, and document type — eliminating the disorganization Notion enables.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: "Why do agencies stop using Notion?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Agencies stop using Notion because its infinite flexibility becomes a liability over time. Without enforced metadata, pages end up named 'Final v3 ACTUAL final' in folders called 'Archive (old)?'. Notion has no real-time messaging, no CRM, no client portal, and no calendar — so agencies still need Slack, HubSpot, and Calendly alongside it, paying $40+/month for Notion on top of three other tools.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Kobin store files in Google Drive or its own system?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Kobin Vault stores files directly in your Google Drive using the drive.file scope — only files the app creates, never your existing Drive content. You own the files. If you ever leave Kobin, your files stay in your Drive. Notion stores files in Notion's proprietary system — leaving Notion means losing the hosting for those files.",
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can clients access Kobin Vault like they would a shared Notion page?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Yes, and with better access control. Clients see two Vault folders in their portal: Client Uploads (they can view and upload) and Deliverables (they can view only). Internal Documents is hidden entirely. In Notion, scoping client access requires manually managing permissions per page, and pages can be accidentally shared when they move between sections.",
-          },
-        },
-      ],
-    },
   ],
 }
 

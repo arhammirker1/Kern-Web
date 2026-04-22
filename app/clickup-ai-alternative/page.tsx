@@ -58,59 +58,6 @@ const jsonLd = {
         'Kobin is the best ClickUp AI alternative for agencies. Unlike ClickUp AI which is scoped to tasks and docs, Kobin AI sees tasks, CRM pipeline, inbox messages, vault files, team workload, and calendar events simultaneously - and takes action across all of them.',
       offers: { '@type': 'Offer', price: '49', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://www.kobin.team/#waitlist' },
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best ClickUp AI alternative in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The best ClickUp AI alternative in 2026 is Kobin. ClickUp AI is scoped to tasks and docs inside ClickUp only. Kobin AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and can take action on all of them: creating tasks, assigning team members, drafting client updates, querying pipeline, and generating pre-meeting briefs. Kobin also includes a built-in CRM and client portal that ClickUp lacks, from $29/month for a team of 5.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What are the main limitations of ClickUp AI for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ClickUp AI has four key limitations for agencies. First, it is scoped to ClickUp only - it cannot see your CRM pipeline, inbox messages, or calendar events. Second, ClickUp has no native client portal (Enterprise plan only). Third, ClickUp has no built-in CRM, so you still need HubSpot on top. Fourth, ClickUp Business costs $19/user/month and still requires Slack ($87/month) and HubSpot ($50/month) alongside it, making the total stack $232 per month or more for 5 people.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin cheaper than ClickUp for a 5-person agency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. ClickUp Business costs $95/month for 5 users, but agencies still need Slack ($87/month) for messaging and HubSpot ($50/month) for CRM on top of it, making the real total $232/month or more. Kobin Pro is $29/month for 5 users and includes every module: real-time inbox, task management, CRM, client portal, Google Drive vault, calendar, LinkedIn Studio, and an AI layer that sees all of them.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does ClickUp have a client portal for agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ClickUp does not include a client portal on standard plans. A client-facing workspace requires the ClickUp Enterprise plan, which has custom pricing significantly above the standard $19/user Business plan. Kobin includes a fully scoped client portal on every plan from $0/month, with automatic setup, pre-created DMs, and project-linked tasks visible to clients immediately.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Why is ClickUp too complex for small agencies?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'ClickUp has over 35 different ways to view and organize work, requiring weeks of configuration before it becomes useful. Every task has 15 or more configuration options. Most small agency teams spend more time configuring ClickUp than doing client work. Kobin uses four time-horizon buckets (Today, This Week, Delegated, Backlog) that work out of the box in 30 minutes with no template setup required.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can Kobin replace ClickUp completely for an agency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. Kobin replaces ClickUp with a time-horizon task system (Today, This Week, Delegated, Backlog), a real-time inbox replacing Slack, a Google Drive-backed Vault replacing Notion, a built-in CRM replacing HubSpot, a client portal, calendar with Google Meet, and LinkedIn Studio. Most agencies save $150 to $250 per month in subscriptions alone when switching from the ClickUp stack to Kobin.',
-          },
-        },
-      ],
-    },
   ],
 }
 

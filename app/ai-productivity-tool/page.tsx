@@ -68,59 +68,6 @@ const jsonLd = {
         'Built-in client portal on all plans',
       ],
     },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is the best AI productivity tool for agencies in 2026?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The best AI productivity tool for agencies in 2026 is Kobin. It is the only workspace where AI has simultaneous access to tasks, CRM pipeline, inbox messages, vault files, calendar events, and team workload - and takes action on all of them. It creates tasks from conversations, assigns team members based on live workload, drafts client updates, and generates pre-meeting briefs. It replaces Slack, Notion, Asana, HubSpot, and Zapier from $29/month with no middleware required.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How is an AI productivity tool different from a project management tool?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'A project management tool stores your work and lets you organize it. An AI productivity tool actively reduces the work required to manage your work. The key difference is execution: a project management tool waits for you to create tasks, assign them, and update status. An AI productivity tool converts a client message into a task automatically, assigns it to the right person based on workload, and updates the client without you doing any of those steps manually.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much time does an AI productivity tool save?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Research from UC Irvine (2024) shows the average worker loses 23 minutes of focus after each tool switch. A Lokalise study (2026) found workers lose 51 minutes per week to tool fatigue alone - over 44 hours per year. For a 5-person agency, that is more than a full working week lost annually just to switching between Slack, Notion, Asana, and HubSpot. A unified AI workspace eliminates this by keeping every workflow in one tab with AI that executes across all modules.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Kobin replace ChatGPT as a productivity tool?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin does not replace ChatGPT for general AI tasks. What it replaces is the manual workflow of pasting context from multiple tools into ChatGPT. Kobin AI is pre-loaded with your live workspace data before every response - your active tasks, CRM pipeline, calendar, vault files, and team workload. You never need to paste context. You ask a question and the AI already knows your full operation.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What makes an AI productivity tool better than separate AI features in each tool?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Separate AI features - Notion AI, ClickUp AI, Slack AI - each see only their own module. When you ask "what should I focus on today?", Notion AI sees your notes, ClickUp AI sees your tasks, Slack AI sees your messages. None see the full picture. An AI productivity tool like Kobin sees all layers simultaneously: tasks, pipeline, calendar, inbox, files, and team workload. The answer it gives is based on your complete operational reality, not a fragment of it.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is Kobin a good AI productivity tool for small teams?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Kobin is purpose-built for teams of 1 to 15 people, specifically agencies. The AI layer is designed around the workflows small agency teams actually run: converting client messages to tasks, tracking deliverables, managing a CRM pipeline without dedicated sales ops, and keeping clients informed without manual updates. It starts at $0/month for solo founders and $29/month for teams of up to 5.',
-          },
-        },
-      ],
-    },
   ],
 }
 

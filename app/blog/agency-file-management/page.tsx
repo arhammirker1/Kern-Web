@@ -1219,6 +1219,8 @@ export default function AgencyFileManagementPost() {
               </h3>
               <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
                 {[
+                  { href: '/blog/agency-management-software', label: 'Agency management software →' },
+                  { href: '/blog/agency-workflow-software', label: 'Agency workflow software →' },
                   { href: '/blog/vault-agency-file-management', label: 'Kobin Vault deep-dive →' },
                   { href: '/ai-for-agencies', label: 'AI for agencies →' },
                   { href: '/ai-workspace', label: 'AI workspace overview →' },

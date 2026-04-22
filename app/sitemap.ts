@@ -59,6 +59,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      url: `${SITE}/blog/agency-management-software`,
+      lastModified: new Date('2026-04-22'),
+      changeFrequency: 'monthly',
+      priority: 0.98,
+    },
+    {
+      url: `${SITE}/blog/best-tools-for-marketing-agencies`,
+      lastModified: new Date('2026-04-22'),
+      changeFrequency: 'monthly',
+      priority: 0.97,
+    },
+    {
+      url: `${SITE}/blog/agency-workflow-software`,
+      lastModified: new Date('2026-04-22'),
+      changeFrequency: 'monthly',
+      priority: 0.98,
+    },
+    {
       url: `${SITE}/blog/ai-for-marketing-agencies`,
       lastModified: new Date('2026-04-10'),
       changeFrequency: 'monthly',
@@ -237,6 +255,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.3,
     },
+
 
 
   ]
