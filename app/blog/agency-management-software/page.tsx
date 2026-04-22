@@ -718,26 +718,26 @@ export default function AgencyManagementSoftwarePage() {
                                 },
                                 {
                                     q: 'How much does agency management software cost for a 20-person agency?',
-                                    a: 'For a 20-person agency, costs vary dramatically: Kobin AI Agency plan costs $79/month (flat, unlimited seats). Productive.io costs $640/month ($32/user). Teamwork costs $1,100/month ($54.99/user). Scoro costs $1,420/month ($71/user). However, most per-seat platforms still require Slack ($260/month for 20 seats) and HubSpot ($200/month for Starter) alongside them, bringing the true stack cost to $1,100–$1,880/month — versus Kobin AI's $79/ month all -in.',
-                },
-                            {
-                                q: 'Does Kobin AI work for agencies with 50 or more team members?',
-                            a: 'Yes. Kobin AI\'s Agency plan includes unlimited team members at a flat $79/month — meaning a 50-person agency pays the same as a 10-person agency. The platform includes role-based permissions with 12 granular toggles (Admin, Project Manager, Executor, Sales/Outreach, Analyst), unlimited client portals, white-label portal option, 500 GB vault storage, and an AI layer with full cross-module read/write access that scales to any team size without configuration changes.',
-                },
-                            {
-                                q: 'Is Productive.io better than Kobin AI for agencies?',
-                            a: 'Productive.io is stronger than Kobin AI specifically for resource capacity planning and budget vs actual financial reporting — features built for agencies that bill by the hour and need utilization rate tracking. For all other use cases — AI capability, client portal quality, inbox messaging, CRM, and total cost at scale — Kobin AI is stronger. Most agencies using Productive.io also need Slack, HubSpot, and a dedicated file management tool alongside it, which brings the true monthly cost to $1,100+/month for a 20-person team.',
-                },
-                            {
-                                q: 'What agency management software scales best from 5 to 100 seats?',
-                            a: 'Kobin AI scales best from 5 to 100 seats because its pricing model does not penalize growth: the Agency plan is flat at $79/month regardless of team size. By contrast, per-seat tools like Teamwork ($54.99/user), Scoro ($71/user), and Productive.io ($32/user) become prohibitively expensive at scale. Teamwork and Scoro both offer enterprise contracts with volume discounts at 100+ seats, but require multi-year commitments and dedicated procurement processes. Kobin AI requires no contract change as you scale.',
-                },
-                            ].map(({q, a}) => (
-                            <details className="faq-item" key={q}>
-                                <summary className="faq-q">{q}</summary>
-                                <p className="faq-a">{a}</p>
-                            </details>
-              ))}
+                                    a: 'For a 20-person agency, costs vary dramatically: Kobin AI Agency plan costs $79/month (flat, unlimited seats). Productive.io costs $640/month ($32/user). Teamwork costs $1,100/month ($54.99/user). Scoro costs $1,420/month ($71/user). However, most per-seat platforms still require Slack ($260/month for 20 seats) and HubSpot ($200/month for Starter) alongside them, bringing the true stack cost to $1,100–$1,880/month — versus Kobin AI\'s $79/month all-in.',
+                                },
+                                {
+                                    q: 'Does Kobin AI work for agencies with 50 or more team members?',
+                                    a: 'Yes. Kobin AI\'s Agency plan includes unlimited team members at a flat $79/month — meaning a 50-person agency pays the same as a 10-person agency. The platform includes role-based permissions with 12 granular toggles (Admin, Project Manager, Executor, Sales/Outreach, Analyst), unlimited client portals, white-label portal option, 500 GB vault storage, and an AI layer with full cross-module read/write access that scales to any team size without configuration changes.',
+                                },
+                                {
+                                    q: 'Is Productive.io better than Kobin AI for agencies?',
+                                    a: 'Productive.io is stronger than Kobin AI specifically for resource capacity planning and budget vs actual financial reporting — features built for agencies that bill by the hour and need utilization rate tracking. For all other use cases — AI capability, client portal quality, inbox messaging, CRM, and total cost at scale — Kobin AI is stronger. Most agencies using Productive.io also need Slack, HubSpot, and a dedicated file management tool alongside it, which brings the true monthly cost to $1,100+/month for a 20-person team.',
+                                },
+                                {
+                                    q: 'What agency management software scales best from 5 to 100 seats?',
+                                    a: 'Kobin AI scales best from 5 to 100 seats because its pricing model does not penalize growth: the Agency plan is flat at $79/month regardless of team size. By contrast, per-seat tools like Teamwork ($54.99/user), Scoro ($71/user), and Productive.io ($32/user) become prohibitively expensive at scale. Teamwork and Scoro both offer enterprise contracts with volume discounts at 100+ seats, but require multi-year commitments and dedicated procurement processes. Kobin AI requires no contract change as you scale.',
+                                },
+                            ].map(({ q, a }) => (
+                                <details className="faq-item" key={q}>
+                                    <summary className="faq-q">{q}</summary>
+                                    <p className="faq-a">{a}</p>
+                                </details>
+                            ))}
                         </div>
 
                     </div>
