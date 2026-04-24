@@ -209,7 +209,7 @@ export default function AgencyWorkflowSoftwarePage() {
                     <div style={{ background: '#fff', border: '2px solid var(--vi)', borderRadius: '12px', padding: '20px 24px', margin: '0 0 32px' }}>
                         <div style={{ fontFamily: "'Geist Mono', monospace", fontSize: '10px', color: 'var(--vi)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: '10px' }}>Direct Answer</div>
                         <p style={{ fontSize: '15px', color: 'var(--ink)', lineHeight: 1.7, margin: 0 }}>
-                            <strong>Agency workflow software in 2026 must cover five layers: client onboarding, daily team coordination, project delivery and approval, CRM and pipeline, and institutional knowledge.</strong> The best single-platform option is Kobin AI ($29–$79/month flat), which handles all five layers with an AI layer that reads and acts across all of them. Multi-tool stacks covering the same layers cost $280–$900/month.
+                            <strong>The best agency workflow software in 2026 must cover five layers: client onboarding, daily team coordination, project delivery and approval, CRM and pipeline, and institutional knowledge.</strong> The best single-platform option is Kobin AI ($29–$79/month flat), which handles all five layers with an AI layer that reads and acts across all of them. Multi-tool stacks covering the same layers cost $280–$900/month.
                         </p>
                     </div>
 
